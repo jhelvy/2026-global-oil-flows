@@ -24,7 +24,7 @@ date_baseline_end <- as.Date("2026-02-27")
 
 # Cache a download under data/raw with the download date in its name. Reuses the
 # newest cached copy unless `refresh` is TRUE, so reruns never need live endpoints.
-cached_download <- function(url, stem, ext, refresh = FALSE, ua = NULL) {
+cached_download <- function(url, stem, ext, refresh = FALSE) {
   existing <- sort(list.files(
     path_raw,
     pattern = paste0("^", stem, "_[0-9]{4}-[0-9]{2}-[0-9]{2}\\.", ext, "$"),
@@ -37,9 +37,6 @@ cached_download <- function(url, stem, ext, refresh = FALSE, ua = NULL) {
   req <- request(url) |>
     req_retry(max_tries = 4, backoff = ~ 5) |>
     req_timeout(600)
-  if (!is.null(ua)) {
-    req <- req_user_agent(req, ua)
-  }
   req_perform(req, path = dest)
   dest
 }

@@ -1,0 +1,29 @@
+target,period,value,unit,scope,source,report_date,source_url
+hormuz_flow,2025Q4,15.9,mb/d,crude and condensate,EIA Global Energy Security Data,2026-10-06,https://www.eia.gov/outlooks/steo/report/energysecurity/article.php
+hormuz_flow,2026Q1,10.9,mb/d,crude and condensate,EIA Global Energy Security Data,2026-10-06,https://www.eia.gov/outlooks/steo/report/energysecurity/article.php
+hormuz_flow,2026Q2,3.7,mb/d,crude and condensate,EIA Global Energy Security Data,2026-10-06,https://www.eia.gov/outlooks/steo/report/energysecurity/article.php
+hormuz_flow_total_oil,2026-08,7.6,mb/d,crude and products,IEA,2026-09,https://www.iea.org/commentaries/oil-markets-strain-to-plug-the-gap-left-by-middle-east-supply-shortfall
+hormuz_flow,2025,14.95,mb/d,crude and condensate,IEA Strait of Hormuz Factsheet,2026-02,https://iea.blob.core.windows.net/assets/c8248eba-8689-46d9-ae4b-b858b59c0f1c/StraitofHormuz2026-Factsheet.pdf
+shut_in,2026-05,10.9,mb/d,Middle East crude production shut-ins,EIA STEO,2026-10-06,https://www.eia.gov/outlooks/steo/report/global_oil.php
+shut_in,2026-08,5.8,mb/d,Middle East crude production shut-ins,EIA STEO,2026-10-06,https://www.eia.gov/outlooks/steo/report/global_oil.php
+shut_in,2026-09,4.8,mb/d,Middle East crude production shut-ins,EIA STEO,2026-10-06,https://www.eia.gov/outlooks/steo/report/global_oil.php
+stock_draw,2026Q3,1.9,mb/d,global oil inventories,EIA STEO,2026-10-06,https://www.eia.gov/outlooks/steo/report/global_oil.php
+stock_draw,2026Q4,0.7,mb/d,global oil inventories,EIA STEO,2026-10-06,https://www.eia.gov/outlooks/steo/report/global_oil.php
+stock_change_cumulative,2026-03..2026-09,-509,million barrels,observed global inventories vs end-February,IEA Oil Market Report,2026-10-14,https://www.iea.org/reports/oil-market-report-october-2026
+refinery_runs,2026-10,81.3,mb/d,global refinery runs,IEA Oil Market Report,2026-10-14,https://www.iea.org/reports/oil-market-report-october-2026
+iraq_exports,2026-05,0.329,mb/d,total Iraqi crude exports,Economist account via Shafaq News,2026-06,https://api.shafaq.com/en/Economy/Iraq-oil-exports-collapse-to-10-of-pre-Iran-war-levels
+hormuz_flow_total_oil,2026-04,2.7,mb/d,all oil via Hormuz,IEA Oil Market Report,2026-05-13,https://iea.blob.core.windows.net/assets/2b89a47b-34a2-40e0-90ff-68f7ccd80715/-13MAY2026__OilMarketReport_publicversion.pdf
+bypass_total_oil,2026-04,7.8,mb/d,all oil bypassing Hormuz,IEA Oil Market Report,2026-05-13,https://iea.blob.core.windows.net/assets/2b89a47b-34a2-40e0-90ff-68f7ccd80715/-13MAY2026__OilMarketReport_publicversion.pdf
+gulf_crude_exports,2026-04,8.4,mb/d,Gulf crude and condensate exports,IEA Oil Market Report,2026-05-13,https://iea.blob.core.windows.net/assets/2b89a47b-34a2-40e0-90ff-68f7ccd80715/-13MAY2026__OilMarketReport_publicversion.pdf
+gulf_crude_exports,2026-02,18.4,mb/d,"Gulf crude and condensate exports, from 'about 10 mb/d' lower by April",IEA Oil Market Report,2026-05-13,https://iea.blob.core.windows.net/assets/2b89a47b-34a2-40e0-90ff-68f7ccd80715/-13MAY2026__OilMarketReport_publicversion.pdf
+saudi_crude_exports,2026-02,7.3,mb/d,Saudi crude exports,IEA Oil Market Report,2026-05-13,https://iea.blob.core.windows.net/assets/2b89a47b-34a2-40e0-90ff-68f7ccd80715/-13MAY2026__OilMarketReport_publicversion.pdf
+saudi_crude_exports,2026-04,4.2,mb/d,Saudi crude exports,IEA Oil Market Report,2026-05-13,https://iea.blob.core.windows.net/assets/2b89a47b-34a2-40e0-90ff-68f7ccd80715/-13MAY2026__OilMarketReport_publicversion.pdf
+uae_fujairah_crude,2026-04,1.9,mb/d,UAE crude exports from Fujairah,IEA Oil Market Report,2026-05-13,https://iea.blob.core.windows.net/assets/2b89a47b-34a2-40e0-90ff-68f7ccd80715/-13MAY2026__OilMarketReport_publicversion.pdf
+regional_runs,2026-02,10.3,mb/d,Middle East crude runs,IEA Oil Market Report,2026-05-13,https://iea.blob.core.windows.net/assets/2b89a47b-34a2-40e0-90ff-68f7ccd80715/-13MAY2026__OilMarketReport_publicversion.pdf
+regional_runs,2026-04,7.2,mb/d,Middle East crude runs,IEA Oil Market Report,2026-05-13,https://iea.blob.core.windows.net/assets/2b89a47b-34a2-40e0-90ff-68f7ccd80715/-13MAY2026__OilMarketReport_publicversion.pdf
+regional_runs,2026-04,10.6,mb/d,Europe crude runs,IEA Oil Market Report,2026-05-13,https://iea.blob.core.windows.net/assets/2b89a47b-34a2-40e0-90ff-68f7ccd80715/-13MAY2026__OilMarketReport_publicversion.pdf
+china_runs,2026-04,13.3,mb/d,China refinery throughput (NBS-based),Reuters via Tank Terminals,2026-05,https://tankterminals.com/news/chinas-april-oil-throughput-hits-lowest-since-august-2022-inventories-rise/
+china_runs,2026-06,12.38,mb/d,China refinery throughput (NBS-based),Energy Intelligence,2026-08-03,https://www.energyintel.com/0000019f-65e3-d56b-a1ff-7debe5930000
+regional_exports_total_oil,2026-07,15,mb/d,"Gulf exports, all oil, including bypass",IEA Oil Market Report via Hellenic Shipping News,2026-08-13,https://www.hellenicshippingnews.com/?p=1144387
+stock_change_cumulative,2026-03..2026-07,-410,million barrels,observed global inventories vs end-February,IEA Oil Market Report via Hellenic Shipping News,2026-08-13,https://www.hellenicshippingnews.com/?p=1144387
+gulf_shutin,2026-07,8.3,mb/d,Gulf output below pre-war,IEA Oil Market Report via Hellenic Shipping News,2026-08-13,https://www.hellenicshippingnews.com/?p=1144387

@@ -1,0 +1,1098 @@
+year,reporter,partner,mbd,partner_fixed,producer,consumer,pipe
+2024,Algeria,China,4.0905918493150684e-8,China,row,row,0
+2024,Algeria,Ireland,2.324349024657534e-8,Ireland,row,row,0
+2024,Algeria,Netherlands,6.864709673972603e-8,Netherlands,row,row,0
+2024,Algeria,Niger,4.986846010958904e-8,Niger,row,row,0
+2024,Antigua and Barbuda,USA,4.416455534246575e-9,USA,usa,row,0
+2024,Bahamas,Netherlands,4.016438356164383e-8,Netherlands,row,row,0
+2024,Bahamas,USA,1.0643561643835617e-6,USA,usa,row,0
+2024,Bahrain,Kuwait,1.6467397260273974e-9,Kuwait,kuwait,mideast,0
+2024,Armenia,Russian Federation,8.472877534246577e-6,Russian Federation,russia,row,0
+2024,Botswana,South Africa,6.2039312602739725e-07,South Africa,row,row,0
+2024,Cambodia,France,1.004109589041096e-10,France,row,row,0
+2024,Cabo Verde,Portugal,1.5061643835616438e-9,Portugal,row,row,0
+2024,Central African Rep.,United Arab Emirates,2.008219178082192e-9,United Arab Emirates,uae,row,0
+2024,Congo,Gabon,5.54268493150685e-10,Gabon,row,row,0
+2024,Congo,United Arab Emirates,3.897069808219178e-7,United Arab Emirates,uae,row,0
+2024,Congo,United Kingdom,2.3978056657534246e-8,United Kingdom,row,row,0
+2024,Dem. Rep. of the Congo,United Arab Emirates,3.020120657534247e-5,United Arab Emirates,uae,row,0
+2024,Grenada,Jamaica,2.7333871232876713e-9,Jamaica,row,row,0
+2024,Grenada,United Kingdom,1.1466931506849314e-10,United Kingdom,row,row,0
+2024,Grenada,USA,1.4178027397260273e-10,USA,usa,row,0
+2024,Iraq,"Other Europe, nes",8.434520547945207e-10,"Other Europe, nes",row,mideast,0
+2024,Iraq,USA,1.5061643835616438e-9,USA,usa,mideast,0
+2024,Jordan,Iraq,0.00965945391780822,Iraq,iraq,row,0
+2024,Jordan,Saudi Arabia,0.02680852109589041,Saudi Arabia,saudi,row,0
+2024,Lesotho,South Africa,3.649315808219178e-7,South Africa,row,row,0
+2024,Maldives,Spain,8.394356164383563e-9,Spain,row,row,0
+2024,"Other Asia, nes",Chad,0.004041741917808219,Chad,row,otherasia,0
+2024,"Other Asia, nes",Iraq,0.015380328136986303,Iraq,iraq,otherasia,0
+2024,"Other Asia, nes",Kuwait,0.12031502164383562,Kuwait,kuwait,otherasia,0
+2024,"Other Asia, nes",Oman,0.07498429342465752,Oman,othergulf,otherasia,0
+2024,"Other Asia, nes",Norway,0.0033516575616438357,Norway,row,otherasia,0
+2024,"Other Asia, nes",Qatar,0.04444450109589041,Qatar,othergulf,otherasia,0
+2024,"Other Asia, nes",Saudi Arabia,0.28916749589041096,Saudi Arabia,saudi,otherasia,0
+2024,"Other Asia, nes",United Arab Emirates,0.09063896438356164,United Arab Emirates,uae,otherasia,0
+2024,"Other Asia, nes",USA,0.2680043600547945,USA,usa,otherasia,0
+2024,Montserrat,Antigua and Barbuda,1.004109589041096e-10,Antigua and Barbuda,row,row,0
+2024,Montserrat,Curaçao,2.008219178082192e-11,Curaçao,row,row,0
+2024,Papua New Guinea,Australia,2.911917808219178e-10,Australia,row,otherasia,0
+2024,Papua New Guinea,Singapore,4.016438356164384e-11,Singapore,row,otherasia,0
+2024,Papua New Guinea,USA,1.204931506849315e-10,USA,usa,otherasia,0
+2024,Qatar,Belgium,2.4299853698630137e-4,Belgium,row,mideast,0
+2024,Qatar,Brazil,0.0012149909578630135,Brazil,brazil,mideast,0
+2024,Qatar,Colombia,1.4581599123287672e-4,Colombia,row,mideast,0
+2024,Qatar,Finland,6.310923153424658e-5,Finland,row,mideast,0
+2024,Qatar,Germany,2.6059728460273976e-4,Germany,row,mideast,0
+2024,Qatar,Greece,2.040633241369863e-4,Greece,row,mideast,0
+2024,Qatar,Ireland,8.893964345479454e-4,Ireland,row,mideast,0
+2024,Qatar,Italy,0.0026267323498904106,Italy,row,mideast,0
+2024,Qatar,Kazakhstan,2.1333533232876714e-4,Kazakhstan,row,mideast,0.82
+2024,Qatar,Kuwait,0.021164610470958904,Kuwait,kuwait,mideast,0
+2024,Qatar,Malaysia,0.006400342466054795,Malaysia,row,mideast,0
+2024,Qatar,Malta,2.296492413972603e-4,Malta,row,mideast,0
+2024,Qatar,Oman,0.01009013865112329,Oman,othergulf,mideast,0
+2024,Qatar,Netherlands,9.992111809863013e-4,Netherlands,row,mideast,0
+2024,Qatar,Portugal,9.025865386027398e-4,Portugal,row,mideast,0
+2024,Qatar,India,0.0026772034765753425,India,row,mideast,0
+2024,Qatar,Singapore,0.003607864196328767,Singapore,row,mideast,0
+2024,Qatar,South Africa,4.578326635342465e-4,South Africa,row,mideast,0
+2024,Qatar,Spain,0.0019212313369041095,Spain,row,mideast,0
+2024,Qatar,Sweden,0.0020735209632328764,Sweden,row,mideast,0
+2024,Qatar,Tunisia,1.5756740706849318e-4,Tunisia,row,mideast,0
+2024,Qatar,United Kingdom,0.0010485028604657533,United Kingdom,row,mideast,0
+2024,Qatar,USA,9.629467189041097e-5,USA,usa,mideast,0
+2024,Tunisia,Azerbaijan,0.020703863230653916,Azerbaijan,row,row,0
+2024,Tunisia,Libya,4.174448274328767e-6,Libya,row,row,0
+2024,Ukraine,Latvia,4.89423095890411e-7,Latvia,row,row,0
+2024,Burkina Faso,United Arab Emirates,4.920739452054794e-7,United Arab Emirates,uae,row,0
+2024,Uzbekistan,Azerbaijan,1.793721287671233e-5,Azerbaijan,row,row,0
+2024,Uzbekistan,Iran,5.621005479452055e-7,Iran,iran,row,0
+2024,Uzbekistan,Iraq,4.418082191780822e-7,Iraq,iraq,row,0
+2024,Uzbekistan,Kazakhstan,0.001194420487671233,Kazakhstan,row,row,0.82
+2024,Uzbekistan,Russian Federation,0.009612582082191781,Russian Federation,russia,row,0
+2024,Uzbekistan,Turkmenistan,0.0016162529506849315,Turkmenistan,row,row,0
+2024,Yemen,United Arab Emirates,2.40986301369863e-9,United Arab Emirates,uae,row,0
+2024,Zambia,China,6.635156164383561e-8,China,row,row,0
+2024,Zambia,South Africa,1.4942837589041094e-5,South Africa,row,row,0
+2024,Zambia,United Rep. of Tanzania,3.060686684931506e-6,United Rep. of Tanzania,row,row,0
+2025,Andorra,France,4.016438356164384e-10,France,row,row,0
+2025,Andorra,Spain,4.016438356164384e-11,Spain,row,row,0
+2025,Angola,France,2.209041095890411e-10,France,row,row,0
+2025,Angola,Nigeria,8.169435616438356e-11,Nigeria,row,row,0
+2025,Angola,Portugal,4.157425383561644e-8,Portugal,row,row,0
+2025,Angola,United Arab Emirates,3.0123287671232874e-10,United Arab Emirates,uae,row,0
+2025,Angola,United Kingdom,3.5595684931506847e-9,United Kingdom,row,row,0
+2025,Angola,USA,1.4092637917808222e-8,USA,usa,row,0
+2025,Azerbaijan,Iraq,8.830139726027398e-6,Iraq,iraq,row,0
+2025,Azerbaijan,Kazakhstan,0.0027305056902465754,Kazakhstan,row,row,0.82
+2025,Azerbaijan,Russian Federation,0.030673971473068495,Russian Federation,russia,row,0
+2025,Azerbaijan,United Kingdom,0,United Kingdom,row,row,0
+2025,Argentina,USA,1.245095890410959e-10,USA,usa,row,0
+2025,Australia,Algeria,0.0029412234896164387,Algeria,row,otherasia,0
+2025,Australia,Argentina,0.005519213407972603,Argentina,row,otherasia,0
+2025,Australia,Brunei Darussalam,0.023290903638657535,Brunei Darussalam,row,otherasia,0
+2025,Australia,Germany,1.3161840378082193e-7,Germany,row,otherasia,0
+2025,Australia,Indonesia,6.055943379999999e-4,Indonesia,row,otherasia,0
+2025,Australia,Malaysia,0.07367932476882191,Malaysia,row,otherasia,0
+2025,Australia,Oman,0.0018156027635068495,Oman,othergulf,otherasia,0
+2025,Australia,New Zealand,0.007473272360739726,New Zealand,row,otherasia,0
+2025,Australia,Nigeria,0.011587771738054795,Nigeria,row,otherasia,0
+2025,Australia,Papua New Guinea,0.0020715320631232875,Papua New Guinea,row,otherasia,0
+2025,Australia,Singapore,3.7316485772602746e-4,Singapore,row,otherasia,0
+2025,Australia,Viet Nam,0.026922199957260275,Viet Nam,row,otherasia,0
+2025,Australia,United Arab Emirates,3.183462779178082e-4,United Arab Emirates,uae,otherasia,0
+2025,Australia,USA,0.04290456603673973,USA,usa,otherasia,0
+2025,Austria,Algeria,7.936683214520547e-4,Algeria,row,europe,0
+2025,Austria,Azerbaijan,0.004586692253890411,Azerbaijan,row,europe,0
+2025,Austria,France,1.279938493150685e-6,France,row,europe,0
+2025,Austria,Germany,5.801903854794521e-5,Germany,row,europe,0
+2025,Austria,Guyana,0.011683136383561644,Guyana,row,europe,0
+2025,Austria,Iraq,0.005390321342465754,Iraq,iraq,europe,0
+2025,Austria,Kazakhstan,0.09560997558630137,Kazakhstan,row,europe,0.82
+2025,Austria,Libya,0.0242486842739726,Libya,row,europe,0
+2025,Austria,Saudi Arabia,0.021103351150684933,Saudi Arabia,saudi,europe,0
+2025,Austria,Senegal,0.0013647857534246576,Senegal,row,europe,0
+2025,Austria,Slovakia,1.5510119342465752e-5,Slovakia,row,europe,0
+2025,Austria,Tunisia,2.5988364383561647e-4,Tunisia,row,europe,0
+2025,Austria,USA,0.0011418743484383563,USA,usa,europe,0
+2025,Belgium,Algeria,4.956787622906849e-4,Algeria,row,europe,0
+2025,Belgium,Azerbaijan,1.204931506849315e-10,Azerbaijan,row,europe,0
+2025,Belgium,Bahrain,5.783671232876712e-11,Bahrain,othergulf,europe,0
+2025,Belgium,Bosnia Herzegovina,1.0844383561643836e-10,Bosnia Herzegovina,row,europe,0
+2025,Belgium,Brazil,6.653230136986302e-10,Brazil,brazil,europe,0
+2025,Belgium,Colombia,3.434054794520548e-10,Colombia,row,europe,0
+2025,Belgium,Czechia,1.3026735424657534e-7,Czechia,row,europe,0
+2025,Belgium,France,6.288578120356164e-5,France,row,europe,0
+2025,Belgium,Gabon,0,Gabon,row,europe,0
+2025,Belgium,Georgia,1.004109589041096e-10,Georgia,row,europe,0
+2025,Belgium,Germany,1.2397421286986302e-4,Germany,row,europe,0
+2025,Belgium,Gibraltar,2.7311780821917815e-11,Gibraltar,row,europe,0
+2025,Belgium,"China, Hong Kong SAR",2.40986301369863e-10,"China, Hong Kong SAR",row,europe,0
+2025,Belgium,Israel,1.0121424657534248e-10,Israel,row,europe,0
+2025,Belgium,Oman,3.9762739726027395e-11,Oman,othergulf,europe,0
+2025,Belgium,Netherlands,0.6626969172465227,Netherlands,row,europe,0
+2025,Belgium,Nigeria,1.6065753424657536e-10,Nigeria,row,europe,0
+2025,Belgium,Norway,0.0015373093469158903,Norway,row,europe,0
+2025,Belgium,Peru,0,Peru,row,europe,0
+2025,Belgium,Philippines,9.036986301369863e-11,Philippines,row,europe,0
+2025,Belgium,Qatar,2.209041095890411e-10,Qatar,othergulf,europe,0
+2025,Belgium,Senegal,5.120958904109589e-10,Senegal,row,europe,0
+2025,Belgium,Singapore,1.9881369863013697e-11,Singapore,row,europe,0
+2025,Belgium,Spain,2.7396380067123293e-6,Spain,row,europe,0
+2025,Belgium,Sweden,0,Sweden,row,europe,0
+2025,Belgium,Switzerland,6.024657534246575e-12,Switzerland,row,europe,0
+2025,Belgium,United Arab Emirates,2.0517975342465755e-9,United Arab Emirates,uae,europe,0
+2025,Belgium,Tunisia,1.0884547945205481e-10,Tunisia,row,europe,0
+2025,Belgium,Türkiye,7.96058082191781e-10,Türkiye,row,europe,0
+2025,Belgium,Turkmenistan,2.008219178082192e-11,Turkmenistan,row,europe,0
+2025,Belgium,Egypt,1.004109589041096e-10,Egypt,row,europe,0
+2025,Belgium,United Kingdom,0.0051235594312676715,United Kingdom,row,europe,0
+2025,Belgium,USA,2.9460173698630133e-9,USA,usa,europe,0
+2025,Belgium,Uruguay,3.7051643835616433e-10,Uruguay,row,europe,0
+2025,Bolivia (Plurinational State of),Argentina,2.701624746000548e-4,Argentina,row,row,0
+2025,Bolivia (Plurinational State of),Paraguay,3.915273080013699e-5,Paraguay,row,row,0
+2025,Brazil,Algeria,0.024727604383561645,Algeria,row,row,0
+2025,Brazil,Angola,0.015889451863013698,Angola,row,row,0
+2025,Brazil,Argentina,0.008211843180821918,Argentina,row,row,0
+2025,Brazil,Dem. Rep. of the Congo,0.00260923901369863,Dem. Rep. of the Congo,row,row,0
+2025,Brazil,Gabon,0.011538082712328769,Gabon,row,row,0
+2025,Brazil,Ghana,0.0051007361369863015,Ghana,row,row,0
+2025,Brazil,Guyana,0.022061894246575342,Guyana,row,row,0
+2025,Brazil,Côte d'Ivoire,0.006346173424657533,Côte d'Ivoire,row,row,0
+2025,Brazil,Netherlands,0.0011457834273972602,Netherlands,row,row,0
+2025,Brazil,Nigeria,0.007528632958904108,Nigeria,row,row,0
+2025,Brazil,Peru,0.001985494169863014,Peru,row,row,0
+2025,Brazil,Russian Federation,0.0034217042465753424,Russian Federation,russia,row,0
+2025,Brazil,Saudi Arabia,0.06908253890410959,Saudi Arabia,saudi,row,0
+2025,Brazil,United Kingdom,0,United Kingdom,row,row,0
+2025,Brazil,USA,0.06410728268652283,USA,usa,row,0
+2025,Brazil,Uruguay,1.7751693589041097e-4,Uruguay,row,row,0
+2025,Belize,Guatemala,1.1536576547945207e-6,Guatemala,row,row,0
+2025,Brunei Darussalam,Australia,0.014348762315917809,Australia,row,otherasia,0
+2025,Brunei Darussalam,Iraq,0.0013814027429315068,Iraq,iraq,otherasia,0
+2025,Brunei Darussalam,Kazakhstan,0.005201690560164384,Kazakhstan,row,otherasia,0.82
+2025,Brunei Darussalam,Malaysia,0.06235645296512329,Malaysia,row,otherasia,0
+2025,Brunei Darussalam,Nigeria,0.005095116416767123,Nigeria,row,otherasia,0
+2025,Brunei Darussalam,Norway,0.0029598865532328767,Norway,row,otherasia,0
+2025,Brunei Darussalam,Papua New Guinea,0.003184897250136986,Papua New Guinea,row,otherasia,0
+2025,Brunei Darussalam,Philippines,0.003399253721753425,Philippines,row,otherasia,0
+2025,Brunei Darussalam,Qatar,0.001408826,Qatar,othergulf,otherasia,0
+2025,Brunei Darussalam,Russian Federation,0.019124266232410963,Russian Federation,russia,otherasia,0
+2025,Brunei Darussalam,Singapore,0.002783479560082192,Singapore,row,otherasia,0
+2025,Brunei Darussalam,Viet Nam,0.004760010164136986,Viet Nam,row,otherasia,0
+2025,Brunei Darussalam,South Africa,0.0026582247209041097,South Africa,row,otherasia,0
+2025,Brunei Darussalam,Thailand,6.762951802465753e-4,Thailand,row,otherasia,0
+2025,Brunei Darussalam,United Arab Emirates,0.014606300219178081,United Arab Emirates,uae,otherasia,0
+2025,Bulgaria,Azerbaijan,0.0034010723248767125,Azerbaijan,row,europe,0
+2025,Bulgaria,Brazil,0.0026775399938630136,Brazil,brazil,europe,0
+2025,Bulgaria,Colombia,0.0015377282471780822,Colombia,row,europe,0
+2025,Bulgaria,Gabon,0.0026484265994520546,Gabon,row,europe,0
+2025,Bulgaria,Guyana,0.00818698662868493,Guyana,row,europe,0
+2025,Bulgaria,Iraq,0.016766218205506847,Iraq,iraq,europe,0
+2025,Bulgaria,Italy,5.402015403561642e-4,Italy,row,europe,0
+2025,Bulgaria,Kazakhstan,0.03551099780663013,Kazakhstan,row,europe,0.82
+2025,Bulgaria,Libya,0.005126152219150685,Libya,row,europe,0
+2025,Bulgaria,Norway,0.006087790784082192,Norway,row,europe,0
+2025,Bulgaria,Saudi Arabia,0.014300452113397259,Saudi Arabia,saudi,europe,0
+2025,Bulgaria,Tunisia,7.035464935890412e-4,Tunisia,row,europe,0
+2025,Myanmar,China,4.177095890410959e-9,China,row,otherasia,0
+2025,Canada,Cuba,5.815601917808219e-10,Cuba,row,row,0
+2025,Canada,Ecuador,0.008513459816692,Ecuador,row,row,0
+2025,Canada,El Salvador,2.588594520547945e-11,El Salvador,row,row,0
+2025,Canada,France,3.981236884657534e-7,France,row,row,0
+2025,Canada,Germany,9.534263542465754e-7,Germany,row,row,0
+2025,Canada,Guyana,6.619700106301371e-7,Guyana,row,row,0
+2025,Canada,Italy,5.7974315506849313e-8,Italy,row,row,0
+2025,Canada,Mexico,3.380033698630137e-10,Mexico,row,row,0
+2025,Canada,Oman,3.743983260273972e-9,Oman,othergulf,row,0
+2025,Canada,Nepal,5.201287671232877e-11,Nepal,row,row,0
+2025,Canada,Netherlands,2.0704739726027397e-10,Netherlands,row,row,0
+2025,Canada,Nigeria,0.05641246237146603,Nigeria,row,row,0
+2025,Canada,Poland,7.555201698630137e-8,Poland,row,row,0
+2025,Canada,Saudi Arabia,0.052323475113051555,Saudi Arabia,saudi,row,0
+2025,Canada,India,1.5932407671232878e-8,India,row,row,0
+2025,Canada,Singapore,5.068745205479452e-11,Singapore,row,row,0
+2025,Canada,Spain,3.348564904109589e-9,Spain,row,row,0
+2025,Canada,Sweden,5.968937083287672e-7,Sweden,row,row,0
+2025,Canada,Thailand,3.639897260273972e-10,Thailand,row,row,0
+2025,Canada,United Arab Emirates,2.3295061315068494e-8,United Arab Emirates,uae,row,0
+2025,Canada,Türkiye,7.365947123287672e-10,Türkiye,row,row,0
+2025,Canada,United Kingdom,0.0019534515357894793,United Kingdom,row,row,0
+2025,Canada,USA,0.34441105873499417,USA,usa,row,0
+2025,Sri Lanka,Bahrain,3.001203232876712e-9,Bahrain,othergulf,row,0
+2025,Sri Lanka,"China, Hong Kong SAR",1.1922797260273973e-9,"China, Hong Kong SAR",row,row,0
+2025,Sri Lanka,Senegal,4.644629397260274e-9,Senegal,row,row,0
+2025,Sri Lanka,India,1.5190772328767122e-9,India,row,row,0
+2025,Sri Lanka,Sweden,5.821389605479452e-8,Sweden,row,row,0
+2025,Sri Lanka,United Arab Emirates,0.029009988436566932,United Arab Emirates,uae,row,0
+2025,Sri Lanka,USA,2.0779485643835612e-8,USA,usa,row,0
+2025,Chile,Argentina,0.0765715645468806,Argentina,row,row,0
+2025,Chile,Brazil,0.08443307382432877,Brazil,brazil,row,0
+2025,Chile,Ecuador,0.017127897836849315,Ecuador,row,row,0
+2025,Chile,USA,1.809070307671233e-7,USA,usa,row,0
+2025,China,Albania,2.791424657534247e-9,Albania,row,china,0
+2025,China,Algeria,0.0036370854521917805,Algeria,row,china,0
+2025,China,Angola,0.5976637099076987,Angola,row,china,0
+2025,China,Azerbaijan,0.001227717625178082,Azerbaijan,row,china,0
+2025,China,Argentina,0.00711926701849315,Argentina,row,china,0
+2025,China,Australia,0.012925219965287673,Australia,row,china,0
+2025,China,Brazil,0.947791568849096,Brazil,brazil,china,0
+2025,China,Brunei Darussalam,0.004083312054794521,Brunei Darussalam,row,china,0
+2025,China,Cameroon,0.007983350211780822,Cameroon,row,china,0
+2025,China,Canada,0.32776823176257536,Canada,canada,china,0
+2025,China,Chad,0.01865317661120548,Chad,row,china,0
+2025,China,Colombia,0.16672128809301373,Colombia,row,china,0
+2025,China,Congo,0.1809345628094247,Congo,row,china,0
+2025,China,Dem. Rep. of the Congo,0.0023779724931506847,Dem. Rep. of the Congo,row,china,0
+2025,China,Cuba,8.635342465753424e-10,Cuba,row,china,0
+2025,China,Ecuador,0.16401976024238354,Ecuador,row,china,0
+2025,China,Equatorial Guinea,0.02266491912838356,Equatorial Guinea,row,china,0
+2025,China,Gabon,0.08599229188435617,Gabon,row,china,0
+2025,China,Ghana,0.08232415817882192,Ghana,row,china,0
+2025,China,Guyana,0.03824452369786301,Guyana,row,china,0
+2025,China,Indonesia,0.29171753218101365,Iran,iran,china,0
+2025,China,Iraq,1.2979252474690959,Iraq,iraq,china,0
+2025,China,Kazakhstan,0.07832171174838357,Kazakhstan,row,china,1
+2025,China,Kuwait,0.38199856270380816,Kuwait,kuwait,china,0
+2025,China,Libya,0.02780956070019178,Libya,row,china,0
+2025,China,Malaysia,1.3001697747015617,Iran,iran,china,0
+2025,China,Mexico,0.01601867335679452,Mexico,row,china,0
+2025,China,Mongolia,0.009647103972328768,Mongolia,row,china,0
+2025,China,Mozambique,0.0012486116797260274,Mozambique,row,china,0
+2025,China,Oman,0.7101239907082466,Oman,othergulf,china,0
+2025,China,New Zealand,6.24632175479452e-4,New Zealand,row,china,0
+2025,China,Niger,0.005747890189315069,Niger,row,china,0
+2025,China,Nigeria,0.021078150450027398,Nigeria,row,china,0
+2025,China,Norway,0.035184132683041096,Norway,row,china,0
+2025,China,Papua New Guinea,0.001586806834520548,Papua New Guinea,row,china,0
+2025,China,Timor-Leste,4.895385484109589e-4,Timor-Leste,row,china,0
+2025,China,Qatar,0.14559204420934244,Qatar,othergulf,china,0
+2025,China,Russian Federation,2.0253961040599178,Russian Federation,russia,china,0.37
+2025,China,Saudi Arabia,1.622044325928548,Saudi Arabia,saudi,china,0
+2025,China,Senegal,0.018549773927863014,Senegal,row,china,0
+2025,China,Viet Nam,4.983691098630137e-4,Viet Nam,row,china,0
+2025,China,South Sudan,0.012215810877452054,South Sudan,row,china,0
+2025,China,Togo,0.0504106874209589,Togo,row,china,0
+2025,China,Trinidad and Tobago,0.04384860864547945,Trinidad and Tobago,row,china,0
+2025,China,United Arab Emirates,0.7536948641274793,United Arab Emirates,uae,china,0
+2025,China,Türkiye,0,Türkiye,row,china,0
+2025,China,United Kingdom,0.04839631268961644,United Kingdom,row,china,0
+2025,China,USA,0.045920404066465755,USA,usa,china,0
+2025,China,Venezuela,0.00891886895430137,Venezuela,row,china,0
+2025,Colombia,Brazil,3.933298082191781e-9,Brazil,brazil,row,0
+2025,Colombia,China,4.226698904109588e-8,China,row,row,0
+2025,Colombia,"Other Asia, nes",3.614794520547945e-10,"Other Asia, nes",row,row,0
+2025,Colombia,Nigeria,0,Nigeria,row,row,0
+2025,Colombia,Peru,1.7069863013698632e-10,Peru,row,row,0
+2025,Colombia,USA,0.005001741520444932,USA,usa,row,0
+2025,Comoros,United Arab Emirates,4.016438356164384e-9,United Arab Emirates,uae,row,0
+2025,Costa Rica,China,8.379294520547945e-9,China,row,row,0
+2025,Costa Rica,Spain,4.2607884246575344e-8,Spain,row,row,0
+2025,Costa Rica,USA,6.772293435616439e-8,USA,usa,row,0
+2025,Croatia,Angola,0.005402486210465754,Angola,row,europe,0
+2025,Croatia,Azerbaijan,0.024184579327205483,Azerbaijan,row,europe,0
+2025,Croatia,Guyana,8.069381317260273e-4,Guyana,row,europe,0
+2025,Croatia,Côte d'Ivoire,0.001384852783150685,Côte d'Ivoire,row,europe,0
+2025,Croatia,Kazakhstan,0.015526596600082192,Kazakhstan,row,europe,0.82
+2025,Croatia,Libya,0.016115775272547945,Libya,row,europe,0
+2025,Croatia,Saudi Arabia,0.009754191275972603,Saudi Arabia,saudi,europe,0
+2025,Croatia,Türkiye,4.016438356164384e-10,Türkiye,row,europe,0
+2025,Croatia,USA,0,USA,usa,europe,0
+2025,Cyprus,Tunisia,1.0013486893150685e-4,Tunisia,row,europe,0
+2025,Cyprus,United Kingdom,1.2169808219178082e-8,United Kingdom,row,europe,0
+2025,Czechia,Azerbaijan,0.05943168016438356,Azerbaijan,row,europe,0
+2025,Czechia,Austria,4.1168493150684925e-9,Austria,row,europe,0
+2025,Czechia,Belgium,8.032876712328768e-9,Belgium,row,europe,0
+2025,Czechia,France,0,France,row,europe,0
+2025,Czechia,Germany,0,Germany,row,europe,0
+2025,Czechia,Italy,0,Italy,row,europe,0
+2025,Czechia,Kazakhstan,0.024936539506849317,Kazakhstan,row,europe,0.82
+2025,Czechia,Netherlands,1.0643561643835617e-9,Netherlands,row,europe,0
+2025,Czechia,"Other Europe, nes",8.032876712328768e-9,"Other Europe, nes",row,europe,0
+2025,Czechia,Norway,0.029504816410958905,Norway,row,europe,0
+2025,Czechia,Poland,1.5974781095890412e-6,Poland,row,europe,0
+2025,Czechia,Russian Federation,0.010582130219178084,Russian Federation,russia,europe,0
+2025,Czechia,Saudi Arabia,0.014852005835616437,Saudi Arabia,saudi,europe,0
+2025,Czechia,Ukraine,4.859890410958905e-9,Ukraine,row,europe,0
+2025,Czechia,United Kingdom,0,United Kingdom,row,europe,0
+2025,Denmark,Azerbaijan,0.0017728166899726027,Azerbaijan,row,europe,0
+2025,Denmark,Belgium,5.161123287671233e-7,Belgium,row,europe,0
+2025,Denmark,Greenland,8.032876712328768e-11,Greenland,row,europe,0
+2025,Denmark,Lithuania,6.024657534246576e-11,Lithuania,row,europe,0
+2025,Denmark,Netherlands,1.5427139726027397e-6,Netherlands,row,europe,0
+2025,Denmark,Norway,0.04446833375747945,Norway,row,europe,0
+2025,Denmark,Sweden,1.6407150684931505e-8,Sweden,row,europe,0
+2025,Denmark,United Arab Emirates,2.008219178082192e-11,United Arab Emirates,uae,europe,0
+2025,Denmark,United Kingdom,0.010710545915013699,United Kingdom,row,europe,0
+2025,Denmark,USA,0.048428601118712326,USA,usa,europe,0
+2025,Denmark,"Areas, nes",0.0029517186438630136,"Areas, nes",row,europe,0
+2025,Dominican Rep.,USA,0.021099371663561645,USA,usa,row,0
+2025,Ecuador,Brazil,3.614794520547945e-8,Brazil,brazil,row,0
+2025,Ecuador,China,0,China,row,row,0
+2025,Ecuador,Netherlands,3.1328219178082185e-10,Netherlands,row,row,0
+2025,Ecuador,Spain,1.8274794520547946e-8,Spain,row,row,0
+2025,Ecuador,USA,4.558657534246575e-11,USA,usa,row,0
+2025,El Salvador,Israel,5.23141095890411e-10,Israel,row,row,0
+2025,El Salvador,India,4.4158329863013694e-7,India,row,row,0
+2025,Estonia,Netherlands,5.016531506849315e-7,Netherlands,row,europe,0
+2025,Estonia,Poland,8.193534246575342e-7,Poland,row,europe,0
+2025,Estonia,USA,1.0241917808219179e-10,USA,usa,europe,0
+2025,Faroe Isds,Sweden,1.7592e-8,Sweden,row,row,0
+2025,Fiji,New Zealand,1.1045205479452055e-11,New Zealand,row,row,0
+2025,Fiji,India,9.458712328767123e-11,India,row,row,0
+2025,Fiji,Singapore,3.6341577698630135e-7,Singapore,row,row,0
+2025,Fiji,Thailand,1.2852602739726029e-11,Thailand,row,row,0
+2025,Fiji,USA,6.024657534246576e-11,USA,usa,row,0
+2025,Finland,Canada,8.375077260273973e-10,Canada,canada,europe,0
+2025,Finland,Denmark,0.008196205557956932,Denmark,row,europe,0
+2025,Finland,Gabon,4.206817534246576e-10,Gabon,row,europe,0
+2025,Finland,Guyana,0.0036218283907168223,Guyana,row,europe,0
+2025,Finland,Norway,0.161634769217822,Norway,row,europe,0
+2025,Finland,Senegal,0.002361931115108849,Senegal,row,europe,0
+2025,Finland,United Kingdom,0.007264747898653672,United Kingdom,row,europe,0
+2025,Finland,USA,0.021224968835850216,USA,usa,europe,0
+2025,France,Algeria,0.0891626939892055,Algeria,row,europe,0
+2025,France,Angola,0.02626785736389041,Angola,row,europe,0
+2025,France,Azerbaijan,0.008874771031671233,Azerbaijan,row,europe,0
+2025,France,Argentina,3.97627397260274e-9,Argentina,row,europe,0
+2025,France,Belgium,4.9100958904109585e-8,Belgium,row,europe,0
+2025,France,Brazil,0,Brazil,brazil,europe,0
+2025,France,Cameroon,0.00449285256969863,Cameroon,row,europe,0
+2025,France,Canada,0.010239287041095892,Canada,canada,europe,0
+2025,France,Chad,0.007993720515041096,Chad,row,europe,0
+2025,France,China,7.631232876712329e-10,China,row,europe,0
+2025,France,Congo,0.004995217413178082,Congo,row,europe,0
+2025,France,Dem. Rep. of the Congo,0.0025373496470958903,Dem. Rep. of the Congo,row,europe,0
+2025,France,Croatia,8.032876712328768e-11,Croatia,row,europe,0
+2025,France,Czechia,0,Czechia,row,europe,0
+2025,France,Gabon,0.005420846193643835,Gabon,row,europe,0
+2025,France,Germany,1.2109561643835617e-8,Germany,row,europe,0
+2025,France,Guyana,9.402286591232877e-4,Guyana,row,europe,0
+2025,France,Iraq,0.07048187144958905,Iraq,iraq,europe,0
+2025,France,Israel,0.001300306534849315,Israel,row,europe,0
+2025,France,Italy,2.1086301369863016e-9,Italy,row,europe,0
+2025,France,Côte d'Ivoire,0.0035019326027397255,Côte d'Ivoire,row,europe,0
+2025,France,Kazakhstan,0.14474022930734246,Kazakhstan,row,europe,0.82
+2025,France,Liberia,0.005601445424657534,Liberia,row,europe,0
+2025,France,Libya,0.0812503896718904,Libya,row,europe,0
+2025,France,Mauritius,1.8073972602739725e-10,Mauritius,row,europe,0
+2025,France,Oman,2.8115068493150686e-9,Oman,othergulf,europe,0
+2025,France,Netherlands,4.9683342465753426e-8,Netherlands,row,europe,0
+2025,France,Nigeria,0.13423197757578081,Nigeria,row,europe,0
+2025,France,Norway,0.08717210257750685,Norway,row,europe,0
+2025,France,Poland,4.9301780821917815e-8,Poland,row,europe,0
+2025,France,Qatar,9.920602739726028e-9,Qatar,othergulf,europe,0
+2025,France,Saudi Arabia,0.02130541039257534,Saudi Arabia,saudi,europe,0
+2025,France,Serbia,1.8073972602739725e-10,Serbia,row,europe,0
+2025,France,Singapore,8.829456931506849e-9,Singapore,row,europe,0
+2025,France,Spain,8.416916498630138e-5,Spain,row,europe,0
+2025,France,United Arab Emirates,0.0026964361514794522,United Arab Emirates,uae,europe,0
+2025,France,Tunisia,0.002081928794547945,Tunisia,row,europe,0
+2025,France,Türkiye,2.5705205479452057e-9,Türkiye,row,europe,0
+2025,France,Uganda,7.249671232876712e-9,Uganda,row,europe,0
+2025,France,Egypt,0.0011197549387945206,Egypt,row,europe,0
+2025,France,United Kingdom,0.005433162923981371,United Kingdom,row,europe,0
+2025,France,USA,0.2423890222863839,USA,usa,europe,0
+2025,France,Uruguay,6.225479452054795e-10,Uruguay,row,europe,0
+2025,France,"Areas, nes",4.5586575342465754e-8,"Areas, nes",row,europe,0
+2025,Georgia,Azerbaijan,7.829012342465754e-5,Azerbaijan,row,row,0
+2025,Georgia,Netherlands,0,Netherlands,row,row,0
+2025,Georgia,Russian Federation,0.004524186813534247,Russian Federation,russia,row,0
+2025,Germany,Algeria,0.037289694783260274,Algeria,row,europe,0
+2025,Germany,Angola,0.002441499795753425,Angola,row,europe,0
+2025,Germany,Azerbaijan,0.033401186776520556,Azerbaijan,row,europe,0
+2025,Germany,Brazil,0.005906765549534247,Brazil,brazil,europe,0
+2025,Germany,Cameroon,0.005075778290273973,Cameroon,row,europe,0
+2025,Germany,Canada,0.04387040206090411,Canada,canada,europe,0
+2025,Germany,Chad,0.03171705386882192,Chad,row,europe,0
+2025,Germany,Denmark,0.005658657962383562,Denmark,row,europe,0
+2025,Germany,Equatorial Guinea,7.884670136986303e-4,Equatorial Guinea,row,europe,0
+2025,Germany,France,5.109325290410959e-5,France,row,europe,0
+2025,Germany,Gabon,2.3340800515068494e-4,Gabon,row,europe,0
+2025,Germany,Ghana,0.0013550995500273973,Ghana,row,europe,0
+2025,Germany,Guyana,0.08462777547328766,Guyana,row,europe,0
+2025,Germany,Iraq,0.06314213640630137,Iraq,iraq,europe,0
+2025,Germany,Israel,5.353549242739726e-4,Israel,row,europe,0
+2025,Germany,Italy,6.150361612054794e-4,Italy,row,europe,0
+2025,Germany,Côte d'Ivoire,0.0025520529643835617,Côte d'Ivoire,row,europe,0
+2025,Germany,Kazakhstan,0.20765825385547945,Kazakhstan,row,europe,0.82
+2025,Germany,Libya,0.20939827473978082,Libya,row,europe,0
+2025,Germany,Mexico,0.004070205231589041,Mexico,row,europe,0
+2025,Germany,Netherlands,0.0012915804007945205,Netherlands,row,europe,0
+2025,Germany,Niger,0.001164586925780822,Niger,row,europe,0
+2025,Germany,Nigeria,0.05872347510435615,Nigeria,row,europe,0
+2025,Germany,Norway,0.25200121131668496,Norway,row,europe,0
+2025,Germany,Poland,4.327712328767123e-4,Poland,row,europe,0
+2025,Germany,Saudi Arabia,0.012895007352027397,Saudi Arabia,saudi,europe,0
+2025,Germany,Senegal,0.007297577743178082,Senegal,row,europe,0
+2025,Germany,Syria,8.023036438356165e-4,Syria,row,europe,0
+2025,Germany,United Arab Emirates,0.01608918647071233,United Arab Emirates,uae,europe,0
+2025,Germany,Tunisia,0.002288365753424658,Tunisia,row,europe,0
+2025,Germany,Egypt,0.001792596684931507,Egypt,row,europe,0
+2025,Germany,United Kingdom,0.17398247140216438,United Kingdom,row,europe,0
+2025,Germany,USA,0.2496157203722466,USA,usa,europe,0
+2025,Ghana,Angola,0.004794220876113507,Angola,row,row,0
+2025,Ghana,Central African Rep.,3.195657087671233e-5,Central African Rep.,row,row,0
+2025,Ghana,Côte d'Ivoire,0.0020389618808767124,Côte d'Ivoire,row,row,0
+2025,Ghana,Morocco,0.004050314182109589,Morocco,row,row,0
+2025,Ghana,Nigeria,0.005599812380986301,Nigeria,row,row,0
+2025,Ghana,Russian Federation,9.284228004657534e-4,Russian Federation,russia,row,0
+2025,Ghana,Togo,8.557917583561644e-5,Togo,row,row,0
+2025,Ghana,United Arab Emirates,2.40986301369863e-9,United Arab Emirates,uae,row,0
+2025,Ghana,United Kingdom,4.4313364383561647e-10,United Kingdom,row,row,0
+2025,Ghana,USA,1.867418915068493e-5,USA,usa,row,0
+2025,Greece,Azerbaijan,0.012661429873260275,Azerbaijan,row,europe,0
+2025,Greece,Canada,0.0019797968520547946,Canada,canada,europe,0
+2025,Greece,Germany,6.378465589041097e-4,Germany,row,europe,0
+2025,Greece,Guyana,0.005723083260273973,Guyana,row,europe,0
+2025,Greece,Iraq,0.12870318670947944,Iraq,iraq,europe,0
+2025,Greece,Ireland,2.008219178082192e-11,Ireland,row,europe,0
+2025,Greece,Israel,3.012328767123288e-7,Israel,row,europe,0
+2025,Greece,Italy,7.013926383561644e-5,Italy,row,europe,0
+2025,Greece,Kazakhstan,0.07780819066498632,Kazakhstan,row,europe,0.82
+2025,Greece,Libya,0.07158408575863014,Libya,row,europe,0
+2025,Greece,Norway,0.017646292968602737,Norway,row,europe,0
+2025,Greece,Saudi Arabia,0.03536734830232877,Saudi Arabia,saudi,europe,0
+2025,Greece,Viet Nam,3.77545205479452e-9,Viet Nam,row,europe,0
+2025,Greece,United Arab Emirates,4.016438356164384e-11,United Arab Emirates,uae,europe,0
+2025,Greece,Egypt,0.01242299384958904,Egypt,row,europe,0
+2025,Guatemala,China,4.7393972602739715e-9,China,row,row,0
+2025,Guatemala,Rep. of Korea,7.225974246575343e-7,Rep. of Korea,row,row,0
+2025,Guatemala,USA,6.273475890410959e-7,USA,usa,row,0
+2025,Guyana,USA,4.901661369863014e-9,USA,usa,row,0
+2025,Hungary,Croatia,0.00881901648376137,Croatia,row,europe,0
+2025,Hungary,Italy,1.0844383561643836e-7,Italy,row,europe,0
+2025,Hungary,Romania,2.053102876712329e-5,Romania,row,europe,0
+2025,Hungary,Russian Federation,0.08596935273972603,Russian Federation,russia,europe,1
+2025,Hungary,Slovenia,2.175423506849315e-6,Slovenia,row,europe,0
+2025,Hungary,Ukraine,2.1086301369863016e-9,Ukraine,row,europe,0
+2025,Hungary,United Kingdom,4.016438356164384e-11,United Kingdom,row,europe,0
+2025,Iceland,Estonia,2.3476082191780826e-11,Estonia,row,row,0
+2025,Iceland,France,1.8073972602739725e-10,France,row,row,0
+2025,Iceland,Germany,2.6106849315068494e-10,Germany,row,row,0
+2025,Iceland,Sweden,4.016438356164384e-11,Sweden,row,row,0
+2025,Iceland,USA,2.008219178082192e-11,USA,usa,row,0
+2025,Indonesia,Algeria,0.004113997643835617,Algeria,row,otherasia,0
+2025,Indonesia,Angola,0.07501622410958905,Angola,row,otherasia,0
+2025,Indonesia,Azerbaijan,0.005372869917808219,Azerbaijan,row,otherasia,0
+2025,Indonesia,Australia,0.02547098486849315,Australia,row,otherasia,0
+2025,Indonesia,Brazil,0.033365557534246575,Brazil,brazil,otherasia,0
+2025,Indonesia,Brunei Darussalam,0.0032661676712328765,Brunei Darussalam,row,otherasia,0
+2025,Indonesia,China,3.672028767123287e-9,China,row,otherasia,0
+2025,Indonesia,Equatorial Guinea,0.003503418684931507,Equatorial Guinea,row,otherasia,0
+2025,Indonesia,Gabon,0.019872433287671232,Gabon,row,otherasia,0
+2025,Indonesia,Ghana,0.002527845890410959,Ghana,row,otherasia,0
+2025,Indonesia,Japan,9.63945205479452e-10,Japan,row,otherasia,0
+2025,Indonesia,Libya,0.001932204065753425,Libya,row,otherasia,0
+2025,Indonesia,Malaysia,0.007112148383561645,Malaysia,row,otherasia,0
+2025,Indonesia,"Other Asia, nes",1.4822665753424658e-8,"Other Asia, nes",row,otherasia,0
+2025,Indonesia,Nigeria,0.0929929989041096,Nigeria,row,otherasia,0
+2025,Indonesia,Norway,7.860230109589042e-4,Norway,row,otherasia,0
+2025,Indonesia,Saudi Arabia,0.06402985945205479,Saudi Arabia,saudi,otherasia,0
+2025,Indonesia,USA,0.013749164886441755,USA,usa,otherasia,0
+2025,Ireland,Algeria,0.008531554666219179,Algeria,row,europe,0
+2025,Ireland,Azerbaijan,0.010611038313342466,Azerbaijan,row,europe,0
+2025,Ireland,France,1.0095398136986303e-5,France,row,europe,0
+2025,Ireland,Germany,2.148794520547945e-9,Germany,row,europe,0
+2025,Ireland,United Kingdom,6.885400356164384e-6,United Kingdom,row,europe,0
+2025,Ireland,USA,0.0435939914359452,USA,usa,europe,0
+2025,Israel,"Areas, nes",0.21053727932570288,"Areas, nes",row,row,0
+2025,Italy,Albania,4.1737116394520554e-4,Albania,row,europe,0
+2025,Italy,Algeria,0.01907239740526027,Algeria,row,europe,0
+2025,Italy,Angola,0.006837506457479452,Angola,row,europe,0
+2025,Italy,Antigua and Barbuda,9.455435316712329e-4,Antigua and Barbuda,row,europe,0
+2025,Italy,Azerbaijan,0.14654912580364388,Azerbaijan,row,europe,0
+2025,Italy,Austria,1.935822876712329e-5,Austria,row,europe,0
+2025,Italy,Belgium,1.558578904109589e-6,Belgium,row,europe,0
+2025,Italy,Brazil,0.026516261785917806,Brazil,brazil,europe,0
+2025,Italy,Cameroon,0.005628559998356164,Cameroon,row,europe,0
+2025,Italy,Canada,0.0033060556033424654,Canada,canada,europe,0
+2025,Italy,Croatia,9.627402739726029e-6,Croatia,row,europe,0
+2025,Italy,Cuba,5.347345251232877e-4,Cuba,row,europe,0
+2025,Italy,Czechia,2.711095890410959e-9,Czechia,row,europe,0
+2025,Italy,Equatorial Guinea,0.003613115046849315,Equatorial Guinea,row,europe,0
+2025,Italy,Estonia,1.0041095890410959e-7,Estonia,row,europe,0
+2025,Italy,France,6.060805479452055e-7,France,row,europe,0
+2025,Italy,Gabon,8.684814141917807e-4,Gabon,row,europe,0
+2025,Italy,Germany,3.901864632328767e-6,Germany,row,europe,0
+2025,Italy,Ghana,0.002395460848958904,Ghana,row,europe,0
+2025,Italy,Greece,9.940005550958904e-4,Greece,row,europe,0
+2025,Italy,Guyana,0.008441450811917809,Guyana,row,europe,0
+2025,Italy,Iraq,0.057852489601506844,Iraq,iraq,europe,0
+2025,Italy,Côte d'Ivoire,0.004744115109342465,Côte d'Ivoire,row,europe,0
+2025,Italy,Kazakhstan,0.11699982332145206,Kazakhstan,row,europe,0.82
+2025,Italy,Liberia,0.0016242695206575345,Liberia,row,europe,0
+2025,Italy,Libya,0.23132855781216435,Libya,row,europe,0
+2025,Italy,Mexico,0.018782025279095886,Mexico,row,europe,0
+2025,Italy,Netherlands,2.0082191780821916e-8,Netherlands,row,europe,0
+2025,Italy,Niger,0.03104760725819178,Niger,row,europe,0
+2025,Italy,Nigeria,0.05688772301430138,Nigeria,row,europe,0
+2025,Italy,"Other Europe, nes",2.1638943205479454e-5,"Other Europe, nes",row,europe,0
+2025,Italy,Norway,0.015360152984739727,Norway,row,europe,0
+2025,Italy,Saudi Arabia,0.043691144601452056,Saudi Arabia,saudi,europe,0
+2025,Italy,Senegal,0.018951326851397263,Senegal,row,europe,0
+2025,Italy,Slovenia,1.0436411827397263e-4,Slovenia,row,europe,0
+2025,Italy,Sudan,0.014983926616958904,Sudan,row,europe,0
+2025,Italy,Syria,8.716414273972603e-4,Syria,row,europe,0
+2025,Italy,Tunisia,0.003700669266082191,Tunisia,row,europe,0
+2025,Italy,Ukraine,0,Ukraine,row,europe,0
+2025,Italy,Egypt,0.008402411633561644,Egypt,row,europe,0
+2025,Italy,United Kingdom,0.013730650426465756,United Kingdom,row,europe,0
+2025,Italy,USA,0.08393329598887671,USA,usa,europe,0
+2025,Italy,Venezuela,0.0030615469256986302,Venezuela,row,europe,0
+2025,Côte d'Ivoire,Colombia,0.00860244243350685,Colombia,row,row,0
+2025,Côte d'Ivoire,France,2.40986301369863e-10,France,row,row,0
+2025,Côte d'Ivoire,Nigeria,0.05181825786224658,Nigeria,row,row,0
+2025,Jamaica,Barbados,0.0011285085101438357,Barbados,row,row,0
+2025,Jamaica,Brazil,0.010997124129572603,Brazil,brazil,row,0
+2025,Jamaica,Colombia,0.00506705859637726,Colombia,row,row,0
+2025,Jamaica,Ecuador,0.0016996791065060275,Ecuador,row,row,0
+2025,Japan,Australia,0.005835742347945206,Australia,row,japan,0
+2025,Japan,Brunei Darussalam,0.0041237877123287674,Brunei Darussalam,row,japan,0
+2025,Japan,Canada,0.001616074219178082,Canada,canada,japan,0
+2025,Japan,Colombia,0.002288570591780822,Colombia,row,japan,0
+2025,Japan,Ecuador,0.029462543397260274,Ecuador,row,japan,0
+2025,Japan,Indonesia,3.884297534246576e-4,Indonesia,row,japan,0
+2025,Japan,Kuwait,0.14867258260273972,Kuwait,kuwait,japan,0
+2025,Japan,Malaysia,0.0016885950301369862,Malaysia,row,japan,0
+2025,Japan,Oman,0.023312410320547945,Oman,othergulf,japan,0
+2025,Japan,Qatar,0.09759692169863014,Qatar,othergulf,japan,0
+2025,Japan,Russian Federation,0.001506194506849315,Russian Federation,russia,japan,0
+2025,Japan,Saudi Arabia,0.919421781369863,Saudi Arabia,saudi,japan,0
+2025,Japan,Viet Nam,0.0014964486191780821,Viet Nam,row,japan,0
+2025,Japan,South Sudan,0.005732210616438356,South Sudan,row,japan,0
+2025,Japan,United Arab Emirates,0.9866077580821917,United Arab Emirates,uae,japan,0
+2025,Japan,USA,0.08575889940273973,USA,usa,japan,0
+2025,Kazakhstan,Kuwait,0,Kuwait,kuwait,row,0
+2025,Kazakhstan,Russian Federation,2.346503698630137e-6,Russian Federation,russia,row,0
+2025,Kazakhstan,Spain,2.0082191780821916e-8,Spain,row,row,0
+2025,Kenya,Jordan,1.004109589041096e-10,Jordan,row,row,0
+2025,Kenya,India,1.3254246575342466e-9,India,row,row,0
+2025,Rep. of Korea,Algeria,0.03651623507098631,Algeria,row,korea,0
+2025,Rep. of Korea,Argentina,3.263356164383562e-9,Argentina,row,korea,0
+2025,Rep. of Korea,Australia,0.0559412135111315,Australia,row,korea,0
+2025,Rep. of Korea,Bahrain,8.555013698630136e-10,Bahrain,othergulf,korea,0
+2025,Rep. of Korea,Brazil,0.08677259117745753,Brazil,brazil,korea,0
+2025,Rep. of Korea,Canada,0.013332729548054792,Canada,canada,korea,0
+2025,Rep. of Korea,China,3.074583561643836e-9,China,row,korea,0
+2025,Rep. of Korea,Colombia,3.5545479452054793e-9,Colombia,row,korea,0
+2025,Rep. of Korea,Congo,1.4057534246575343e-9,Congo,row,korea,0
+2025,Rep. of Korea,Dem. Rep. of the Congo,0.00517469063569863,Dem. Rep. of the Congo,row,korea,0
+2025,Rep. of Korea,Ecuador,0.0019510735140547944,Ecuador,row,korea,0
+2025,Rep. of Korea,Equatorial Guinea,0.005920078255369863,Equatorial Guinea,row,korea,0
+2025,Rep. of Korea,France,7.510739726027398e-10,France,row,korea,0
+2025,Rep. of Korea,Gabon,0.0026045547621369866,Gabon,row,korea,0
+2025,Rep. of Korea,Guyana,8.263101368767124e-4,Guyana,row,korea,0
+2025,Rep. of Korea,"China, Hong Kong SAR",2.3335506849315067e-9,"China, Hong Kong SAR",row,korea,0
+2025,Rep. of Korea,Indonesia,0.004378102042246575,Indonesia,row,korea,0
+2025,Rep. of Korea,Iraq,0.3112596486782192,Iraq,iraq,korea,0
+2025,Rep. of Korea,Kazakhstan,0.03885143432312329,Kazakhstan,row,korea,0.82
+2025,Rep. of Korea,Kuwait,0.2395957954821387,Kuwait,kuwait,korea,0
+2025,Rep. of Korea,Malaysia,0.012333943005013698,Malaysia,row,korea,0
+2025,Rep. of Korea,Mexico,0.07416662987629405,Mexico,row,korea,0
+2025,Rep. of Korea,Mozambique,0.0012057544750684933,Mozambique,row,korea,0
+2025,Rep. of Korea,Oman,0.012165050948767124,Oman,othergulf,korea,0
+2025,Rep. of Korea,New Zealand,0.0052277987951506845,New Zealand,row,korea,0
+2025,Rep. of Korea,Nigeria,0.004695158541397261,Nigeria,row,korea,0
+2025,Rep. of Korea,Norway,0.01199667721389041,Norway,row,korea,0
+2025,Rep. of Korea,Papua New Guinea,0.007940217579863015,Papua New Guinea,row,korea,0
+2025,Rep. of Korea,Philippines,3.3296694895342465e-4,Philippines,row,korea,0
+2025,Rep. of Korea,Qatar,0.10986922044791782,Qatar,othergulf,korea,0
+2025,Rep. of Korea,Saudi Arabia,0.9465127955427863,Saudi Arabia,saudi,korea,0
+2025,Rep. of Korea,Singapore,1.98813698630137e-9,Singapore,row,korea,0
+2025,Rep. of Korea,United Arab Emirates,0.3083345230775507,United Arab Emirates,uae,korea,0
+2025,Rep. of Korea,United Kingdom,0.005224007397835616,United Kingdom,row,korea,0
+2025,Rep. of Korea,USA,0.4481825157654808,USA,usa,korea,0
+2025,Kyrgyzstan,Kazakhstan,5.304851534246576e-4,Kazakhstan,row,row,0.82
+2025,Latvia,Estonia,6.024657534246576e-11,Estonia,row,europe,0
+2025,Latvia,Netherlands,9.237808219178081e-10,Netherlands,row,europe,0
+2025,Latvia,Poland,3.6951232876712326e-9,Poland,row,europe,0
+2025,Latvia,India,2.6769561643835617e-5,India,row,europe,0
+2025,Liberia,China,4.418082191780822e-9,China,row,row,0
+2025,Liberia,United Arab Emirates,2.1790784657534245e-6,United Arab Emirates,uae,row,0
+2025,Lithuania,Algeria,0.016097366810958903,Algeria,row,europe,0
+2025,Lithuania,Germany,2.008219178082192e-11,Germany,row,europe,0
+2025,Lithuania,Latvia,1.504594558630137e-4,Latvia,row,europe,0
+2025,Lithuania,Norway,0.057500576602739724,Norway,row,europe,0
+2025,Lithuania,Saudi Arabia,0.08903596367123288,Saudi Arabia,saudi,europe,0
+2025,Lithuania,United Kingdom,0.026514710597260276,United Kingdom,row,europe,0
+2025,Lithuania,USA,0.0019021731561643833,USA,usa,europe,0
+2025,Luxembourg,Belgium,2.5693156164383563e-7,Belgium,row,europe,0
+2025,Luxembourg,Germany,2.701054794520548e-9,Germany,row,europe,0
+2025,Luxembourg,Italy,4.418082191780822e-10,Italy,row,europe,0
+2025,Luxembourg,Netherlands,4.096767123287671e-9,Netherlands,row,europe,0
+2025,Luxembourg,"Areas, nes",3.012328767123288e-11,"Areas, nes",row,europe,0
+2025,Malawi,China,5.1008767123287676e-8,China,row,row,0
+2025,Malawi,Mozambique,1.0041095890410959e-7,Mozambique,row,row,0
+2025,Malawi,India,1.204931506849315e-8,India,row,row,0
+2025,Malawi,South Africa,8.876328767123288e-9,South Africa,row,row,0
+2025,Malawi,United Arab Emirates,4.016438356164383e-8,United Arab Emirates,uae,row,0
+2025,Malaysia,Angola,0.006410114822054795,Angola,row,otherasia,0
+2025,Malaysia,Argentina,0.00298606957430137,Argentina,row,otherasia,0
+2025,Malaysia,Australia,0.0012336748063471233,Australia,row,otherasia,0
+2025,Malaysia,Brazil,0.008854139929125206,Brazil,brazil,otherasia,0
+2025,Malaysia,Brunei Darussalam,0.0032664490829863017,Brunei Darussalam,row,otherasia,0
+2025,Malaysia,Cameroon,0.019274185336739726,Cameroon,row,otherasia,0
+2025,Malaysia,Congo,0.010310925540958906,Congo,row,otherasia,0
+2025,Malaysia,Gabon,0.00572000889781726,Gabon,row,otherasia,0
+2025,Malaysia,Ghana,0.002415775411780822,Ghana,row,otherasia,0
+2025,Malaysia,Indonesia,0.002807998691232877,Indonesia,row,otherasia,0
+2025,Malaysia,Iraq,0.012279451422931784,Iraq,iraq,otherasia,0
+2025,Malaysia,Kuwait,0.015090481099890413,Kuwait,kuwait,otherasia,0
+2025,Malaysia,Libya,0.0072566683500641105,Libya,row,otherasia,0
+2025,Malaysia,Mozambique,6.131573717534246e-4,Mozambique,row,otherasia,0
+2025,Malaysia,Oman,0.04332931674325122,Oman,othergulf,otherasia,0
+2025,Malaysia,Nigeria,0.002236752693068493,Nigeria,row,otherasia,0
+2025,Malaysia,Qatar,0.0014175617534246576,Qatar,othergulf,otherasia,0
+2025,Malaysia,Saudi Arabia,0.1534612347942109,Saudi Arabia,saudi,otherasia,0
+2025,Malaysia,Viet Nam,1.004109589041096e-9,Viet Nam,row,otherasia,0
+2025,Malaysia,Sudan,0.03843822690041095,Sudan,row,otherasia,0
+2025,Malaysia,Thailand,0.008120246496712329,Thailand,row,otherasia,0
+2025,Malaysia,United Arab Emirates,0.09320068839491068,United Arab Emirates,uae,otherasia,0
+2025,Malaysia,United Kingdom,1.8796931506849314e-10,United Kingdom,row,otherasia,0
+2025,Malaysia,USA,0.021056360842186303,USA,usa,otherasia,0
+2025,Malta,Canada,6.024657534246576e-11,Canada,canada,europe,0
+2025,Malta,Iraq,1.6065753424657536e-10,Iraq,iraq,europe,0
+2025,Malta,Libya,2.008219178082192e-11,Libya,row,europe,0
+2025,Malta,United Kingdom,4.016438356164384e-11,United Kingdom,row,europe,0
+2025,Malta,USA,4.016438356164384e-11,USA,usa,europe,0
+2025,Mauritania,Spain,1.2049515890410959e-6,Spain,row,row,0
+2025,Rep. of Moldova,Bulgaria,9.626800273972601e-7,Bulgaria,row,row,0
+2025,Rep. of Moldova,France,7.1090958904109585e-9,France,row,row,0
+2025,Mozambique,China,2.008219178082192e-11,China,row,row,0
+2025,Mozambique,Italy,4.016438356164384e-10,Italy,row,row,0
+2025,Mozambique,Portugal,1.204931506849315e-8,Portugal,row,row,0
+2025,Mozambique,South Africa,3.889960712328767e-6,South Africa,row,row,0
+2025,Oman,China,4.8799444876712335e-8,China,row,mideast,0
+2025,Oman,Iraq,0.008879499785369862,Iraq,iraq,mideast,0
+2025,Oman,Kuwait,0.1235868524931507,Kuwait,kuwait,mideast,0
+2025,Oman,Qatar,0.0041661704350410955,Qatar,othergulf,mideast,0
+2025,Oman,Saudi Arabia,0.002503949507264274,Saudi Arabia,saudi,mideast,0
+2025,Oman,Senegal,0.0027490358699999995,Senegal,row,mideast,0
+2025,Oman,India,8.75985205479452e-8,India,row,mideast,0
+2025,Oman,United Arab Emirates,0.002097876524931507,United Arab Emirates,uae,mideast,0
+2025,Oman,Egypt,0.0012612218904109588,Egypt,row,mideast,0
+2025,Oman,United Kingdom,4.191536994520547e-8,United Kingdom,row,mideast,0
+2025,Namibia,Norway,1.5538595890410958e-8,Norway,row,row,0
+2025,Namibia,Panama,1.004109589041096e-10,Panama,row,row,0
+2025,Namibia,South Africa,1.4723576403561642e-6,South Africa,row,row,0
+2025,Namibia,United Kingdom,8.075049315068494e-10,United Kingdom,row,row,0
+2025,Netherlands,Algeria,0.016831872031479456,Algeria,row,europe,0
+2025,Netherlands,Angola,0.023795253446136987,Angola,row,europe,0
+2025,Netherlands,Azerbaijan,0.00794090700150685,Azerbaijan,row,europe,0
+2025,Netherlands,Argentina,0.006633452973616439,Argentina,row,europe,0
+2025,Netherlands,Australia,2.0885479452054796e-8,Australia,row,europe,0
+2025,Netherlands,Austria,6.024657534246575e-10,Austria,row,europe,0
+2025,Netherlands,Bahamas,5.7097185616438356e-5,Bahamas,row,europe,0
+2025,Netherlands,Belgium,0.01787465978131507,Belgium,row,europe,0
+2025,Netherlands,Bulgaria,2.40986301369863e-9,Bulgaria,row,europe,0
+2025,Netherlands,Cameroon,0.015126998095534246,Cameroon,row,europe,0
+2025,Netherlands,Chad,0.028925401800547947,Chad,row,europe,0
+2025,Netherlands,Chile,4.953724050410958e-4,Chile,row,europe,0
+2025,Netherlands,Cyprus,3.7152054794520546e-9,Cyprus,row,europe,0
+2025,Netherlands,Czechia,4.016438356164384e-10,Czechia,row,europe,0
+2025,Netherlands,Denmark,0.0028731727536438355,Denmark,row,europe,0
+2025,Netherlands,Ecuador,6.627123287671233e-10,Ecuador,row,europe,0
+2025,Netherlands,Equatorial Guinea,0.0010292324109589042,Equatorial Guinea,row,europe,0
+2025,Netherlands,Finland,8.032876712328768e-10,Finland,row,europe,0
+2025,Netherlands,France,2.2098443835616435e-7,France,row,europe,0
+2025,Netherlands,Gabon,0.003519356354136986,Gabon,row,europe,0
+2025,Netherlands,Germany,1.1010635994520548e-4,Germany,row,europe,0
+2025,Netherlands,Ghana,0.0033146107375342463,Ghana,row,europe,0
+2025,Netherlands,Gibraltar,4.016438356164384e-11,Gibraltar,row,europe,0
+2025,Netherlands,Guinea,7.898390692054795e-4,Guinea,row,europe,0
+2025,Netherlands,Guyana,0.07758445528767123,Guyana,row,europe,0
+2025,Netherlands,"China, Hong Kong SAR",9.016904109589041e-9,"China, Hong Kong SAR",row,europe,0
+2025,Netherlands,Hungary,1.4700164383561644e-8,Hungary,row,europe,0
+2025,Netherlands,Iraq,0.12393096309852054,Iraq,iraq,europe,0
+2025,Netherlands,Ireland,8.173452054794522e-9,Ireland,row,europe,0
+2025,Netherlands,Israel,0.011081164350821916,Israel,row,europe,0
+2025,Netherlands,Côte d'Ivoire,0.008227522994684933,Côte d'Ivoire,row,europe,0
+2025,Netherlands,Kazakhstan,0.2275760764109589,Kazakhstan,row,europe,0.82
+2025,Netherlands,Latvia,1.8274794520547946e-9,Latvia,row,europe,0
+2025,Netherlands,Libya,0.0344059331919452,Libya,row,europe,0
+2025,Netherlands,Lithuania,7.189424657534246e-9,Lithuania,row,europe,0
+2025,Netherlands,Luxembourg,3.072575342465754e-9,Luxembourg,row,europe,0
+2025,Netherlands,Malaysia,4.5184931506849315e-9,Malaysia,row,europe,0
+2025,Netherlands,Mauritania,8.983063407397261e-4,Mauritania,row,europe,0
+2025,Netherlands,Mexico,0.014238876438356165,Mexico,row,europe,0
+2025,Netherlands,Oman,3.87586301369863e-9,Oman,othergulf,europe,0
+2025,Netherlands,Niger,0.02822953698630137,Niger,row,europe,0
+2025,Netherlands,Nigeria,0.062268786566767126,Nigeria,row,europe,0
+2025,Netherlands,"Other Europe, nes",0.0036829168294520544,"Other Europe, nes",row,europe,0
+2025,Netherlands,Norway,0.18388927687284928,Norway,row,europe,0
+2025,Netherlands,Portugal,1.2250136986301368e-9,Portugal,row,europe,0
+2025,Netherlands,Qatar,4.905476986301371e-7,Qatar,othergulf,europe,0
+2025,Netherlands,Romania,3.6147945205479447e-9,Romania,row,europe,0
+2025,Netherlands,Saudi Arabia,0.017064179753424658,Saudi Arabia,saudi,europe,0
+2025,Netherlands,Senegal,0.03864017368202739,Senegal,row,europe,0
+2025,Netherlands,Slovakia,8.615260273972603e-9,Slovakia,row,europe,0
+2025,Netherlands,Slovenia,7.43041095890411e-10,Slovenia,row,europe,0
+2025,Netherlands,Spain,3.8885348767123285e-6,Spain,row,europe,0
+2025,Netherlands,Sweden,1.4198109589041095e-8,Sweden,row,europe,0
+2025,Netherlands,Thailand,4.406032876712329e-8,Thailand,row,europe,0
+2025,Netherlands,Togo,4.016438356164384e-11,Togo,row,europe,0
+2025,Netherlands,United Arab Emirates,5.998040597260274e-4,United Arab Emirates,uae,europe,0
+2025,Netherlands,Tunisia,0.0012127273132876712,Tunisia,row,europe,0
+2025,Netherlands,Türkiye,5.225386301369863e-8,Türkiye,row,europe,0
+2025,Netherlands,Egypt,5.571257070684932e-4,Egypt,row,europe,0
+2025,Netherlands,United Kingdom,0.11793616696008219,United Kingdom,row,europe,0
+2025,Netherlands,USA,0.33479710983997263,USA,usa,europe,0
+2025,Netherlands,"Areas, nes",1.2732567463013698e-4,"Areas, nes",row,europe,0
+2025,New Zealand,Australia,1.006017397260274e-9,Australia,row,otherasia,0
+2025,New Zealand,China,1.8073972602739726e-7,China,row,otherasia,0
+2025,New Zealand,Germany,6.500103424657533e-9,Germany,row,otherasia,0
+2025,New Zealand,India,4.016438356164383e-8,India,row,otherasia,0
+2025,New Zealand,USA,3.542498630136986e-11,USA,usa,otherasia,0
+2025,Nicaragua,USA,0.016840598725827396,USA,usa,row,0
+2025,Niger,Nigeria,2.008219178082192e-9,Nigeria,row,row,0
+2025,Norway,Libya,0.003257584120739726,Libya,row,row,0
+2025,Norway,Nigeria,0.0017725546575342464,Nigeria,row,row,0
+2025,Norway,United Kingdom,0.001226359205479452,United Kingdom,row,row,0
+2025,Norway,USA,0.024580880355945203,USA,usa,row,0
+2025,Pakistan,Kuwait,0.001575508191780822,Kuwait,kuwait,row,0
+2025,Pakistan,Saudi Arabia,0.10605783024657534,Saudi Arabia,saudi,row,0
+2025,Pakistan,United Arab Emirates,0.11511210731506849,United Arab Emirates,uae,row,0
+2025,Paraguay,China,1.4011345205479454e-7,China,row,row,0
+2025,Paraguay,Spain,8.233698630136985e-9,Spain,row,row,0
+2025,Peru,Argentina,0.0019586260046575345,Argentina,row,row,0
+2025,Peru,Brazil,0.01557845375947945,Brazil,brazil,row,0
+2025,Peru,Colombia,0.004966593796916164,Colombia,row,row,0
+2025,Peru,Ecuador,0.031664839146,Ecuador,row,row,0
+2025,Peru,France,1.4075206575342464e-8,France,row,row,0
+2025,Peru,Guyana,0.002086110790493151,Guyana,row,row,0
+2025,Peru,Nigeria,0.02161349330490411,Nigeria,row,row,0
+2025,Peru,Sweden,5.37580191780822e-8,Sweden,row,row,0
+2025,Peru,Trinidad and Tobago,0.012814534294356167,Trinidad and Tobago,row,row,0
+2025,Peru,USA,0.0386065157779863,USA,usa,row,0
+2025,Philippines,Brazil,0.0013462531437260276,Brazil,brazil,otherasia,0
+2025,Philippines,Brunei Darussalam,8.291334520547945e-4,Brunei Darussalam,row,otherasia,0
+2025,Philippines,Iraq,0.02368029665449315,Iraq,iraq,otherasia,0
+2025,Philippines,Kuwait,0.005849199424657534,Kuwait,kuwait,otherasia,0
+2025,Philippines,Malaysia,0.0016960848442191781,Malaysia,row,otherasia,0
+2025,Philippines,Oman,0.004154377509315069,Oman,othergulf,otherasia,0
+2025,Philippines,Qatar,0.0013680591506849316,Qatar,othergulf,otherasia,0
+2025,Philippines,Saudi Arabia,0.0682409818049315,Saudi Arabia,saudi,otherasia,0
+2025,Philippines,United Arab Emirates,0.05187838539035616,United Arab Emirates,uae,otherasia,0
+2025,Poland,Algeria,0.0061286937304109584,Algeria,row,europe,0
+2025,Poland,Brazil,0.0026905176885753425,Brazil,brazil,europe,0
+2025,Poland,Canada,2.209041095890411e-10,Canada,canada,europe,0
+2025,Poland,Czechia,1.2049315068493152e-7,Czechia,row,europe,0
+2025,Poland,Guyana,0.04085690685983562,Guyana,row,europe,0
+2025,Poland,Nigeria,0.018160005033643838,Nigeria,row,europe,0
+2025,Poland,Norway,0.16546924747945205,Norway,row,europe,0
+2025,Poland,Saudi Arabia,0.24175099251441098,Saudi Arabia,saudi,europe,0
+2025,Poland,Senegal,5.02054794520548e-10,Senegal,row,europe,0
+2025,Poland,United Kingdom,0.020614051600438357,United Kingdom,row,europe,0
+2025,Poland,USA,0.015046020211726028,USA,usa,europe,0
+2025,Portugal,Algeria,0.031145037678438358,Algeria,row,europe,0
+2025,Portugal,Angola,0.007769061336821917,Angola,row,europe,0
+2025,Portugal,Azerbaijan,0.014570032564027398,Azerbaijan,row,europe,0
+2025,Portugal,Brazil,0.0715641147820274,Brazil,brazil,europe,0
+2025,Portugal,Dem. Rep. of the Congo,0.0024745212248493153,Dem. Rep. of the Congo,row,europe,0
+2025,Portugal,Gabon,0.0017660097909041096,Gabon,row,europe,0
+2025,Portugal,Ghana,0.005071807739726028,Ghana,row,europe,0
+2025,Portugal,Italy,1.5764520547945205e-7,Italy,row,europe,0
+2025,Portugal,Nigeria,0.01884184430457534,Nigeria,row,europe,0
+2025,Portugal,Spain,7.785865753424657e-8,Spain,row,europe,0
+2025,Portugal,USA,0.011442234708547945,USA,usa,europe,0
+2025,Romania,Azerbaijan,0.028580387074821915,Azerbaijan,row,europe,0
+2025,Romania,Guyana,0.00886663390830137,Guyana,row,europe,0
+2025,Romania,Indonesia,1.004109589041096e-10,Indonesia,row,europe,0
+2025,Romania,Côte d'Ivoire,0.004118604739616439,Côte d'Ivoire,row,europe,0
+2025,Romania,Kazakhstan,0.11011176129167126,Kazakhstan,row,europe,0.82
+2025,Romania,Libya,0.01591454552558904,Libya,row,europe,0
+2025,Romania,Rep. of Moldova,1.001498904109589e-6,Rep. of Moldova,row,europe,0
+2025,Romania,Norway,0.008338035436630135,Norway,row,europe,0
+2025,Romania,Saudi Arabia,8.016616964931508e-4,Saudi Arabia,saudi,europe,0
+2025,Romania,Türkiye,0.0017685381589315071,Türkiye,row,europe,0
+2025,Romania,Ukraine,5.008047383287671e-4,Ukraine,row,europe,0
+2025,Romania,"Areas, nes",5.076778082191782e-9,"Areas, nes",row,europe,0
+2025,Rwanda,China,9.61133698630137e-7,China,row,row,0
+2025,Rwanda,Kenya,6.627123287671233e-8,Kenya,row,row,0
+2025,Rwanda,South Africa,2.008219178082192e-10,South Africa,row,row,0
+2025,Rwanda,United Arab Emirates,6.627123287671233e-8,United Arab Emirates,uae,row,0
+2025,Senegal,Nicaragua,0.007708392332575343,Nicaragua,row,row,0
+2025,Senegal,Nigeria,0.020825751398904108,Nigeria,row,row,0
+2025,Serbia,Azerbaijan,0.003638771071041096,Azerbaijan,row,row,0
+2025,Serbia,Guyana,0.00280447525060274,Guyana,row,row,0
+2025,Serbia,Hungary,1.0382069416438357e-4,Hungary,row,row,0
+2025,Serbia,Iraq,0.004736675299917808,Iraq,iraq,row,0
+2025,Serbia,Kazakhstan,0.02838904963479452,Kazakhstan,row,row,0.82
+2025,Serbia,Libya,0.0017582206718356162,Libya,row,row,0
+2025,Serbia,Netherlands,6.024657534246576e-11,Netherlands,row,row,0
+2025,Serbia,Nigeria,0.0029709886113972604,Nigeria,row,row,0
+2025,Serbia,Romania,2.4985433619178083e-4,Romania,row,row,0
+2025,Serbia,Tunisia,2.008219178082192e-10,Tunisia,row,row,0
+2025,Serbia,USA,1.445917808219178e-9,USA,usa,row,0
+2025,Serbia,"Areas, nes",1.5952690684931504e-6,"Areas, nes",row,row,0
+2025,Seychelles,United Arab Emirates,1.004109589041096e-9,United Arab Emirates,uae,row,0
+2025,India,Algeria,0.007980602767123288,Algeria,row,india,0
+2025,India,Angola,0.11172912157441096,Angola,row,india,0
+2025,India,Azerbaijan,0.009155554011671233,Azerbaijan,row,india,0
+2025,India,Argentina,0.0019013819178082191,Argentina,row,india,0
+2025,India,Brazil,0.07035240083621919,Brazil,brazil,india,0
+2025,India,Brunei Darussalam,0.007472844630136987,Brunei Darussalam,row,india,0
+2025,India,Cameroon,7.121446438356164e-4,Cameroon,row,india,0
+2025,India,Canada,0.08531100676142465,Canada,canada,india,0
+2025,India,Central African Rep.,0.004295098849315069,Central African Rep.,row,india,0
+2025,India,Colombia,0.06805697364194521,Colombia,row,india,0
+2025,India,Congo,0.020128532964602742,Congo,row,india,0
+2025,India,Dem. Rep. of the Congo,0.0038609358000547944,Dem. Rep. of the Congo,row,india,0
+2025,India,Gabon,0.008336423057534246,Gabon,row,india,0
+2025,India,Ghana,0.010082323826849315,Ghana,row,india,0
+2025,India,Guinea,5.970917589041096e-4,Guinea,row,india,0
+2025,India,Hungary,6.024657534246576e-11,Hungary,row,india,0
+2025,India,Iran,0.004169083095890411,Iran,iran,india,0
+2025,India,Iraq,1.0068133079994248,Iraq,iraq,india,0
+2025,India,Israel,4.418082191780822e-8,Israel,row,india,0
+2025,India,Kazakhstan,0.005214039863013699,Kazakhstan,row,india,0.82
+2025,India,Kuwait,0.1651290852739726,Kuwait,kuwait,india,0
+2025,India,Libya,0.019124130657534245,Libya,row,india,0
+2025,India,Malaysia,0.014129446567123288,Malaysia,row,india,0
+2025,India,Mexico,0.02753879164487671,Mexico,row,india,0
+2025,India,Oman,0.01602205102079452,Oman,othergulf,india,0
+2025,India,Netherlands,1.1848493150684929e-9,Netherlands,row,india,0
+2025,India,Nigeria,0.15039897081164383,Nigeria,row,india,0
+2025,India,Panama,0.0057833900821917805,Panama,row,india,0
+2025,India,Qatar,0.055785778328767126,Qatar,othergulf,india,0
+2025,India,Russian Federation,1.7817557988843837,Russian Federation,russia,india,0
+2025,India,Saudi Arabia,0.7401963141345754,Saudi Arabia,saudi,india,0
+2025,India,Senegal,6.024657534246575e-10,Senegal,row,india,0
+2025,India,Singapore,0.0027795627093150682,Singapore,row,india,0
+2025,India,South Sudan,0.0015997393643835617,South Sudan,row,india,0
+2025,India,Switzerland,0.0035339898054794518,Switzerland,row,india,0
+2025,India,Togo,0.005409620328767123,Togo,row,india,0
+2025,India,United Arab Emirates,0.5352916802106028,United Arab Emirates,uae,india,0
+2025,India,Türkiye,0.0026389807397260274,Türkiye,row,india,0
+2025,India,Egypt,0.020542358697917807,Egypt,row,india,0
+2025,India,USA,0.27073524752758904,USA,usa,india,0
+2025,India,Uruguay,0.005541292211424657,Uruguay,row,india,0
+2025,India,Venezuela,0.03104425698630137,Venezuela,row,india,0
+2025,Singapore,Angola,0.004757387891780822,Angola,row,otherasia,0
+2025,Singapore,Argentina,6.024657534246575e-10,Argentina,row,otherasia,0
+2025,Singapore,Australia,0.035080172658630136,Australia,row,otherasia,0
+2025,Singapore,Brazil,0.04455932685123287,Brazil,brazil,otherasia,0
+2025,Singapore,Brunei Darussalam,0.008794743256438356,Brunei Darussalam,row,otherasia,0
+2025,Singapore,Canada,0.0032157675953424654,Canada,canada,otherasia,0
+2025,Singapore,China,5.821967972602741e-4,China,row,otherasia,0
+2025,Singapore,Congo,4.907997301369863e-4,Congo,row,otherasia,0
+2025,Singapore,Finland,1.5682183561643837e-9,Finland,row,otherasia,0
+2025,Singapore,Germany,2.4035170410958907e-9,Germany,row,otherasia,0
+2025,Singapore,Ghana,0.002529821576438356,Ghana,row,otherasia,0
+2025,Singapore,"China, Hong Kong SAR",2.008219178082192e-10,"China, Hong Kong SAR",row,otherasia,0
+2025,Singapore,Indonesia,0.001088331088219178,Indonesia,row,otherasia,0
+2025,Singapore,Iraq,0.07914988282164383,Iraq,iraq,otherasia,0
+2025,Singapore,Israel,0,Israel,row,otherasia,0
+2025,Singapore,Italy,4.016438356164384e-10,Italy,row,otherasia,0
+2025,Singapore,Japan,4.177095890410959e-7,Japan,row,otherasia,0
+2025,Singapore,Kazakhstan,0.003951137093150685,Kazakhstan,row,otherasia,0.82
+2025,Singapore,Rep. of Korea,2.008219178082192e-10,Rep. of Korea,row,otherasia,0
+2025,Singapore,Kuwait,0.004792641777808219,Kuwait,kuwait,otherasia,0
+2025,Singapore,Libya,7.305373208219179e-4,Libya,row,otherasia,0
+2025,Singapore,Malaysia,0.018061429466575345,Malaysia,row,otherasia,0
+2025,Singapore,Oman,0.021343886807671235,Oman,othergulf,otherasia,0
+2025,Singapore,Netherlands,5.218359542465753e-4,Netherlands,row,otherasia,0
+2025,Singapore,New Zealand,4.016438356164384e-10,New Zealand,row,otherasia,0
+2025,Singapore,Niger,9.640733298630137e-4,Niger,row,otherasia,0
+2025,Singapore,Nigeria,0.003461614590410959,Nigeria,row,otherasia,0
+2025,Singapore,Norway,0.0017869835115068493,Norway,row,otherasia,0
+2025,Singapore,Pakistan,8.032876712328768e-10,Pakistan,row,otherasia,0
+2025,Singapore,Papua New Guinea,0.00635574781041096,Papua New Guinea,row,otherasia,0
+2025,Singapore,Philippines,7.575679509589043e-4,Philippines,row,otherasia,0
+2025,Singapore,Qatar,0.1295156679679452,Qatar,othergulf,otherasia,0
+2025,Singapore,Saudi Arabia,0.06517577722931507,Saudi Arabia,saudi,otherasia,0
+2025,Singapore,Viet Nam,2.008219178082192e-10,Viet Nam,row,otherasia,0
+2025,Singapore,Spain,4.016438356164384e-10,Spain,row,otherasia,0
+2025,Singapore,South Sudan,0.00676093173479452,South Sudan,row,otherasia,0
+2025,Singapore,Sudan,0.0017975081865753428,Sudan,row,otherasia,0
+2025,Singapore,Thailand,7.246546443835617e-4,Thailand,row,otherasia,0
+2025,Singapore,United Arab Emirates,0.4004968494665753,United Arab Emirates,uae,otherasia,0
+2025,Singapore,Tunisia,1.8073972602739723e-9,Tunisia,row,otherasia,0
+2025,Singapore,Türkiye,3.404132328767123e-9,Türkiye,row,otherasia,0
+2025,Singapore,Egypt,3.373782112328767e-4,Egypt,row,otherasia,0
+2025,Singapore,United Kingdom,0.00542091977479452,United Kingdom,row,otherasia,0
+2025,Singapore,USA,0.08666696972520548,USA,usa,otherasia,0
+2025,Slovakia,Azerbaijan,0.0037420553698630137,Azerbaijan,row,europe,0
+2025,Slovakia,Czechia,2.811506849315068e-8,Czechia,row,europe,0
+2025,Slovakia,"Other Europe, nes",4.398e-9,"Other Europe, nes",row,europe,0
+2025,Slovakia,Norway,2.177712876712329e-4,Norway,row,europe,0
+2025,Slovakia,Poland,1.004109589041096e-10,Poland,row,europe,0
+2025,Slovakia,Russian Federation,0.10263704978082193,Russian Federation,russia,europe,1
+2025,Slovakia,Saudi Arabia,0.008968064219178083,Saudi Arabia,saudi,europe,0
+2025,Slovakia,Ukraine,0.003492534618958904,Ukraine,row,europe,0
+2025,Slovakia,USA,0,USA,usa,europe,0
+2025,Slovenia,Italy,2.40986301369863e-10,Italy,row,europe,0
+2025,Slovenia,USA,3.0123287671232874e-10,USA,usa,europe,0
+2025,South Africa,Algeria,0.002699650326356165,Algeria,row,row,0
+2025,South Africa,Angola,0.02881487020019178,Angola,row,row,0
+2025,South Africa,Belgium,0.0024140561753424657,Belgium,row,row,0
+2025,South Africa,Brazil,0.008466633277945206,Brazil,brazil,row,0
+2025,South Africa,Ghana,0.003063192942465753,Ghana,row,row,0
+2025,South Africa,Kuwait,0.001050146005479452,Kuwait,kuwait,row,0
+2025,South Africa,Nigeria,0.05170385560016438,Nigeria,row,row,0
+2025,South Africa,Saudi Arabia,0.019651484997260275,Saudi Arabia,saudi,row,0
+2025,South Africa,Zimbabwe,3.4139726027397264e-10,Zimbabwe,row,row,0
+2025,South Africa,United Arab Emirates,0.004108402745205479,United Arab Emirates,uae,row,0
+2025,South Africa,Türkiye,0.0024634141863013703,Türkiye,row,row,0
+2025,South Africa,USA,0.020727384823590683,USA,usa,row,0
+2025,Zimbabwe,China,5.10388904109589e-8,China,row,row,0
+2025,Zimbabwe,South Africa,7.363336438356164e-6,South Africa,row,row,0
+2025,Spain,Albania,0.00793555226580822,Albania,row,europe,0
+2025,Spain,Algeria,0.0770750582430137,Algeria,row,europe,0
+2025,Spain,Angola,0.028551104608438353,Angola,row,europe,0
+2025,Spain,Azerbaijan,0.0016590722,Azerbaijan,row,europe,0
+2025,Spain,Brazil,0.16246103473827397,Brazil,brazil,europe,0
+2025,Spain,Cameroon,0.0015507408246575342,Cameroon,row,europe,0
+2025,Spain,Canada,0.05365703021353424,Canada,canada,europe,0
+2025,Spain,Denmark,8.089106849315069e-7,Denmark,row,europe,0
+2025,Spain,Equatorial Guinea,0.019456917999397257,Equatorial Guinea,row,europe,0
+2025,Spain,France,6.109886356164384e-5,France,row,europe,0
+2025,Spain,Gabon,0.005813091643835617,Gabon,row,europe,0
+2025,Spain,Germany,0,Germany,row,europe,0
+2025,Spain,Ghana,0.002497501698630137,Ghana,row,europe,0
+2025,Spain,Guyana,0.043438127079068495,Guyana,row,europe,0
+2025,Spain,Iraq,0.05616421024334247,Iraq,iraq,europe,0
+2025,Spain,Italy,0.011270985179307946,Italy,row,europe,0
+2025,Spain,Côte d'Ivoire,0,Côte d'Ivoire,row,europe,0
+2025,Spain,Kazakhstan,0.049438122978931506,Kazakhstan,row,europe,0.82
+2025,Spain,Libya,0.09167224446068493,Libya,row,europe,0
+2025,Spain,Malta,1.004258197260274e-4,Malta,row,europe,0
+2025,Spain,Mexico,0.14784603101767124,Mexico,row,europe,0
+2025,Spain,Netherlands,5.444009073972602e-4,Netherlands,row,europe,0
+2025,Spain,Nigeria,0,Nigeria,row,europe,0
+2025,Spain,Norway,0.010105175352876713,Norway,row,europe,0
+2025,Spain,Peru,6.024657534246575e-10,Peru,row,europe,0
+2025,Spain,Romania,5.008398219178082e-5,Romania,row,europe,0
+2025,Spain,Saudi Arabia,0.07244949841309589,Saudi Arabia,saudi,europe,0
+2025,Spain,Senegal,0.01606960916531507,Senegal,row,europe,0
+2025,Spain,Trinidad and Tobago,0,Trinidad and Tobago,row,europe,0
+2025,Spain,Tunisia,9.153304364383562e-4,Tunisia,row,europe,0
+2025,Spain,Türkiye,3.0123287671232874e-10,Türkiye,row,europe,0
+2025,Spain,Egypt,0.0014296007060821917,Egypt,row,europe,0
+2025,Spain,United Kingdom,0.013191894462520547,United Kingdom,row,europe,0
+2025,Spain,USA,0.19709622365885943,USA,usa,europe,0
+2025,Spain,Uruguay,0.005478804342986301,Uruguay,row,europe,0
+2025,Spain,Venezuela,0.01439440096438356,Venezuela,row,europe,0
+2025,South Sudan,Kenya,1.5262465753424657e-9,Kenya,row,row,0
+2025,South Sudan,Uganda,0,Uganda,row,row,0
+2025,Sweden,Angola,5.83026191780822e-4,Angola,row,europe,0
+2025,Sweden,Barbados,3.853993506849315e-9,Barbados,row,europe,0
+2025,Sweden,Belgium,2.0082191780821916e-8,Belgium,row,europe,0
+2025,Sweden,Brazil,0.0013029727671232878,Brazil,brazil,europe,0
+2025,Sweden,Denmark,0.014445502109589042,Denmark,row,europe,0
+2025,Sweden,France,1.6946913810958906e-7,France,row,europe,0
+2025,Sweden,Guyana,0.032413902630136986,Guyana,row,europe,0
+2025,Sweden,Libya,0.00492917397260274,Libya,row,europe,0
+2025,Sweden,Nigeria,0.01092388895890411,Nigeria,row,europe,0
+2025,Sweden,Norway,0.175462009225735,Norway,row,europe,0
+2025,Sweden,United Kingdom,0.03825541426683088,United Kingdom,row,europe,0
+2025,Sweden,USA,0.04787186199528153,USA,usa,europe,0
+2025,Switzerland,Algeria,0.0015250617260273974,Algeria,row,row,0
+2025,Switzerland,Azerbaijan,0.0017166056712328765,Azerbaijan,row,row,0
+2025,Switzerland,Israel,0.0011479181643835616,Israel,row,row,0
+2025,Switzerland,Kazakhstan,0.003087516493150685,Kazakhstan,row,row,0.82
+2025,Switzerland,Libya,0.001565467095890411,Libya,row,row,0
+2025,Switzerland,Nigeria,0.0216841281369863,Nigeria,row,row,0
+2025,Switzerland,USA,0.030600520876712327,USA,usa,row,0
+2025,Thailand,Angola,0.00425603898630137,Angola,row,otherasia,0
+2025,Thailand,Azerbaijan,0.0027693744109589043,Azerbaijan,row,otherasia,0
+2025,Thailand,Argentina,5.02054794520548e-10,Argentina,row,otherasia,0
+2025,Thailand,Australia,0.009817300025534246,Australia,row,otherasia,0
+2025,Thailand,Belgium,1.5061643835616438e-9,Belgium,row,otherasia,0
+2025,Thailand,Brazil,0.0175401678630137,Brazil,brazil,otherasia,0
+2025,Thailand,Brunei Darussalam,0.017228381935095887,Brunei Darussalam,row,otherasia,0
+2025,Thailand,Congo,0.01140497794520548,Congo,row,otherasia,0
+2025,Thailand,Gabon,0.005920732191780822,Gabon,row,otherasia,0
+2025,Thailand,Indonesia,0.8691787900704657,Indonesia,row,otherasia,0
+2025,Thailand,Iraq,3.494301369863014e-8,Iraq,iraq,otherasia,0
+2025,Thailand,Kazakhstan,0.0013004223287671234,Kazakhstan,row,otherasia,0.82
+2025,Thailand,Kuwait,0.003937254273972603,Kuwait,kuwait,otherasia,0
+2025,Thailand,Libya,0.015811974767123288,Libya,row,otherasia,0
+2025,Thailand,Malaysia,0.05026845993665754,Malaysia,row,otherasia,0
+2025,Thailand,Oman,6.987158830136985e-4,Oman,othergulf,otherasia,0
+2025,Thailand,New Zealand,0.0014607384657534248,New Zealand,row,otherasia,0
+2025,Thailand,Niger,0.001698170219178082,Niger,row,otherasia,0
+2025,Thailand,Nigeria,0.018375285808219177,Nigeria,row,otherasia,0
+2025,Thailand,Norway,4.016438356164384e-11,Norway,row,otherasia,0
+2025,Thailand,Pakistan,0.003842727397260274,Pakistan,row,otherasia,0
+2025,Thailand,Papua New Guinea,0.0015812516986301371,Papua New Guinea,row,otherasia,0
+2025,Thailand,Philippines,3.5599701369863016e-4,Philippines,row,otherasia,0
+2025,Thailand,Timor-Leste,9.660939999999999e-4,Timor-Leste,row,otherasia,0
+2025,Thailand,Qatar,0.03428751087671233,Qatar,othergulf,otherasia,0
+2025,Thailand,Saudi Arabia,0.11914840695890411,Saudi Arabia,saudi,otherasia,0
+2025,Thailand,Viet Nam,0.01368482884931507,Viet Nam,row,otherasia,0
+2025,Thailand,South Sudan,8.28972794520548e-4,South Sudan,row,otherasia,0
+2025,Thailand,Sudan,8.603411780821918e-4,Sudan,row,otherasia,0
+2025,Thailand,United Arab Emirates,0.398876891150685,United Arab Emirates,uae,otherasia,0
+2025,Thailand,USA,0.13404780311216438,USA,usa,otherasia,0
+2025,Togo,USA,5.321981643835617e-6,USA,usa,row,0
+2025,Tonga,New Zealand,1.068018754520548e-7,New Zealand,row,row,0
+2025,Trinidad and Tobago,Jamaica,2.6106849315068494e-10,Jamaica,row,row,0
+2025,Trinidad and Tobago,USA,0,USA,usa,row,0
+2025,Uganda,Singapore,0,Singapore,row,row,0
+2025,Uganda,United Arab Emirates,1.4097698630136986e-7,United Arab Emirates,uae,row,0
+2025,Uganda,United Kingdom,0,United Kingdom,row,row,0
+2025,Uganda,USA,0,USA,usa,row,0
+2025,Egypt,Kuwait,4.8764324790295896e-4,Kuwait,kuwait,row,0
+2025,Egypt,Saudi Arabia,0.04860784225525849,Saudi Arabia,saudi,row,0
+2025,Egypt,USA,0.00564465255088337,USA,usa,row,0
+2025,United Kingdom,Algeria,0.04635262046854794,Algeria,row,europe,0
+2025,United Kingdom,Angola,0.0028488597260273975,Angola,row,europe,0
+2025,United Kingdom,Brazil,0.009394208328767122,Brazil,brazil,europe,0
+2025,United Kingdom,Cameroon,0.003902307886465753,Cameroon,row,europe,0
+2025,United Kingdom,Canada,0.027734852255753426,Canada,canada,europe,0
+2025,United Kingdom,Equatorial Guinea,8.450586301369864e-5,Equatorial Guinea,row,europe,0
+2025,United Kingdom,Gabon,0.001163883506849315,Gabon,row,europe,0
+2025,United Kingdom,Guyana,0.0333660595890411,Guyana,row,europe,0
+2025,United Kingdom,Ireland,5.062318904109589e-6,Ireland,row,europe,0
+2025,United Kingdom,Israel,0,Israel,row,europe,0
+2025,United Kingdom,Côte d'Ivoire,0.009116079230493151,Côte d'Ivoire,row,europe,0
+2025,United Kingdom,Kazakhstan,0.03754285298139726,Kazakhstan,row,europe,0.82
+2025,United Kingdom,Libya,0.09037951288841096,Libya,row,europe,0
+2025,United Kingdom,Netherlands,6.366548013150684e-4,Netherlands,row,europe,0
+2025,United Kingdom,Nigeria,0.03223167682191781,Nigeria,row,europe,0
+2025,United Kingdom,Norway,0.38043934570813703,Norway,row,europe,0
+2025,United Kingdom,Poland,4.9864082191780834e-8,Poland,row,europe,0
+2025,United Kingdom,Türkiye,0.013810262219178082,Türkiye,row,europe,0
+2025,United Kingdom,USA,0.2622647310365479,USA,usa,europe,0
+2025,United Rep. of Tanzania,China,2.0471786301369861e-7,China,row,row,0
+2025,United Rep. of Tanzania,United Arab Emirates,1.3856712328767124e-9,United Arab Emirates,uae,row,0
+2025,USA,Algeria,0.007856774928328765,Algeria,row,usa,0
+2025,USA,Angola,0.03252517042356164,Angola,row,usa,0
+2025,USA,Argentina,0.11558482628482192,Argentina,row,usa,0
+2025,USA,Brazil,0.2280003405060822,Brazil,brazil,usa,0
+2025,USA,Cameroon,0.0030590458292876713,Cameroon,row,usa,0
+2025,USA,Canada,4.549017488120384,Canada,canada,usa,0.887
+2025,USA,China,1.1111878356164385e-6,China,row,usa,0
+2025,USA,Colombia,0.22091728439046573,Colombia,row,usa,0
+2025,USA,Dem. Rep. of the Congo,0.004443863669424658,Dem. Rep. of the Congo,row,usa,0
+2025,USA,Ecuador,0.11754983424936986,Ecuador,row,usa,0
+2025,USA,Gabon,0.01765668849509589,Gabon,row,usa,0
+2025,USA,Germany,1.0085626142465753e-4,Germany,row,usa,0
+2025,USA,Ghana,0.012145781161972602,Ghana,row,usa,0
+2025,USA,Guatemala,0.0014968977373150684,Guatemala,row,usa,0
+2025,USA,Guyana,0.22027190457969864,Guyana,row,usa,0
+2025,USA,Iraq,0.20857487087761645,Iraq,iraq,usa,0
+2025,USA,Côte d'Ivoire,0.001081811605479452,Côte d'Ivoire,row,usa,0
+2025,USA,Kazakhstan,0.0350867553400274,Kazakhstan,row,usa,0.82
+2025,USA,Kuwait,0.017965953144,Kuwait,kuwait,usa,0
+2025,USA,Libya,0.05671122418528767,Libya,row,usa,0
+2025,USA,Mexico,0.4388436183303288,Mexico,row,usa,0
+2025,USA,Nigeria,0.15745151974841096,Nigeria,row,usa,0
+2025,USA,Norway,0.01239447010849315,Norway,row,usa,0
+2025,USA,Peru,0.00232191000230137,Peru,row,usa,0
+2025,USA,Saudi Arabia,0.3101389302159452,Saudi Arabia,saudi,usa,0
+2025,USA,Senegal,0.00308412738230137,Senegal,row,usa,0
+2025,USA,India,4.371310767123288e-6,India,row,usa,0
+2025,USA,Singapore,0.0030138798754520547,Singapore,row,usa,0
+2025,USA,Trinidad and Tobago,0.03950527562482192,Trinidad and Tobago,row,usa,0
+2025,USA,United Arab Emirates,0.031165277676082195,United Arab Emirates,uae,usa,0
+2025,USA,Tunisia,0.002086357339561644,Tunisia,row,usa,0
+2025,USA,United Kingdom,0.05918323395131507,United Kingdom,row,usa,0
+2025,USA,Venezuela,0.1589782247801096,Venezuela,row,usa,0
+2025,Uruguay,Argentina,0.007770892330657533,Argentina,row,row,0
+2025,Uruguay,Nigeria,0.013817483313452058,Nigeria,row,row,0
+2025,Uruguay,USA,0.016522369147534247,USA,usa,row,0
+2025,Samoa,Australia,1.1005041095890414e-10,Australia,row,row,0
