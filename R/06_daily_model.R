@@ -20,14 +20,20 @@ mid_of <- function(m) {
 }
 month_mid <- as.Date(map_dbl(months, mid_of))
 
-# 7-day tanker mean, floored at one vessel so a day of zero AIS calls cannot zero out
-# a flow that other sources report. The floor only limits noise after the closure.
+# 7-day tanker mean plus a small constant. After the closure AIS counts fall to one or
+# two vessels a day and most transits run dark, so one vessel must not double a flow.
+# The constant barely changes the pre-war shape, where counts average near 37 a day.
+signal_damping <- 3
 signal <- hormuz |>
   filter(date %in% dates) |>
   arrange(date) |>
-  mutate(w = pmax(tanker_7d, 1)) |>
+  mutate(w = tanker_7d + signal_damping) |>
   pull(w)
 signal <- signal / mean(signal[prewar])
+# Pre-war counts swing more than barrels do: a 60% rise over the last days of February
+# would overstate the starting point of the collapse. Half weight keeps the shape.
+prewar_weight <- 0.5
+signal[prewar] <- 1 + prewar_weight * (signal[prewar] - 1)
 
 scale_path <- function(s) {
   out <- numeric(length(dates))

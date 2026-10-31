@@ -31,4 +31,6 @@ Print each page to PDF. The public highlights are enough. Free IEA account acces
 | https://www.iea.org/topics/the-middle-east-and-global-energy-markets | `data/raw/manual/iea_middle_east_topic.pdf` |
 | https://www.iea.org/commentaries/oil-markets-strain-to-plug-the-gap-left-by-middle-east-supply-shortfall | `data/raw/manual/iea_commentary_supply_shortfall.pdf` |
 
+Status on 2026-10-31: everything above is in place except the August, September and October reports, which need a paid IEA subscription. Those months use public excerpts and EIA data, flagged as lower confidence in `METHODOLOGY.md`. If you get access, save them under the names above and update `data/raw/iea_refinery_runs.csv` and `data/raw/hormuz_crude_targets.csv`.
+
 The figures I most need are monthly Hormuz flows, Gulf exports, supply losses, and crude versus product stock draws.

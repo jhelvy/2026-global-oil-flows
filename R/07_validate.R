@@ -128,9 +128,10 @@ quarter_mean <- function(from, to) {
   days <- hormuz_day |> filter(date >= from, date <= to)
   mean(days$mbd)
 }
+# IEA's Gulf export figures exclude Oman, which loads outside the strait.
 gulf_total <- gulf |>
   group_by(month) |>
-  summarise(exports = sum(exports), .groups = "drop")
+  summarise(exports = sum(exports - other), bypass = sum(bypass), .groups = "drop")
 release_by_month <- gulf |>
   group_by(month) |>
   summarise(release = first(release), .groups = "drop")
@@ -145,6 +146,9 @@ comparison <- tribble(
   "Gulf crude exports, IEA", "Apr 2026", gulf_total$exports[gulf_total$month == as.Date("2026-04-01")] + release_by_month$release[release_by_month$month == as.Date("2026-04-01")], 8.4,
   "Gulf crude exports, IEA", "May 2026", gulf_total$exports[gulf_total$month == as.Date("2026-05-01")] + release_by_month$release[release_by_month$month == as.Date("2026-05-01")], 7.9,
   "Gulf crude exports, IEA", "Jun 2026", gulf_total$exports[gulf_total$month == as.Date("2026-06-01")] + release_by_month$release[release_by_month$month == as.Date("2026-06-01")], 13.2,
+  "Yanbu + Fujairah (model crude; IEA all oil)", "Feb 2026", gulf_total$bypass[gulf_total$month == as.Date("2026-02-01")], 4.1,
+  "Yanbu + Fujairah (model crude; IEA all oil)", "Jun 2026", gulf_total$bypass[gulf_total$month == as.Date("2026-06-01")], 7.8,
+  "Yanbu + Fujairah (model crude; IEA all oil)", "Aug 2026", gulf_total$bypass[gulf_total$month == as.Date("2026-08-01")], 5.5,
   "Middle East runs, IEA", "Feb 2026", consumption$mbd[consumption$group == "mideast" & consumption$month == as.Date("2026-02-01")], 10.3,
   "Middle East runs, IEA", "Apr 2026", consumption$mbd[consumption$group == "mideast" & consumption$month == as.Date("2026-04-01")], 7.2,
   "Europe runs, IEA", "Apr 2026", consumption$mbd[consumption$group == "europe" & consumption$month == as.Date("2026-04-01")], 10.6,
@@ -250,7 +254,7 @@ p_hz <- compare_hz |>
   scale_y_continuous(limits = c(0, NA), expand = expansion(mult = c(0, 0.05))) +
   labs(
     x = NULL, y = "mb/d", title = "Hormuz crude: model (red) against unscaled AIS tanker ratio (gray)",
-    subtitle = "IEA and EIA monthly figures exceed the AIS ratio because many transits run dark",
+    subtitle = "IEA and EIA monthly figures exceed the AIS ratio; EIA calls Hormuz AIS data especially unreliable since February",
     caption = "Data sources: IMF PortWatch, IEA, EIA"
   ) +
   plot_theme()
