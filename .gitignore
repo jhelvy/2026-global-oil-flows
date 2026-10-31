@@ -4,3 +4,10 @@
 .Ruserdata
 .DS_Store
 .claude/
+.Renviron
+node_modules/
+web/dist/
+# Bulk downloads over ~5 MB stay local; R/0x_fetch scripts recreate them.
+data/raw/*_bulk_*
+data/raw/jodi_primary_*
+.env
