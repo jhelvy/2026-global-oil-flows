@@ -1,0 +1,374 @@
+import * as d3 from 'd3';
+import '../styles.css';
+import { createSankey, fmtPct } from './sankey.js';
+import { createParticles } from './particles.js';
+import { createPriceChart } from './priceChart.js';
+import { createControls } from './controls.js';
+import { showTooltip, hideTooltip, sparkline } from './tooltip.js';
+
+const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+const fmtLong = d3.utcFormat('%b %-d, %Y');
+const fmtShort = d3.utcFormat('%b %-d');
+const parse = d3.utcParse('%Y-%m-%d');
+const mbd = (v) => `${v.toFixed(1)} <small>mb/d</small>`;
+const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]);
+
+function prepare(raw) {
+  const nodes = raw.nodes.map((n, index) => ({ ...n, index, inOrder: [], outOrder: [], touchedBy: new Set() }));
+  const byId = new Map(nodes.map((n) => [n.id, n]));
+  const links = raw.links.map((l, i) => ({
+    ...l,
+    i,
+    side: l.c == null ? 'left' : 'right',
+    sNode: byId.get(l.source),
+    tNode: byId.get(l.target),
+    oNode: byId.get(l.origin),
+    baseline: raw.baseline.values[i],
+  }));
+  const frames = raw.frames.map((f) => ({ ...f, dateObj: parse(f.date), values: Float32Array.from(f.values) }));
+  const dates = frames.map((f) => f.dateObj);
+
+  for (const n of nodes) {
+    n.outOrder = links.filter((l) => l.sNode === n).sort((a, b) => a.tNode.index - b.tNode.index || a.oNode.index - b.oNode.index).map((l) => l.i);
+    n.inOrder = links.filter((l) => l.tNode === n).sort((a, b) => a.sNode.index - b.sNode.index || a.oNode.index - b.oNode.index).map((l) => l.i);
+    n.valueLinks = n.column === 0 ? n.outOrder : n.inOrder;
+    n.series = frames.map((f) => d3.sum(n.valueLinks, (i) => f.values[i]));
+    n.max = d3.max(n.series);
+    n.baseline = d3.sum(n.valueLinks, (i) => raw.baseline.values[i]);
+    n.now = 0;
+  }
+  for (const l of links) {
+    l.sNode.touchedBy.add(l.origin);
+    l.tNode.touchedBy.add(l.origin);
+  }
+
+  const warIndex = d3.bisectLeft(dates, parse(raw.meta.war_start));
+  const events = raw.events
+    .map((e) => ({ ...e, dateObj: parse(e.date) }))
+    .map((e) => ({ ...e, index: d3.bisectLeft(dates, e.dateObj) }));
+  const anchor = new Map(raw.meta.hormuz_target_status.map((s) => [s.month.slice(0, 7), s]));
+  return { nodes, links, frames, dates, events, warIndex, anchor, meta: raw.meta, byId };
+}
+
+function renderStatic(data) {
+  const legend = document.getElementById('legend');
+  const groups = [
+    ['Gulf producers', '--p_saudi'],
+    ['Russia', '--p_russia'],
+    ['Americas', '--p_usa'],
+    ['Rest of World', '--p_row'],
+    ['Stock draws', '--p_stock'],
+  ];
+  legend.innerHTML =
+    groups.map(([label, v]) => `<span><i style="background:var(${v})"></i>${label}</span>`).join('') +
+    `<span><i class="outline"></i>Jan 1 to Feb 27 average</span>` +
+    `<span class="hint">Click a producer to follow its oil. Arrow keys step one day.</span>`;
+
+  const a = (href, text) => `<a href="${esc(href)}" target="_blank" rel="noopener">${esc(text)}</a>`;
+  document.getElementById('events-list').innerHTML = data.events
+    .map((e) => `<li>${fmtShort(e.dateObj)}: ${a(e.url, e.label)}</li>`)
+    .join('');
+  document.getElementById('sources-list').innerHTML = data.meta.sources.map((s) => `<li>${a(s.url, s.name)}</li>`).join('');
+}
+
+async function main() {
+  const res = await fetch(`${import.meta.env.BASE_URL}data/flows.json`);
+  const raw = await res.json();
+  const data = prepare(raw);
+  const { frames, nodes, links, byId, events, anchor, warIndex } = data;
+  renderStatic(data);
+
+  const wrap = document.getElementById('sankey-wrap');
+  const sankey = createSankey(document.getElementById('sankey'), data);
+  const particles = createParticles(document.getElementById('particles'), data, sankey.geom);
+  particles.readColors();
+  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => particles.readColors());
+
+  // Playback state. `cursor` is a fractional frame index, so playback and jumps both
+  // move continuously and the diagram never snaps.
+  let cursor = 0;
+  let playing = false;
+  let ended = false;
+  let msPerDay = 100;
+  let jump = null;
+  let lastDay = -1;
+  let selected = null;
+  let hover = null;
+  let needsDraw = true;
+  const values = new Float32Array(links.length);
+
+  const controls = createControls({
+    count: frames.length,
+    onPlayToggle: togglePlay,
+    onSpeed: (ms) => (msPerDay = ms),
+    onSeek: seek,
+    onStep: (d) => seek(Math.max(0, Math.min(frames.length - 1, Math.round(cursor) + d))),
+  });
+
+  const chart = createPriceChart(document.getElementById('price-chart'), data, {
+    onSeek: seek,
+    onHover: (i, event) => {
+      const f = frames[i];
+      const ev = events.filter((e) => e.index === i);
+      const html =
+        `<div class="tt-title">${fmtLong(f.dateObj)}</div>` +
+        `<div class="tt-row"><span>Brent${f.brent_imputed ? ' (last close)' : ''}</span><span>$${f.brent.toFixed(2)}</span></div>` +
+        `<div class="tt-row"><span>Hormuz tankers, 7-day avg</span><span>${f.hormuz_tankers_7d.toFixed(1)}</span></div>` +
+        ev.map((e) => `<div class="tt-sub">${esc(e.label)}</div>`).join('');
+      hover = null;
+      showTooltip(html, event.clientX, event.clientY);
+    },
+    onLeave: hideTooltip,
+  });
+
+  function setState() {
+    controls.setState(playing ? 'playing' : ended ? 'ended' : 'paused');
+  }
+
+  function togglePlay() {
+    if (ended) {
+      cursor = 0;
+      ended = false;
+    }
+    playing = !playing;
+    jump = null;
+    setState();
+  }
+
+  function seek(i) {
+    playing = false;
+    ended = false;
+    setState();
+    if (reduceMotion) {
+      cursor = i;
+      jump = null;
+    } else {
+      jump = { from: cursor, to: i, t: 0 };
+    }
+    needsDraw = true;
+  }
+
+  function applyCursor() {
+    const i0 = Math.floor(cursor);
+    const i1 = Math.min(i0 + 1, frames.length - 1);
+    const a = cursor - i0;
+    const va = frames[i0].values;
+    const vb = frames[i1].values;
+    for (let i = 0; i < values.length; i++) values[i] = va[i] + a * (vb[i] - va[i]);
+    sankey.update(values);
+    chart.setCursor(cursor);
+    const day = Math.round(cursor);
+    if (day !== lastDay) onDay(day);
+  }
+
+  function statusNote(f) {
+    const month = f.date.slice(0, 7);
+    const s = anchor.get(month);
+    if (!s) return '';
+    return { reported: 'Reported by IEA', derived: 'Derived from IEA figures', assumption: 'Assumed, no published figure' }[s.status] ?? s.status;
+  }
+
+  function onDay(day) {
+    lastDay = day;
+    const f = frames[day];
+    sankey.updateLabels(day);
+    document.getElementById('date-value').textContent = fmtLong(f.dateObj);
+    const days = day - warIndex;
+    document.getElementById('date-note').textContent =
+      days === 0 ? 'War starts' : days > 0 ? `Day ${days + 1} of the war` : `${-days} day${days === -1 ? '' : 's'} before the war`;
+    const h = byId.get('r_hormuz');
+    const s = byId.get('p_stock');
+    const hNow = h.series[day];
+    const sNow = s.series[day];
+    document.getElementById('hormuz-value').innerHTML = mbd(hNow);
+    document.getElementById('hormuz-note').innerHTML = `${fmtPct(hNow, h.baseline) || '0%'} vs Jan-Feb average<br>${statusNote(f)}`;
+    document.getElementById('stock-value').innerHTML = mbd(sNow);
+    document.getElementById('stock-note').textContent = `Jan-Feb average ${s.baseline.toFixed(1)} mb/d`;
+    document.getElementById('brent-value').innerHTML = `$${f.brent.toFixed(2)}`;
+    document.getElementById('brent-note').textContent = `${fmtPct(f.brent, baselineBrent) || '0%'} vs Jan-Feb average${f.brent_imputed ? ', last close' : ''}`;
+    controls.setDay(day, fmtLong(f.dateObj));
+
+    const past = events.filter((e) => e.index <= day);
+    const ev = past[past.length - 1];
+    document.getElementById('ticker').innerHTML = ev
+      ? `<strong>${fmtShort(ev.dateObj)}</strong> ${esc(ev.label)} <a href="${esc(ev.url)}" target="_blank" rel="noopener">source</a>`
+      : 'Before the crisis';
+
+    if (hover) renderHover();
+    if (tableDetails.open) renderTable(day);
+  }
+
+  const prewar = frames.slice(0, warIndex);
+  const baselineBrent = d3.mean(prewar, (f) => f.brent);
+
+  // Table view: the same values as the diagram, reachable without pointer or color.
+  const tableDetails = document.getElementById('table-details');
+  tableDetails.addEventListener('toggle', () => tableDetails.open && renderTable(Math.round(cursor)));
+  function renderTable(day) {
+    const col = ['Producer', 'Route', 'Consumer'];
+    const rows = nodes
+      .map((n) => {
+        const now = n.series[day];
+        return `<tr><td>${col[n.column]}</td><td>${esc(n.label)}</td><td>${now.toFixed(2)}</td><td>${n.baseline.toFixed(2)}</td><td>${fmtPct(now, n.baseline) || 'n/a'}</td></tr>`;
+      })
+      .join('');
+    document.getElementById('values-table').innerHTML =
+      `<caption class="tile-note" style="text-align:left">${fmtLong(frames[day].dateObj)}</caption>` +
+      `<thead><tr><th>Column</th><th>Node</th><th>Today, mb/d</th><th>Jan 1 to Feb 27, mb/d</th><th>Change</th></tr></thead><tbody>${rows}</tbody>`;
+  }
+
+  // Hover and selection.
+  let pointer = { x: 0, y: 0 };
+  function renderHover() {
+    if (!hover) return;
+    const day = Math.round(cursor);
+    if (hover.type === 'link') {
+      const l = hover.link;
+      const now = frames[day].values[l.i];
+      const title =
+        l.side === 'left'
+          ? `${esc(l.sNode.label)} → ${esc(l.tNode.label)}`
+          : `${esc(l.oNode.label)} → ${esc(l.tNode.label)}`;
+      const sub = l.side === 'right' ? `<div class="tt-sub">via ${esc(l.sNode.label)}</div>` : '';
+      showTooltip(
+        `<div class="tt-title">${title}</div>${sub}` +
+          `<div class="tt-row"><span>${fmtLong(frames[day].dateObj)}</span><span>${now.toFixed(2)} mb/d</span></div>` +
+          `<div class="tt-row"><span>Jan 1 to Feb 27</span><span>${l.baseline.toFixed(2)} mb/d</span></div>` +
+          `<div class="tt-row"><span>Change</span><span>${fmtPct(now, l.baseline) || 'n/a'}</span></div>`,
+        pointer.x,
+        pointer.y
+      );
+    } else {
+      const n = hover.node;
+      const now = n.series[day];
+      showTooltip(
+        `<div class="tt-title">${esc(n.label)}</div>` +
+          `<div class="tt-row"><span>${fmtLong(frames[day].dateObj)}</span><span>${now.toFixed(2)} mb/d</span></div>` +
+          `<div class="tt-row"><span>Jan 1 to Feb 27</span><span>${n.baseline.toFixed(2)} mb/d</span></div>` +
+          `<div class="tt-row"><span>Change</span><span>${fmtPct(now, n.baseline) || 'n/a'}</span></div>` +
+          sparkline(n.series, n.baseline, day, warIndex),
+        pointer.x,
+        pointer.y
+      );
+    }
+  }
+
+  function setHover(h) {
+    const same = h?.type === hover?.type && h?.link === hover?.link && h?.node === hover?.node;
+    if (same && !h) return;
+    hover = h;
+    if (!same) sankey.setHighlight(selected, h?.type === 'link' ? h.link : null);
+    if (h) renderHover();
+    else hideTooltip();
+  }
+
+  function select(origin) {
+    selected = selected === origin ? null : origin;
+    particles.setOrigin(selected);
+    sankey.setHighlight(selected, hover?.type === 'link' ? hover.link : null);
+    needsDraw = true;
+  }
+
+  wrap.addEventListener('pointermove', (e) => {
+    const r = wrap.getBoundingClientRect();
+    pointer = { x: e.clientX, y: e.clientY };
+    setHover(sankey.hit(e.clientX - r.left, e.clientY - r.top));
+  });
+  wrap.addEventListener('pointerleave', () => setHover(null));
+  wrap.addEventListener('click', (e) => {
+    const r = wrap.getBoundingClientRect();
+    const h = sankey.hit(e.clientX - r.left, e.clientY - r.top);
+    if (h?.type === 'node' && h.node.column === 0) select(h.node.id);
+    else if (!h && selected) select(selected);
+  });
+  sankey.nodeSel
+    .on('focus', function (_, n) {
+      const box = this.getBoundingClientRect();
+      pointer = { x: box.right, y: box.top };
+      setHover({ type: 'node', node: n });
+    })
+    .on('blur', () => setHover(null))
+    .on('keydown', (e, n) => {
+      if ((e.key === 'Enter' || e.key === ' ') && n.column === 0) {
+        e.preventDefault();
+        e.stopPropagation();
+        select(n.id);
+      }
+    });
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      setHover(null);
+      if (selected) select(selected);
+    }
+  });
+
+  // Layout.
+  const priceEl = document.getElementById('price-chart');
+  function resize() {
+    const w = wrap.clientWidth;
+    const narrow = w < 620;
+    const stacked = window.innerWidth < 1000;
+    const h = narrow ? 560 : stacked ? 560 : Math.max(470, Math.min(760, window.innerHeight - 404));
+    wrap.style.height = `${h}px`;
+    sankey.layout(w, h);
+    particles.resize(w, h);
+    chart.resize(priceEl.clientWidth);
+    lastDay = -1;
+    applyCursor();
+    needsDraw = true;
+  }
+  new ResizeObserver(resize).observe(wrap);
+  window.addEventListener('resize', resize);
+  resize();
+
+  if (!reduceMotion) particles.warm(values);
+
+  // Animation loop. Pausing stops everything, including particles.
+  let last = performance.now();
+  function tick(now) {
+    const dt = Math.max(0, Math.min(0.1, (now - last) / 1000));
+    last = now;
+    let moved = false;
+    if (playing) {
+      cursor += (dt * 1000) / msPerDay;
+      if (cursor >= frames.length - 1) {
+        cursor = frames.length - 1;
+        playing = false;
+        ended = true;
+        setState();
+      }
+      moved = true;
+    } else if (jump) {
+      jump.t = Math.min(1, jump.t + dt / 0.22);
+      cursor = jump.from + (jump.to - jump.from) * d3.easeCubicOut(jump.t);
+      if (jump.t >= 1) {
+        cursor = jump.to;
+        jump = null;
+      }
+      moved = true;
+    }
+    if (moved) applyCursor();
+    if (reduceMotion) {
+      if (needsDraw) particles.clear();
+    } else if (playing) {
+      particles.step(dt, values);
+      particles.draw();
+    } else if (moved || needsDraw) {
+      particles.draw();
+    }
+    needsDraw = false;
+    requestAnimationFrame(tick);
+  }
+  requestAnimationFrame(tick);
+
+  // Play on load, except for readers who asked for less motion.
+  if (!reduceMotion) {
+    playing = true;
+  }
+  setState();
+}
+
+main().catch((err) => {
+  document.querySelector('.page').insertAdjacentHTML('afterbegin', `<p role="alert">The flow data failed to load: ${esc(err.message)}</p>`);
+  throw err;
+});

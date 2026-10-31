@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Global Oil Flows 2026</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 16 16%27%3E%3Cpath fill=%27%23c2480f%27 d=%27M8 1s5 6 5 9a5 5 0 0 1-10 0c0-3 5-9 5-9z%27/%3E%3C/svg%3E" />
+    <meta name="description" content="Modeled daily crude oil flows from producers through routes to consumers across the 2026 Strait of Hormuz closure." />
+  </head>
+  <body>
+    <main class="page">
+      <header class="masthead">
+        <div class="titles">
+          <h1>Global crude oil flows through the 2026 Hormuz closure</h1>
+          <p class="sub">Modeled daily flows from producers, through routes, to consumers. Million barrels per day (mb/d), crude and condensate.</p>
+        </div>
+        <div class="controls" role="group" aria-label="Playback">
+          <button id="play" type="button" class="primary">Pause</button>
+          <div class="speed" role="group" aria-label="Playback speed">
+            <button type="button" data-ms="200">Slow</button>
+            <button type="button" data-ms="100" aria-pressed="true">Medium</button>
+            <button type="button" data-ms="50">Fast</button>
+          </div>
+        </div>
+      </header>
+
+      <div class="overview">
+      <section class="readout" aria-label="Current date and key figures">
+        <div class="tile date-tile">
+          <div class="tile-label">Date</div>
+          <div class="tile-value" id="date-value"></div>
+          <div class="tile-note" id="date-note"></div>
+        </div>
+        <div class="tile">
+          <div class="tile-label">Strait of Hormuz</div>
+          <div class="tile-value" id="hormuz-value"></div>
+          <div class="tile-note" id="hormuz-note"></div>
+        </div>
+        <div class="tile">
+          <div class="tile-label">Stock draws</div>
+          <div class="tile-value" id="stock-value"></div>
+          <div class="tile-note" id="stock-note"></div>
+        </div>
+        <div class="tile">
+          <div class="tile-label">Brent spot</div>
+          <div class="tile-value" id="brent-value"></div>
+          <div class="tile-note" id="brent-note"></div>
+        </div>
+      </section>
+
+      <section class="chart-card" aria-label="Brent price and Hormuz tanker transits">
+        <div id="price-chart"></div>
+        <p class="ticker" id="ticker"></p>
+      </section>
+      </div>
+
+      <section class="chart-card" aria-label="Oil flow Sankey diagram">
+        <div class="legend" id="legend"></div>
+        <div class="sankey-wrap" id="sankey-wrap">
+          <svg id="sankey" role="img" aria-label="Sankey diagram of crude oil from producers through routes to consumers for the selected date. The table below holds the same values."></svg>
+          <canvas id="particles" aria-hidden="true"></canvas>
+        </div>
+        <div class="scrubber-row">
+          <label for="scrubber">Date</label>
+          <input id="scrubber" type="range" min="0" step="1" />
+        </div>
+      </section>
+
+      <p class="footnote">
+        <strong>These are modeled estimates, not measurements.</strong>
+        No public daily country-level oil data exists, so monthly official figures are shaped by daily tanker counts.
+        Flows reach consumers the same day they leave, with no voyage lag. Outlines mark each node's Jan 1 to Feb 27 average.
+        Monthly figures for August onward rest on public excerpts and forecasts, and carry less confidence.
+      </p>
+
+      <details class="more" id="table-details">
+        <summary>Table of values for this date</summary>
+        <div class="table-scroll"><table id="values-table"></table></div>
+      </details>
+
+      <details class="more">
+        <summary>Method and limitations</summary>
+        <div class="prose">
+          <h2>How the flows are built</h2>
+          <p>Production comes from EIA international data, extended past June with the October Short-Term Energy Outlook. Consumption is crude refinery intake plus direct burn, from JODI where reported, and closes on IEA global refinery throughput. Stock draws and builds are the balancing term.</p>
+          <p>A 2025 trade matrix from the Energy Institute, split further with UN Comtrade, seeds who sells to whom. Iterative proportional fitting rescales it to each month's totals. Gulf exports fill bypass pipelines first, up to dated capacity limits, and the rest crosses the strait. IEA and EIA figures set each month's Hormuz volume. When a published volume exceeds what that month's production can explain, the difference is drawn from storage, which is the blue stock band running through the strait.</p>
+          <p>Each producer-route-consumer flow keeps its monthly mean exactly. Within a month, Hormuz flows follow the 7-day PortWatch tanker count, with pre-war swings at half weight; other flows interpolate between mid-month points, with a break at the war start.</p>
+          <h2>Known limitations</h2>
+          <ul>
+            <li>No public daily country-level production or consumption data exists. True daily trade flows need paid tanker tracking, such as Kpler or Vortexa.</li>
+            <li>PortWatch counts vessels, not barrels, and does not separate inbound from outbound. EIA calls Hormuz vessel-tracking data especially unreliable since February, because many transits run dark.</li>
+            <li>JODI lags about two months, so recent months lean on EIA and IEA estimates, some of them forecasts. The IEA reports for August to October are subscription-only and were not used. Their months rest on public excerpts: September and October Hormuz volumes are assumptions, and August to October global refinery runs are interpolated or forecast.</li>
+            <li>Iranian exports are opaque, so treat Iran as an estimate with wide uncertainty.</li>
+            <li>Trade shares start from a pre-war annual baseline and are rescaled, so actual rerouting, such as Asian buyers shifting to Atlantic Basin crude, is only approximated.</li>
+            <li>Flows show no transit lag. A tanker leaving Hormuz takes weeks to reach Asia or Europe, but here it counts toward the consumer that day, so short dips and spikes at consumers overstate how quickly refineries felt the change.</li>
+          </ul>
+          <h2>Timeline sources</h2>
+          <ul id="events-list" class="compact"></ul>
+          <h2>Data sources</h2>
+          <ul id="sources-list" class="compact"></ul>
+        </div>
+      </details>
+    </main>
+    <div class="tooltip" id="tooltip" role="status" hidden></div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
