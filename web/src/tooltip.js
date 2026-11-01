@@ -1,6 +1,6 @@
 import * as d3 from 'd3';
 
-const el = document.getElementById('tooltip');
+const el = document.getElementById('flow-tip');
 
 export function showTooltip(html, clientX, clientY) {
   el.innerHTML = html;

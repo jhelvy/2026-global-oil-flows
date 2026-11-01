@@ -144,10 +144,6 @@ if (size_mb > 2) {
   stop("flows.json exceeds the 2 MB limit in plan section 5, step 6.")
 }
 
-web_data <- file.path("web", "public", "data")
-dir.create(web_data, recursive = TRUE, showWarnings = FALSE)
-file.copy(out_json, file.path(web_data, "flows.json"), overwrite = TRUE)
-
 name_of <- function(id) nodes$label[match(id, nodes$id)]
 long <- function(df, time_col) {
   df |>

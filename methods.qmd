@@ -1,0 +1,59 @@
+---
+title: "Method and limitations"
+execute:
+  echo: false
+---
+
+```{r}
+flows <- jsonlite::read_json("data/final/flows.json")
+
+# Timeline and source links come from the same file the graphic reads.
+link_list <- function(items, text) {
+  cat(sprintf("- %s\n", vapply(items, text, character(1))), sep = "")
+}
+```
+
+## How the flows are built
+
+Production comes from EIA international data, extended past June with the October Short-Term Energy Outlook. Consumption is crude refinery intake plus direct burn, from JODI where reported, and closes on IEA global refinery throughput. Stock draws and builds are the balancing term.
+
+A 2025 trade matrix from the Energy Institute, split further with UN Comtrade, seeds who sells to whom. Iterative proportional fitting rescales it to each month's totals. Gulf exports fill bypass pipelines first, up to dated capacity limits, and the rest crosses the strait. IEA and EIA figures set each month's Hormuz volume. When a published volume exceeds what that month's production can explain, the difference is drawn from storage, which is the blue stock band running through the strait.
+
+Each producer-route-consumer flow keeps its monthly mean exactly. Within a month, Hormuz flows follow the 7-day PortWatch tanker count, with pre-war swings at half weight. Other flows interpolate between mid-month points, with a break at the war start.
+
+## Confidence by month
+
+| Months | Production | Global refinery runs | Hormuz crude |
+|---|---|---|---|
+| Jan to Feb | EIA | IEA reported | Tanker counts, factsheet baseline |
+| Mar | EIA | IEA reported | IEA reported |
+| Apr to Jun | EIA | IEA reported | Derived from IEA all-oil figures |
+| Jul | STEO extension | IEA reported | Derived from IEA excerpts via a trade press summary |
+| Aug | STEO extension | Interpolated | Derived from an IEA commentary |
+| Sep | STEO extension | Interpolated | **Assumption:** 1.1 times August, from EIA's "increased slightly" |
+| Oct | STEO extension | Forecast | **Assumption:** held at September |
+
+## Known limitations
+
+- No public daily country-level production or consumption data exists. True daily trade flows need paid tanker tracking, such as Kpler or Vortexa.
+- PortWatch counts vessels, not barrels, and does not separate inbound from outbound. EIA calls Hormuz vessel-tracking data especially unreliable since February, because many transits run dark.
+- JODI lags about two months, so recent months lean on EIA and IEA estimates, some of them forecasts. The IEA reports for August to October are subscription-only and were not used.
+- Iranian exports are opaque, so treat Iran as an estimate with wide uncertainty.
+- Trade shares start from a pre-war annual baseline and are rescaled, so actual rerouting, such as Asian buyers shifting to Atlantic Basin crude, is only approximated.
+- Flows show no transit lag. A tanker leaving Hormuz takes weeks to reach Asia or Europe, but here it counts toward the consumer that day, so short dips and spikes at consumers overstate how quickly refineries felt the change.
+
+## Timeline sources
+
+```{r}
+#| output: asis
+link_list(flows$events, function(e) {
+  sprintf("%s: [%s](%s)", format(as.Date(e$date), "%b %e"), e$label, e$url)
+})
+```
+
+## Data sources
+
+```{r}
+#| output: asis
+link_list(flows$meta$sources, function(s) sprintf("[%s](%s)", s$name, s$url))
+```

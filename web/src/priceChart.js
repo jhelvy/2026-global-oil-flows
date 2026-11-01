@@ -3,15 +3,15 @@
 import * as d3 from 'd3';
 
 export function createPriceChart(root, data, { onSeek, onHover, onLeave }) {
-  const { dates, frames, events, warIndex } = data;
+  const { dates, frames, warIndex } = data;
   const svg = d3.select(root).append('svg');
   const defs = svg.append('defs');
   const clipId = 'played-clip';
   const clipRect = defs.append('clipPath').attr('id', clipId).append('rect');
   const margin = { top: 16, right: 14, bottom: 20, left: 34 };
 
-  const gGridP = svg.append('g').attr('class', 'grid');
-  const gEvents = svg.append('g');
+  const gGridP = svg.append('g').attr('class', 'gridlines');
+  const warLine = svg.append('line').attr('class', 'event-line');
   const gAxisY = svg.append('g').attr('class', 'axis');
   const gAxisT = svg.append('g').attr('class', 'axis');
   const gAxisX = svg.append('g').attr('class', 'axis');
@@ -19,10 +19,11 @@ export function createPriceChart(root, data, { onSeek, onHover, onLeave }) {
   const pFull = svg.append('path').attr('class', 'series').attr('clip-path', `url(#${clipId})`);
   const tDim = svg.append('path').attr('class', 'series-dim');
   const tFull = svg.append('path').attr('class', 'series tankers').attr('clip-path', `url(#${clipId})`);
-  const titleP = svg.append('text').attr('class', 'panel-title').text('Brent spot, $ per barrel');
-  const titleT = svg.append('text').attr('class', 'panel-title').attr('text-anchor', 'end').text('Hormuz tanker transits per day, 7-day average');
-  const warLabel = svg.append('text').attr('class', 'event-label').text('War starts Feb 28');
   const playhead = svg.append('line').attr('class', 'playhead');
+  // Text goes after the lines, so its halo keeps the playhead from striking through it.
+  const titleP = svg.append('text').attr('class', 'panel-title').text('Brent spot, $ per barrel');
+  const titleT = svg.append('text').attr('class', 'panel-title').text('Hormuz tankers per day, 7-day average');
+  const warLabel = svg.append('text').attr('class', 'event-label').text('War starts Feb 28');
   const tagP = svg.append('text').attr('class', 'play-tag');
   const tagT = svg.append('text').attr('class', 'play-tag');
 
@@ -34,9 +35,9 @@ export function createPriceChart(root, data, { onSeek, onHover, onLeave }) {
   function resize(w) {
     width = w;
     const narrow = w < 620;
-    const hP = narrow ? 86 : 90;
-    const hT = narrow ? 36 : 40;
-    const gap = 14;
+    const hP = 76;
+    const hT = 48;
+    const gap = 24;
     const height = margin.top + hP + gap + hT + margin.bottom;
     svg.attr('viewBox', `0 0 ${w} ${height}`).attr('height', height);
     const innerL = margin.left;
@@ -72,18 +73,11 @@ export function createPriceChart(root, data, { onSeek, onHover, onLeave }) {
       .attr('transform', `translate(0,${tBot})`)
       .call(d3.axisBottom(x).ticks(d3.utcMonth.every(narrow ? 2 : 1)).tickFormat(d3.utcFormat('%b')).tickSizeOuter(0).tickSize(4));
 
-    gEvents
-      .selectAll('line')
-      .data(events)
-      .join('line')
-      .attr('class', (e) => `event-line ${e.index === warIndex ? 'war' : ''}`)
-      .attr('x1', (e) => x(e.dateObj))
-      .attr('x2', (e) => x(e.dateObj))
-      .attr('y1', pTop)
-      .attr('y2', tBot);
+    const warX = x(dates[warIndex]);
+    warLine.attr('x1', warX).attr('x2', warX).attr('y1', pTop).attr('y2', tBot);
 
-    titleP.attr('x', innerL + 4).attr('y', pTop - 4);
-    titleT.attr('x', innerR - 2).attr('y', tTop + 10);
+    titleP.attr('x', innerL).attr('y', pTop - 5);
+    titleT.attr('x', innerL).attr('y', tTop - 5);
     warLabel.attr('x', x(dates[warIndex]) + 5).attr('y', pBot - 4).style('display', narrow ? 'none' : null);
     playhead.attr('y1', pTop).attr('y2', tBot);
   }
@@ -97,15 +91,17 @@ export function createPriceChart(root, data, { onSeek, onHover, onLeave }) {
     playhead.attr('x1', px).attr('x2', px);
     const fr = frames[Math.round(f)];
     const right = px > width - margin.right - 40;
+    // Tags flip under the line near a panel's top, so they stay clear of its title.
+    const tagY = (y, top) => (y - top < 16 ? y + 15 : y - 6);
     tagP
       .attr('x', right ? px - 6 : px + 6)
       .attr('text-anchor', right ? 'end' : 'start')
-      .attr('y', yP(fr.brent) - 6)
+      .attr('y', tagY(yP(fr.brent), yP.range()[1]))
       .text(`$${fr.brent.toFixed(0)}`);
     tagT
       .attr('x', right ? px - 6 : px + 6)
       .attr('text-anchor', right ? 'end' : 'start')
-      .attr('y', yT(fr.hormuz_tankers_7d) - 5)
+      .attr('y', tagY(yT(fr.hormuz_tankers_7d), yT.range()[1]))
       .text(fr.hormuz_tankers_7d.toFixed(0));
   }
 

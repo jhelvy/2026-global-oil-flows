@@ -1,6 +1,6 @@
 # Methodology and data gaps
 
-Rerun everything with `Rscript run_all.R` from the repo root. API keys go in a git-ignored `.env`, as `COMTRADE_API_KEY`, `EIA_API_KEY` and `FRED_API_KEY`. Files that need a person with a browser go in `data/raw/manual/` (see `DOWNLOADS_NEEDED.md`). The front end lives in `web/`: run `npm install` and `npm run dev` there.
+Rerun everything with `Rscript run_all.R` from the repo root. API keys go in a git-ignored `.env`, as `COMTRADE_API_KEY`, `EIA_API_KEY` and `FRED_API_KEY`. Files that need a person with a browser go in `data/raw/manual/`. That command ends by rendering the website to `_site/`, so `_site/index.html` opens with a double-click. To rebuild only the site, run `quarto render`, or `quarto preview` while editing. The graphic's code lives in `web/`, and Quarto bundles it before each render.
 
 ## Scope decisions
 

@@ -1,5 +1,5 @@
 import * as d3 from 'd3';
-import '../styles.css';
+import raw from '../../data/final/flows.json';
 import { createSankey, fmtPct } from './sankey.js';
 import { createParticles } from './particles.js';
 import { createPriceChart } from './priceChart.js';
@@ -8,9 +8,7 @@ import { showTooltip, hideTooltip, sparkline } from './tooltip.js';
 
 const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 const fmtLong = d3.utcFormat('%b %-d, %Y');
-const fmtShort = d3.utcFormat('%b %-d');
 const parse = d3.utcParse('%Y-%m-%d');
-const mbd = (v) => `${v.toFixed(1)} <small>mb/d</small>`;
 const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]);
 
 function prepare(raw) {
@@ -46,11 +44,10 @@ function prepare(raw) {
   const events = raw.events
     .map((e) => ({ ...e, dateObj: parse(e.date) }))
     .map((e) => ({ ...e, index: d3.bisectLeft(dates, e.dateObj) }));
-  const anchor = new Map(raw.meta.hormuz_target_status.map((s) => [s.month.slice(0, 7), s]));
-  return { nodes, links, frames, dates, events, warIndex, anchor, meta: raw.meta, byId };
+  return { nodes, links, frames, dates, events, warIndex };
 }
 
-function renderStatic(data) {
+function renderLegend() {
   const legend = document.getElementById('legend');
   const groups = [
     ['Gulf producers', '--p_saudi'],
@@ -62,27 +59,18 @@ function renderStatic(data) {
   legend.innerHTML =
     groups.map(([label, v]) => `<span><i style="background:var(${v})"></i>${label}</span>`).join('') +
     `<span><i class="outline"></i>Jan 1 to Feb 27 average</span>` +
-    `<span class="hint">Click a producer to follow its oil. Arrow keys step one day.</span>`;
-
-  const a = (href, text) => `<a href="${esc(href)}" target="_blank" rel="noopener">${esc(text)}</a>`;
-  document.getElementById('events-list').innerHTML = data.events
-    .map((e) => `<li>${fmtShort(e.dateObj)}: ${a(e.url, e.label)}</li>`)
-    .join('');
-  document.getElementById('sources-list').innerHTML = data.meta.sources.map((s) => `<li>${a(s.url, s.name)}</li>`).join('');
+    `<span class="hint">Click a producer to follow its oil.</span>`;
 }
 
-async function main() {
-  const res = await fetch(`${import.meta.env.BASE_URL}data/flows.json`);
-  const raw = await res.json();
+function main() {
   const data = prepare(raw);
-  const { frames, nodes, links, byId, events, anchor, warIndex } = data;
-  renderStatic(data);
+  const { frames, nodes, links, events, warIndex } = data;
+  renderLegend();
 
   const wrap = document.getElementById('sankey-wrap');
   const sankey = createSankey(document.getElementById('sankey'), data);
   const particles = createParticles(document.getElementById('particles'), data, sankey.geom);
   particles.readColors();
-  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => particles.readColors());
 
   // Playback state. `cursor` is a fractional frame index, so playback and jumps both
   // move continuously and the diagram never snaps.
@@ -161,45 +149,15 @@ async function main() {
     if (day !== lastDay) onDay(day);
   }
 
-  function statusNote(f) {
-    const month = f.date.slice(0, 7);
-    const s = anchor.get(month);
-    if (!s) return '';
-    return { reported: 'Reported by IEA', derived: 'Derived from IEA figures', assumption: 'Assumed, no published figure' }[s.status] ?? s.status;
-  }
-
   function onDay(day) {
     lastDay = day;
     const f = frames[day];
     sankey.updateLabels(day);
     document.getElementById('date-value').textContent = fmtLong(f.dateObj);
-    const days = day - warIndex;
-    document.getElementById('date-note').textContent =
-      days === 0 ? 'War starts' : days > 0 ? `Day ${days + 1} of the war` : `${-days} day${days === -1 ? '' : 's'} before the war`;
-    const h = byId.get('r_hormuz');
-    const s = byId.get('p_stock');
-    const hNow = h.series[day];
-    const sNow = s.series[day];
-    document.getElementById('hormuz-value').innerHTML = mbd(hNow);
-    document.getElementById('hormuz-note').innerHTML = `${fmtPct(hNow, h.baseline) || '0%'} vs Jan-Feb average<br>${statusNote(f)}`;
-    document.getElementById('stock-value').innerHTML = mbd(sNow);
-    document.getElementById('stock-note').textContent = `Jan-Feb average ${s.baseline.toFixed(1)} mb/d`;
-    document.getElementById('brent-value').innerHTML = `$${f.brent.toFixed(2)}`;
-    document.getElementById('brent-note').textContent = `${fmtPct(f.brent, baselineBrent) || '0%'} vs Jan-Feb average${f.brent_imputed ? ', last close' : ''}`;
     controls.setDay(day, fmtLong(f.dateObj));
-
-    const past = events.filter((e) => e.index <= day);
-    const ev = past[past.length - 1];
-    document.getElementById('ticker').innerHTML = ev
-      ? `<strong>${fmtShort(ev.dateObj)}</strong> ${esc(ev.label)} <a href="${esc(ev.url)}" target="_blank" rel="noopener">source</a>`
-      : 'Before the crisis';
-
     if (hover) renderHover();
     if (tableDetails.open) renderTable(day);
   }
-
-  const prewar = frames.slice(0, warIndex);
-  const baselineBrent = d3.mean(prewar, (f) => f.brent);
 
   // Table view: the same values as the diagram, reachable without pointer or color.
   const tableDetails = document.getElementById('table-details');
@@ -213,7 +171,7 @@ async function main() {
       })
       .join('');
     document.getElementById('values-table').innerHTML =
-      `<caption class="tile-note" style="text-align:left">${fmtLong(frames[day].dateObj)}</caption>` +
+      `<caption>${fmtLong(frames[day].dateObj)}</caption>` +
       `<thead><tr><th>Column</th><th>Node</th><th>Today, mb/d</th><th>Jan 1 to Feb 27, mb/d</th><th>Change</th></tr></thead><tbody>${rows}</tbody>`;
   }
 
@@ -307,8 +265,9 @@ async function main() {
   function resize() {
     const w = wrap.clientWidth;
     const narrow = w < 620;
-    const stacked = window.innerWidth < 1000;
-    const h = narrow ? 560 : stacked ? 560 : Math.max(470, Math.min(760, window.innerHeight - 404));
+    // Fill what is left of the first screen, within limits that keep labels readable.
+    const room = window.innerHeight - (wrap.getBoundingClientRect().top + window.scrollY) - 16;
+    const h = narrow ? 560 : Math.max(470, Math.min(760, room));
     wrap.style.height = `${h}px`;
     sankey.layout(w, h);
     particles.resize(w, h);
@@ -368,7 +327,4 @@ async function main() {
   setState();
 }
 
-main().catch((err) => {
-  document.querySelector('.page').insertAdjacentHTML('afterbegin', `<p role="alert">The flow data failed to load: ${esc(err.message)}</p>`);
-  throw err;
-});
+main();

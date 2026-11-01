@@ -9,3 +9,8 @@ for (s in scripts) {
   env <- new.env(parent = globalenv())
   sys.source(file.path("R", s), envir = env)
 }
+
+message("\n== quarto render")
+if (system2("quarto", "render") != 0) {
+  stop("quarto render failed.")
+}

@@ -1,0 +1,49 @@
+---
+pagetitle: "Global Oil Flows 2026"
+description: "Modeled daily crude oil flows from producers through routes to consumers across the 2026 Strait of Hormuz closure."
+page-layout: custom
+css: web/styles.css
+include-after-body:
+  text: |
+    <script src="web/dist/oil-flows.js"></script>
+---
+
+```{=html}
+<div class="flows">
+  <h1>Global crude oil flows through the 2026 Hormuz closure</h1>
+  <p class="sub">Modeled daily flows from producers, through routes, to consumers, in million barrels per day (mb/d) of crude and condensate.</p>
+
+  <div class="date-row">
+    <div class="date" id="date-value"></div>
+    <div class="controls" role="group" aria-label="Playback">
+      <button id="play" type="button">Pause</button>
+      <div class="speed" role="group" aria-label="Playback speed">
+        <button type="button" data-ms="200">Slow</button>
+        <button type="button" data-ms="100" aria-pressed="true">Medium</button>
+        <button type="button" data-ms="50">Fast</button>
+      </div>
+    </div>
+  </div>
+
+  <section aria-label="Brent price and Hormuz tanker transits">
+    <div id="price-chart"></div>
+    <input id="scrubber" type="range" min="0" step="1" aria-label="Date" />
+  </section>
+
+  <section aria-label="Oil flow Sankey diagram">
+    <div class="legend" id="legend"></div>
+    <div class="sankey-wrap" id="sankey-wrap">
+      <svg id="sankey" role="img" aria-label="Sankey diagram of crude oil from producers through routes to consumers for the selected date. The table below holds the same values."></svg>
+      <canvas id="particles" aria-hidden="true"></canvas>
+    </div>
+  </section>
+
+  <p class="note">These are modeled estimates, not measurements. Flows reach consumers the same day they leave, with no voyage lag. See the <a href="methods.html">method and limitations</a>.</p>
+
+  <details id="table-details">
+    <summary>Table of values for this date</summary>
+    <div class="table-scroll"><table id="values-table"></table></div>
+  </details>
+</div>
+<div class="flow-tip" id="flow-tip" role="status" hidden></div>
+```

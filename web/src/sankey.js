@@ -59,7 +59,6 @@ export function createSankey(svgEl, data) {
   const labels = nodeSel.append('text').attr('dy', '0.35em');
   labels.append('tspan').attr('class', 'name');
   labels.append('tspan').attr('class', 'val').attr('dx', 5);
-  labels.append('tspan').attr('class', 'pct').attr('dx', 4);
 
   const heads = gHeads
     .selectAll('text')
@@ -130,7 +129,6 @@ export function createSankey(svgEl, data) {
       .attr('x', (n) => (n.column === 0 ? n.x - 7 : n.x + NODE_W + 7))
       .attr('text-anchor', (n) => (n.column === 0 ? 'end' : 'start'));
     labels.select('.name').text((n) => (narrow ? SHORT[n.label] ?? n.label : n.label));
-    labels.select('.pct').style('display', narrow ? 'none' : null);
     // Route labels sit over the links, so narrow screens keep names only there.
     labels.select('.val').style('display', (n) => (narrow && n.column === 1 ? 'none' : null));
 
@@ -193,7 +191,6 @@ export function createSankey(svgEl, data) {
   // Labels show the day's own value, not a position part way through a tween.
   function updateLabels(day) {
     labels.select('.val').text((n) => n.series[day].toFixed(1));
-    labels.select('.pct').text((n) => fmtPct(n.series[day], n.baseline));
   }
 
   // Finds what sits under a point. All links in a gap share an x span, so the curve
