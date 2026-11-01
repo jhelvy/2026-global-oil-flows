@@ -7,6 +7,7 @@ Rerun everything with `Rscript run_all.R` from the repo root. API keys go in a g
 - **Crude plus lease condensate**, per the plan's recommendation. EIA International (product 57) is the production source because it has one definition and sums to a world total. JODI's crude definition varies by country, so JODI supplies only refinery intake, direct use, imports and exports.
 - **Brent on the chart.** WTI is in `flows.json` but not drawn.
 - **Other seaborne stays one route.** It is not split by Bab el-Mandeb, Suez and Cape.
+- **Column order is chosen for legibility.** The order of nodes in `R/08_export_json.R` came from a search over the non-Gulf producers, routes and consumer regions for the fewest band crossings and the least vertical travel. Each route stacks its outgoing bands by origin in the same order as its incoming bands, so a producer's band enters and leaves at the same height.
 
 ## Method
 

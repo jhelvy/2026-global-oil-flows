@@ -27,7 +27,12 @@ function prepare(raw) {
   const dates = frames.map((f) => f.dateObj);
 
   for (const n of nodes) {
-    n.outOrder = links.filter((l) => l.sNode === n).sort((a, b) => a.tNode.index - b.tNode.index || a.oNode.index - b.oNode.index).map((l) => l.i);
+    // A route stacks its outgoing bands by origin in the same order as its incoming ones. Each
+    // producer's band then enters and leaves at the same height, and reads as one band.
+    const out = n.column === 1
+      ? (a, b) => a.oNode.index - b.oNode.index || a.tNode.index - b.tNode.index
+      : (a, b) => a.tNode.index - b.tNode.index || a.oNode.index - b.oNode.index;
+    n.outOrder = links.filter((l) => l.sNode === n).sort(out).map((l) => l.i);
     n.inOrder = links.filter((l) => l.tNode === n).sort((a, b) => a.sNode.index - b.sNode.index || a.oNode.index - b.oNode.index).map((l) => l.i);
     n.valueLinks = n.column === 0 ? n.outOrder : n.inOrder;
     n.series = frames.map((f) => d3.sum(n.valueLinks, (i) => f.values[i]));
@@ -51,9 +56,9 @@ function renderLegend() {
   const legend = document.getElementById('legend');
   const groups = [
     ['Gulf producers', '--p_saudi'],
-    ['Russia', '--p_russia'],
-    ['Americas', '--p_usa'],
     ['Rest of World', '--p_row'],
+    ['Americas', '--p_usa'],
+    ['Russia', '--p_russia'],
     ['Stock draws', '--p_stock'],
   ];
   legend.innerHTML =

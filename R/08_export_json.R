@@ -9,6 +9,9 @@ events <- read_csv(file.path(path_raw, "events.csv"))
 hormuz_targets <- read_csv(file.path(path_raw, "hormuz_crude_targets.csv"))
 iea_runs <- read_csv(file.path(path_raw, "iea_refinery_runs.csv"))
 
+# Row order sets the top-to-bottom order of each column. This order came from a search over
+# the non-Gulf producers, routes and consumer regions for the fewest band crossings and the
+# least vertical travel, so same-country paths such as USA to USA run nearly straight.
 nodes <- tribble(
   ~key, ~id, ~label, ~column, ~group,
   "saudi", "p_saudi", "Saudi Arabia", 0, "gulf",
@@ -17,26 +20,26 @@ nodes <- tribble(
   "kuwait", "p_kuwait", "Kuwait", 0, "gulf",
   "iran", "p_iran", "Iran", 0, "gulf",
   "othergulf", "p_othergulf", "Other Gulf", 0, "gulf",
+  "row", "p_row", "Rest of World", 0, "other",
+  "brazil", "p_brazil", "Brazil", 0, "americas",
   "russia", "p_russia", "Russia", 0, "russia",
   "usa", "p_usa", "USA", 0, "americas",
   "canada", "p_canada", "Canada", 0, "americas",
-  "brazil", "p_brazil", "Brazil", 0, "americas",
-  "row", "p_row", "Rest of World", 0, "other",
   "stock", "p_stock", "Stock draws / SPR", 0, "stock",
   "hormuz", "r_hormuz", "Strait of Hormuz", 1, "hormuz",
   "bypass", "r_bypass", "Gulf bypass pipelines", 1, "route",
   "seaborne", "r_seaborne", "Other seaborne", 1, "route",
-  "pipeline", "r_pipeline", "Cross-border pipelines", 1, "route",
   "domestic", "r_domestic", "Domestic (no transit)", 1, "route",
+  "pipeline", "r_pipeline", "Cross-border pipelines", 1, "route",
   "china", "c_china", "China", 2, "consumer",
   "india", "c_india", "India", 2, "consumer",
   "japan", "c_japan", "Japan", 2, "consumer",
   "korea", "c_korea", "South Korea", 2, "consumer",
   "otherasia", "c_otherasia", "Other Asia", 2, "consumer",
   "europe", "c_europe", "Europe (EU + UK)", 2, "consumer",
-  "usa", "c_usa", "USA", 2, "consumer",
   "mideast", "c_mideast", "Middle East", 2, "consumer",
   "row", "c_row", "Rest of World", 2, "consumer",
+  "usa", "c_usa", "USA", 2, "consumer",
   "stock", "c_stock", "Stock builds", 2, "stock"
 )
 

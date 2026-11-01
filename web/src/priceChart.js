@@ -11,6 +11,9 @@ export function createPriceChart(root, data, { onSeek, onHover, onLeave }) {
   const margin = { top: 16, right: 14, bottom: 20, left: 34 };
 
   const gGridP = svg.append('g').attr('class', 'gridlines');
+  const gGridT = svg.append('g').attr('class', 'gridlines');
+  const frameP = svg.append('rect').attr('class', 'panel-frame');
+  const frameT = svg.append('rect').attr('class', 'panel-frame');
   const warLine = svg.append('line').attr('class', 'event-line');
   const gAxisY = svg.append('g').attr('class', 'axis');
   const gAxisT = svg.append('g').attr('class', 'axis');
@@ -67,11 +70,22 @@ export function createPriceChart(root, data, { onSeek, onHover, onLeave }) {
       .attr('x2', innerR)
       .attr('y1', (d) => yP(d))
       .attr('y2', (d) => yP(d));
+    gGridT
+      .selectAll('line')
+      .data(yT.ticks(3))
+      .join('line')
+      .attr('x1', innerL)
+      .attr('x2', innerR)
+      .attr('y1', (d) => yT(d))
+      .attr('y2', (d) => yT(d));
+    frameP.attr('x', innerL).attr('y', pTop).attr('width', innerR - innerL).attr('height', hP);
+    frameT.attr('x', innerL).attr('y', tTop).attr('width', innerR - innerL).attr('height', hT);
     gAxisY.attr('transform', `translate(${innerL},0)`).call(d3.axisLeft(yP).ticks(4).tickSize(0).tickPadding(6)).call((g) => g.select('.domain').remove());
-    gAxisT.attr('transform', `translate(${innerL},0)`).call(d3.axisLeft(yT).ticks(2).tickSize(0).tickPadding(6)).call((g) => g.select('.domain').remove());
+    gAxisT.attr('transform', `translate(${innerL},0)`).call(d3.axisLeft(yT).ticks(3).tickSize(0).tickPadding(6)).call((g) => g.select('.domain').remove());
     gAxisX
       .attr('transform', `translate(0,${tBot})`)
-      .call(d3.axisBottom(x).ticks(d3.utcMonth.every(narrow ? 2 : 1)).tickFormat(d3.utcFormat('%b')).tickSizeOuter(0).tickSize(4));
+      .call(d3.axisBottom(x).ticks(d3.utcMonth.every(narrow ? 2 : 1)).tickFormat(d3.utcFormat('%b')).tickSizeOuter(0).tickSize(4))
+      .call((g) => g.select('.domain').remove());
 
     const warX = x(dates[warIndex]);
     warLine.attr('x1', warX).attr('x2', warX).attr('y1', pTop).attr('y2', tBot);

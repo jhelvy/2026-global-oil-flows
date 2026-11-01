@@ -1,0 +1,6 @@
+/*-- scss:defaults --*/
+$font-family-sans-serif: "Roboto Condensed", system-ui, -apple-system, "Segoe UI", sans-serif;
+$headings-font-family: "Fira Sans Condensed", "Roboto Condensed", system-ui, sans-serif;
+
+/*-- scss:rules --*/
+.navbar-brand { font-family: $headings-font-family; font-weight: 500; }
