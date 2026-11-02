@@ -15,7 +15,7 @@ jodi <- map(jodi_files, read_csv, col_types = cols(.default = "c")) |>
   filter(
     ENERGY_PRODUCT == "CRUDEOIL",
     UNIT_MEASURE == "KBD",
-    FLOW_BREAKDOWN %in% c("INDPROD", "REFINOBS", "TOTEXPSB", "TOTIMPSB", "DIRECUSE")
+    FLOW_BREAKDOWN %in% c("INDPROD", "REFINOBS", "TOTEXPSB", "TOTIMPSB", "DIRECUSE", "STATDIFF")
   ) |>
   transmute(
     iso2 = REF_AREA,
@@ -251,6 +251,20 @@ consumption_country <- imap(consumer_groups, \(g, name) {
     select(group, iso2, month, mbd, reported)
 }) |>
   bind_rows()
+
+# JODI's China refinery intake equals imports plus output minus exports in every month, so
+# it is apparent supply with stock change forced to zero, not actual runs. Official
+# throughput replaces it, and the difference becomes China's stock change in 04.
+china_balance <- read_csv(file.path(path_raw, "china_crude_balance.csv"))
+stopifnot(all(months %in% china_balance$month))
+consumption_country <- consumption_country |>
+  mutate(
+    china_runs = china_balance$runs_mbd[match(month, china_balance$month)],
+    china_ok = china_balance$status[match(month, china_balance$month)] != "assumption",
+    mbd = if_else(iso2 == "CN", china_runs, mbd),
+    reported = if_else(iso2 == "CN", china_ok, reported)
+  ) |>
+  select(-china_runs, -china_ok)
 
 write_csv(consumption_country, file.path(path_interim, "consumption_monthly_country.csv"))
 

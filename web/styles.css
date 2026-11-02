@@ -58,6 +58,25 @@
 .speed button[aria-pressed='true'] { background: var(--grid); font-weight: 600; }
 .flows :focus-visible { outline: 2px solid var(--p_stock); outline-offset: 2px; }
 
+.chart-wrap { position: relative; }
+.event-card {
+  position: absolute;
+  top: 18px;
+  z-index: 5;
+  width: 290px;
+  max-width: 100%;
+  padding: 8px 10px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.12);
+  font-size: 13px;
+  line-height: 1.35;
+}
+.card-date { color: var(--ink-2); font-size: 12px; }
+.card-title { font-family: var(--font-head); font-size: 14px; font-weight: 600; }
+.event-card p { margin: 2px 0 2px; color: var(--ink-2); }
+.event-card a { color: var(--ink-2); font-size: 12px; }
 #price-chart svg { display: block; width: 100%; cursor: pointer; touch-action: pan-y; }
 /* Inset by the chart margins less half the thumb, so the thumb tracks the playhead. */
 #scrubber { display: block; width: calc(100% - 32px); margin: 2px 6px 0 26px; height: 24px; accent-color: var(--ink); }
@@ -100,7 +119,10 @@
 .series-dim { fill: none; stroke: var(--axis); stroke-width: 1.5; }
 .series { fill: none; stroke: var(--ink); stroke-width: 2; stroke-linejoin: round; }
 .series.tankers { stroke: var(--p_saudi); }
-.event-line { stroke: var(--ink-2); stroke-dasharray: 3 3; }
+.event-line { stroke: var(--axis); }
+.event-line.war { stroke: var(--ink-2); stroke-dasharray: 3 3; }
+.event-line.stock { stroke: var(--p_stock); stroke-opacity: 0.6; }
+.event-line.active { stroke-width: 2; stroke-opacity: 1; }
 .event-label { font-size: 12px; fill: var(--ink-2); paint-order: stroke; stroke: var(--surface); stroke-width: 3px; }
 .playhead { stroke: var(--ink); stroke-width: 1.5; }
 .play-tag { font-size: 13px; font-weight: 600; fill: var(--ink); paint-order: stroke; stroke: var(--surface); stroke-width: 3px; font-variant-numeric: tabular-nums; }

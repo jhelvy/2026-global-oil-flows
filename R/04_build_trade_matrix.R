@@ -429,14 +429,8 @@ row_targets <- row_targets |>
   select(-stored)
 
 world_supply <- world_supply |>
-  left_join(storage_month, by = "month") |>
-  mutate(
-    draw = draw + stored + release,
-    build = build + release,
-    build_total = build + stored
-  )
+  left_join(storage_month, by = "month")
 
-write_csv(world_supply, file.path(path_interim, "world_balance_monthly.csv"))
 write_csv(row_targets, file.path(path_interim, "row_targets.csv"))
 
 # Monthly IPF ----
@@ -455,7 +449,7 @@ ipf <- function(seed, row_sum, col_sum, tol = 1e-7, max_iter = 5000) {
   list(m = m, iter = i, err = err)
 }
 
-rows_all <- c(producers, "stock")
+rows_all <- producers
 cols_all <- c(consumers, "stock")
 seed <- matrix(0.001, length(rows_all), length(cols_all), dimnames = list(rows_all, cols_all))
 for (k in seq_len(nrow(seed_final))) {
@@ -476,10 +470,85 @@ base_cols <- col_targets |>
 
 # ROW-to-ROW has no complete bilateral record, so its seed is the baseline residual.
 seed["row", "row"] <- max(base_cols[["row"]] - sum(seed[producers[producers != "row"], "row"]), 0.5)
-# Stock draws go to importers in proportion to their imports, never to the Gulf.
-seed["stock", consumers] <- base_cols[consumers] / sum(base_cols[consumers])
-seed["stock", "mideast"] <- 0
-seed["stock", "stock"] <- 0
+# Stock changes by consumer ----
+# China: official runs minus customs imports and domestic output. Elsewhere JODI masks its
+# stock-change field but publishes the statistical difference, and supply minus runs equals
+# stock change plus that difference. This recovers EIA's reported US crude stock change to
+# within 0.01 mb/d in January to July (see R/07_validate.R).
+stock_groups <- c("usa", "japan", "korea", "europe")
+jodi_stock <- consumption_country |>
+  distinct(group, iso2) |>
+  filter(group %in% stock_groups) |>
+  inner_join(
+    jodi |>
+      filter(month %in% months) |>
+      select(iso2, month, flow, mbd) |>
+      pivot_wider(names_from = flow, values_from = mbd),
+    by = "iso2", relationship = "many-to-many"
+  ) |>
+  filter(!is.na(REFINOBS), !is.na(TOTIMPSB)) |>
+  mutate(across(c(DIRECUSE, TOTEXPSB, INDPROD, STATDIFF), \(x) replace_na(x, 0))) |>
+  group_by(consumer = group, month) |>
+  summarise(net = sum(REFINOBS + DIRECUSE + TOTEXPSB - INDPROD - TOTIMPSB + STATDIFF), .groups = "drop")
+
+china_balance <- read_csv(file.path(path_raw, "china_crude_balance.csv"))
+stock_known <- bind_rows(
+  jodi_stock,
+  china_balance |> transmute(consumer = "china", month, net = runs_mbd - imports_mbd - output_mbd)
+)
+
+importers <- setdiff(consumers, "mideast")
+# Oil leaving Gulf storage goes where Gulf crude went before the war.
+gulf_weights <- seed_final |>
+  filter(producer %in% c("saudi", "iraq", "uae", "kuwait", "iran", "othergulf"), consumer %in% importers) |>
+  group_by(consumer) |>
+  summarise(mbd = sum(mbd), .groups = "drop") |>
+  deframe()
+gulf_weights <- gulf_weights[importers] / sum(gulf_weights[importers], na.rm = TRUE)
+gulf_weights[is.na(gulf_weights)] <- 0
+names(gulf_weights) <- importers
+
+# The world total stays fixed. What reported figures leave unexplained is the residual: oil
+# on water, unreported tanks and the gap between IEA runs and EIA production. It goes to
+# importers without a reported figure, in proportion to their imports.
+stock_cells <- map(months, \(mo) {
+  w <- world_supply |> filter(month == mo)
+  known <- stock_known |> filter(month == mo)
+  net <- setNames(known$net, known$consumer)
+  open <- setdiff(importers, known$consumer)
+  shares <- base_cols[open] / sum(base_cols[open])
+  residual <- w$stock_change - sum(net)
+  net_all <- c(net, shares * residual)
+  draws <- pmax(net_all, 0)
+  draws[open] <- draws[open] + shares * w$stored
+  tibble(
+    consumer = importers,
+    month = mo,
+    net_local = unname(net_all[importers]),
+    basis = if_else(importers %in% known$consumer, "reported", "residual"),
+    domestic = unname(draws[importers]),
+    hormuz = unname(gulf_weights[importers] * w$release),
+    build_part = pmax(-net_local, 0)
+  )
+}) |>
+  bind_rows()
+
+stock_totals <- stock_cells |>
+  group_by(month) |>
+  summarise(
+    draw = sum(domestic + hormuz),
+    local_builds = sum(build_part),
+    .groups = "drop"
+  )
+world_supply <- world_supply |>
+  select(-draw, -build) |>
+  left_join(stock_totals, by = "month") |>
+  mutate(build = local_builds + release, build_total = build + stored) |>
+  select(-local_builds)
+
+write_csv(stock_cells |> select(-build_part), file.path(path_interim, "stock_cells_monthly.csv"))
+write_csv(world_supply, file.path(path_interim, "world_balance_monthly.csv"))
+
 # Stock builds come from exporters in proportion to their exports.
 seed[producers, "stock"] <- base_rows[producers] / sum(base_rows[producers])
 
@@ -487,8 +556,14 @@ fits <- map(months, \(mo) {
   rows <- row_targets |> filter(month == mo)
   cols <- col_targets |> filter(month == mo)
   w <- world_supply |> filter(month == mo)
-  row_sum <- c(rows$exports[match(producers, rows$producer)], stock = w$draw)
-  col_sum <- c(cols$imports[match(consumers, cols$consumer)], stock = w$build)
+  cells <- stock_cells |> filter(month == mo)
+  from_stock <- (cells$domestic + cells$hormuz)[match(consumers, cells$consumer)]
+  from_stock[is.na(from_stock)] <- 0
+  row_sum <- rows$exports[match(producers, rows$producer)]
+  col_sum <- c(cols$imports[match(consumers, cols$consumer)] - from_stock, stock = w$build)
+  if (any(col_sum < -1e-6)) {
+    stop("A consumer draws more from stocks than it imports in ", mo)
+  }
   names(row_sum) <- rows_all
   names(col_sum) <- cols_all
   gap <- sum(row_sum) - sum(col_sum)
@@ -517,6 +592,11 @@ trade <- map(fits, \(f) {
 }) |>
   bind_rows() |>
   filter(mbd > 0)
+
+trade <- bind_rows(
+  trade,
+  stock_cells |> transmute(producer = "stock", consumer, month, mbd = domestic + hormuz) |> filter(mbd > 0)
+)
 
 write_csv(trade, file.path(path_interim, "trade_monthly.csv"))
 write_csv(domestic_cells, file.path(path_interim, "domestic_monthly.csv"))

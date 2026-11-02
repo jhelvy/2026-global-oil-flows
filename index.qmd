@@ -26,7 +26,10 @@ include-after-body:
   </div>
 
   <section aria-label="Brent price and Hormuz tanker transits">
-    <div id="price-chart"></div>
+    <div class="chart-wrap">
+      <div id="price-chart"></div>
+      <div class="event-card" id="event-card" role="status" hidden></div>
+    </div>
     <input id="scrubber" type="range" min="0" step="1" aria-label="Date" />
   </section>
 

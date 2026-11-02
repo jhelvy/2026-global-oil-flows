@@ -15,23 +15,52 @@ link_list <- function(items, text) {
 
 ## How the flows are built
 
-Production comes from EIA international data, extended past June with the October Short-Term Energy Outlook. Consumption is crude refinery intake plus direct burn, from JODI where reported, and closes on IEA global refinery throughput. Stock draws and builds are the balancing term.
+Production comes from EIA international data, extended past June with the October Short-Term Energy Outlook. Consumption is crude refinery intake plus direct burn, from JODI where reported, and closes on IEA global refinery throughput. China is the exception, because JODI's China intake is only imports plus output minus exports. China uses official refinery throughput instead.
 
 A 2025 trade matrix from the Energy Institute, split further with UN Comtrade, seeds who sells to whom. Iterative proportional fitting rescales it to each month's totals. Gulf exports fill bypass pipelines first, up to dated capacity limits, and the rest crosses the strait. IEA and EIA figures set each month's Hormuz volume. When a published volume exceeds what that month's production can explain, the difference is drawn from storage, which is the blue stock band running through the strait.
 
 Each producer-route-consumer flow keeps its monthly mean exactly. Within a month, Hormuz flows follow the 7-day PortWatch tanker count, with pre-war swings at half weight. Other flows interpolate between mid-month points, with a break at the war start.
 
+## Where stock draws go
+
+World stock change is IEA refinery runs minus production. The table splits that total by consumer, with draws positive and builds negative.
+
+- **China:** official refinery throughput minus customs imports and domestic output, as Reuters reports each month. This implied figure does not always match satellite tank counts. IEA's satellite series shows small draws in April and May (0.2 and 0.3 mb/d), while official data implies a 0.44 mb/d build in April and a 0.46 mb/d draw in May.
+- **USA, Japan, South Korea, Europe:** JODI supply minus refinery intake, corrected by JODI's statistical difference. For the US this matches EIA's reported crude stock change, including the SPR, to within 0.01 mb/d from January to July.
+- **Residual consumers:** what reported figures leave unexplained goes to the remaining importers by import share. It includes oil on water, unreported tanks and the gap between IEA runs and EIA production, so it is not a measured stock change for those places. In January that gap makes the residual unusually large.
+
+A build shows in the diagram as oil flowing to the Stock builds node. Both stock nodes include oil on water, because the model has no voyage lag: in March, cargoes already at sea account for much of the draw, and in June the wave of newly loaded tankers shows as a build. Separately, oil leaving Gulf storage is shown as the band from stocks through Hormuz. It goes where Gulf crude went before the war and is not included in this table.
+
+```{r}
+stock_table <- readr::read_csv("data/interim/stock_cells_monthly.csv", show_col_types = FALSE)
+names_of <- c(
+  china = "China", usa = "USA", japan = "Japan", korea = "South Korea", europe = "Europe (EU + UK)",
+  india = "India", otherasia = "Other Asia", row = "Rest of World"
+)
+stock_wide <- stock_table |>
+  dplyr::mutate(consumer = factor(consumer, levels = names(names_of), labels = names_of), mon = format(month, "%b")) |>
+  dplyr::select(consumer, month, mon, net_local) |>
+  dplyr::arrange(month, consumer) |>
+  dplyr::select(-month) |>
+  tidyr::pivot_wider(names_from = mon, values_from = net_local) |>
+  dplyr::arrange(consumer) |>
+  dplyr::rename(`mb/d` = consumer)
+knitr::kable(stock_wide, digits = 2)
+```
+
+In September and October, only China has a reported figure. Other consumers show their share of the residual in those months, and in all months for India, Other Asia and Rest of World. October for China is an assumption.
+
 ## Confidence by month
 
-| Months | Production | Global refinery runs | Hormuz crude |
-|---|---|---|---|
-| Jan to Feb | EIA | IEA reported | Tanker counts, factsheet baseline |
-| Mar | EIA | IEA reported | IEA reported |
-| Apr to Jun | EIA | IEA reported | Derived from IEA all-oil figures |
-| Jul | STEO extension | IEA reported | Derived from IEA excerpts via a trade press summary |
-| Aug | STEO extension | Interpolated | Derived from an IEA commentary |
-| Sep | STEO extension | Interpolated | **Assumption:** 1.1 times August, from EIA's "increased slightly" |
-| Oct | STEO extension | Forecast | **Assumption:** held at September |
+| Months | Production | Global refinery runs | China runs | Hormuz crude |
+|---|---|---|---|---|
+| Jan to Feb | EIA | IEA reported | Derived from a Jan-Apr average | Tanker counts, factsheet baseline |
+| Mar | EIA | IEA reported | NBS | IEA reported |
+| Apr to Jun | EIA | IEA reported | NBS | Derived from IEA all-oil figures |
+| Jul | STEO extension | IEA reported | NBS | Derived from IEA excerpts via a trade press summary |
+| Aug | STEO extension | Interpolated | NBS | Derived from an IEA commentary |
+| Sep | STEO extension | Interpolated | NBS | **Assumption:** 1.1 times August, from EIA's "increased slightly" |
+| Oct | STEO extension | Forecast | **Assumption:** held at September | **Assumption:** held at September |
 
 ## Known limitations
 

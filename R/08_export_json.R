@@ -25,7 +25,7 @@ nodes <- tribble(
   "russia", "p_russia", "Russia", 0, "russia",
   "usa", "p_usa", "USA", 0, "americas",
   "canada", "p_canada", "Canada", 0, "americas",
-  "stock", "p_stock", "Stock draws / SPR", 0, "stock",
+  "stock", "p_stock", "Stocks, oil on water", 0, "stock",
   "hormuz", "r_hormuz", "Strait of Hormuz", 1, "hormuz",
   "bypass", "r_bypass", "Gulf bypass pipelines", 1, "route",
   "seaborne", "r_seaborne", "Other seaborne", 1, "route",
@@ -40,7 +40,7 @@ nodes <- tribble(
   "mideast", "c_mideast", "Middle East", 2, "consumer",
   "row", "c_row", "Rest of World", 2, "consumer",
   "usa", "c_usa", "USA", 2, "consumer",
-  "stock", "c_stock", "Stock builds", 2, "stock"
+  "stock", "c_stock", "Stock builds, oil on water", 2, "stock"
 )
 
 id_for <- function(key, col) {
@@ -125,7 +125,9 @@ export <- list(
       list(name = "IEA Oil Market Report (refinery runs, Hormuz flows)", url = "https://www.iea.org/topics/oil-market-report"),
       list(name = "IEA Strait of Hormuz Factsheet", url = "https://www.iea.org/topics/the-middle-east-and-global-energy-markets"),
       list(name = "Energy Institute Statistical Review 2026 (trade baseline)", url = "https://www.energyinst.org/statistical-review"),
-      list(name = "UN Comtrade HS 2709 (splits EI regions)", url = "https://comtradeplus.un.org/")
+      list(name = "UN Comtrade HS 2709 (splits EI regions)", url = "https://comtradeplus.un.org/"),
+      list(name = "NBS and customs data for China, via Reuters (refinery runs, imports, output)", url = "https://boereport.com/2026/10/20/china-uses-crude-stockpiles-but-rising-oil-imports-may-curtail-draws-russell/"),
+      list(name = "EIA monthly crude stocks (checks the US stock figures)", url = "https://www.eia.gov/dnav/pet/pet_stoc_wstk_dcu_nus_m.htm")
     ),
     notes = "Daily flows are modeled estimates. Monthly official data are shaped by daily shipping signals; no public daily country-level data exist.",
     hormuz_target_status = hormuz_targets |> transmute(month = format(month), status, value = hormuz_crude_mbd),
@@ -135,7 +137,7 @@ export <- list(
   links = links |> select(id, source, target, origin, p, r, c),
   frames = frames,
   baseline = list(values = baseline_values),
-  events = events |> transmute(date = format(date), label, url = source_url)
+  events = events |> transmute(date = format(date), label, url = source_url, detail, kind)
 )
 
 json <- toJSON(export, auto_unbox = TRUE, digits = NA, na = "null", dataframe = "rows")

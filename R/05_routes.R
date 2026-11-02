@@ -7,7 +7,7 @@ domestic <- read_csv(file.path(path_interim, "domestic_monthly.csv"))
 gulf <- read_csv(file.path(path_interim, "gulf_routes_monthly.csv"))
 seed <- read_csv(file.path(path_interim, "trade_seed.csv"))
 storage <- read_csv(file.path(path_interim, "gulf_storage_monthly.csv"))
-balance <- read_csv(file.path(path_interim, "world_balance_monthly.csv"))
+stock_cells <- read_csv(file.path(path_interim, "stock_cells_monthly.csv"))
 
 gulf_producers <- unique(gulf$producer)
 
@@ -44,11 +44,8 @@ other_flows <- trade |>
 
 # Stock draws reach refiners from local tanks, so they carry no transit route. The
 # exception is the release from Gulf storage, which leaves through Hormuz.
-stock_flows <- trade |>
-  filter(producer == "stock") |>
-  left_join(balance |> select(month, draw, release), by = "month") |>
-  mutate(hormuz = if_else(draw > 0, mbd * release / draw, 0), domestic = mbd - hormuz) |>
-  select(producer, consumer, month, hormuz, domestic) |>
+stock_flows <- stock_cells |>
+  transmute(producer = "stock", consumer, month, hormuz, domestic) |>
   pivot_longer(c(hormuz, domestic), names_to = "route", values_to = "mbd") |>
   filter(mbd > 0)
 

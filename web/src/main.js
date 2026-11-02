@@ -9,6 +9,8 @@ import { showTooltip, hideTooltip, sparkline } from './tooltip.js';
 const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 const fmtLong = d3.utcFormat('%b %-d, %Y');
 const parse = d3.utcParse('%Y-%m-%d');
+// How long playback stops at an event, by playback speed in ms per day.
+const HOLD_SECONDS = { 200: 5.5, 100: 4.5, 50: 3 };
 const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]);
 
 function prepare(raw) {
@@ -49,7 +51,9 @@ function prepare(raw) {
   const events = raw.events
     .map((e) => ({ ...e, dateObj: parse(e.date) }))
     .map((e) => ({ ...e, index: d3.bisectLeft(dates, e.dateObj) }));
-  return { nodes, links, frames, dates, events, warIndex };
+  // Events with a description get a line on the chart and stop playback.
+  const popups = events.filter((e) => e.detail);
+  return { nodes, links, frames, dates, events, popups, warIndex };
 }
 
 function renderLegend() {
@@ -59,7 +63,7 @@ function renderLegend() {
     ['Rest of World', '--p_row'],
     ['Americas', '--p_usa'],
     ['Russia', '--p_russia'],
-    ['Stock draws', '--p_stock'],
+    ['Stocks, oil on water', '--p_stock'],
   ];
   legend.innerHTML =
     groups.map(([label, v]) => `<span><i style="background:var(${v})"></i>${label}</span>`).join('') +
@@ -69,7 +73,7 @@ function renderLegend() {
 
 function main() {
   const data = prepare(raw);
-  const { frames, nodes, links, events, warIndex } = data;
+  const { frames, nodes, links, events, popups, warIndex } = data;
   renderLegend();
 
   const wrap = document.getElementById('sankey-wrap');
@@ -83,6 +87,9 @@ function main() {
   let playing = false;
   let ended = false;
   let msPerDay = 100;
+  let nextPopup = 0;
+  let holdLeft = 0;
+  let cardEvent = null;
   let jump = null;
   let lastDay = -1;
   let selected = null;
@@ -114,6 +121,46 @@ function main() {
     onLeave: hideTooltip,
   });
 
+  // The event card sits beside its line on the chart, on the side with more room.
+  const chartWrap = document.querySelector('.chart-wrap');
+  const card = document.getElementById('event-card');
+
+  function placeCard() {
+    if (!cardEvent) return;
+    const w = chartWrap.clientWidth;
+    const lineX = chart.xOf(cardEvent.index);
+    const cardW = card.offsetWidth;
+    // The right side leaves room for the playhead's value tags.
+    const left = lineX + 44 + cardW <= w ? lineX + 44 : lineX - 10 - cardW;
+    card.style.left = `${Math.max(0, left)}px`;
+  }
+
+  function showCard(ev) {
+    cardEvent = ev;
+    card.innerHTML =
+      `<div class="card-date">${fmtLong(ev.dateObj)}</div>` +
+      `<div class="card-title">${esc(ev.label)}</div>` +
+      `<p>${esc(ev.detail)}</p>` +
+      `<a href="${esc(ev.url)}" target="_blank" rel="noopener">Source</a>`;
+    card.hidden = false;
+    placeCard();
+    chart.setActive(ev);
+  }
+
+  function hideCard() {
+    cardEvent = null;
+    card.hidden = true;
+    chart.setActive(null);
+  }
+
+  // A reader who lands on an event by hand sees its card too, without any timed stop.
+  function syncCard() {
+    const day = Math.round(cursor);
+    const ev = popups.find((e) => e.index === day);
+    if (ev) showCard(ev);
+    else hideCard();
+  }
+
   function setState() {
     controls.setState(playing ? 'playing' : ended ? 'ended' : 'paused');
   }
@@ -122,19 +169,27 @@ function main() {
     if (ended) {
       cursor = 0;
       ended = false;
+      nextPopup = 0;
     }
     playing = !playing;
     jump = null;
+    holdLeft = 0;
+    // Pausing during a stop keeps the card up for reading. Playing again moves on.
+    if (playing) hideCard();
     setState();
   }
 
   function seek(i) {
     playing = false;
     ended = false;
+    holdLeft = 0;
+    nextPopup = d3.bisectRight(popups.map((e) => e.index), i);
     setState();
     if (reduceMotion) {
       cursor = i;
       jump = null;
+      applyCursor();
+      syncCard();
     } else {
       jump = { from: cursor, to: i, t: 0 };
     }
@@ -277,6 +332,7 @@ function main() {
     sankey.layout(w, h);
     particles.resize(w, h);
     chart.resize(priceEl.clientWidth);
+    placeCard();
     lastDay = -1;
     applyCursor();
     needsDraw = true;
@@ -293,8 +349,19 @@ function main() {
     const dt = Math.max(0, Math.min(0.1, (now - last) / 1000));
     last = now;
     let moved = false;
-    if (playing) {
+    if (playing && holdLeft > 0) {
+      // Stopped at an event: the date holds while oil keeps moving.
+      holdLeft -= dt;
+      if (holdLeft <= 0) hideCard();
+    } else if (playing) {
       cursor += (dt * 1000) / msPerDay;
+      const ev = popups[nextPopup];
+      if (ev && cursor >= ev.index) {
+        cursor = ev.index;
+        nextPopup += 1;
+        holdLeft = HOLD_SECONDS[msPerDay];
+        showCard(ev);
+      }
       if (cursor >= frames.length - 1) {
         cursor = frames.length - 1;
         playing = false;
@@ -308,6 +375,8 @@ function main() {
       if (jump.t >= 1) {
         cursor = jump.to;
         jump = null;
+        applyCursor();
+        syncCard();
       }
       moved = true;
     }

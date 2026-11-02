@@ -11,11 +11,12 @@ Rerun everything with `Rscript run_all.R` from the repo root. API keys go in a g
 
 ## Method
 
-1. **Consumption** is crude refinery runs plus direct burn. World crude use closes on IEA global refinery throughput (`data/raw/iea_refinery_runs.csv`). The stock term is runs minus production. Rest of World is the residual, steady at about 15 to 16 mb/d. STEO total-liquids stock change is kept only for comparison, because it is largely products.
+1. **Consumption** is crude refinery runs plus direct burn. World crude use closes on IEA global refinery throughput (`data/raw/iea_refinery_runs.csv`). The stock term is runs minus production. Rest of World is the residual. STEO total-liquids stock change is kept only for comparison, because it is largely products. JODI's China refinery intake equals imports plus output minus exports in every month, so it is apparent supply and hides stock change. `data/raw/china_crude_balance.csv` replaces it with official throughput, as Reuters reports it.
 2. **Trade.** The Energy Institute 2025 inter-area crude matrix is the seed. Comtrade splits its regions into the node groups and supplies intra-Europe flows that EI excludes. Iterative proportional fitting rescales the seed to each month's totals, converging in 21 to 27 iterations.
 3. **Routes.** Gulf exports are production minus domestic use. Bypass pipelines fill first, up to dated capacities in `data/raw/route_assumptions.csv`. The rest crosses the strait.
 4. **Hormuz volumes** come from `data/raw/hormuz_crude_targets.csv`. A shortfall against the month's figure becomes a release from storage, drawn as the blue stock band through the strait. An excess becomes stored oil. Either way, net stock change and consumer totals hold.
-5. **Daily shape.** Each producer-route-consumer flow keeps its monthly mean exactly. Hormuz flows follow the 7-day tanker count plus a small constant, because one vessel must not double a flow when counts are near zero. Pre-war swings carry half weight, because a 60% late-February rise in vessel counts would overstate the starting point. Other flows interpolate between mid-month points, with a break at the war start.
+5. **Stock change by consumer.** China is official runs minus customs imports and output. USA, Japan, South Korea and Europe are JODI supply minus intake, corrected by JODI's statistical difference, because JODI masks its stock-change field. For the US this matches EIA's reported crude stock change to within 0.01 mb/d from January to July (August is 0.10 against EIA's 0.37). The remainder of the world total goes to the other importers by import share, and it includes oil on water, unreported tanks and the gap between IEA runs and EIA production. `data/interim/stock_cells_monthly.csv` holds the result, and the IPF runs on what is left. After August, only China has a reported figure.
+6. **Daily shape.** Each producer-route-consumer flow keeps its monthly mean exactly. Hormuz flows follow the 7-day tanker count plus a small constant, because one vessel must not double a flow when counts are near zero. Pre-war swings carry half weight, because a 60% late-February rise in vessel counts would overstate the starting point. Other flows interpolate between mid-month points, with a break at the war start.
 
 ## Confidence by month
 
@@ -38,9 +39,12 @@ The IEA reports for August to October need a paid subscription and were not used
 - Yanbu plus Fujairah comes in about 20% under IEA in February and June, as expected, because the model is crude only and IEA's figure is all oil.
 - That same figure is 10% over IEA in August. With Saudi at 3.82 and UAE at 1.8 mb/d, the model's 5.62 mb/d sits between IEA's 5.5 for both ports and EIA's "more than 5.0" for Yanbu alone, so the sources themselves disagree.
 - Middle East runs are 11% over IEA in April.
-- China runs are 7% under the NBS-based figure in June.
+- China's official-data stock change differs from IEA's satellite series, which shows a 0.2 mb/d draw in April where official data implies a 0.44 mb/d build, and a 1.4 mb/d draw in June against 0.94. Both show the turn from building to drawing in spring.
 
 ## Known gaps and open items
+
+- Rest of World consumption is what remains of IEA world runs, so it absorbs noise. It drops to 14.2 mb/d in August because China's runs jump 1.4 mb/d while the world figure for that month is interpolated.
+- In March, the residual stock draw is 6.8 mb/d, largely cargoes at sea when the strait closed. With no voyage lag it lands on India, Other Asia and Rest of World by import share, so those bands are not measured stock draws.
 
 - PortWatch returned no rows for Yanbu, Ras Tanura or Kharg, so the bypass ramp is not shaped by port data.
 - Comtrade 2025 lacks some reporters, so the newest year per reporter is used.

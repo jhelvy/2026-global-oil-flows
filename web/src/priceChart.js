@@ -3,7 +3,7 @@
 import * as d3 from 'd3';
 
 export function createPriceChart(root, data, { onSeek, onHover, onLeave }) {
-  const { dates, frames, warIndex } = data;
+  const { dates, frames, warIndex, popups } = data;
   const svg = d3.select(root).append('svg');
   const defs = svg.append('defs');
   const clipId = 'played-clip';
@@ -14,7 +14,12 @@ export function createPriceChart(root, data, { onSeek, onHover, onLeave }) {
   const gGridT = svg.append('g').attr('class', 'gridlines');
   const frameP = svg.append('rect').attr('class', 'panel-frame');
   const frameT = svg.append('rect').attr('class', 'panel-frame');
-  const warLine = svg.append('line').attr('class', 'event-line');
+  const eventLines = svg
+    .append('g')
+    .selectAll('line')
+    .data(popups)
+    .join('line')
+    .attr('class', (e) => `event-line ${e.kind}`);
   const gAxisY = svg.append('g').attr('class', 'axis');
   const gAxisT = svg.append('g').attr('class', 'axis');
   const gAxisX = svg.append('g').attr('class', 'axis');
@@ -27,6 +32,7 @@ export function createPriceChart(root, data, { onSeek, onHover, onLeave }) {
   const titleP = svg.append('text').attr('class', 'panel-title').text('Brent spot, $ per barrel');
   const titleT = svg.append('text').attr('class', 'panel-title').text('Hormuz tankers per day, 7-day average');
   const warLabel = svg.append('text').attr('class', 'event-label').text('War starts Feb 28');
+  const keyLabel = svg.append('text').attr('class', 'event-label').attr('text-anchor', 'end').text('Blue lines mark stock draws, gray lines other events');
   const tagP = svg.append('text').attr('class', 'play-tag');
   const tagT = svg.append('text').attr('class', 'play-tag');
 
@@ -88,7 +94,12 @@ export function createPriceChart(root, data, { onSeek, onHover, onLeave }) {
       .call((g) => g.select('.domain').remove());
 
     const warX = x(dates[warIndex]);
-    warLine.attr('x1', warX).attr('x2', warX).attr('y1', pTop).attr('y2', tBot);
+    eventLines
+      .attr('x1', (e) => x(e.dateObj))
+      .attr('x2', (e) => x(e.dateObj))
+      .attr('y1', pTop)
+      .attr('y2', tBot);
+    keyLabel.attr('x', innerR).attr('y', pTop - 5).style('display', narrow ? 'none' : null);
 
     titleP.attr('x', innerL).attr('y', pTop - 5);
     titleT.attr('x', innerL).attr('y', tTop - 5);
@@ -119,11 +130,17 @@ export function createPriceChart(root, data, { onSeek, onHover, onLeave }) {
       .text(fr.hormuz_tankers_7d.toFixed(0));
   }
 
+  // A pointer within a few pixels of an event line lands on that event.
   function indexAt(event) {
     const [mx] = d3.pointer(event, svg.node());
+    const near = popups.find((e) => Math.abs(x(e.dateObj) - mx) <= 5);
+    if (near) return near.index;
     const d = x.invert(mx);
     return Math.max(0, Math.min(dates.length - 1, d3.bisectCenter(dates, d)));
   }
+
+  const xOf = (index) => x(dates[index]);
+  const setActive = (ev) => eventLines.classed('active', (e) => e === ev);
 
   let dragging = false;
   svg
@@ -142,5 +159,5 @@ export function createPriceChart(root, data, { onSeek, onHover, onLeave }) {
       onLeave();
     });
 
-  return { resize, setCursor };
+  return { resize, setCursor, xOf, setActive };
 }

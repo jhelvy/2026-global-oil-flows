@@ -7,10 +7,10 @@ import { sankeyLinkHorizontal } from 'd3-sankey';
 
 const NODE_W = 14;
 const SHORT = {
-  'Saudi Arabia': 'Saudi', 'Rest of World': 'ROW', 'Stock draws / SPR': 'Stocks', 'South Korea': 'Korea',
+  'Saudi Arabia': 'Saudi', 'Rest of World': 'ROW', 'Stocks, oil on water': 'Stocks', 'South Korea': 'Korea',
   'Europe (EU + UK)': 'Europe', 'Middle East': 'Mideast', 'Strait of Hormuz': 'Hormuz',
   'Gulf bypass pipelines': 'Bypass', 'Other seaborne': 'Seaborne', 'Cross-border pipelines': 'Pipelines',
-  'Domestic (no transit)': 'Domestic', 'Stock builds': 'Stocks', 'Other Gulf': 'O. Gulf', 'Other Asia': 'O. Asia',
+  'Domestic (no transit)': 'Domestic', 'Stock builds, oil on water': 'Stocks', 'Other Gulf': 'O. Gulf', 'Other Asia': 'O. Asia',
 };
 
 export function fmtPct(now, base) {

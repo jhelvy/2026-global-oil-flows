@@ -136,6 +136,11 @@ release_by_month <- gulf |>
   group_by(month) |>
   summarise(release = first(release), .groups = "drop")
 
+stock_cells <- read_csv(file.path(path_interim, "stock_cells_monthly.csv"))
+stock_net <- function(group, month) {
+  stock_cells$net_local[stock_cells$consumer == group & stock_cells$month == as.Date(month)]
+}
+
 comparison <- tribble(
   ~measure, ~period, ~model, ~published,
   "Hormuz crude, EIA", "1Q26", quarter_mean(date_start, as.Date("2026-03-31")), 10.9,
@@ -153,7 +158,19 @@ comparison <- tribble(
   "Middle East runs, IEA", "Apr 2026", consumption$mbd[consumption$group == "mideast" & consumption$month == as.Date("2026-04-01")], 7.2,
   "Europe runs, IEA", "Apr 2026", consumption$mbd[consumption$group == "europe" & consumption$month == as.Date("2026-04-01")], 10.6,
   "China runs, NBS-based", "Apr 2026", consumption$mbd[consumption$group == "china" & consumption$month == as.Date("2026-04-01")], 13.3,
-  "China runs, NBS-based", "Jun 2026", consumption$mbd[consumption$group == "china" & consumption$month == as.Date("2026-06-01")], 12.38
+  "China runs, NBS-based", "Jun 2026", consumption$mbd[consumption$group == "china" & consumption$month == as.Date("2026-06-01")], 12.38,
+  # Stock change, draws positive. IEA's China figures are satellite-based, so they test the
+  # sign and timing of the official-data estimate, not its exact size.
+  "China crude stock draw, IEA satellite", "Mar 2026", stock_net("china", "2026-03-01"), -1.2,
+  "China crude stock draw, IEA satellite", "Apr 2026", stock_net("china", "2026-04-01"), 0.2,
+  "China crude stock draw, IEA satellite", "May 2026", stock_net("china", "2026-05-01"), 0.3,
+  "China crude stock draw, IEA satellite", "Jun 2026", stock_net("china", "2026-06-01"), 1.4,
+  "US crude stock draw incl. SPR, EIA", "Feb 2026", stock_net("usa", "2026-02-01"), -1.04,
+  "US crude stock draw incl. SPR, EIA", "Apr 2026", stock_net("usa", "2026-04-01"), 0.79,
+  "US crude stock draw incl. SPR, EIA", "May 2026", stock_net("usa", "2026-05-01"), 2.07,
+  "US crude stock draw incl. SPR, EIA", "Jun 2026", stock_net("usa", "2026-06-01"), 1.81,
+  "US crude stock draw incl. SPR, EIA", "Jul 2026", stock_net("usa", "2026-07-01"), 0.42,
+  "US crude stock draw incl. SPR, EIA", "Aug 2026", stock_net("usa", "2026-08-01"), 0.37
 ) |>
   mutate(gap_pct = 100 * (model / published - 1))
 
