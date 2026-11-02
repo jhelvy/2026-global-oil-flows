@@ -1,0 +1,11 @@
+month,imports_mbd,output_mbd,runs_mbd,status,note,source_url
+2026-01-01,12.01,4.43,15.18,derived,"Runs: Jan-Feb average implied by the Jan-Apr average of 14.54 with March and April removed. Imports and output: JODI.",https://boereport.com/2026/05/21/china-kept-building-its-crude-stockpile-in-april-despite-iran-crisis-russell/
+2026-02-01,12.04,4.44,15.18,derived,"Runs: as January. Imports and output: JODI.",https://boereport.com/2026/05/21/china-kept-building-its-crude-stockpile-in-april-despite-iran-crisis-russell/
+2026-03-01,11.77,4.49,14.52,reported,"NBS and customs figures via Reuters.",https://boereport.com/2026/04/16/china-added-more-crude-to-its-massive-stockpile-in-march-but-outlook-shifts-russell/
+2026-04-01,9.37,4.37,13.30,reported,"NBS and customs figures via Reuters.",https://boereport.com/2026/05/21/china-kept-building-its-crude-stockpile-in-april-despite-iran-crisis-russell/
+2026-05-01,7.81,4.38,12.65,reported,"Runs: NBS, 53.72 million tonnes, via Asharq Al-Awsat. Imports and output: JODI.",https://aawsat.com/الاقتصاد/5284756-انخفاض-إنتاج-الصين-من-النفط-في-مايو-لأدنى-مستوى-منذ-أربع-سنوات
+2026-06-01,7.12,4.41,12.47,reported,"NBS and customs figures via Reuters. The column also prints 12.27 for runs, but its 940,000 b/d draw needs 12.47.",https://boereport.com/2026/07/19/what-is-chinas-next-surprise-for-oil-markets-lower-imports-higher-fuel-exports-russell/
+2026-07-01,8.41,4.30,12.51,reported,"NBS and customs figures via Reuters.",https://boereport.com/2026/08/17/china-surprises-oil-markets-again-with-a-return-to-stockpiling-in-july-russell/
+2026-08-01,8.93,4.34,13.91,reported,"NBS and customs figures via Reuters.",https://boereport.com/2026/09/15/china-draws-on-crude-inventories-in-august-as-refinery-runs-rise-russell/
+2026-09-01,9.03,4.43,13.99,reported,"NBS and customs figures via Reuters.",https://boereport.com/2026/10/20/china-uses-crude-stockpiles-but-rising-oil-imports-may-curtail-draws-russell/
+2026-10-01,10.00,4.43,13.99,assumption,"No official data yet. Imports: Reuters expects more than 10 mb/d. Output and runs held at September.",https://boereport.com/2026/10/20/china-uses-crude-stockpiles-but-rising-oil-imports-may-curtail-draws-russell/

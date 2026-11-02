@@ -1,6 +1,9 @@
 month,hormuz_crude_mbd,status,source_url,note
-2026-03-01,1.9,reported,https://www.iea.org/reports/oil-market-report-april-2026,"April OMR: Hormuz crude and condensate exports dropped by 14.2 mb/d to 1.9 mb/d; all oil 2.3 mb/d."
+2026-03-01,1.9,reported,https://www.iea.org/reports/oil-market-report-april-2026,April OMR: Hormuz crude and condensate exports dropped by 14.2 mb/d to 1.9 mb/d; all oil 2.3 mb/d.
 2026-04-01,2.2,derived,https://www.iea.org/reports/oil-market-report-may-2026,"May OMR: all oil via Hormuz 2.7 mb/d, times March's crude share of 0.83."
-2026-05-01,2.2,derived,https://www.iea.org/reports/oil-market-report-june-2026,"June OMR implies all oil via Hormuz of 2.7 mb/d in May (June 8.2 after a 5.5 rise), times the 0.83 crude share."
+2026-05-01,2.2,derived,https://www.iea.org/reports/oil-market-report-june-2026,"July OMR implies all oil via Hormuz of 2.7 mb/d in May (June 8.2 after a 5.5 rise), times the 0.83 crude share."
 2026-06-01,6.7,derived,https://www.iea.org/reports/oil-market-report-july-2026,"July OMR: all oil via Hormuz 8.2 mb/d, times June's crude share of Gulf exports (13.2 of 16.1 mb/d)."
-2026-08-01,6.2,derived,https://www.iea.org/commentaries/oil-markets-strain-to-plug-the-gap-left-by-middle-east-supply-shortfall,"IEA: Hormuz flows averaged 7.6 mb/d in August (search excerpt), times the 0.82 crude share. Update when the OMR is supplied."
+2026-07-01,6.6,derived,https://www.hellenicshippingnews.com/?p=1144387,"August OMR: Gulf exports 15 mb/d all oil. Less about 7 mb/d of bypass, the midpoint of IEA's 7.8 in June and 5.5 in August, times the 0.82 crude share."
+2026-08-01,6.2,derived,https://www.iea.org/commentaries/oil-markets-strain-to-plug-the-gap-left-by-middle-east-supply-shortfall,"IEA commentary of Sep 18: Hormuz flows averaged 7.6 mb/d in August, times the 0.82 crude share."
+2026-09-01,11.3,derived,https://www.cnbc.com/2026/10/30/tanker-attack-strait-hormuz-iran-war-oil.html,Kpler via CNBC: October's 11.1 mb/d was about 2% below September. Kpler's own blog gives 9.9 mb/d for Sep 1-28 excluding Iran. Provisional tracking data.
+2026-10-01,11.1,reported,https://www.cnbc.com/2026/10/30/tanker-attack-strait-hormuz-iran-war-oil.html,"Kpler via CNBC, October average to about Oct 28. Provisional tracking data. Weekly figures ran from 7.3 to about 14 mb/d."

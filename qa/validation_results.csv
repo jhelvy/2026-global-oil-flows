@@ -1,0 +1,8 @@
+check,pass,detail
+Daily left = middle = right,TRUE,max gap 4.26e-14 mb/d
+No negative flows,TRUE,minimum 0.0000 mb/d
+Monthly mean of each flow matches input,TRUE,max gap 0.0000 mb/d
+Monthly producer means within 1% of inputs,TRUE,worst 0.000% (canada)
+Monthly consumer means within 1% of inputs,TRUE,worst 0.000% (korea)
+Pre-war Hormuz near 20% of world supply,TRUE,"14.7 mb/d, 17.2% of crude supply"
+Mar-Apr crude supply loss plausible against IEA,TRUE,9.8 mb/d crude; IEA total oil loss 12.8 mb/d by April

@@ -5,7 +5,7 @@ month,runs_mbd,status,source_url,note
 2026-04-01,77.3,reported,https://www.iea.org/reports/oil-market-report-july-2026,July OMR table.
 2026-05-01,77.7,reported,https://www.iea.org/reports/oil-market-report-july-2026,July OMR table.
 2026-06-01,79.2,reported,https://www.iea.org/reports/oil-market-report-july-2026,July OMR table.
-2026-07-01,80.9,reported,https://www.hellenicshippingnews.com/?p=1144387,August OMR text as republished. Update from data/raw/manual when the August OMR is supplied.
-2026-08-01,81.0,interpolated,https://www.iea.org/reports/oil-market-report-october-2026,Linear between July 80.9 and October 81.3. Update when the later OMRs are supplied.
-2026-09-01,81.2,interpolated,https://www.iea.org/reports/oil-market-report-october-2026,Linear between July 80.9 and October 81.3. Update when the later OMRs are supplied.
+2026-07-01,80.44,derived,https://www.iea.org/reports/oil-market-report-september-2026,September OMR summary: August 81.4 mb/d was up 960 kb/d on the month. The August OMR first gave 80.9.
+2026-08-01,81.4,reported,https://www.iea.org/reports/oil-market-report-september-2026,September OMR summary: a summer peak of 81.4 mb/d.
+2026-09-01,81.35,interpolated,https://www.iea.org/reports/oil-market-report-october-2026,Linear between August 81.4 and October 81.3.
 2026-10-01,81.3,forecast,https://www.iea.org/reports/oil-market-report-october-2026,October OMR seasonal low.

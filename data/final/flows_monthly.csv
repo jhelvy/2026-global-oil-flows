@@ -1,0 +1,1872 @@
+month,source,route,target,value
+2026-01-01,Cargoes at sea,Other seaborne,China,0.158
+2026-02-01,Cargoes at sea,Other seaborne,China,0.152
+2026-03-01,Cargoes at sea,Other seaborne,China,1.434
+2026-05-01,Cargoes at sea,Other seaborne,China,0.063
+2026-07-01,Cargoes at sea,Other seaborne,China,0.501
+2026-08-01,Cargoes at sea,Other seaborne,China,0.521
+2026-01-01,Cargoes at sea,Other seaborne,Europe (EU + UK),0.037
+2026-02-01,Cargoes at sea,Other seaborne,Europe (EU + UK),0.036
+2026-03-01,Cargoes at sea,Other seaborne,Europe (EU + UK),0.338
+2026-05-01,Cargoes at sea,Other seaborne,Europe (EU + UK),0.015
+2026-07-01,Cargoes at sea,Other seaborne,Europe (EU + UK),0.118
+2026-08-01,Cargoes at sea,Other seaborne,Europe (EU + UK),0.123
+2026-01-01,Cargoes at sea,Other seaborne,India,0.07
+2026-02-01,Cargoes at sea,Other seaborne,India,0.067
+2026-03-01,Cargoes at sea,Other seaborne,India,0.637
+2026-05-01,Cargoes at sea,Other seaborne,India,0.028
+2026-07-01,Cargoes at sea,Other seaborne,India,0.222
+2026-08-01,Cargoes at sea,Other seaborne,India,0.231
+2026-01-01,Cargoes at sea,Other seaborne,Japan,0.061
+2026-02-01,Cargoes at sea,Other seaborne,Japan,0.059
+2026-03-01,Cargoes at sea,Other seaborne,Japan,0.555
+2026-05-01,Cargoes at sea,Other seaborne,Japan,0.024
+2026-07-01,Cargoes at sea,Other seaborne,Japan,0.194
+2026-08-01,Cargoes at sea,Other seaborne,Japan,0.201
+2026-01-01,Cargoes at sea,Other seaborne,South Korea,0.056
+2026-02-01,Cargoes at sea,Other seaborne,South Korea,0.053
+2026-03-01,Cargoes at sea,Other seaborne,South Korea,0.504
+2026-05-01,Cargoes at sea,Other seaborne,South Korea,0.022
+2026-07-01,Cargoes at sea,Other seaborne,South Korea,0.176
+2026-08-01,Cargoes at sea,Other seaborne,South Korea,0.183
+2026-01-01,Cargoes at sea,Other seaborne,Other Asia,0.077
+2026-02-01,Cargoes at sea,Other seaborne,Other Asia,0.074
+2026-03-01,Cargoes at sea,Other seaborne,Other Asia,0.7
+2026-05-01,Cargoes at sea,Other seaborne,Other Asia,0.031
+2026-07-01,Cargoes at sea,Other seaborne,Other Asia,0.245
+2026-08-01,Cargoes at sea,Other seaborne,Other Asia,0.254
+2026-01-01,Cargoes at sea,Other seaborne,Rest of World,0.006
+2026-02-01,Cargoes at sea,Other seaborne,Rest of World,0.006
+2026-03-01,Cargoes at sea,Other seaborne,Rest of World,0.056
+2026-05-01,Cargoes at sea,Other seaborne,Rest of World,0.002
+2026-07-01,Cargoes at sea,Other seaborne,Rest of World,0.02
+2026-08-01,Cargoes at sea,Other seaborne,Rest of World,0.02
+2026-01-01,Cargoes at sea,Other seaborne,USA,0.014
+2026-02-01,Cargoes at sea,Other seaborne,USA,0.013
+2026-03-01,Cargoes at sea,Other seaborne,USA,0.127
+2026-05-01,Cargoes at sea,Other seaborne,USA,0.006
+2026-07-01,Cargoes at sea,Other seaborne,USA,0.044
+2026-08-01,Cargoes at sea,Other seaborne,USA,0.046
+2026-01-01,Brazil,Domestic (no transit),Rest of World,1.657
+2026-02-01,Brazil,Domestic (no transit),Rest of World,1.761
+2026-03-01,Brazil,Domestic (no transit),Rest of World,1.915
+2026-04-01,Brazil,Domestic (no transit),Rest of World,2.398
+2026-05-01,Brazil,Domestic (no transit),Rest of World,3.049
+2026-06-01,Brazil,Domestic (no transit),Rest of World,2.455
+2026-07-01,Brazil,Domestic (no transit),Rest of World,2.784
+2026-08-01,Brazil,Domestic (no transit),Rest of World,2.548
+2026-09-01,Brazil,Domestic (no transit),Rest of World,2.51
+2026-10-01,Brazil,Domestic (no transit),Rest of World,2.279
+2026-04-01,Brazil,Other seaborne,Cargoes at sea,0.133
+2026-06-01,Brazil,Other seaborne,Cargoes at sea,0.603
+2026-09-01,Brazil,Other seaborne,Cargoes at sea,0.285
+2026-01-01,Brazil,Other seaborne,China,1.288
+2026-02-01,Brazil,Other seaborne,China,1.198
+2026-03-01,Brazil,Other seaborne,China,1.287
+2026-04-01,Brazil,Other seaborne,China,1.154
+2026-05-01,Brazil,Other seaborne,China,0.838
+2026-06-01,Brazil,Other seaborne,China,0.879
+2026-07-01,Brazil,Other seaborne,China,0.957
+2026-08-01,Brazil,Other seaborne,China,1.008
+2026-09-01,Brazil,Other seaborne,China,0.828
+2026-10-01,Brazil,Other seaborne,China,0.942
+2026-01-01,Brazil,Other seaborne,Europe (EU + UK),0.124
+2026-02-01,Brazil,Other seaborne,Europe (EU + UK),0.107
+2026-03-01,Brazil,Other seaborne,Europe (EU + UK),0.088
+2026-04-01,Brazil,Other seaborne,Europe (EU + UK),0.099
+2026-05-01,Brazil,Other seaborne,Europe (EU + UK),0.077
+2026-06-01,Brazil,Other seaborne,Europe (EU + UK),0.112
+2026-07-01,Brazil,Other seaborne,Europe (EU + UK),0.108
+2026-08-01,Brazil,Other seaborne,Europe (EU + UK),0.085
+2026-09-01,Brazil,Other seaborne,Europe (EU + UK),0.075
+2026-10-01,Brazil,Other seaborne,Europe (EU + UK),0.078
+2026-01-01,Brazil,Other seaborne,India,0.071
+2026-02-01,Brazil,Other seaborne,India,0.07
+2026-03-01,Brazil,Other seaborne,India,0.051
+2026-04-01,Brazil,Other seaborne,India,0.085
+2026-05-01,Brazil,Other seaborne,India,0.077
+2026-06-01,Brazil,Other seaborne,India,0.081
+2026-07-01,Brazil,Other seaborne,India,0.069
+2026-08-01,Brazil,Other seaborne,India,0.059
+2026-09-01,Brazil,Other seaborne,India,0.045
+2026-10-01,Brazil,Other seaborne,India,0.052
+2026-01-01,Brazil,Other seaborne,Japan,0.004
+2026-02-01,Brazil,Other seaborne,Japan,0.003
+2026-03-01,Brazil,Other seaborne,Japan,0.004
+2026-04-01,Brazil,Other seaborne,Japan,0.001
+2026-05-01,Brazil,Other seaborne,Japan,0.003
+2026-06-01,Brazil,Other seaborne,Japan,0.003
+2026-07-01,Brazil,Other seaborne,Japan,0.004
+2026-08-01,Brazil,Other seaborne,Japan,0.003
+2026-09-01,Brazil,Other seaborne,Japan,0.002
+2026-10-01,Brazil,Other seaborne,Japan,0.002
+2026-01-01,Brazil,Other seaborne,South Korea,0.038
+2026-02-01,Brazil,Other seaborne,South Korea,0.032
+2026-03-01,Brazil,Other seaborne,South Korea,0.04
+2026-04-01,Brazil,Other seaborne,South Korea,0.03
+2026-05-01,Brazil,Other seaborne,South Korea,0.037
+2026-06-01,Brazil,Other seaborne,South Korea,0.039
+2026-07-01,Brazil,Other seaborne,South Korea,0.038
+2026-08-01,Brazil,Other seaborne,South Korea,0.038
+2026-09-01,Brazil,Other seaborne,South Korea,0.026
+2026-10-01,Brazil,Other seaborne,South Korea,0.029
+2026-01-01,Brazil,Other seaborne,Middle East,0.001
+2026-02-01,Brazil,Other seaborne,Middle East,0.001
+2026-03-01,Brazil,Other seaborne,Middle East,0
+2026-05-01,Brazil,Other seaborne,Middle East,0
+2026-06-01,Brazil,Other seaborne,Middle East,0
+2026-07-01,Brazil,Other seaborne,Middle East,0
+2026-08-01,Brazil,Other seaborne,Middle East,0.001
+2026-09-01,Brazil,Other seaborne,Middle East,0
+2026-10-01,Brazil,Other seaborne,Middle East,0
+2026-01-01,Brazil,Other seaborne,Other Asia,0.043
+2026-02-01,Brazil,Other seaborne,Other Asia,0.036
+2026-03-01,Brazil,Other seaborne,Other Asia,0.023
+2026-04-01,Brazil,Other seaborne,Other Asia,0.036
+2026-05-01,Brazil,Other seaborne,Other Asia,0.035
+2026-06-01,Brazil,Other seaborne,Other Asia,0.048
+2026-07-01,Brazil,Other seaborne,Other Asia,0.044
+2026-08-01,Brazil,Other seaborne,Other Asia,0.04
+2026-09-01,Brazil,Other seaborne,Other Asia,0.029
+2026-10-01,Brazil,Other seaborne,Other Asia,0.032
+2026-01-01,Brazil,Other seaborne,Rest of World,0.05
+2026-02-01,Brazil,Other seaborne,Rest of World,0.048
+2026-03-01,Brazil,Other seaborne,Rest of World,0.028
+2026-04-01,Brazil,Other seaborne,Rest of World,0.032
+2026-05-01,Brazil,Other seaborne,Rest of World,0.021
+2026-06-01,Brazil,Other seaborne,Rest of World,0.037
+2026-07-01,Brazil,Other seaborne,Rest of World,0.033
+2026-08-01,Brazil,Other seaborne,Rest of World,0.022
+2026-09-01,Brazil,Other seaborne,Rest of World,0.02
+2026-10-01,Brazil,Other seaborne,Rest of World,0.023
+2026-01-01,Brazil,Other seaborne,Stock builds,0.183
+2026-02-01,Brazil,Other seaborne,Stock builds,0.353
+2026-03-01,Brazil,Other seaborne,Stock builds,0.364
+2026-04-01,Brazil,Other seaborne,Stock builds,0.089
+2026-05-01,Brazil,Other seaborne,Stock builds,0.059
+2026-06-01,Brazil,Other seaborne,Stock builds,0.019
+2026-07-01,Brazil,Other seaborne,Stock builds,0.167
+2026-08-01,Brazil,Other seaborne,Stock builds,0.118
+2026-09-01,Brazil,Other seaborne,Stock builds,0.14
+2026-10-01,Brazil,Other seaborne,Stock builds,0.359
+2026-01-01,Brazil,Other seaborne,USA,0.495
+2026-02-01,Brazil,Other seaborne,USA,0.45
+2026-03-01,Brazil,Other seaborne,USA,0.446
+2026-04-01,Brazil,Other seaborne,USA,0.285
+2026-05-01,Brazil,Other seaborne,USA,0.107
+2026-06-01,Brazil,Other seaborne,USA,0.199
+2026-07-01,Brazil,Other seaborne,USA,0.351
+2026-08-01,Brazil,Other seaborne,USA,0.396
+2026-09-01,Brazil,Other seaborne,USA,0.321
+2026-10-01,Brazil,Other seaborne,USA,0.254
+2026-01-01,Canada,Domestic (no transit),Rest of World,0.6
+2026-02-01,Canada,Domestic (no transit),Rest of World,0.371
+2026-03-01,Canada,Domestic (no transit),Rest of World,0.486
+2026-04-01,Canada,Domestic (no transit),Rest of World,0.337
+2026-05-01,Canada,Domestic (no transit),Rest of World,0.554
+2026-06-01,Canada,Domestic (no transit),Rest of World,0.499
+2026-07-01,Canada,Domestic (no transit),Rest of World,0.649
+2026-08-01,Canada,Domestic (no transit),Rest of World,0.681
+2026-09-01,Canada,Domestic (no transit),Rest of World,0.681
+2026-10-01,Canada,Domestic (no transit),Rest of World,0.681
+2026-01-01,Canada,Cross-border pipelines,USA,3.491
+2026-02-01,Canada,Cross-border pipelines,USA,3.58
+2026-03-01,Canada,Cross-border pipelines,USA,3.491
+2026-04-01,Canada,Cross-border pipelines,USA,3.454
+2026-05-01,Canada,Cross-border pipelines,USA,2.764
+2026-06-01,Canada,Cross-border pipelines,USA,2.792
+2026-07-01,Canada,Cross-border pipelines,USA,3.386
+2026-08-01,Canada,Cross-border pipelines,USA,3.451
+2026-09-01,Canada,Cross-border pipelines,USA,3.117
+2026-10-01,Canada,Cross-border pipelines,USA,3.103
+2026-04-01,Canada,Other seaborne,Cargoes at sea,0.11
+2026-06-01,Canada,Other seaborne,Cargoes at sea,0.577
+2026-09-01,Canada,Other seaborne,Cargoes at sea,0.188
+2026-01-01,Canada,Other seaborne,China,0.215
+2026-02-01,Canada,Other seaborne,China,0.226
+2026-03-01,Canada,Other seaborne,China,0.238
+2026-04-01,Canada,Other seaborne,China,0.332
+2026-05-01,Canada,Other seaborne,China,0.515
+2026-06-01,Canada,Other seaborne,China,0.292
+2026-07-01,Canada,Other seaborne,China,0.219
+2026-08-01,Canada,Other seaborne,China,0.208
+2026-09-01,Canada,Other seaborne,China,0.19
+2026-10-01,Canada,Other seaborne,China,0.272
+2026-01-01,Canada,Other seaborne,Europe (EU + UK),0.161
+2026-02-01,Canada,Other seaborne,Europe (EU + UK),0.157
+2026-03-01,Canada,Other seaborne,Europe (EU + UK),0.127
+2026-04-01,Canada,Other seaborne,Europe (EU + UK),0.221
+2026-05-01,Canada,Other seaborne,Europe (EU + UK),0.366
+2026-06-01,Canada,Other seaborne,Europe (EU + UK),0.29
+2026-07-01,Canada,Other seaborne,Europe (EU + UK),0.193
+2026-08-01,Canada,Other seaborne,Europe (EU + UK),0.137
+2026-09-01,Canada,Other seaborne,Europe (EU + UK),0.134
+2026-10-01,Canada,Other seaborne,Europe (EU + UK),0.176
+2026-01-01,Canada,Other seaborne,India,0.002
+2026-02-01,Canada,Other seaborne,India,0.003
+2026-03-01,Canada,Other seaborne,India,0.002
+2026-04-01,Canada,Other seaborne,India,0.005
+2026-05-01,Canada,Other seaborne,India,0.01
+2026-06-01,Canada,Other seaborne,India,0.006
+2026-07-01,Canada,Other seaborne,India,0.003
+2026-08-01,Canada,Other seaborne,India,0.003
+2026-09-01,Canada,Other seaborne,India,0.002
+2026-10-01,Canada,Other seaborne,India,0.003
+2026-01-01,Canada,Other seaborne,Japan,0.002
+2026-02-01,Canada,Other seaborne,Japan,0.002
+2026-03-01,Canada,Other seaborne,Japan,0.003
+2026-04-01,Canada,Other seaborne,Japan,0.001
+2026-05-01,Canada,Other seaborne,Japan,0.006
+2026-06-01,Canada,Other seaborne,Japan,0.004
+2026-07-01,Canada,Other seaborne,Japan,0.003
+2026-08-01,Canada,Other seaborne,Japan,0.003
+2026-09-01,Canada,Other seaborne,Japan,0.002
+2026-10-01,Canada,Other seaborne,Japan,0.002
+2026-01-01,Canada,Other seaborne,South Korea,0.044
+2026-02-01,Canada,Other seaborne,South Korea,0.043
+2026-03-01,Canada,Other seaborne,South Korea,0.052
+2026-04-01,Canada,Other seaborne,South Korea,0.06
+2026-05-01,Canada,Other seaborne,South Korea,0.159
+2026-06-01,Canada,Other seaborne,South Korea,0.091
+2026-07-01,Canada,Other seaborne,South Korea,0.061
+2026-08-01,Canada,Other seaborne,South Korea,0.056
+2026-09-01,Canada,Other seaborne,South Korea,0.043
+2026-10-01,Canada,Other seaborne,South Korea,0.059
+2026-01-01,Canada,Other seaborne,Middle East,0
+2026-02-01,Canada,Other seaborne,Middle East,0
+2026-03-01,Canada,Other seaborne,Middle East,0
+2026-05-01,Canada,Other seaborne,Middle East,0
+2026-06-01,Canada,Other seaborne,Middle East,0
+2026-07-01,Canada,Other seaborne,Middle East,0
+2026-08-01,Canada,Other seaborne,Middle East,0
+2026-09-01,Canada,Other seaborne,Middle East,0
+2026-10-01,Canada,Other seaborne,Middle East,0
+2026-01-01,Canada,Other seaborne,Other Asia,0.011
+2026-02-01,Canada,Other seaborne,Other Asia,0.011
+2026-03-01,Canada,Other seaborne,Other Asia,0.007
+2026-04-01,Canada,Other seaborne,Other Asia,0.016
+2026-05-01,Canada,Other seaborne,Other Asia,0.033
+2026-06-01,Canada,Other seaborne,Other Asia,0.025
+2026-07-01,Canada,Other seaborne,Other Asia,0.016
+2026-08-01,Canada,Other seaborne,Other Asia,0.013
+2026-09-01,Canada,Other seaborne,Other Asia,0.01
+2026-10-01,Canada,Other seaborne,Other Asia,0.014
+2026-01-01,Canada,Other seaborne,Rest of World,0.001
+2026-02-01,Canada,Other seaborne,Rest of World,0.001
+2026-03-01,Canada,Other seaborne,Rest of World,0.001
+2026-04-01,Canada,Other seaborne,Rest of World,0.001
+2026-05-01,Canada,Other seaborne,Rest of World,0.002
+2026-06-01,Canada,Other seaborne,Rest of World,0.002
+2026-07-01,Canada,Other seaborne,Rest of World,0.001
+2026-08-01,Canada,Other seaborne,Rest of World,0.001
+2026-09-01,Canada,Other seaborne,Rest of World,0.001
+2026-10-01,Canada,Other seaborne,Rest of World,0.001
+2026-01-01,Canada,Other seaborne,Stock builds,0.088
+2026-02-01,Canada,Other seaborne,Stock builds,0.192
+2026-03-01,Canada,Other seaborne,Stock builds,0.194
+2026-04-01,Canada,Other seaborne,Stock builds,0.073
+2026-05-01,Canada,Other seaborne,Stock builds,0.104
+2026-06-01,Canada,Other seaborne,Stock builds,0.018
+2026-07-01,Canada,Other seaborne,Stock builds,0.11
+2026-08-01,Canada,Other seaborne,Stock builds,0.07
+2026-09-01,Canada,Other seaborne,Stock builds,0.092
+2026-10-01,Canada,Other seaborne,Stock builds,0.299
+2026-01-01,Canada,Other seaborne,USA,0.445
+2026-02-01,Canada,Other seaborne,USA,0.456
+2026-03-01,Canada,Other seaborne,USA,0.445
+2026-04-01,Canada,Other seaborne,USA,0.44
+2026-05-01,Canada,Other seaborne,USA,0.352
+2026-06-01,Canada,Other seaborne,USA,0.356
+2026-07-01,Canada,Other seaborne,USA,0.431
+2026-08-01,Canada,Other seaborne,USA,0.44
+2026-09-01,Canada,Other seaborne,USA,0.397
+2026-10-01,Canada,Other seaborne,USA,0.395
+2026-04-01,Gulf storage,Strait of Hormuz,China,0.033
+2026-05-01,Gulf storage,Strait of Hormuz,China,0.185
+2026-06-01,Gulf storage,Strait of Hormuz,China,0.648
+2026-08-01,Gulf storage,Strait of Hormuz,China,0.089
+2026-09-01,Gulf storage,Strait of Hormuz,China,1.397
+2026-10-01,Gulf storage,Strait of Hormuz,China,1.215
+2026-04-01,Gulf storage,Strait of Hormuz,Europe (EU + UK),0.008
+2026-05-01,Gulf storage,Strait of Hormuz,Europe (EU + UK),0.044
+2026-06-01,Gulf storage,Strait of Hormuz,Europe (EU + UK),0.153
+2026-08-01,Gulf storage,Strait of Hormuz,Europe (EU + UK),0.021
+2026-09-01,Gulf storage,Strait of Hormuz,Europe (EU + UK),0.329
+2026-10-01,Gulf storage,Strait of Hormuz,Europe (EU + UK),0.286
+2026-04-01,Gulf storage,Strait of Hormuz,India,0.014
+2026-05-01,Gulf storage,Strait of Hormuz,India,0.082
+2026-06-01,Gulf storage,Strait of Hormuz,India,0.287
+2026-08-01,Gulf storage,Strait of Hormuz,India,0.04
+2026-09-01,Gulf storage,Strait of Hormuz,India,0.62
+2026-10-01,Gulf storage,Strait of Hormuz,India,0.539
+2026-04-01,Gulf storage,Strait of Hormuz,Japan,0.013
+2026-05-01,Gulf storage,Strait of Hormuz,Japan,0.072
+2026-06-01,Gulf storage,Strait of Hormuz,Japan,0.25
+2026-08-01,Gulf storage,Strait of Hormuz,Japan,0.035
+2026-09-01,Gulf storage,Strait of Hormuz,Japan,0.54
+2026-10-01,Gulf storage,Strait of Hormuz,Japan,0.47
+2026-04-01,Gulf storage,Strait of Hormuz,South Korea,0.011
+2026-05-01,Gulf storage,Strait of Hormuz,South Korea,0.065
+2026-06-01,Gulf storage,Strait of Hormuz,South Korea,0.228
+2026-08-01,Gulf storage,Strait of Hormuz,South Korea,0.031
+2026-09-01,Gulf storage,Strait of Hormuz,South Korea,0.491
+2026-10-01,Gulf storage,Strait of Hormuz,South Korea,0.427
+2026-04-01,Gulf storage,Strait of Hormuz,Other Asia,0.016
+2026-05-01,Gulf storage,Strait of Hormuz,Other Asia,0.09
+2026-06-01,Gulf storage,Strait of Hormuz,Other Asia,0.316
+2026-08-01,Gulf storage,Strait of Hormuz,Other Asia,0.044
+2026-09-01,Gulf storage,Strait of Hormuz,Other Asia,0.682
+2026-10-01,Gulf storage,Strait of Hormuz,Other Asia,0.593
+2026-04-01,Gulf storage,Strait of Hormuz,Rest of World,0.001
+2026-05-01,Gulf storage,Strait of Hormuz,Rest of World,0.007
+2026-06-01,Gulf storage,Strait of Hormuz,Rest of World,0.025
+2026-08-01,Gulf storage,Strait of Hormuz,Rest of World,0.003
+2026-09-01,Gulf storage,Strait of Hormuz,Rest of World,0.054
+2026-10-01,Gulf storage,Strait of Hormuz,Rest of World,0.047
+2026-04-01,Gulf storage,Strait of Hormuz,USA,0.003
+2026-05-01,Gulf storage,Strait of Hormuz,USA,0.016
+2026-06-01,Gulf storage,Strait of Hormuz,USA,0.057
+2026-08-01,Gulf storage,Strait of Hormuz,USA,0.008
+2026-09-01,Gulf storage,Strait of Hormuz,USA,0.124
+2026-10-01,Gulf storage,Strait of Hormuz,USA,0.107
+2026-01-01,Iran,Domestic (no transit),Middle East,2.385
+2026-02-01,Iran,Domestic (no transit),Middle East,2.385
+2026-03-01,Iran,Domestic (no transit),Middle East,2.036
+2026-04-01,Iran,Domestic (no transit),Middle East,2.024
+2026-05-01,Iran,Domestic (no transit),Middle East,2.076
+2026-06-01,Iran,Domestic (no transit),Middle East,2.043
+2026-07-01,Iran,Domestic (no transit),Middle East,2.136
+2026-08-01,Iran,Domestic (no transit),Middle East,2.26
+2026-09-01,Iran,Domestic (no transit),Middle East,2.217
+2026-10-01,Iran,Domestic (no transit),Middle East,2.2
+2026-03-01,Iran,Domestic (no transit),Stock builds,1.132
+2026-07-01,Iran,Domestic (no transit),Stock builds,0.117
+2026-04-01,Iran,Strait of Hormuz,Cargoes at sea,0.064
+2026-06-01,Iran,Strait of Hormuz,Cargoes at sea,0.217
+2026-01-01,Iran,Strait of Hormuz,China,1.594
+2026-02-01,Iran,Strait of Hormuz,China,1.506
+2026-03-01,Iran,Strait of Hormuz,China,0.613
+2026-04-01,Iran,Strait of Hormuz,China,1.535
+2026-05-01,Iran,Strait of Hormuz,China,0.987
+2026-06-01,Iran,Strait of Hormuz,China,0.87
+2026-07-01,Iran,Strait of Hormuz,China,0.941
+2026-08-01,Iran,Strait of Hormuz,China,0.291
+2026-10-01,Iran,Strait of Hormuz,China,0.023
+2026-01-01,Iran,Strait of Hormuz,Europe (EU + UK),0.002
+2026-02-01,Iran,Strait of Hormuz,Europe (EU + UK),0.002
+2026-03-01,Iran,Strait of Hormuz,Europe (EU + UK),0.001
+2026-04-01,Iran,Strait of Hormuz,Europe (EU + UK),0.002
+2026-05-01,Iran,Strait of Hormuz,Europe (EU + UK),0.001
+2026-06-01,Iran,Strait of Hormuz,Europe (EU + UK),0.002
+2026-07-01,Iran,Strait of Hormuz,Europe (EU + UK),0.002
+2026-08-01,Iran,Strait of Hormuz,Europe (EU + UK),0
+2026-10-01,Iran,Strait of Hormuz,Europe (EU + UK),0
+2026-01-01,Iran,Strait of Hormuz,India,0.003
+2026-02-01,Iran,Strait of Hormuz,India,0.003
+2026-03-01,Iran,Strait of Hormuz,India,0.001
+2026-04-01,Iran,Strait of Hormuz,India,0.004
+2026-05-01,Iran,Strait of Hormuz,India,0.003
+2026-06-01,Iran,Strait of Hormuz,India,0.003
+2026-07-01,Iran,Strait of Hormuz,India,0.002
+2026-08-01,Iran,Strait of Hormuz,India,0.001
+2026-10-01,Iran,Strait of Hormuz,India,0
+2026-01-01,Iran,Strait of Hormuz,Japan,0.002
+2026-02-01,Iran,Strait of Hormuz,Japan,0.002
+2026-03-01,Iran,Strait of Hormuz,Japan,0.001
+2026-04-01,Iran,Strait of Hormuz,Japan,0.001
+2026-05-01,Iran,Strait of Hormuz,Japan,0.002
+2026-06-01,Iran,Strait of Hormuz,Japan,0.002
+2026-07-01,Iran,Strait of Hormuz,Japan,0.002
+2026-08-01,Iran,Strait of Hormuz,Japan,0
+2026-10-01,Iran,Strait of Hormuz,Japan,0
+2026-01-01,Iran,Strait of Hormuz,South Korea,0.003
+2026-02-01,Iran,Strait of Hormuz,South Korea,0.002
+2026-03-01,Iran,Strait of Hormuz,South Korea,0.001
+2026-04-01,Iran,Strait of Hormuz,South Korea,0.002
+2026-05-01,Iran,Strait of Hormuz,South Korea,0.002
+2026-06-01,Iran,Strait of Hormuz,South Korea,0.002
+2026-07-01,Iran,Strait of Hormuz,South Korea,0.002
+2026-08-01,Iran,Strait of Hormuz,South Korea,0.001
+2026-10-01,Iran,Strait of Hormuz,South Korea,0
+2026-01-01,Iran,Strait of Hormuz,Middle East,0.001
+2026-02-01,Iran,Strait of Hormuz,Middle East,0.001
+2026-03-01,Iran,Strait of Hormuz,Middle East,0
+2026-05-01,Iran,Strait of Hormuz,Middle East,0
+2026-06-01,Iran,Strait of Hormuz,Middle East,0
+2026-07-01,Iran,Strait of Hormuz,Middle East,0
+2026-08-01,Iran,Strait of Hormuz,Middle East,0
+2026-10-01,Iran,Strait of Hormuz,Middle East,0
+2026-01-01,Iran,Strait of Hormuz,Other Asia,0.002
+2026-02-01,Iran,Strait of Hormuz,Other Asia,0.002
+2026-03-01,Iran,Strait of Hormuz,Other Asia,0
+2026-04-01,Iran,Strait of Hormuz,Other Asia,0.002
+2026-05-01,Iran,Strait of Hormuz,Other Asia,0.001
+2026-06-01,Iran,Strait of Hormuz,Other Asia,0.002
+2026-07-01,Iran,Strait of Hormuz,Other Asia,0.002
+2026-08-01,Iran,Strait of Hormuz,Other Asia,0
+2026-10-01,Iran,Strait of Hormuz,Other Asia,0
+2026-01-01,Iran,Strait of Hormuz,Rest of World,0.003
+2026-02-01,Iran,Strait of Hormuz,Rest of World,0.003
+2026-03-01,Iran,Strait of Hormuz,Rest of World,0.001
+2026-04-01,Iran,Strait of Hormuz,Rest of World,0.002
+2026-05-01,Iran,Strait of Hormuz,Rest of World,0.001
+2026-06-01,Iran,Strait of Hormuz,Rest of World,0.002
+2026-07-01,Iran,Strait of Hormuz,Rest of World,0.002
+2026-08-01,Iran,Strait of Hormuz,Rest of World,0
+2026-10-01,Iran,Strait of Hormuz,Rest of World,0
+2026-01-01,Iran,Strait of Hormuz,Stock builds,0.083
+2026-02-01,Iran,Strait of Hormuz,Stock builds,0.162
+2026-03-01,Iran,Strait of Hormuz,Stock builds,0.063
+2026-04-01,Iran,Strait of Hormuz,Stock builds,0.043
+2026-05-01,Iran,Strait of Hormuz,Stock builds,0.025
+2026-06-01,Iran,Strait of Hormuz,Stock builds,0.007
+2026-07-01,Iran,Strait of Hormuz,Stock builds,0.06
+2026-08-01,Iran,Strait of Hormuz,Stock builds,0.012
+2026-10-01,Iran,Strait of Hormuz,Stock builds,0.003
+2026-01-01,Iran,Strait of Hormuz,USA,0.003
+2026-02-01,Iran,Strait of Hormuz,USA,0.002
+2026-03-01,Iran,Strait of Hormuz,USA,0.001
+2026-04-01,Iran,Strait of Hormuz,USA,0.002
+2026-05-01,Iran,Strait of Hormuz,USA,0.001
+2026-06-01,Iran,Strait of Hormuz,USA,0.001
+2026-07-01,Iran,Strait of Hormuz,USA,0.001
+2026-08-01,Iran,Strait of Hormuz,USA,0
+2026-10-01,Iran,Strait of Hormuz,USA,0
+2026-04-01,Iraq,Gulf bypass pipelines,Cargoes at sea,0.004
+2026-06-01,Iraq,Gulf bypass pipelines,Cargoes at sea,0.019
+2026-09-01,Iraq,Gulf bypass pipelines,Cargoes at sea,0.023
+2026-03-01,Iraq,Gulf bypass pipelines,China,0.037
+2026-04-01,Iraq,Gulf bypass pipelines,China,0.071
+2026-05-01,Iraq,Gulf bypass pipelines,China,0.063
+2026-06-01,Iraq,Gulf bypass pipelines,China,0.053
+2026-07-01,Iraq,Gulf bypass pipelines,China,0.062
+2026-08-01,Iraq,Gulf bypass pipelines,China,0.129
+2026-09-01,Iraq,Gulf bypass pipelines,China,0.125
+2026-10-01,Iraq,Gulf bypass pipelines,China,0.133
+2026-03-01,Iraq,Gulf bypass pipelines,Europe (EU + UK),0.019
+2026-04-01,Iraq,Gulf bypass pipelines,Europe (EU + UK),0.046
+2026-05-01,Iraq,Gulf bypass pipelines,Europe (EU + UK),0.043
+2026-06-01,Iraq,Gulf bypass pipelines,Europe (EU + UK),0.051
+2026-07-01,Iraq,Gulf bypass pipelines,Europe (EU + UK),0.053
+2026-08-01,Iraq,Gulf bypass pipelines,Europe (EU + UK),0.082
+2026-09-01,Iraq,Gulf bypass pipelines,Europe (EU + UK),0.086
+2026-10-01,Iraq,Gulf bypass pipelines,Europe (EU + UK),0.083
+2026-03-01,Iraq,Gulf bypass pipelines,India,0.025
+2026-04-01,Iraq,Gulf bypass pipelines,India,0.086
+2026-05-01,Iraq,Gulf bypass pipelines,India,0.095
+2026-06-01,Iraq,Gulf bypass pipelines,India,0.081
+2026-07-01,Iraq,Gulf bypass pipelines,India,0.074
+2026-08-01,Iraq,Gulf bypass pipelines,India,0.126
+2026-09-01,Iraq,Gulf bypass pipelines,India,0.112
+2026-10-01,Iraq,Gulf bypass pipelines,India,0.121
+2026-03-01,Iraq,Gulf bypass pipelines,Japan,0
+2026-04-01,Iraq,Gulf bypass pipelines,Japan,0
+2026-05-01,Iraq,Gulf bypass pipelines,Japan,0
+2026-06-01,Iraq,Gulf bypass pipelines,Japan,0
+2026-07-01,Iraq,Gulf bypass pipelines,Japan,0
+2026-08-01,Iraq,Gulf bypass pipelines,Japan,0
+2026-09-01,Iraq,Gulf bypass pipelines,Japan,0
+2026-10-01,Iraq,Gulf bypass pipelines,Japan,0
+2026-03-01,Iraq,Gulf bypass pipelines,South Korea,0.012
+2026-04-01,Iraq,Gulf bypass pipelines,South Korea,0.019
+2026-05-01,Iraq,Gulf bypass pipelines,South Korea,0.028
+2026-06-01,Iraq,Gulf bypass pipelines,South Korea,0.024
+2026-07-01,Iraq,Gulf bypass pipelines,South Korea,0.025
+2026-08-01,Iraq,Gulf bypass pipelines,South Korea,0.05
+2026-09-01,Iraq,Gulf bypass pipelines,South Korea,0.041
+2026-10-01,Iraq,Gulf bypass pipelines,South Korea,0.041
+2026-03-01,Iraq,Gulf bypass pipelines,Middle East,0
+2026-05-01,Iraq,Gulf bypass pipelines,Middle East,0
+2026-06-01,Iraq,Gulf bypass pipelines,Middle East,0
+2026-07-01,Iraq,Gulf bypass pipelines,Middle East,0
+2026-08-01,Iraq,Gulf bypass pipelines,Middle East,0.001
+2026-09-01,Iraq,Gulf bypass pipelines,Middle East,0.001
+2026-10-01,Iraq,Gulf bypass pipelines,Middle East,0.001
+2026-03-01,Iraq,Gulf bypass pipelines,Other Asia,0.003
+2026-04-01,Iraq,Gulf bypass pipelines,Other Asia,0.011
+2026-05-01,Iraq,Gulf bypass pipelines,Other Asia,0.013
+2026-06-01,Iraq,Gulf bypass pipelines,Other Asia,0.014
+2026-07-01,Iraq,Gulf bypass pipelines,Other Asia,0.014
+2026-08-01,Iraq,Gulf bypass pipelines,Other Asia,0.025
+2026-09-01,Iraq,Gulf bypass pipelines,Other Asia,0.022
+2026-10-01,Iraq,Gulf bypass pipelines,Other Asia,0.022
+2026-03-01,Iraq,Gulf bypass pipelines,Rest of World,0
+2026-04-01,Iraq,Gulf bypass pipelines,Rest of World,0.001
+2026-05-01,Iraq,Gulf bypass pipelines,Rest of World,0.001
+2026-06-01,Iraq,Gulf bypass pipelines,Rest of World,0.001
+2026-07-01,Iraq,Gulf bypass pipelines,Rest of World,0.001
+2026-08-01,Iraq,Gulf bypass pipelines,Rest of World,0.002
+2026-09-01,Iraq,Gulf bypass pipelines,Rest of World,0.002
+2026-10-01,Iraq,Gulf bypass pipelines,Rest of World,0.002
+2026-03-01,Iraq,Gulf bypass pipelines,Stock builds,0.006
+2026-04-01,Iraq,Gulf bypass pipelines,Stock builds,0.003
+2026-05-01,Iraq,Gulf bypass pipelines,Stock builds,0.002
+2026-06-01,Iraq,Gulf bypass pipelines,Stock builds,0.001
+2026-07-01,Iraq,Gulf bypass pipelines,Stock builds,0.006
+2026-08-01,Iraq,Gulf bypass pipelines,Stock builds,0.008
+2026-09-01,Iraq,Gulf bypass pipelines,Stock builds,0.011
+2026-10-01,Iraq,Gulf bypass pipelines,Stock builds,0.027
+2026-03-01,Iraq,Gulf bypass pipelines,USA,0.007
+2026-04-01,Iraq,Gulf bypass pipelines,USA,0.01
+2026-05-01,Iraq,Gulf bypass pipelines,USA,0.004
+2026-06-01,Iraq,Gulf bypass pipelines,USA,0.007
+2026-07-01,Iraq,Gulf bypass pipelines,USA,0.013
+2026-08-01,Iraq,Gulf bypass pipelines,USA,0.028
+2026-09-01,Iraq,Gulf bypass pipelines,USA,0.027
+2026-10-01,Iraq,Gulf bypass pipelines,USA,0.02
+2026-01-01,Iraq,Domestic (no transit),Middle East,1.106
+2026-02-01,Iraq,Domestic (no transit),Middle East,1.106
+2026-03-01,Iraq,Domestic (no transit),Middle East,0.944
+2026-04-01,Iraq,Domestic (no transit),Middle East,0.939
+2026-05-01,Iraq,Domestic (no transit),Middle East,0.963
+2026-06-01,Iraq,Domestic (no transit),Middle East,0.948
+2026-07-01,Iraq,Domestic (no transit),Middle East,0.991
+2026-08-01,Iraq,Domestic (no transit),Middle East,1.048
+2026-09-01,Iraq,Domestic (no transit),Middle East,1.107
+2026-10-01,Iraq,Domestic (no transit),Middle East,1.093
+2026-03-01,Iraq,Domestic (no transit),Stock builds,0.353
+2026-07-01,Iraq,Domestic (no transit),Stock builds,0.16
+2026-04-01,Iraq,Strait of Hormuz,Cargoes at sea,0.004
+2026-06-01,Iraq,Strait of Hormuz,Cargoes at sea,0.057
+2026-09-01,Iraq,Strait of Hormuz,Cargoes at sea,0.112
+2026-01-01,Iraq,Strait of Hormuz,China,0.959
+2026-02-01,Iraq,Strait of Hormuz,China,0.966
+2026-03-01,Iraq,Strait of Hormuz,China,0.072
+2026-04-01,Iraq,Strait of Hormuz,China,0.066
+2026-05-01,Iraq,Strait of Hormuz,China,0.027
+2026-06-01,Iraq,Strait of Hormuz,China,0.157
+2026-07-01,Iraq,Strait of Hormuz,China,0.346
+2026-08-01,Iraq,Strait of Hormuz,China,0.637
+2026-09-01,Iraq,Strait of Hormuz,China,0.611
+2026-10-01,Iraq,Strait of Hormuz,China,0.656
+2026-01-01,Iraq,Strait of Hormuz,Europe (EU + UK),0.697
+2026-02-01,Iraq,Strait of Hormuz,Europe (EU + UK),0.654
+2026-03-01,Iraq,Strait of Hormuz,Europe (EU + UK),0.037
+2026-04-01,Iraq,Strait of Hormuz,Europe (EU + UK),0.042
+2026-05-01,Iraq,Strait of Hormuz,Europe (EU + UK),0.019
+2026-06-01,Iraq,Strait of Hormuz,Europe (EU + UK),0.152
+2026-07-01,Iraq,Strait of Hormuz,Europe (EU + UK),0.296
+2026-08-01,Iraq,Strait of Hormuz,Europe (EU + UK),0.406
+2026-09-01,Iraq,Strait of Hormuz,Europe (EU + UK),0.419
+2026-10-01,Iraq,Strait of Hormuz,Europe (EU + UK),0.411
+2026-01-01,Iraq,Strait of Hormuz,India,0.87
+2026-02-01,Iraq,Strait of Hormuz,India,0.937
+2026-03-01,Iraq,Strait of Hormuz,India,0.048
+2026-04-01,Iraq,Strait of Hormuz,India,0.08
+2026-05-01,Iraq,Strait of Hormuz,India,0.041
+2026-06-01,Iraq,Strait of Hormuz,India,0.242
+2026-07-01,Iraq,Strait of Hormuz,India,0.413
+2026-08-01,Iraq,Strait of Hormuz,India,0.622
+2026-09-01,Iraq,Strait of Hormuz,India,0.548
+2026-10-01,Iraq,Strait of Hormuz,India,0.597
+2026-01-01,Iraq,Strait of Hormuz,Japan,0.001
+2026-02-01,Iraq,Strait of Hormuz,Japan,0.001
+2026-03-01,Iraq,Strait of Hormuz,Japan,0
+2026-04-01,Iraq,Strait of Hormuz,Japan,0
+2026-05-01,Iraq,Strait of Hormuz,Japan,0
+2026-06-01,Iraq,Strait of Hormuz,Japan,0
+2026-07-01,Iraq,Strait of Hormuz,Japan,0
+2026-08-01,Iraq,Strait of Hormuz,Japan,0.001
+2026-09-01,Iraq,Strait of Hormuz,Japan,0.001
+2026-10-01,Iraq,Strait of Hormuz,Japan,0.001
+2026-01-01,Iraq,Strait of Hormuz,South Korea,0.287
+2026-02-01,Iraq,Strait of Hormuz,South Korea,0.265
+2026-03-01,Iraq,Strait of Hormuz,South Korea,0.023
+2026-04-01,Iraq,Strait of Hormuz,South Korea,0.017
+2026-05-01,Iraq,Strait of Hormuz,South Korea,0.012
+2026-06-01,Iraq,Strait of Hormuz,South Korea,0.071
+2026-07-01,Iraq,Strait of Hormuz,South Korea,0.14
+2026-08-01,Iraq,Strait of Hormuz,South Korea,0.248
+2026-09-01,Iraq,Strait of Hormuz,South Korea,0.198
+2026-10-01,Iraq,Strait of Hormuz,South Korea,0.204
+2026-01-01,Iraq,Strait of Hormuz,Middle East,0.012
+2026-02-01,Iraq,Strait of Hormuz,Middle East,0.013
+2026-03-01,Iraq,Strait of Hormuz,Middle East,0
+2026-05-01,Iraq,Strait of Hormuz,Middle East,0
+2026-06-01,Iraq,Strait of Hormuz,Middle East,0
+2026-07-01,Iraq,Strait of Hormuz,Middle East,0.002
+2026-08-01,Iraq,Strait of Hormuz,Middle East,0.004
+2026-09-01,Iraq,Strait of Hormuz,Middle East,0.004
+2026-10-01,Iraq,Strait of Hormuz,Middle East,0.004
+2026-01-01,Iraq,Strait of Hormuz,Other Asia,0.162
+2026-02-01,Iraq,Strait of Hormuz,Other Asia,0.147
+2026-03-01,Iraq,Strait of Hormuz,Other Asia,0.007
+2026-04-01,Iraq,Strait of Hormuz,Other Asia,0.01
+2026-05-01,Iraq,Strait of Hormuz,Other Asia,0.006
+2026-06-01,Iraq,Strait of Hormuz,Other Asia,0.043
+2026-07-01,Iraq,Strait of Hormuz,Other Asia,0.08
+2026-08-01,Iraq,Strait of Hormuz,Other Asia,0.126
+2026-09-01,Iraq,Strait of Hormuz,Other Asia,0.106
+2026-10-01,Iraq,Strait of Hormuz,Other Asia,0.11
+2026-01-01,Iraq,Strait of Hormuz,Rest of World,0.02
+2026-02-01,Iraq,Strait of Hormuz,Rest of World,0.021
+2026-03-01,Iraq,Strait of Hormuz,Rest of World,0.001
+2026-04-01,Iraq,Strait of Hormuz,Rest of World,0.001
+2026-05-01,Iraq,Strait of Hormuz,Rest of World,0
+2026-06-01,Iraq,Strait of Hormuz,Rest of World,0.004
+2026-07-01,Iraq,Strait of Hormuz,Rest of World,0.007
+2026-08-01,Iraq,Strait of Hormuz,Rest of World,0.008
+2026-09-01,Iraq,Strait of Hormuz,Rest of World,0.008
+2026-10-01,Iraq,Strait of Hormuz,Rest of World,0.009
+2026-01-01,Iraq,Strait of Hormuz,Stock builds,0.072
+2026-02-01,Iraq,Strait of Hormuz,Stock builds,0.151
+2026-03-01,Iraq,Strait of Hormuz,Stock builds,0.011
+2026-04-01,Iraq,Strait of Hormuz,Stock builds,0.003
+2026-05-01,Iraq,Strait of Hormuz,Stock builds,0.001
+2026-06-01,Iraq,Strait of Hormuz,Stock builds,0.002
+2026-07-01,Iraq,Strait of Hormuz,Stock builds,0.032
+2026-08-01,Iraq,Strait of Hormuz,Stock builds,0.04
+2026-09-01,Iraq,Strait of Hormuz,Stock builds,0.055
+2026-10-01,Iraq,Strait of Hormuz,Stock builds,0.133
+2026-01-01,Iraq,Strait of Hormuz,USA,0.204
+2026-02-01,Iraq,Strait of Hormuz,USA,0.201
+2026-03-01,Iraq,Strait of Hormuz,USA,0.014
+2026-04-01,Iraq,Strait of Hormuz,USA,0.009
+2026-05-01,Iraq,Strait of Hormuz,USA,0.002
+2026-06-01,Iraq,Strait of Hormuz,USA,0.02
+2026-07-01,Iraq,Strait of Hormuz,USA,0.07
+2026-08-01,Iraq,Strait of Hormuz,USA,0.139
+2026-09-01,Iraq,Strait of Hormuz,USA,0.131
+2026-10-01,Iraq,Strait of Hormuz,USA,0.098
+2026-01-01,Kuwait,Domestic (no transit),Middle East,1.326
+2026-02-01,Kuwait,Domestic (no transit),Middle East,1.367
+2026-03-01,Kuwait,Domestic (no transit),Middle East,0.599
+2026-04-01,Kuwait,Domestic (no transit),Middle East,0.476
+2026-05-01,Kuwait,Domestic (no transit),Middle East,0.428
+2026-06-01,Kuwait,Domestic (no transit),Middle East,0.546
+2026-07-01,Kuwait,Domestic (no transit),Middle East,0.672
+2026-08-01,Kuwait,Domestic (no transit),Middle East,0.893
+2026-09-01,Kuwait,Domestic (no transit),Middle East,0.943
+2026-10-01,Kuwait,Domestic (no transit),Middle East,0.931
+2026-03-01,Kuwait,Domestic (no transit),Stock builds,0.375
+2026-07-01,Kuwait,Domestic (no transit),Stock builds,0.118
+2026-04-01,Kuwait,Strait of Hormuz,Cargoes at sea,0.002
+2026-06-01,Kuwait,Strait of Hormuz,Cargoes at sea,0.058
+2026-09-01,Kuwait,Strait of Hormuz,Cargoes at sea,0.034
+2026-01-01,Kuwait,Strait of Hormuz,China,0.27
+2026-02-01,Kuwait,Strait of Hormuz,China,0.267
+2026-03-01,Kuwait,Strait of Hormuz,China,0.05
+2026-04-01,Kuwait,Strait of Hormuz,China,0.022
+2026-05-01,Kuwait,Strait of Hormuz,China,0.029
+2026-06-01,Kuwait,Strait of Hormuz,China,0.119
+2026-07-01,Kuwait,Strait of Hormuz,China,0.167
+2026-08-01,Kuwait,Strait of Hormuz,China,0.19
+2026-09-01,Kuwait,Strait of Hormuz,China,0.137
+2026-10-01,Kuwait,Strait of Hormuz,China,0.147
+2026-01-01,Kuwait,Strait of Hormuz,Europe (EU + UK),0.003
+2026-02-01,Kuwait,Strait of Hormuz,Europe (EU + UK),0.003
+2026-03-01,Kuwait,Strait of Hormuz,Europe (EU + UK),0
+2026-04-01,Kuwait,Strait of Hormuz,Europe (EU + UK),0
+2026-05-01,Kuwait,Strait of Hormuz,Europe (EU + UK),0
+2026-06-01,Kuwait,Strait of Hormuz,Europe (EU + UK),0.002
+2026-07-01,Kuwait,Strait of Hormuz,Europe (EU + UK),0.002
+2026-08-01,Kuwait,Strait of Hormuz,Europe (EU + UK),0.002
+2026-09-01,Kuwait,Strait of Hormuz,Europe (EU + UK),0.001
+2026-10-01,Kuwait,Strait of Hormuz,Europe (EU + UK),0.001
+2026-01-01,Kuwait,Strait of Hormuz,India,0.147
+2026-02-01,Kuwait,Strait of Hormuz,India,0.156
+2026-03-01,Kuwait,Strait of Hormuz,India,0.02
+2026-04-01,Kuwait,Strait of Hormuz,India,0.016
+2026-05-01,Kuwait,Strait of Hormuz,India,0.026
+2026-06-01,Kuwait,Strait of Hormuz,India,0.109
+2026-07-01,Kuwait,Strait of Hormuz,India,0.12
+2026-08-01,Kuwait,Strait of Hormuz,India,0.112
+2026-09-01,Kuwait,Strait of Hormuz,India,0.074
+2026-10-01,Kuwait,Strait of Hormuz,India,0.081
+2026-01-01,Kuwait,Strait of Hormuz,Japan,0.146
+2026-02-01,Kuwait,Strait of Hormuz,Japan,0.136
+2026-03-01,Kuwait,Strait of Hormuz,Japan,0.031
+2026-04-01,Kuwait,Strait of Hormuz,Japan,0.004
+2026-05-01,Kuwait,Strait of Hormuz,Japan,0.017
+2026-06-01,Kuwait,Strait of Hormuz,Japan,0.086
+2026-07-01,Kuwait,Strait of Hormuz,Japan,0.116
+2026-08-01,Kuwait,Strait of Hormuz,Japan,0.122
+2026-09-01,Kuwait,Strait of Hormuz,Japan,0.064
+2026-10-01,Kuwait,Strait of Hormuz,Japan,0.066
+2026-01-01,Kuwait,Strait of Hormuz,South Korea,0.456
+2026-02-01,Kuwait,Strait of Hormuz,South Korea,0.414
+2026-03-01,Kuwait,Strait of Hormuz,South Korea,0.089
+2026-04-01,Kuwait,Strait of Hormuz,South Korea,0.032
+2026-05-01,Kuwait,Strait of Hormuz,South Korea,0.073
+2026-06-01,Kuwait,Strait of Hormuz,South Korea,0.301
+2026-07-01,Kuwait,Strait of Hormuz,South Korea,0.382
+2026-08-01,Kuwait,Strait of Hormuz,South Korea,0.417
+2026-09-01,Kuwait,Strait of Hormuz,South Korea,0.251
+2026-10-01,Kuwait,Strait of Hormuz,South Korea,0.259
+2026-01-01,Kuwait,Strait of Hormuz,Middle East,0.044
+2026-02-01,Kuwait,Strait of Hormuz,Middle East,0.046
+2026-03-01,Kuwait,Strait of Hormuz,Middle East,0.001
+2026-05-01,Kuwait,Strait of Hormuz,Middle East,0.001
+2026-06-01,Kuwait,Strait of Hormuz,Middle East,0.004
+2026-07-01,Kuwait,Strait of Hormuz,Middle East,0.013
+2026-08-01,Kuwait,Strait of Hormuz,Middle East,0.015
+2026-09-01,Kuwait,Strait of Hormuz,Middle East,0.011
+2026-10-01,Kuwait,Strait of Hormuz,Middle East,0.011
+2026-01-01,Kuwait,Strait of Hormuz,Other Asia,0.221
+2026-02-01,Kuwait,Strait of Hormuz,Other Asia,0.197
+2026-03-01,Kuwait,Strait of Hormuz,Other Asia,0.022
+2026-04-01,Kuwait,Strait of Hormuz,Other Asia,0.016
+2026-05-01,Kuwait,Strait of Hormuz,Other Asia,0.029
+2026-06-01,Kuwait,Strait of Hormuz,Other Asia,0.158
+2026-07-01,Kuwait,Strait of Hormuz,Other Asia,0.187
+2026-08-01,Kuwait,Strait of Hormuz,Other Asia,0.183
+2026-09-01,Kuwait,Strait of Hormuz,Other Asia,0.116
+2026-10-01,Kuwait,Strait of Hormuz,Other Asia,0.12
+2026-01-01,Kuwait,Strait of Hormuz,Rest of World,0.003
+2026-02-01,Kuwait,Strait of Hormuz,Rest of World,0.003
+2026-03-01,Kuwait,Strait of Hormuz,Rest of World,0
+2026-04-01,Kuwait,Strait of Hormuz,Rest of World,0
+2026-05-01,Kuwait,Strait of Hormuz,Rest of World,0
+2026-06-01,Kuwait,Strait of Hormuz,Rest of World,0.001
+2026-07-01,Kuwait,Strait of Hormuz,Rest of World,0.002
+2026-08-01,Kuwait,Strait of Hormuz,Rest of World,0.001
+2026-09-01,Kuwait,Strait of Hormuz,Rest of World,0.001
+2026-10-01,Kuwait,Strait of Hormuz,Rest of World,0.001
+2026-01-01,Kuwait,Strait of Hormuz,Stock builds,0.027
+2026-02-01,Kuwait,Strait of Hormuz,Stock builds,0.056
+2026-03-01,Kuwait,Strait of Hormuz,Stock builds,0.01
+2026-04-01,Kuwait,Strait of Hormuz,Stock builds,0.001
+2026-05-01,Kuwait,Strait of Hormuz,Stock builds,0.001
+2026-06-01,Kuwait,Strait of Hormuz,Stock builds,0.002
+2026-07-01,Kuwait,Strait of Hormuz,Stock builds,0.021
+2026-08-01,Kuwait,Strait of Hormuz,Stock builds,0.016
+2026-09-01,Kuwait,Strait of Hormuz,Stock builds,0.016
+2026-10-01,Kuwait,Strait of Hormuz,Stock builds,0.04
+2026-01-01,Kuwait,Strait of Hormuz,USA,0.016
+2026-02-01,Kuwait,Strait of Hormuz,USA,0.016
+2026-03-01,Kuwait,Strait of Hormuz,USA,0.003
+2026-04-01,Kuwait,Strait of Hormuz,USA,0.001
+2026-05-01,Kuwait,Strait of Hormuz,USA,0.001
+2026-06-01,Kuwait,Strait of Hormuz,USA,0.004
+2026-07-01,Kuwait,Strait of Hormuz,USA,0.01
+2026-08-01,Kuwait,Strait of Hormuz,USA,0.012
+2026-09-01,Kuwait,Strait of Hormuz,USA,0.008
+2026-10-01,Kuwait,Strait of Hormuz,USA,0.006
+2026-01-01,Other Gulf,Domestic (no transit),Middle East,0.684
+2026-02-01,Other Gulf,Domestic (no transit),Middle East,0.682
+2026-03-01,Other Gulf,Domestic (no transit),Middle East,0.327
+2026-04-01,Other Gulf,Domestic (no transit),Middle East,0.279
+2026-05-01,Other Gulf,Domestic (no transit),Middle East,0.286
+2026-06-01,Other Gulf,Domestic (no transit),Middle East,0.524
+2026-07-01,Other Gulf,Domestic (no transit),Middle East,0.607
+2026-08-01,Other Gulf,Domestic (no transit),Middle East,0.643
+2026-09-01,Other Gulf,Domestic (no transit),Middle East,0.678
+2026-10-01,Other Gulf,Domestic (no transit),Middle East,0.669
+2026-03-01,Other Gulf,Domestic (no transit),Stock builds,0.041
+2026-07-01,Other Gulf,Domestic (no transit),Stock builds,0.026
+2026-04-01,Other Gulf,Strait of Hormuz,Cargoes at sea,0.002
+2026-06-01,Other Gulf,Strait of Hormuz,Cargoes at sea,0.015
+2026-09-01,Other Gulf,Strait of Hormuz,Cargoes at sea,0.017
+2026-01-01,Other Gulf,Strait of Hormuz,China,0.465
+2026-02-01,Other Gulf,Strait of Hormuz,China,0.512
+2026-03-01,Other Gulf,Strait of Hormuz,China,0.015
+2026-04-01,Other Gulf,Strait of Hormuz,China,0.023
+2026-05-01,Other Gulf,Strait of Hormuz,China,0.017
+2026-06-01,Other Gulf,Strait of Hormuz,China,0.032
+2026-07-01,Other Gulf,Strait of Hormuz,China,0.127
+2026-08-01,Other Gulf,Strait of Hormuz,China,0.126
+2026-09-01,Other Gulf,Strait of Hormuz,China,0.071
+2026-10-01,Other Gulf,Strait of Hormuz,China,0.111
+2026-01-01,Other Gulf,Strait of Hormuz,Europe (EU + UK),0.001
+2026-02-01,Other Gulf,Strait of Hormuz,Europe (EU + UK),0.001
+2026-03-01,Other Gulf,Strait of Hormuz,Europe (EU + UK),0
+2026-04-01,Other Gulf,Strait of Hormuz,Europe (EU + UK),0
+2026-05-01,Other Gulf,Strait of Hormuz,Europe (EU + UK),0
+2026-06-01,Other Gulf,Strait of Hormuz,Europe (EU + UK),0
+2026-07-01,Other Gulf,Strait of Hormuz,Europe (EU + UK),0
+2026-08-01,Other Gulf,Strait of Hormuz,Europe (EU + UK),0
+2026-09-01,Other Gulf,Strait of Hormuz,Europe (EU + UK),0
+2026-10-01,Other Gulf,Strait of Hormuz,Europe (EU + UK),0
+2026-01-01,Other Gulf,Strait of Hormuz,India,0.013
+2026-02-01,Other Gulf,Strait of Hormuz,India,0.015
+2026-03-01,Other Gulf,Strait of Hormuz,India,0
+2026-04-01,Other Gulf,Strait of Hormuz,India,0.001
+2026-05-01,Other Gulf,Strait of Hormuz,India,0.001
+2026-06-01,Other Gulf,Strait of Hormuz,India,0.001
+2026-07-01,Other Gulf,Strait of Hormuz,India,0.005
+2026-08-01,Other Gulf,Strait of Hormuz,India,0.004
+2026-09-01,Other Gulf,Strait of Hormuz,India,0.002
+2026-10-01,Other Gulf,Strait of Hormuz,India,0.003
+2026-01-01,Other Gulf,Strait of Hormuz,Japan,0.107
+2026-02-01,Other Gulf,Strait of Hormuz,Japan,0.111
+2026-03-01,Other Gulf,Strait of Hormuz,Japan,0.004
+2026-04-01,Other Gulf,Strait of Hormuz,Japan,0.002
+2026-05-01,Other Gulf,Strait of Hormuz,Japan,0.004
+2026-06-01,Other Gulf,Strait of Hormuz,Japan,0.01
+2026-07-01,Other Gulf,Strait of Hormuz,Japan,0.037
+2026-08-01,Other Gulf,Strait of Hormuz,Japan,0.034
+2026-09-01,Other Gulf,Strait of Hormuz,Japan,0.014
+2026-10-01,Other Gulf,Strait of Hormuz,Japan,0.021
+2026-01-01,Other Gulf,Strait of Hormuz,South Korea,0.025
+2026-02-01,Other Gulf,Strait of Hormuz,South Korea,0.026
+2026-03-01,Other Gulf,Strait of Hormuz,South Korea,0.001
+2026-04-01,Other Gulf,Strait of Hormuz,South Korea,0.001
+2026-05-01,Other Gulf,Strait of Hormuz,South Korea,0.001
+2026-06-01,Other Gulf,Strait of Hormuz,South Korea,0.003
+2026-07-01,Other Gulf,Strait of Hormuz,South Korea,0.009
+2026-08-01,Other Gulf,Strait of Hormuz,South Korea,0.009
+2026-09-01,Other Gulf,Strait of Hormuz,South Korea,0.004
+2026-10-01,Other Gulf,Strait of Hormuz,South Korea,0.006
+2026-01-01,Other Gulf,Strait of Hormuz,Middle East,0.022
+2026-02-01,Other Gulf,Strait of Hormuz,Middle East,0.025
+2026-03-01,Other Gulf,Strait of Hormuz,Middle East,0
+2026-05-01,Other Gulf,Strait of Hormuz,Middle East,0
+2026-06-01,Other Gulf,Strait of Hormuz,Middle East,0
+2026-07-01,Other Gulf,Strait of Hormuz,Middle East,0.003
+2026-08-01,Other Gulf,Strait of Hormuz,Middle East,0.003
+2026-09-01,Other Gulf,Strait of Hormuz,Middle East,0.002
+2026-10-01,Other Gulf,Strait of Hormuz,Middle East,0.002
+2026-01-01,Other Gulf,Strait of Hormuz,Other Asia,0.082
+2026-02-01,Other Gulf,Strait of Hormuz,Other Asia,0.081
+2026-03-01,Other Gulf,Strait of Hormuz,Other Asia,0.001
+2026-04-01,Other Gulf,Strait of Hormuz,Other Asia,0.004
+2026-05-01,Other Gulf,Strait of Hormuz,Other Asia,0.004
+2026-06-01,Other Gulf,Strait of Hormuz,Other Asia,0.009
+2026-07-01,Other Gulf,Strait of Hormuz,Other Asia,0.031
+2026-08-01,Other Gulf,Strait of Hormuz,Other Asia,0.026
+2026-09-01,Other Gulf,Strait of Hormuz,Other Asia,0.013
+2026-10-01,Other Gulf,Strait of Hormuz,Other Asia,0.019
+2026-01-01,Other Gulf,Strait of Hormuz,Rest of World,0.002
+2026-02-01,Other Gulf,Strait of Hormuz,Rest of World,0.002
+2026-03-01,Other Gulf,Strait of Hormuz,Rest of World,0
+2026-04-01,Other Gulf,Strait of Hormuz,Rest of World,0
+2026-05-01,Other Gulf,Strait of Hormuz,Rest of World,0
+2026-06-01,Other Gulf,Strait of Hormuz,Rest of World,0
+2026-07-01,Other Gulf,Strait of Hormuz,Rest of World,0
+2026-08-01,Other Gulf,Strait of Hormuz,Rest of World,0
+2026-09-01,Other Gulf,Strait of Hormuz,Rest of World,0
+2026-10-01,Other Gulf,Strait of Hormuz,Rest of World,0
+2026-01-01,Other Gulf,Strait of Hormuz,Stock builds,0.046
+2026-02-01,Other Gulf,Strait of Hormuz,Stock builds,0.105
+2026-03-01,Other Gulf,Strait of Hormuz,Stock builds,0.003
+2026-04-01,Other Gulf,Strait of Hormuz,Stock builds,0.001
+2026-05-01,Other Gulf,Strait of Hormuz,Stock builds,0.001
+2026-06-01,Other Gulf,Strait of Hormuz,Stock builds,0
+2026-07-01,Other Gulf,Strait of Hormuz,Stock builds,0.016
+2026-08-01,Other Gulf,Strait of Hormuz,Stock builds,0.01
+2026-09-01,Other Gulf,Strait of Hormuz,Stock builds,0.008
+2026-10-01,Other Gulf,Strait of Hormuz,Stock builds,0.03
+2026-01-01,Other Gulf,Strait of Hormuz,USA,0.001
+2026-02-01,Other Gulf,Strait of Hormuz,USA,0.001
+2026-03-01,Other Gulf,Strait of Hormuz,USA,0
+2026-04-01,Other Gulf,Strait of Hormuz,USA,0
+2026-05-01,Other Gulf,Strait of Hormuz,USA,0
+2026-06-01,Other Gulf,Strait of Hormuz,USA,0
+2026-07-01,Other Gulf,Strait of Hormuz,USA,0
+2026-08-01,Other Gulf,Strait of Hormuz,USA,0
+2026-09-01,Other Gulf,Strait of Hormuz,USA,0
+2026-10-01,Other Gulf,Strait of Hormuz,USA,0
+2026-04-01,Other Gulf,Other seaborne,Cargoes at sea,0.054
+2026-06-01,Other Gulf,Other seaborne,Cargoes at sea,0.212
+2026-09-01,Other Gulf,Other seaborne,Cargoes at sea,0.125
+2026-01-01,Other Gulf,Other seaborne,China,0.559
+2026-02-01,Other Gulf,Other seaborne,China,0.534
+2026-03-01,Other Gulf,Other seaborne,China,0.584
+2026-04-01,Other Gulf,Other seaborne,China,0.668
+2026-05-01,Other Gulf,Other seaborne,China,0.603
+2026-06-01,Other Gulf,Other seaborne,China,0.443
+2026-07-01,Other Gulf,Other seaborne,China,0.535
+2026-08-01,Other Gulf,Other seaborne,China,0.58
+2026-09-01,Other Gulf,Other seaborne,China,0.52
+2026-10-01,Other Gulf,Other seaborne,China,0.556
+2026-01-01,Other Gulf,Other seaborne,Europe (EU + UK),0.002
+2026-02-01,Other Gulf,Other seaborne,Europe (EU + UK),0.001
+2026-03-01,Other Gulf,Other seaborne,Europe (EU + UK),0.001
+2026-04-01,Other Gulf,Other seaborne,Europe (EU + UK),0.002
+2026-05-01,Other Gulf,Other seaborne,Europe (EU + UK),0.002
+2026-06-01,Other Gulf,Other seaborne,Europe (EU + UK),0.002
+2026-07-01,Other Gulf,Other seaborne,Europe (EU + UK),0.002
+2026-08-01,Other Gulf,Other seaborne,Europe (EU + UK),0.001
+2026-09-01,Other Gulf,Other seaborne,Europe (EU + UK),0.001
+2026-10-01,Other Gulf,Other seaborne,Europe (EU + UK),0.001
+2026-01-01,Other Gulf,Other seaborne,India,0.015
+2026-02-01,Other Gulf,Other seaborne,India,0.015
+2026-03-01,Other Gulf,Other seaborne,India,0.012
+2026-04-01,Other Gulf,Other seaborne,India,0.024
+2026-05-01,Other Gulf,Other seaborne,India,0.027
+2026-06-01,Other Gulf,Other seaborne,India,0.02
+2026-07-01,Other Gulf,Other seaborne,India,0.019
+2026-08-01,Other Gulf,Other seaborne,India,0.017
+2026-09-01,Other Gulf,Other seaborne,India,0.014
+2026-10-01,Other Gulf,Other seaborne,India,0.015
+2026-01-01,Other Gulf,Other seaborne,Japan,0.128
+2026-02-01,Other Gulf,Other seaborne,Japan,0.116
+2026-03-01,Other Gulf,Other seaborne,Japan,0.153
+2026-04-01,Other Gulf,Other seaborne,Japan,0.054
+2026-05-01,Other Gulf,Other seaborne,Japan,0.148
+2026-06-01,Other Gulf,Other seaborne,Japan,0.137
+2026-07-01,Other Gulf,Other seaborne,Japan,0.157
+2026-08-01,Other Gulf,Other seaborne,Japan,0.158
+2026-09-01,Other Gulf,Other seaborne,Japan,0.103
+2026-10-01,Other Gulf,Other seaborne,Japan,0.106
+2026-01-01,Other Gulf,Other seaborne,South Korea,0.03
+2026-02-01,Other Gulf,Other seaborne,South Korea,0.027
+2026-03-01,Other Gulf,Other seaborne,South Korea,0.034
+2026-04-01,Other Gulf,Other seaborne,South Korea,0.032
+2026-05-01,Other Gulf,Other seaborne,South Korea,0.049
+2026-06-01,Other Gulf,Other seaborne,South Korea,0.036
+2026-07-01,Other Gulf,Other seaborne,South Korea,0.039
+2026-08-01,Other Gulf,Other seaborne,South Korea,0.041
+2026-09-01,Other Gulf,Other seaborne,South Korea,0.031
+2026-10-01,Other Gulf,Other seaborne,South Korea,0.031
+2026-01-01,Other Gulf,Other seaborne,Middle East,0.027
+2026-02-01,Other Gulf,Other seaborne,Middle East,0.027
+2026-03-01,Other Gulf,Other seaborne,Middle East,0.005
+2026-05-01,Other Gulf,Other seaborne,Middle East,0.005
+2026-06-01,Other Gulf,Other seaborne,Middle East,0.005
+2026-07-01,Other Gulf,Other seaborne,Middle East,0.012
+2026-08-01,Other Gulf,Other seaborne,Middle East,0.013
+2026-09-01,Other Gulf,Other seaborne,Middle East,0.012
+2026-10-01,Other Gulf,Other seaborne,Middle East,0.012
+2026-01-01,Other Gulf,Other seaborne,Other Asia,0.098
+2026-02-01,Other Gulf,Other seaborne,Other Asia,0.085
+2026-03-01,Other Gulf,Other seaborne,Other Asia,0.055
+2026-04-01,Other Gulf,Other seaborne,Other Asia,0.108
+2026-05-01,Other Gulf,Other seaborne,Other Asia,0.131
+2026-06-01,Other Gulf,Other seaborne,Other Asia,0.126
+2026-07-01,Other Gulf,Other seaborne,Other Asia,0.128
+2026-08-01,Other Gulf,Other seaborne,Other Asia,0.119
+2026-09-01,Other Gulf,Other seaborne,Other Asia,0.094
+2026-10-01,Other Gulf,Other seaborne,Other Asia,0.097
+2026-01-01,Other Gulf,Other seaborne,Rest of World,0.002
+2026-02-01,Other Gulf,Other seaborne,Rest of World,0.002
+2026-03-01,Other Gulf,Other seaborne,Rest of World,0.001
+2026-04-01,Other Gulf,Other seaborne,Rest of World,0.002
+2026-05-01,Other Gulf,Other seaborne,Rest of World,0.001
+2026-06-01,Other Gulf,Other seaborne,Rest of World,0.002
+2026-07-01,Other Gulf,Other seaborne,Rest of World,0.002
+2026-08-01,Other Gulf,Other seaborne,Rest of World,0.001
+2026-09-01,Other Gulf,Other seaborne,Rest of World,0.001
+2026-10-01,Other Gulf,Other seaborne,Rest of World,0.001
+2026-01-01,Other Gulf,Other seaborne,Stock builds,0.055
+2026-02-01,Other Gulf,Other seaborne,Stock builds,0.11
+2026-03-01,Other Gulf,Other seaborne,Stock builds,0.115
+2026-04-01,Other Gulf,Other seaborne,Stock builds,0.036
+2026-05-01,Other Gulf,Other seaborne,Stock builds,0.029
+2026-06-01,Other Gulf,Other seaborne,Stock builds,0.007
+2026-07-01,Other Gulf,Other seaborne,Stock builds,0.065
+2026-08-01,Other Gulf,Other seaborne,Stock builds,0.048
+2026-09-01,Other Gulf,Other seaborne,Stock builds,0.061
+2026-10-01,Other Gulf,Other seaborne,Stock builds,0.148
+2026-01-01,Other Gulf,Other seaborne,USA,0.002
+2026-02-01,Other Gulf,Other seaborne,USA,0.002
+2026-03-01,Other Gulf,Other seaborne,USA,0.002
+2026-04-01,Other Gulf,Other seaborne,USA,0.001
+2026-05-01,Other Gulf,Other seaborne,USA,0.001
+2026-06-01,Other Gulf,Other seaborne,USA,0.001
+2026-07-01,Other Gulf,Other seaborne,USA,0.002
+2026-08-01,Other Gulf,Other seaborne,USA,0.002
+2026-09-01,Other Gulf,Other seaborne,USA,0.002
+2026-10-01,Other Gulf,Other seaborne,USA,0.001
+2026-01-01,Rest of World,Domestic (no transit),China,4.404
+2026-02-01,Rest of World,Domestic (no transit),China,4.415
+2026-03-01,Rest of World,Domestic (no transit),China,4.455
+2026-04-01,Rest of World,Domestic (no transit),China,4.307
+2026-05-01,Rest of World,Domestic (no transit),China,4.296
+2026-06-01,Rest of World,Domestic (no transit),China,4.359
+2026-07-01,Rest of World,Domestic (no transit),China,4.256
+2026-08-01,Rest of World,Domestic (no transit),China,4.291
+2026-09-01,Rest of World,Domestic (no transit),China,4.291
+2026-10-01,Rest of World,Domestic (no transit),China,4.291
+2026-01-01,Rest of World,Domestic (no transit),Europe (EU + UK),0.476
+2026-02-01,Rest of World,Domestic (no transit),Europe (EU + UK),0.305
+2026-03-01,Rest of World,Domestic (no transit),Europe (EU + UK),0.251
+2026-04-01,Rest of World,Domestic (no transit),Europe (EU + UK),0.373
+2026-05-01,Rest of World,Domestic (no transit),Europe (EU + UK),0.313
+2026-06-01,Rest of World,Domestic (no transit),Europe (EU + UK),0.4
+2026-07-01,Rest of World,Domestic (no transit),Europe (EU + UK),0.332
+2026-08-01,Rest of World,Domestic (no transit),Europe (EU + UK),0.29
+2026-09-01,Rest of World,Domestic (no transit),Europe (EU + UK),0.29
+2026-10-01,Rest of World,Domestic (no transit),Europe (EU + UK),0.29
+2026-01-01,Rest of World,Domestic (no transit),India,0.559
+2026-02-01,Rest of World,Domestic (no transit),India,0.558
+2026-03-01,Rest of World,Domestic (no transit),India,0.556
+2026-04-01,Rest of World,Domestic (no transit),India,0.556
+2026-05-01,Rest of World,Domestic (no transit),India,0.556
+2026-06-01,Rest of World,Domestic (no transit),India,0.556
+2026-07-01,Rest of World,Domestic (no transit),India,0.556
+2026-08-01,Rest of World,Domestic (no transit),India,0.556
+2026-09-01,Rest of World,Domestic (no transit),India,0.556
+2026-10-01,Rest of World,Domestic (no transit),India,0.556
+2026-01-01,Rest of World,Domestic (no transit),Other Asia,0.934
+2026-02-01,Rest of World,Domestic (no transit),Other Asia,0.954
+2026-03-01,Rest of World,Domestic (no transit),Other Asia,0.928
+2026-04-01,Rest of World,Domestic (no transit),Other Asia,1.07
+2026-05-01,Rest of World,Domestic (no transit),Other Asia,1.046
+2026-06-01,Rest of World,Domestic (no transit),Other Asia,0.617
+2026-07-01,Rest of World,Domestic (no transit),Other Asia,0.776
+2026-08-01,Rest of World,Domestic (no transit),Other Asia,0.521
+2026-09-01,Rest of World,Domestic (no transit),Other Asia,0.521
+2026-10-01,Rest of World,Domestic (no transit),Other Asia,0.521
+2026-01-01,Rest of World,Domestic (no transit),Rest of World,7.585
+2026-02-01,Rest of World,Domestic (no transit),Rest of World,8.287
+2026-03-01,Rest of World,Domestic (no transit),Rest of World,6.474
+2026-04-01,Rest of World,Domestic (no transit),Rest of World,7.103
+2026-05-01,Rest of World,Domestic (no transit),Rest of World,6.387
+2026-06-01,Rest of World,Domestic (no transit),Rest of World,7.416
+2026-07-01,Rest of World,Domestic (no transit),Rest of World,7.005
+2026-08-01,Rest of World,Domestic (no transit),Rest of World,6.052
+2026-09-01,Rest of World,Domestic (no transit),Rest of World,6.062
+2026-10-01,Rest of World,Domestic (no transit),Rest of World,6.667
+2026-01-01,Rest of World,Cross-border pipelines,China,0.074
+2026-02-01,Rest of World,Cross-border pipelines,China,0.077
+2026-03-01,Rest of World,Cross-border pipelines,China,0.112
+2026-04-01,Rest of World,Cross-border pipelines,China,0.097
+2026-05-01,Rest of World,Cross-border pipelines,China,0.097
+2026-06-01,Rest of World,Cross-border pipelines,China,0.066
+2026-07-01,Rest of World,Cross-border pipelines,China,0.075
+2026-08-01,Rest of World,Cross-border pipelines,China,0.103
+2026-09-01,Rest of World,Cross-border pipelines,China,0.095
+2026-10-01,Rest of World,Cross-border pipelines,China,0.103
+2026-01-01,Rest of World,Cross-border pipelines,Europe (EU + UK),0.783
+2026-02-01,Rest of World,Cross-border pipelines,Europe (EU + UK),0.76
+2026-03-01,Rest of World,Cross-border pipelines,Europe (EU + UK),0.843
+2026-04-01,Rest of World,Cross-border pipelines,Europe (EU + UK),0.909
+2026-05-01,Rest of World,Cross-border pipelines,Europe (EU + UK),0.979
+2026-06-01,Rest of World,Cross-border pipelines,Europe (EU + UK),0.93
+2026-07-01,Rest of World,Cross-border pipelines,Europe (EU + UK),0.94
+2026-08-01,Rest of World,Cross-border pipelines,Europe (EU + UK),0.959
+2026-09-01,Rest of World,Cross-border pipelines,Europe (EU + UK),0.952
+2026-10-01,Rest of World,Cross-border pipelines,Europe (EU + UK),0.94
+2026-01-01,Rest of World,Cross-border pipelines,India,0.003
+2026-02-01,Rest of World,Cross-border pipelines,India,0.004
+2026-03-01,Rest of World,Cross-border pipelines,India,0.004
+2026-04-01,Rest of World,Cross-border pipelines,India,0.006
+2026-05-01,Rest of World,Cross-border pipelines,India,0.008
+2026-06-01,Rest of World,Cross-border pipelines,India,0.005
+2026-07-01,Rest of World,Cross-border pipelines,India,0.005
+2026-08-01,Rest of World,Cross-border pipelines,India,0.005
+2026-09-01,Rest of World,Cross-border pipelines,India,0.004
+2026-10-01,Rest of World,Cross-border pipelines,India,0.005
+2026-01-01,Rest of World,Cross-border pipelines,South Korea,0.015
+2026-02-01,Rest of World,Cross-border pipelines,South Korea,0.015
+2026-03-01,Rest of World,Cross-border pipelines,South Korea,0.025
+2026-04-01,Rest of World,Cross-border pipelines,South Korea,0.018
+2026-05-01,Rest of World,Cross-border pipelines,South Korea,0.03
+2026-06-01,Rest of World,Cross-border pipelines,South Korea,0.021
+2026-07-01,Rest of World,Cross-border pipelines,South Korea,0.021
+2026-08-01,Rest of World,Cross-border pipelines,South Korea,0.028
+2026-09-01,Rest of World,Cross-border pipelines,South Korea,0.021
+2026-10-01,Rest of World,Cross-border pipelines,South Korea,0.022
+2026-01-01,Rest of World,Cross-border pipelines,Middle East,0
+2026-02-01,Rest of World,Cross-border pipelines,Middle East,0
+2026-03-01,Rest of World,Cross-border pipelines,Middle East,0
+2026-05-01,Rest of World,Cross-border pipelines,Middle East,0
+2026-06-01,Rest of World,Cross-border pipelines,Middle East,0
+2026-07-01,Rest of World,Cross-border pipelines,Middle East,0
+2026-08-01,Rest of World,Cross-border pipelines,Middle East,0
+2026-09-01,Rest of World,Cross-border pipelines,Middle East,0
+2026-10-01,Rest of World,Cross-border pipelines,Middle East,0
+2026-01-01,Rest of World,Cross-border pipelines,Other Asia,0.004
+2026-02-01,Rest of World,Cross-border pipelines,Other Asia,0.004
+2026-03-01,Rest of World,Cross-border pipelines,Other Asia,0.004
+2026-04-01,Rest of World,Cross-border pipelines,Other Asia,0.005
+2026-05-01,Rest of World,Cross-border pipelines,Other Asia,0.007
+2026-06-01,Rest of World,Cross-border pipelines,Other Asia,0.006
+2026-07-01,Rest of World,Cross-border pipelines,Other Asia,0.006
+2026-08-01,Rest of World,Cross-border pipelines,Other Asia,0.007
+2026-09-01,Rest of World,Cross-border pipelines,Other Asia,0.006
+2026-10-01,Rest of World,Cross-border pipelines,Other Asia,0.006
+2026-01-01,Rest of World,Cross-border pipelines,USA,0.022
+2026-02-01,Rest of World,Cross-border pipelines,USA,0.022
+2026-03-01,Rest of World,Cross-border pipelines,USA,0.03
+2026-04-01,Rest of World,Cross-border pipelines,USA,0.018
+2026-05-01,Rest of World,Cross-border pipelines,USA,0.009
+2026-06-01,Rest of World,Cross-border pipelines,USA,0.012
+2026-07-01,Rest of World,Cross-border pipelines,USA,0.021
+2026-08-01,Rest of World,Cross-border pipelines,USA,0.031
+2026-09-01,Rest of World,Cross-border pipelines,USA,0.028
+2026-10-01,Rest of World,Cross-border pipelines,USA,0.021
+2026-04-01,Rest of World,Other seaborne,Cargoes at sea,0.301
+2026-06-01,Rest of World,Other seaborne,Cargoes at sea,1.232
+2026-09-01,Rest of World,Other seaborne,Cargoes at sea,0.891
+2026-01-01,Rest of World,Other seaborne,China,1.606
+2026-02-01,Rest of World,Other seaborne,China,1.674
+2026-03-01,Rest of World,Other seaborne,China,2.429
+2026-04-01,Rest of World,Other seaborne,China,2.097
+2026-05-01,Rest of World,Other seaborne,China,2.112
+2026-06-01,Rest of World,Other seaborne,China,1.438
+2026-07-01,Rest of World,Other seaborne,China,1.637
+2026-08-01,Rest of World,Other seaborne,China,2.242
+2026-09-01,Rest of World,Other seaborne,China,2.071
+2026-10-01,Rest of World,Other seaborne,China,2.235
+2026-01-01,Rest of World,Other seaborne,Europe (EU + UK),5.092
+2026-02-01,Rest of World,Other seaborne,Europe (EU + UK),4.946
+2026-03-01,Rest of World,Other seaborne,Europe (EU + UK),5.485
+2026-04-01,Rest of World,Other seaborne,Europe (EU + UK),5.916
+2026-05-01,Rest of World,Other seaborne,Europe (EU + UK),6.368
+2026-06-01,Rest of World,Other seaborne,Europe (EU + UK),6.052
+2026-07-01,Rest of World,Other seaborne,Europe (EU + UK),6.115
+2026-08-01,Rest of World,Other seaborne,Europe (EU + UK),6.237
+2026-09-01,Rest of World,Other seaborne,Europe (EU + UK),6.195
+2026-10-01,Rest of World,Other seaborne,Europe (EU + UK),6.115
+2026-01-01,Rest of World,Other seaborne,India,0.439
+2026-02-01,Rest of World,Other seaborne,India,0.49
+2026-03-01,Rest of World,Other seaborne,India,0.485
+2026-04-01,Rest of World,Other seaborne,India,0.768
+2026-05-01,Rest of World,Other seaborne,India,0.967
+2026-06-01,Rest of World,Other seaborne,India,0.666
+2026-07-01,Rest of World,Other seaborne,India,0.589
+2026-08-01,Rest of World,Other seaborne,India,0.66
+2026-09-01,Rest of World,Other seaborne,India,0.56
+2026-10-01,Rest of World,Other seaborne,India,0.614
+2026-01-01,Rest of World,Other seaborne,Japan,0.063
+2026-02-01,Rest of World,Other seaborne,Japan,0.062
+2026-03-01,Rest of World,Other seaborne,Japan,0.108
+2026-04-01,Rest of World,Other seaborne,Japan,0.028
+2026-05-01,Rest of World,Other seaborne,Japan,0.088
+2026-06-01,Rest of World,Other seaborne,Japan,0.075
+2026-07-01,Rest of World,Other seaborne,Japan,0.082
+2026-08-01,Rest of World,Other seaborne,Japan,0.104
+2026-09-01,Rest of World,Other seaborne,Japan,0.069
+2026-10-01,Rest of World,Other seaborne,Japan,0.072
+2026-01-01,Rest of World,Other seaborne,South Korea,0.117
+2026-02-01,Rest of World,Other seaborne,South Korea,0.112
+2026-03-01,Rest of World,Other seaborne,South Korea,0.189
+2026-04-01,Rest of World,Other seaborne,South Korea,0.135
+2026-05-01,Rest of World,Other seaborne,South Korea,0.231
+2026-06-01,Rest of World,Other seaborne,South Korea,0.158
+2026-07-01,Rest of World,Other seaborne,South Korea,0.162
+2026-08-01,Rest of World,Other seaborne,South Korea,0.213
+2026-09-01,Rest of World,Other seaborne,South Korea,0.164
+2026-10-01,Rest of World,Other seaborne,South Korea,0.17
+2026-01-01,Rest of World,Other seaborne,Middle East,0.071
+2026-02-01,Rest of World,Other seaborne,Middle East,0.078
+2026-03-01,Rest of World,Other seaborne,Middle East,0.018
+2026-05-01,Rest of World,Other seaborne,Middle East,0.016
+2026-06-01,Rest of World,Other seaborne,Middle East,0.015
+2026-07-01,Rest of World,Other seaborne,Middle East,0.036
+2026-08-01,Rest of World,Other seaborne,Middle East,0.048
+2026-09-01,Rest of World,Other seaborne,Middle East,0.044
+2026-10-01,Rest of World,Other seaborne,Middle East,0.044
+2026-01-01,Rest of World,Other seaborne,Other Asia,0.892
+2026-02-01,Rest of World,Other seaborne,Other Asia,0.839
+2026-03-01,Rest of World,Other seaborne,Other Asia,0.729
+2026-04-01,Rest of World,Other seaborne,Other Asia,1.073
+2026-05-01,Rest of World,Other seaborne,Other Asia,1.447
+2026-06-01,Rest of World,Other seaborne,Other Asia,1.297
+2026-07-01,Rest of World,Other seaborne,Other Asia,1.245
+2026-08-01,Rest of World,Other seaborne,Other Asia,1.46
+2026-09-01,Rest of World,Other seaborne,Other Asia,1.188
+2026-10-01,Rest of World,Other seaborne,Other Asia,1.235
+2026-01-01,Rest of World,Other seaborne,Stock builds,0.285
+2026-02-01,Rest of World,Other seaborne,Stock builds,0.617
+2026-03-01,Rest of World,Other seaborne,Stock builds,0.858
+2026-04-01,Rest of World,Other seaborne,Stock builds,0.201
+2026-05-01,Rest of World,Other seaborne,Stock builds,0.185
+2026-06-01,Rest of World,Other seaborne,Stock builds,0.039
+2026-07-01,Rest of World,Other seaborne,Stock builds,0.358
+2026-08-01,Rest of World,Other seaborne,Stock builds,0.329
+2026-09-01,Rest of World,Other seaborne,Stock builds,0.437
+2026-10-01,Rest of World,Other seaborne,Stock builds,1.064
+2026-01-01,Rest of World,Other seaborne,USA,1.286
+2026-02-01,Rest of World,Other seaborne,USA,1.309
+2026-03-01,Rest of World,Other seaborne,USA,1.755
+2026-04-01,Rest of World,Other seaborne,USA,1.077
+2026-05-01,Rest of World,Other seaborne,USA,0.559
+2026-06-01,Rest of World,Other seaborne,USA,0.678
+2026-07-01,Rest of World,Other seaborne,USA,1.25
+2026-08-01,Rest of World,Other seaborne,USA,1.836
+2026-09-01,Rest of World,Other seaborne,USA,1.675
+2026-10-01,Rest of World,Other seaborne,USA,1.256
+2026-01-01,Russia,Domestic (no transit),Rest of World,5.266
+2026-02-01,Russia,Domestic (no transit),Rest of World,5.239
+2026-03-01,Russia,Domestic (no transit),Rest of World,5.239
+2026-04-01,Russia,Domestic (no transit),Rest of World,5.161
+2026-05-01,Russia,Domestic (no transit),Rest of World,5.103
+2026-06-01,Russia,Domestic (no transit),Rest of World,5.032
+2026-07-01,Russia,Domestic (no transit),Rest of World,5.032
+2026-08-01,Russia,Domestic (no transit),Rest of World,4.961
+2026-09-01,Russia,Domestic (no transit),Rest of World,4.99
+2026-10-01,Russia,Domestic (no transit),Rest of World,5.012
+2026-01-01,Russia,Cross-border pipelines,China,0.633
+2026-02-01,Russia,Cross-border pipelines,China,0.602
+2026-03-01,Russia,Cross-border pipelines,China,0.754
+2026-04-01,Russia,Cross-border pipelines,China,0.576
+2026-05-01,Russia,Cross-border pipelines,China,0.519
+2026-06-01,Russia,Cross-border pipelines,China,0.431
+2026-07-01,Russia,Cross-border pipelines,China,0.533
+2026-08-01,Russia,Cross-border pipelines,China,0.619
+2026-09-01,Russia,Cross-border pipelines,China,0.592
+2026-10-01,Russia,Cross-border pipelines,China,0.612
+2026-01-01,Russia,Cross-border pipelines,Europe (EU + UK),0.676
+2026-02-01,Russia,Cross-border pipelines,Europe (EU + UK),0.6
+2026-03-01,Russia,Cross-border pipelines,Europe (EU + UK),0.574
+2026-04-01,Russia,Cross-border pipelines,Europe (EU + UK),0.547
+2026-05-01,Russia,Cross-border pipelines,Europe (EU + UK),0.527
+2026-06-01,Russia,Cross-border pipelines,Europe (EU + UK),0.612
+2026-07-01,Russia,Cross-border pipelines,Europe (EU + UK),0.67
+2026-08-01,Russia,Cross-border pipelines,Europe (EU + UK),0.581
+2026-09-01,Russia,Cross-border pipelines,Europe (EU + UK),0.596
+2026-10-01,Russia,Cross-border pipelines,Europe (EU + UK),0.564
+2026-04-01,Russia,Other seaborne,Cargoes at sea,0.087
+2026-06-01,Russia,Other seaborne,Cargoes at sea,0.389
+2026-09-01,Russia,Other seaborne,Cargoes at sea,0.268
+2026-01-01,Russia,Other seaborne,China,1.077
+2026-02-01,Russia,Other seaborne,China,1.025
+2026-03-01,Russia,Other seaborne,China,1.285
+2026-04-01,Russia,Other seaborne,China,0.981
+2026-05-01,Russia,Other seaborne,China,0.883
+2026-06-01,Russia,Other seaborne,China,0.735
+2026-07-01,Russia,Other seaborne,China,0.907
+2026-08-01,Russia,Other seaborne,China,1.055
+2026-09-01,Russia,Other seaborne,China,1.008
+2026-10-01,Russia,Other seaborne,China,1.042
+2026-01-01,Russia,Other seaborne,Europe (EU + UK),0.038
+2026-02-01,Russia,Other seaborne,Europe (EU + UK),0.034
+2026-03-01,Russia,Other seaborne,Europe (EU + UK),0.032
+2026-04-01,Russia,Other seaborne,Europe (EU + UK),0.031
+2026-05-01,Russia,Other seaborne,Europe (EU + UK),0.03
+2026-06-01,Russia,Other seaborne,Europe (EU + UK),0.034
+2026-07-01,Russia,Other seaborne,Europe (EU + UK),0.038
+2026-08-01,Russia,Other seaborne,Europe (EU + UK),0.033
+2026-09-01,Russia,Other seaborne,Europe (EU + UK),0.033
+2026-10-01,Russia,Other seaborne,Europe (EU + UK),0.032
+2026-01-01,Russia,Other seaborne,India,1.699
+2026-02-01,Russia,Other seaborne,India,1.729
+2026-03-01,Russia,Other seaborne,India,1.479
+2026-04-01,Russia,Other seaborne,India,2.069
+2026-05-01,Russia,Other seaborne,India,2.331
+2026-06-01,Russia,Other seaborne,India,1.96
+2026-07-01,Russia,Other seaborne,India,1.882
+2026-08-01,Russia,Other seaborne,India,1.79
+2026-09-01,Russia,Other seaborne,India,1.57
+2026-10-01,Russia,Other seaborne,India,1.65
+2026-01-01,Russia,Other seaborne,Japan,0.003
+2026-02-01,Russia,Other seaborne,Japan,0.003
+2026-03-01,Russia,Other seaborne,Japan,0.004
+2026-04-01,Russia,Other seaborne,Japan,0.001
+2026-05-01,Russia,Other seaborne,Japan,0.003
+2026-06-01,Russia,Other seaborne,Japan,0.003
+2026-07-01,Russia,Other seaborne,Japan,0.003
+2026-08-01,Russia,Other seaborne,Japan,0.003
+2026-09-01,Russia,Other seaborne,Japan,0.002
+2026-10-01,Russia,Other seaborne,Japan,0.002
+2026-01-01,Russia,Other seaborne,South Korea,0.001
+2026-02-01,Russia,Other seaborne,South Korea,0.001
+2026-03-01,Russia,Other seaborne,South Korea,0.002
+2026-04-01,Russia,Other seaborne,South Korea,0.001
+2026-05-01,Russia,Other seaborne,South Korea,0.002
+2026-06-01,Russia,Other seaborne,South Korea,0.001
+2026-07-01,Russia,Other seaborne,South Korea,0.001
+2026-08-01,Russia,Other seaborne,South Korea,0.002
+2026-09-01,Russia,Other seaborne,South Korea,0.001
+2026-10-01,Russia,Other seaborne,South Korea,0.001
+2026-01-01,Russia,Other seaborne,Middle East,0.044
+2026-02-01,Russia,Other seaborne,Middle East,0.043
+2026-03-01,Russia,Other seaborne,Middle East,0.009
+2026-05-01,Russia,Other seaborne,Middle East,0.006
+2026-06-01,Russia,Other seaborne,Middle East,0.007
+2026-07-01,Russia,Other seaborne,Middle East,0.018
+2026-08-01,Russia,Other seaborne,Middle East,0.021
+2026-09-01,Russia,Other seaborne,Middle East,0.02
+2026-10-01,Russia,Other seaborne,Middle East,0.019
+2026-01-01,Russia,Other seaborne,Other Asia,0.038
+2026-02-01,Russia,Other seaborne,Other Asia,0.032
+2026-03-01,Russia,Other seaborne,Other Asia,0.024
+2026-04-01,Russia,Other seaborne,Other Asia,0.031
+2026-05-01,Russia,Other seaborne,Other Asia,0.038
+2026-06-01,Russia,Other seaborne,Other Asia,0.042
+2026-07-01,Russia,Other seaborne,Other Asia,0.043
+2026-08-01,Russia,Other seaborne,Other Asia,0.043
+2026-09-01,Russia,Other seaborne,Other Asia,0.036
+2026-10-01,Russia,Other seaborne,Other Asia,0.036
+2026-01-01,Russia,Other seaborne,Rest of World,0.434
+2026-02-01,Russia,Other seaborne,Rest of World,0.433
+2026-03-01,Russia,Other seaborne,Rest of World,0.292
+2026-04-01,Russia,Other seaborne,Rest of World,0.283
+2026-05-01,Russia,Other seaborne,Rest of World,0.228
+2026-06-01,Russia,Other seaborne,Rest of World,0.323
+2026-07-01,Russia,Other seaborne,Rest of World,0.331
+2026-08-01,Russia,Other seaborne,Rest of World,0.243
+2026-09-01,Russia,Other seaborne,Rest of World,0.251
+2026-10-01,Russia,Other seaborne,Rest of World,0.265
+2026-01-01,Russia,Other seaborne,Stock builds,0.118
+2026-02-01,Russia,Other seaborne,Stock builds,0.234
+2026-03-01,Russia,Other seaborne,Stock builds,0.28
+2026-04-01,Russia,Other seaborne,Stock builds,0.058
+2026-05-01,Russia,Other seaborne,Stock builds,0.048
+2026-06-01,Russia,Other seaborne,Stock builds,0.012
+2026-07-01,Russia,Other seaborne,Stock builds,0.123
+2026-08-01,Russia,Other seaborne,Stock builds,0.096
+2026-09-01,Russia,Other seaborne,Stock builds,0.131
+2026-10-01,Russia,Other seaborne,Stock builds,0.307
+2026-01-01,Russia,Other seaborne,USA,0.001
+2026-02-01,Russia,Other seaborne,USA,0.001
+2026-03-01,Russia,Other seaborne,USA,0.001
+2026-04-01,Russia,Other seaborne,USA,0.001
+2026-05-01,Russia,Other seaborne,USA,0
+2026-06-01,Russia,Other seaborne,USA,0.001
+2026-07-01,Russia,Other seaborne,USA,0.001
+2026-08-01,Russia,Other seaborne,USA,0.001
+2026-09-01,Russia,Other seaborne,USA,0.001
+2026-10-01,Russia,Other seaborne,USA,0.001
+2026-04-01,Saudi Arabia,Gulf bypass pipelines,Cargoes at sea,0.103
+2026-06-01,Saudi Arabia,Gulf bypass pipelines,Cargoes at sea,0.383
+2026-09-01,Saudi Arabia,Gulf bypass pipelines,Cargoes at sea,0.17
+2026-01-01,Saudi Arabia,Gulf bypass pipelines,China,0.29
+2026-02-01,Saudi Arabia,Gulf bypass pipelines,China,0.399
+2026-03-01,Saudi Arabia,Gulf bypass pipelines,China,0.705
+2026-04-01,Saudi Arabia,Gulf bypass pipelines,China,0.95
+2026-05-01,Saudi Arabia,Gulf bypass pipelines,China,0.657
+2026-06-01,Saudi Arabia,Gulf bypass pipelines,China,0.593
+2026-07-01,Saudi Arabia,Gulf bypass pipelines,China,0.59
+2026-08-01,Saudi Arabia,Gulf bypass pipelines,China,0.588
+2026-09-01,Saudi Arabia,Gulf bypass pipelines,China,0.524
+2026-10-01,Saudi Arabia,Gulf bypass pipelines,China,0.558
+2026-01-01,Saudi Arabia,Gulf bypass pipelines,Europe (EU + UK),0.172
+2026-02-01,Saudi Arabia,Gulf bypass pipelines,Europe (EU + UK),0.221
+2026-03-01,Saudi Arabia,Gulf bypass pipelines,Europe (EU + UK),0.298
+2026-04-01,Saudi Arabia,Gulf bypass pipelines,Europe (EU + UK),0.501
+2026-05-01,Saudi Arabia,Gulf bypass pipelines,Europe (EU + UK),0.37
+2026-06-01,Saudi Arabia,Gulf bypass pipelines,Europe (EU + UK),0.467
+2026-07-01,Saudi Arabia,Gulf bypass pipelines,Europe (EU + UK),0.412
+2026-08-01,Saudi Arabia,Gulf bypass pipelines,Europe (EU + UK),0.306
+2026-09-01,Saudi Arabia,Gulf bypass pipelines,Europe (EU + UK),0.293
+2026-10-01,Saudi Arabia,Gulf bypass pipelines,Europe (EU + UK),0.286
+2026-01-01,Saudi Arabia,Gulf bypass pipelines,India,0.155
+2026-02-01,Saudi Arabia,Gulf bypass pipelines,India,0.228
+2026-03-01,Saudi Arabia,Gulf bypass pipelines,India,0.275
+2026-04-01,Saudi Arabia,Gulf bypass pipelines,India,0.678
+2026-05-01,Saudi Arabia,Gulf bypass pipelines,India,0.587
+2026-06-01,Saudi Arabia,Gulf bypass pipelines,India,0.535
+2026-07-01,Saudi Arabia,Gulf bypass pipelines,India,0.414
+2026-08-01,Saudi Arabia,Gulf bypass pipelines,India,0.338
+2026-09-01,Saudi Arabia,Gulf bypass pipelines,India,0.276
+2026-10-01,Saudi Arabia,Gulf bypass pipelines,India,0.299
+2026-01-01,Saudi Arabia,Gulf bypass pipelines,Japan,0.228
+2026-02-01,Saudi Arabia,Gulf bypass pipelines,Japan,0.296
+2026-03-01,Saudi Arabia,Gulf bypass pipelines,Japan,0.629
+2026-04-01,Saudi Arabia,Gulf bypass pipelines,Japan,0.26
+2026-05-01,Saudi Arabia,Gulf bypass pipelines,Japan,0.552
+2026-06-01,Saudi Arabia,Gulf bypass pipelines,Japan,0.627
+2026-07-01,Saudi Arabia,Gulf bypass pipelines,Japan,0.594
+2026-08-01,Saudi Arabia,Gulf bypass pipelines,Japan,0.547
+2026-09-01,Saudi Arabia,Gulf bypass pipelines,Japan,0.353
+2026-10-01,Saudi Arabia,Gulf bypass pipelines,Japan,0.364
+2026-01-01,Saudi Arabia,Gulf bypass pipelines,South Korea,0.276
+2026-02-01,Saudi Arabia,Gulf bypass pipelines,South Korea,0.348
+2026-03-01,Saudi Arabia,Gulf bypass pipelines,South Korea,0.713
+2026-04-01,Saudi Arabia,Gulf bypass pipelines,South Korea,0.795
+2026-05-01,Saudi Arabia,Gulf bypass pipelines,South Korea,0.932
+2026-06-01,Saudi Arabia,Gulf bypass pipelines,South Korea,0.846
+2026-07-01,Saudi Arabia,Gulf bypass pipelines,South Korea,0.758
+2026-08-01,Saudi Arabia,Gulf bypass pipelines,South Korea,0.726
+2026-09-01,Saudi Arabia,Gulf bypass pipelines,South Korea,0.539
+2026-10-01,Saudi Arabia,Gulf bypass pipelines,South Korea,0.552
+2026-01-01,Saudi Arabia,Gulf bypass pipelines,Middle East,0.025
+2026-02-01,Saudi Arabia,Gulf bypass pipelines,Middle East,0.036
+2026-03-01,Saudi Arabia,Gulf bypass pipelines,Middle East,0.01
+2026-05-01,Saudi Arabia,Gulf bypass pipelines,Middle East,0.01
+2026-06-01,Saudi Arabia,Gulf bypass pipelines,Middle East,0.012
+2026-07-01,Saudi Arabia,Gulf bypass pipelines,Middle East,0.025
+2026-08-01,Saudi Arabia,Gulf bypass pipelines,Middle East,0.025
+2026-09-01,Saudi Arabia,Gulf bypass pipelines,Middle East,0.022
+2026-10-01,Saudi Arabia,Gulf bypass pipelines,Middle East,0.022
+2026-01-01,Saudi Arabia,Gulf bypass pipelines,Other Asia,0.182
+2026-02-01,Saudi Arabia,Gulf bypass pipelines,Other Asia,0.225
+2026-03-01,Saudi Arabia,Gulf bypass pipelines,Other Asia,0.238
+2026-04-01,Saudi Arabia,Gulf bypass pipelines,Other Asia,0.548
+2026-05-01,Saudi Arabia,Gulf bypass pipelines,Other Asia,0.507
+2026-06-01,Saudi Arabia,Gulf bypass pipelines,Other Asia,0.603
+2026-07-01,Saudi Arabia,Gulf bypass pipelines,Other Asia,0.506
+2026-08-01,Saudi Arabia,Gulf bypass pipelines,Other Asia,0.432
+2026-09-01,Saudi Arabia,Gulf bypass pipelines,Other Asia,0.338
+2026-10-01,Saudi Arabia,Gulf bypass pipelines,Other Asia,0.347
+2026-01-01,Saudi Arabia,Gulf bypass pipelines,Rest of World,0.059
+2026-02-01,Saudi Arabia,Gulf bypass pipelines,Rest of World,0.085
+2026-03-01,Saudi Arabia,Gulf bypass pipelines,Rest of World,0.081
+2026-04-01,Saudi Arabia,Gulf bypass pipelines,Rest of World,0.139
+2026-05-01,Saudi Arabia,Gulf bypass pipelines,Rest of World,0.086
+2026-06-01,Saudi Arabia,Gulf bypass pipelines,Rest of World,0.132
+2026-07-01,Saudi Arabia,Gulf bypass pipelines,Rest of World,0.109
+2026-08-01,Saudi Arabia,Gulf bypass pipelines,Rest of World,0.069
+2026-09-01,Saudi Arabia,Gulf bypass pipelines,Rest of World,0.066
+2026-10-01,Saudi Arabia,Gulf bypass pipelines,Rest of World,0.072
+2026-01-01,Saudi Arabia,Gulf bypass pipelines,Stock builds,0.039
+2026-02-01,Saudi Arabia,Gulf bypass pipelines,Stock builds,0.111
+2026-03-01,Saudi Arabia,Gulf bypass pipelines,Stock builds,0.188
+2026-04-01,Saudi Arabia,Gulf bypass pipelines,Stock builds,0.069
+2026-05-01,Saudi Arabia,Gulf bypass pipelines,Stock builds,0.044
+2026-06-01,Saudi Arabia,Gulf bypass pipelines,Stock builds,0.012
+2026-07-01,Saudi Arabia,Gulf bypass pipelines,Stock builds,0.097
+2026-08-01,Saudi Arabia,Gulf bypass pipelines,Stock builds,0.065
+2026-09-01,Saudi Arabia,Gulf bypass pipelines,Stock builds,0.083
+2026-10-01,Saudi Arabia,Gulf bypass pipelines,Stock builds,0.201
+2026-01-01,Saudi Arabia,Gulf bypass pipelines,USA,0.074
+2026-02-01,Saudi Arabia,Gulf bypass pipelines,USA,0.1
+2026-03-01,Saudi Arabia,Gulf bypass pipelines,USA,0.163
+2026-04-01,Saudi Arabia,Gulf bypass pipelines,USA,0.156
+2026-05-01,Saudi Arabia,Gulf bypass pipelines,USA,0.056
+2026-06-01,Saudi Arabia,Gulf bypass pipelines,USA,0.089
+2026-07-01,Saudi Arabia,Gulf bypass pipelines,USA,0.144
+2026-08-01,Saudi Arabia,Gulf bypass pipelines,USA,0.154
+2026-09-01,Saudi Arabia,Gulf bypass pipelines,USA,0.136
+2026-10-01,Saudi Arabia,Gulf bypass pipelines,USA,0.1
+2026-01-01,Saudi Arabia,Domestic (no transit),Middle East,3.005
+2026-02-01,Saudi Arabia,Domestic (no transit),Middle East,3.106
+2026-03-01,Saudi Arabia,Domestic (no transit),Middle East,2.195
+2026-04-01,Saudi Arabia,Domestic (no transit),Middle East,2.335
+2026-05-01,Saudi Arabia,Domestic (no transit),Middle East,2.641
+2026-06-01,Saudi Arabia,Domestic (no transit),Middle East,2.64
+2026-07-01,Saudi Arabia,Domestic (no transit),Middle East,2.684
+2026-08-01,Saudi Arabia,Domestic (no transit),Middle East,2.685
+2026-09-01,Saudi Arabia,Domestic (no transit),Middle East,2.836
+2026-10-01,Saudi Arabia,Domestic (no transit),Middle East,2.799
+2026-03-01,Saudi Arabia,Domestic (no transit),Stock builds,1.251
+2026-07-01,Saudi Arabia,Domestic (no transit),Stock builds,0.169
+2026-04-01,Saudi Arabia,Strait of Hormuz,Cargoes at sea,0.002
+2026-06-01,Saudi Arabia,Strait of Hormuz,Cargoes at sea,0.031
+2026-09-01,Saudi Arabia,Strait of Hormuz,Cargoes at sea,0.159
+2026-01-01,Saudi Arabia,Strait of Hormuz,China,1.084
+2026-02-01,Saudi Arabia,Strait of Hormuz,China,1.092
+2026-03-01,Saudi Arabia,Strait of Hormuz,China,0.161
+2026-04-01,Saudi Arabia,Strait of Hormuz,China,0.015
+2026-05-01,Saudi Arabia,Strait of Hormuz,China,0.033
+2026-06-01,Saudi Arabia,Strait of Hormuz,China,0.048
+2026-07-01,Saudi Arabia,Strait of Hormuz,China,0.238
+2026-08-01,Saudi Arabia,Strait of Hormuz,China,0.129
+2026-09-01,Saudi Arabia,Strait of Hormuz,China,0.488
+2026-10-01,Saudi Arabia,Strait of Hormuz,China,0.535
+2026-01-01,Saudi Arabia,Strait of Hormuz,Europe (EU + UK),0.643
+2026-02-01,Saudi Arabia,Strait of Hormuz,Europe (EU + UK),0.603
+2026-03-01,Saudi Arabia,Strait of Hormuz,Europe (EU + UK),0.068
+2026-04-01,Saudi Arabia,Strait of Hormuz,Europe (EU + UK),0.008
+2026-05-01,Saudi Arabia,Strait of Hormuz,Europe (EU + UK),0.018
+2026-06-01,Saudi Arabia,Strait of Hormuz,Europe (EU + UK),0.038
+2026-07-01,Saudi Arabia,Strait of Hormuz,Europe (EU + UK),0.166
+2026-08-01,Saudi Arabia,Strait of Hormuz,Europe (EU + UK),0.067
+2026-09-01,Saudi Arabia,Strait of Hormuz,Europe (EU + UK),0.273
+2026-10-01,Saudi Arabia,Strait of Hormuz,Europe (EU + UK),0.274
+2026-01-01,Saudi Arabia,Strait of Hormuz,India,0.578
+2026-02-01,Saudi Arabia,Strait of Hormuz,India,0.623
+2026-03-01,Saudi Arabia,Strait of Hormuz,India,0.063
+2026-04-01,Saudi Arabia,Strait of Hormuz,India,0.01
+2026-05-01,Saudi Arabia,Strait of Hormuz,India,0.029
+2026-06-01,Saudi Arabia,Strait of Hormuz,India,0.044
+2026-07-01,Saudi Arabia,Strait of Hormuz,India,0.167
+2026-08-01,Saudi Arabia,Strait of Hormuz,India,0.074
+2026-09-01,Saudi Arabia,Strait of Hormuz,India,0.257
+2026-10-01,Saudi Arabia,Strait of Hormuz,India,0.287
+2026-01-01,Saudi Arabia,Strait of Hormuz,Japan,0.851
+2026-02-01,Saudi Arabia,Strait of Hormuz,Japan,0.809
+2026-03-01,Saudi Arabia,Strait of Hormuz,Japan,0.144
+2026-04-01,Saudi Arabia,Strait of Hormuz,Japan,0.004
+2026-05-01,Saudi Arabia,Strait of Hormuz,Japan,0.027
+2026-06-01,Saudi Arabia,Strait of Hormuz,Japan,0.051
+2026-07-01,Saudi Arabia,Strait of Hormuz,Japan,0.239
+2026-08-01,Saudi Arabia,Strait of Hormuz,Japan,0.12
+2026-09-01,Saudi Arabia,Strait of Hormuz,Japan,0.329
+2026-10-01,Saudi Arabia,Strait of Hormuz,Japan,0.349
+2026-01-01,Saudi Arabia,Strait of Hormuz,South Korea,1.03
+2026-02-01,Saudi Arabia,Strait of Hormuz,South Korea,0.951
+2026-03-01,Saudi Arabia,Strait of Hormuz,South Korea,0.163
+2026-04-01,Saudi Arabia,Strait of Hormuz,South Korea,0.012
+2026-05-01,Saudi Arabia,Strait of Hormuz,South Korea,0.046
+2026-06-01,Saudi Arabia,Strait of Hormuz,South Korea,0.069
+2026-07-01,Saudi Arabia,Strait of Hormuz,South Korea,0.305
+2026-08-01,Saudi Arabia,Strait of Hormuz,South Korea,0.159
+2026-09-01,Saudi Arabia,Strait of Hormuz,South Korea,0.502
+2026-10-01,Saudi Arabia,Strait of Hormuz,South Korea,0.529
+2026-01-01,Saudi Arabia,Strait of Hormuz,Middle East,0.094
+2026-02-01,Saudi Arabia,Strait of Hormuz,Middle East,0.099
+2026-03-01,Saudi Arabia,Strait of Hormuz,Middle East,0.002
+2026-05-01,Saudi Arabia,Strait of Hormuz,Middle East,0
+2026-06-01,Saudi Arabia,Strait of Hormuz,Middle East,0.001
+2026-07-01,Saudi Arabia,Strait of Hormuz,Middle East,0.01
+2026-08-01,Saudi Arabia,Strait of Hormuz,Middle East,0.005
+2026-09-01,Saudi Arabia,Strait of Hormuz,Middle East,0.021
+2026-10-01,Saudi Arabia,Strait of Hormuz,Middle East,0.021
+2026-01-01,Saudi Arabia,Strait of Hormuz,Other Asia,0.679
+2026-02-01,Saudi Arabia,Strait of Hormuz,Other Asia,0.616
+2026-03-01,Saudi Arabia,Strait of Hormuz,Other Asia,0.054
+2026-04-01,Saudi Arabia,Strait of Hormuz,Other Asia,0.008
+2026-05-01,Saudi Arabia,Strait of Hormuz,Other Asia,0.025
+2026-06-01,Saudi Arabia,Strait of Hormuz,Other Asia,0.049
+2026-07-01,Saudi Arabia,Strait of Hormuz,Other Asia,0.203
+2026-08-01,Saudi Arabia,Strait of Hormuz,Other Asia,0.095
+2026-09-01,Saudi Arabia,Strait of Hormuz,Other Asia,0.316
+2026-10-01,Saudi Arabia,Strait of Hormuz,Other Asia,0.333
+2026-01-01,Saudi Arabia,Strait of Hormuz,Rest of World,0.222
+2026-02-01,Saudi Arabia,Strait of Hormuz,Rest of World,0.234
+2026-03-01,Saudi Arabia,Strait of Hormuz,Rest of World,0.019
+2026-04-01,Saudi Arabia,Strait of Hormuz,Rest of World,0.002
+2026-05-01,Saudi Arabia,Strait of Hormuz,Rest of World,0.004
+2026-06-01,Saudi Arabia,Strait of Hormuz,Rest of World,0.011
+2026-07-01,Saudi Arabia,Strait of Hormuz,Rest of World,0.044
+2026-08-01,Saudi Arabia,Strait of Hormuz,Rest of World,0.015
+2026-09-01,Saudi Arabia,Strait of Hormuz,Rest of World,0.062
+2026-10-01,Saudi Arabia,Strait of Hormuz,Rest of World,0.069
+2026-01-01,Saudi Arabia,Strait of Hormuz,Stock builds,0.145
+2026-02-01,Saudi Arabia,Strait of Hormuz,Stock builds,0.304
+2026-03-01,Saudi Arabia,Strait of Hormuz,Stock builds,0.043
+2026-04-01,Saudi Arabia,Strait of Hormuz,Stock builds,0.001
+2026-05-01,Saudi Arabia,Strait of Hormuz,Stock builds,0.002
+2026-06-01,Saudi Arabia,Strait of Hormuz,Stock builds,0.001
+2026-07-01,Saudi Arabia,Strait of Hormuz,Stock builds,0.039
+2026-08-01,Saudi Arabia,Strait of Hormuz,Stock builds,0.014
+2026-09-01,Saudi Arabia,Strait of Hormuz,Stock builds,0.078
+2026-10-01,Saudi Arabia,Strait of Hormuz,Stock builds,0.192
+2026-01-01,Saudi Arabia,Strait of Hormuz,USA,0.278
+2026-02-01,Saudi Arabia,Strait of Hormuz,USA,0.273
+2026-03-01,Saudi Arabia,Strait of Hormuz,USA,0.037
+2026-04-01,Saudi Arabia,Strait of Hormuz,USA,0.002
+2026-05-01,Saudi Arabia,Strait of Hormuz,USA,0.003
+2026-06-01,Saudi Arabia,Strait of Hormuz,USA,0.007
+2026-07-01,Saudi Arabia,Strait of Hormuz,USA,0.058
+2026-08-01,Saudi Arabia,Strait of Hormuz,USA,0.034
+2026-09-01,Saudi Arabia,Strait of Hormuz,USA,0.126
+2026-10-01,Saudi Arabia,Strait of Hormuz,USA,0.096
+2026-05-01,Stock draws,Domestic (no transit),China,0.46
+2026-06-01,Stock draws,Domestic (no transit),China,0.94
+2026-08-01,Stock draws,Domestic (no transit),China,0.64
+2026-09-01,Stock draws,Domestic (no transit),China,0.53
+2026-01-01,Stock draws,Domestic (no transit),Europe (EU + UK),0.168
+2026-05-01,Stock draws,Domestic (no transit),Europe (EU + UK),0.21
+2026-06-01,Stock draws,Domestic (no transit),Europe (EU + UK),0.127
+2026-08-01,Stock draws,Domestic (no transit),Europe (EU + UK),0.268
+2026-01-01,Stock draws,Domestic (no transit),India,0.364
+2026-02-01,Stock draws,Domestic (no transit),India,0.035
+2026-03-01,Stock draws,Domestic (no transit),India,1.493
+2026-04-01,Stock draws,Domestic (no transit),India,0.162
+2026-06-01,Stock draws,Domestic (no transit),India,0.078
+2026-01-01,Stock draws,Domestic (no transit),Japan,0.217
+2026-02-01,Stock draws,Domestic (no transit),Japan,0.118
+2026-03-01,Stock draws,Domestic (no transit),Japan,0.014
+2026-04-01,Stock draws,Domestic (no transit),Japan,1.587
+2026-05-01,Stock draws,Domestic (no transit),Japan,0.768
+2026-03-01,Stock draws,Domestic (no transit),South Korea,0.007
+2026-04-01,Stock draws,Domestic (no transit),South Korea,0.451
+2026-01-01,Stock draws,Domestic (no transit),Other Asia,0.282
+2026-02-01,Stock draws,Domestic (no transit),Other Asia,0.027
+2026-03-01,Stock draws,Domestic (no transit),Other Asia,1.157
+2026-04-01,Stock draws,Domestic (no transit),Other Asia,0.126
+2026-06-01,Stock draws,Domestic (no transit),Other Asia,0.06
+2026-01-01,Stock draws,Domestic (no transit),Rest of World,0.712
+2026-02-01,Stock draws,Domestic (no transit),Rest of World,0.068
+2026-03-01,Stock draws,Domestic (no transit),Rest of World,2.917
+2026-04-01,Stock draws,Domestic (no transit),Rest of World,0.317
+2026-06-01,Stock draws,Domestic (no transit),Rest of World,0.152
+2026-01-01,Stock draws,Domestic (no transit),USA,0.108
+2026-04-01,Stock draws,Domestic (no transit),USA,0.785
+2026-05-01,Stock draws,Domestic (no transit),USA,2.068
+2026-06-01,Stock draws,Domestic (no transit),USA,1.809
+2026-07-01,Stock draws,Domestic (no transit),USA,0.418
+2026-08-01,Stock draws,Domestic (no transit),USA,0.104
+2026-04-01,UAE,Gulf bypass pipelines,Cargoes at sea,0.033
+2026-06-01,UAE,Gulf bypass pipelines,Cargoes at sea,0.109
+2026-09-01,UAE,Gulf bypass pipelines,Cargoes at sea,0.08
+2026-01-01,UAE,Gulf bypass pipelines,China,0.165
+2026-02-01,UAE,Gulf bypass pipelines,China,0.179
+2026-03-01,UAE,Gulf bypass pipelines,China,0.246
+2026-04-01,UAE,Gulf bypass pipelines,China,0.336
+2026-05-01,UAE,Gulf bypass pipelines,China,0.231
+2026-06-01,UAE,Gulf bypass pipelines,China,0.186
+2026-07-01,UAE,Gulf bypass pipelines,China,0.219
+2026-08-01,UAE,Gulf bypass pipelines,China,0.245
+2026-09-01,UAE,Gulf bypass pipelines,China,0.272
+2026-10-01,UAE,Gulf bypass pipelines,China,0.283
+2026-01-01,UAE,Gulf bypass pipelines,Europe (EU + UK),0.004
+2026-02-01,UAE,Gulf bypass pipelines,Europe (EU + UK),0.004
+2026-03-01,UAE,Gulf bypass pipelines,Europe (EU + UK),0.005
+2026-04-01,UAE,Gulf bypass pipelines,Europe (EU + UK),0.008
+2026-05-01,UAE,Gulf bypass pipelines,Europe (EU + UK),0.006
+2026-06-01,UAE,Gulf bypass pipelines,Europe (EU + UK),0.007
+2026-07-01,UAE,Gulf bypass pipelines,Europe (EU + UK),0.007
+2026-08-01,UAE,Gulf bypass pipelines,Europe (EU + UK),0.006
+2026-09-01,UAE,Gulf bypass pipelines,Europe (EU + UK),0.007
+2026-10-01,UAE,Gulf bypass pipelines,Europe (EU + UK),0.007
+2026-01-01,UAE,Gulf bypass pipelines,India,0.139
+2026-02-01,UAE,Gulf bypass pipelines,India,0.161
+2026-03-01,UAE,Gulf bypass pipelines,India,0.151
+2026-04-01,UAE,Gulf bypass pipelines,India,0.378
+2026-05-01,UAE,Gulf bypass pipelines,India,0.325
+2026-06-01,UAE,Gulf bypass pipelines,India,0.264
+2026-07-01,UAE,Gulf bypass pipelines,India,0.242
+2026-08-01,UAE,Gulf bypass pipelines,India,0.222
+2026-09-01,UAE,Gulf bypass pipelines,India,0.226
+2026-10-01,UAE,Gulf bypass pipelines,India,0.239
+2026-01-01,UAE,Gulf bypass pipelines,Japan,0.3
+2026-02-01,UAE,Gulf bypass pipelines,Japan,0.306
+2026-03-01,UAE,Gulf bypass pipelines,Japan,0.506
+2026-04-01,UAE,Gulf bypass pipelines,Japan,0.212
+2026-05-01,UAE,Gulf bypass pipelines,Japan,0.447
+2026-06-01,UAE,Gulf bypass pipelines,Japan,0.453
+2026-07-01,UAE,Gulf bypass pipelines,Japan,0.509
+2026-08-01,UAE,Gulf bypass pipelines,Japan,0.526
+2026-09-01,UAE,Gulf bypass pipelines,Japan,0.423
+2026-10-01,UAE,Gulf bypass pipelines,Japan,0.426
+2026-01-01,UAE,Gulf bypass pipelines,South Korea,0.091
+2026-02-01,UAE,Gulf bypass pipelines,South Korea,0.09
+2026-03-01,UAE,Gulf bypass pipelines,South Korea,0.144
+2026-04-01,UAE,Gulf bypass pipelines,South Korea,0.163
+2026-05-01,UAE,Gulf bypass pipelines,South Korea,0.189
+2026-06-01,UAE,Gulf bypass pipelines,South Korea,0.153
+2026-07-01,UAE,Gulf bypass pipelines,South Korea,0.163
+2026-08-01,UAE,Gulf bypass pipelines,South Korea,0.175
+2026-09-01,UAE,Gulf bypass pipelines,South Korea,0.162
+2026-10-01,UAE,Gulf bypass pipelines,South Korea,0.162
+2026-01-01,UAE,Gulf bypass pipelines,Middle East,0.001
+2026-02-01,UAE,Gulf bypass pipelines,Middle East,0.001
+2026-03-01,UAE,Gulf bypass pipelines,Middle East,0
+2026-05-01,UAE,Gulf bypass pipelines,Middle East,0
+2026-06-01,UAE,Gulf bypass pipelines,Middle East,0
+2026-07-01,UAE,Gulf bypass pipelines,Middle East,0
+2026-08-01,UAE,Gulf bypass pipelines,Middle East,0.001
+2026-09-01,UAE,Gulf bypass pipelines,Middle East,0.001
+2026-10-01,UAE,Gulf bypass pipelines,Middle East,0.001
+2026-01-01,UAE,Gulf bypass pipelines,Other Asia,0.338
+2026-02-01,UAE,Gulf bypass pipelines,Other Asia,0.33
+2026-03-01,UAE,Gulf bypass pipelines,Other Asia,0.271
+2026-04-01,UAE,Gulf bypass pipelines,Other Asia,0.632
+2026-05-01,UAE,Gulf bypass pipelines,Other Asia,0.581
+2026-06-01,UAE,Gulf bypass pipelines,Other Asia,0.616
+2026-07-01,UAE,Gulf bypass pipelines,Other Asia,0.612
+2026-08-01,UAE,Gulf bypass pipelines,Other Asia,0.586
+2026-09-01,UAE,Gulf bypass pipelines,Other Asia,0.573
+2026-10-01,UAE,Gulf bypass pipelines,Other Asia,0.575
+2026-01-01,UAE,Gulf bypass pipelines,Rest of World,0.002
+2026-02-01,UAE,Gulf bypass pipelines,Rest of World,0.002
+2026-03-01,UAE,Gulf bypass pipelines,Rest of World,0.002
+2026-04-01,UAE,Gulf bypass pipelines,Rest of World,0.003
+2026-05-01,UAE,Gulf bypass pipelines,Rest of World,0.002
+2026-06-01,UAE,Gulf bypass pipelines,Rest of World,0.002
+2026-07-01,UAE,Gulf bypass pipelines,Rest of World,0.002
+2026-08-01,UAE,Gulf bypass pipelines,Rest of World,0.002
+2026-09-01,UAE,Gulf bypass pipelines,Rest of World,0.002
+2026-10-01,UAE,Gulf bypass pipelines,Rest of World,0.002
+2026-01-01,UAE,Gulf bypass pipelines,Stock builds,0.02
+2026-02-01,UAE,Gulf bypass pipelines,Stock builds,0.045
+2026-03-01,UAE,Gulf bypass pipelines,Stock builds,0.06
+2026-04-01,UAE,Gulf bypass pipelines,Stock builds,0.022
+2026-05-01,UAE,Gulf bypass pipelines,Stock builds,0.014
+2026-06-01,UAE,Gulf bypass pipelines,Stock builds,0.003
+2026-07-01,UAE,Gulf bypass pipelines,Stock builds,0.033
+2026-08-01,UAE,Gulf bypass pipelines,Stock builds,0.025
+2026-09-01,UAE,Gulf bypass pipelines,Stock builds,0.039
+2026-10-01,UAE,Gulf bypass pipelines,Stock builds,0.093
+2026-01-01,UAE,Gulf bypass pipelines,USA,0.01
+2026-02-01,UAE,Gulf bypass pipelines,USA,0.01
+2026-03-01,UAE,Gulf bypass pipelines,USA,0.013
+2026-04-01,UAE,Gulf bypass pipelines,USA,0.013
+2026-05-01,UAE,Gulf bypass pipelines,USA,0.004
+2026-06-01,UAE,Gulf bypass pipelines,USA,0.006
+2026-07-01,UAE,Gulf bypass pipelines,USA,0.012
+2026-08-01,UAE,Gulf bypass pipelines,USA,0.015
+2026-09-01,UAE,Gulf bypass pipelines,USA,0.016
+2026-10-01,UAE,Gulf bypass pipelines,USA,0.012
+2026-01-01,UAE,Domestic (no transit),Middle East,0.882
+2026-02-01,UAE,Domestic (no transit),Middle East,0.882
+2026-03-01,UAE,Domestic (no transit),Middle East,0.753
+2026-04-01,UAE,Domestic (no transit),Middle East,0.748
+2026-05-01,UAE,Domestic (no transit),Middle East,0.768
+2026-06-01,UAE,Domestic (no transit),Middle East,0.756
+2026-07-01,UAE,Domestic (no transit),Middle East,0.79
+2026-08-01,UAE,Domestic (no transit),Middle East,0.836
+2026-09-01,UAE,Domestic (no transit),Middle East,0.883
+2026-10-01,UAE,Domestic (no transit),Middle East,0.871
+2026-07-01,UAE,Domestic (no transit),Stock builds,0.171
+2026-04-01,UAE,Strait of Hormuz,Cargoes at sea,0
+2026-06-01,UAE,Strait of Hormuz,Cargoes at sea,0.098
+2026-09-01,UAE,Strait of Hormuz,Cargoes at sea,0.063
+2026-01-01,UAE,Strait of Hormuz,China,0.312
+2026-02-01,UAE,Strait of Hormuz,China,0.32
+2026-04-01,UAE,Strait of Hormuz,China,0.004
+2026-05-01,UAE,Strait of Hormuz,China,0.014
+2026-06-01,UAE,Strait of Hormuz,China,0.167
+2026-07-01,UAE,Strait of Hormuz,China,0.181
+2026-08-01,UAE,Strait of Hormuz,China,0.19
+2026-09-01,UAE,Strait of Hormuz,China,0.213
+2026-10-01,UAE,Strait of Hormuz,China,0.245
+2026-01-01,UAE,Strait of Hormuz,Europe (EU + UK),0.008
+2026-02-01,UAE,Strait of Hormuz,Europe (EU + UK),0.008
+2026-04-01,UAE,Strait of Hormuz,Europe (EU + UK),0
+2026-05-01,UAE,Strait of Hormuz,Europe (EU + UK),0
+2026-06-01,UAE,Strait of Hormuz,Europe (EU + UK),0.006
+2026-07-01,UAE,Strait of Hormuz,Europe (EU + UK),0.006
+2026-08-01,UAE,Strait of Hormuz,Europe (EU + UK),0.004
+2026-09-01,UAE,Strait of Hormuz,Europe (EU + UK),0.005
+2026-10-01,UAE,Strait of Hormuz,Europe (EU + UK),0.006
+2026-01-01,UAE,Strait of Hormuz,India,0.263
+2026-02-01,UAE,Strait of Hormuz,India,0.288
+2026-04-01,UAE,Strait of Hormuz,India,0.005
+2026-05-01,UAE,Strait of Hormuz,India,0.02
+2026-06-01,UAE,Strait of Hormuz,India,0.237
+2026-07-01,UAE,Strait of Hormuz,India,0.2
+2026-08-01,UAE,Strait of Hormuz,India,0.172
+2026-09-01,UAE,Strait of Hormuz,India,0.177
+2026-10-01,UAE,Strait of Hormuz,India,0.207
+2026-01-01,UAE,Strait of Hormuz,Japan,0.566
+2026-02-01,UAE,Strait of Hormuz,Japan,0.548
+2026-04-01,UAE,Strait of Hormuz,Japan,0.003
+2026-05-01,UAE,Strait of Hormuz,Japan,0.028
+2026-06-01,UAE,Strait of Hormuz,Japan,0.406
+2026-07-01,UAE,Strait of Hormuz,Japan,0.419
+2026-08-01,UAE,Strait of Hormuz,Japan,0.408
+2026-09-01,UAE,Strait of Hormuz,Japan,0.332
+2026-10-01,UAE,Strait of Hormuz,Japan,0.368
+2026-01-01,UAE,Strait of Hormuz,South Korea,0.172
+2026-02-01,UAE,Strait of Hormuz,South Korea,0.161
+2026-04-01,UAE,Strait of Hormuz,South Korea,0.002
+2026-05-01,UAE,Strait of Hormuz,South Korea,0.012
+2026-06-01,UAE,Strait of Hormuz,South Korea,0.137
+2026-07-01,UAE,Strait of Hormuz,South Korea,0.134
+2026-08-01,UAE,Strait of Hormuz,South Korea,0.135
+2026-09-01,UAE,Strait of Hormuz,South Korea,0.127
+2026-10-01,UAE,Strait of Hormuz,South Korea,0.14
+2026-01-01,UAE,Strait of Hormuz,Middle East,0.001
+2026-02-01,UAE,Strait of Hormuz,Middle East,0.002
+2026-05-01,UAE,Strait of Hormuz,Middle East,0
+2026-06-01,UAE,Strait of Hormuz,Middle East,0
+2026-07-01,UAE,Strait of Hormuz,Middle East,0
+2026-08-01,UAE,Strait of Hormuz,Middle East,0
+2026-09-01,UAE,Strait of Hormuz,Middle East,0
+2026-10-01,UAE,Strait of Hormuz,Middle East,0.001
+2026-01-01,UAE,Strait of Hormuz,Other Asia,0.638
+2026-02-01,UAE,Strait of Hormuz,Other Asia,0.59
+2026-04-01,UAE,Strait of Hormuz,Other Asia,0.008
+2026-05-01,UAE,Strait of Hormuz,Other Asia,0.036
+2026-06-01,UAE,Strait of Hormuz,Other Asia,0.552
+2026-07-01,UAE,Strait of Hormuz,Other Asia,0.504
+2026-08-01,UAE,Strait of Hormuz,Other Asia,0.454
+2026-09-01,UAE,Strait of Hormuz,Other Asia,0.45
+2026-10-01,UAE,Strait of Hormuz,Other Asia,0.497
+2026-01-01,UAE,Strait of Hormuz,Rest of World,0.004
+2026-02-01,UAE,Strait of Hormuz,Rest of World,0.004
+2026-04-01,UAE,Strait of Hormuz,Rest of World,0
+2026-05-01,UAE,Strait of Hormuz,Rest of World,0
+2026-06-01,UAE,Strait of Hormuz,Rest of World,0.002
+2026-07-01,UAE,Strait of Hormuz,Rest of World,0.002
+2026-08-01,UAE,Strait of Hormuz,Rest of World,0.001
+2026-09-01,UAE,Strait of Hormuz,Rest of World,0.002
+2026-10-01,UAE,Strait of Hormuz,Rest of World,0.002
+2026-01-01,UAE,Strait of Hormuz,Stock builds,0.038
+2026-02-01,UAE,Strait of Hormuz,Stock builds,0.081
+2026-04-01,UAE,Strait of Hormuz,Stock builds,0
+2026-05-01,UAE,Strait of Hormuz,Stock builds,0.001
+2026-06-01,UAE,Strait of Hormuz,Stock builds,0.003
+2026-07-01,UAE,Strait of Hormuz,Stock builds,0.027
+2026-08-01,UAE,Strait of Hormuz,Stock builds,0.019
+2026-09-01,UAE,Strait of Hormuz,Stock builds,0.031
+2026-10-01,UAE,Strait of Hormuz,Stock builds,0.08
+2026-01-01,UAE,Strait of Hormuz,USA,0.018
+2026-02-01,UAE,Strait of Hormuz,USA,0.018
+2026-04-01,UAE,Strait of Hormuz,USA,0
+2026-05-01,UAE,Strait of Hormuz,USA,0
+2026-06-01,UAE,Strait of Hormuz,USA,0.006
+2026-07-01,UAE,Strait of Hormuz,USA,0.01
+2026-08-01,UAE,Strait of Hormuz,USA,0.011
+2026-09-01,UAE,Strait of Hormuz,USA,0.013
+2026-10-01,UAE,Strait of Hormuz,USA,0.01
+2026-01-01,USA,Domestic (no transit),USA,9.866
+2026-02-01,USA,Domestic (no transit),USA,9.451
+2026-03-01,USA,Domestic (no transit),USA,9.86
+2026-04-01,USA,Domestic (no transit),USA,9.888
+2026-05-01,USA,Domestic (no transit),USA,10.834
+2026-06-01,USA,Domestic (no transit),USA,11.157
+2026-07-01,USA,Domestic (no transit),USA,11.006
+2026-08-01,USA,Domestic (no transit),USA,10.691
+2026-09-01,USA,Domestic (no transit),USA,10.691
+2026-10-01,USA,Domestic (no transit),USA,10.691
+2026-04-01,USA,Other seaborne,Cargoes at sea,0.071
+2026-06-01,USA,Other seaborne,Cargoes at sea,0.169
+2026-09-01,USA,Other seaborne,Cargoes at sea,0.155
+2026-01-01,USA,Other seaborne,China,0.027
+2026-02-01,USA,Other seaborne,China,0.034
+2026-03-01,USA,Other seaborne,China,0.041
+2026-04-01,USA,Other seaborne,China,0.036
+2026-05-01,USA,Other seaborne,China,0.022
+2026-06-01,USA,Other seaborne,China,0.014
+2026-07-01,USA,Other seaborne,China,0.019
+2026-08-01,USA,Other seaborne,China,0.027
+2026-09-01,USA,Other seaborne,China,0.026
+2026-10-01,USA,Other seaborne,China,0.029
+2026-01-01,USA,Other seaborne,Europe (EU + UK),1.56
+2026-02-01,USA,Other seaborne,Europe (EU + UK),1.831
+2026-03-01,USA,Other seaborne,Europe (EU + UK),1.704
+2026-04-01,USA,Other seaborne,Europe (EU + UK),1.864
+2026-05-01,USA,Other seaborne,Europe (EU + UK),1.236
+2026-06-01,USA,Other seaborne,Europe (EU + UK),1.115
+2026-07-01,USA,Other seaborne,Europe (EU + UK),1.316
+2026-08-01,USA,Other seaborne,Europe (EU + UK),1.396
+2026-09-01,USA,Other seaborne,Europe (EU + UK),1.446
+2026-10-01,USA,Other seaborne,Europe (EU + UK),1.428
+2026-01-01,USA,Other seaborne,India,0.239
+2026-02-01,USA,Other seaborne,India,0.322
+2026-03-01,USA,Other seaborne,India,0.268
+2026-04-01,USA,Other seaborne,India,0.43
+2026-05-01,USA,Other seaborne,India,0.334
+2026-06-01,USA,Other seaborne,India,0.218
+2026-07-01,USA,Other seaborne,India,0.226
+2026-08-01,USA,Other seaborne,India,0.263
+2026-09-01,USA,Other seaborne,India,0.232
+2026-10-01,USA,Other seaborne,India,0.255
+2026-01-01,USA,Other seaborne,Japan,0.069
+2026-02-01,USA,Other seaborne,Japan,0.082
+2026-03-01,USA,Other seaborne,Japan,0.12
+2026-04-01,USA,Other seaborne,Japan,0.032
+2026-05-01,USA,Other seaborne,Japan,0.061
+2026-06-01,USA,Other seaborne,Japan,0.05
+2026-07-01,USA,Other seaborne,Japan,0.063
+2026-08-01,USA,Other seaborne,Japan,0.083
+2026-09-01,USA,Other seaborne,Japan,0.058
+2026-10-01,USA,Other seaborne,Japan,0.061
+2026-01-01,USA,Other seaborne,South Korea,0.351
+2026-02-01,USA,Other seaborne,South Korea,0.405
+2026-03-01,USA,Other seaborne,South Korea,0.572
+2026-04-01,USA,Other seaborne,South Korea,0.415
+2026-05-01,USA,Other seaborne,South Korea,0.436
+2026-06-01,USA,Other seaborne,South Korea,0.284
+2026-07-01,USA,Other seaborne,South Korea,0.34
+2026-08-01,USA,Other seaborne,South Korea,0.465
+2026-09-01,USA,Other seaborne,South Korea,0.373
+2026-10-01,USA,Other seaborne,South Korea,0.387
+2026-01-01,USA,Other seaborne,Middle East,0
+2026-02-01,USA,Other seaborne,Middle East,0
+2026-03-01,USA,Other seaborne,Middle East,0
+2026-05-01,USA,Other seaborne,Middle East,0
+2026-06-01,USA,Other seaborne,Middle East,0
+2026-07-01,USA,Other seaborne,Middle East,0
+2026-08-01,USA,Other seaborne,Middle East,0
+2026-09-01,USA,Other seaborne,Middle East,0
+2026-10-01,USA,Other seaborne,Middle East,0
+2026-01-01,USA,Other seaborne,Other Asia,0.409
+2026-02-01,USA,Other seaborne,Other Asia,0.466
+2026-03-01,USA,Other seaborne,Other Asia,0.339
+2026-04-01,USA,Other seaborne,Other Asia,0.507
+2026-05-01,USA,Other seaborne,Other Asia,0.421
+2026-06-01,USA,Other seaborne,Other Asia,0.358
+2026-07-01,USA,Other seaborne,Other Asia,0.402
+2026-08-01,USA,Other seaborne,Other Asia,0.49
+2026-09-01,USA,Other seaborne,Other Asia,0.416
+2026-10-01,USA,Other seaborne,Other Asia,0.432
+2026-01-01,USA,Other seaborne,Rest of World,0.718
+2026-02-01,USA,Other seaborne,Rest of World,0.948
+2026-03-01,USA,Other seaborne,Rest of World,0.622
+2026-04-01,USA,Other seaborne,Rest of World,0.692
+2026-05-01,USA,Other seaborne,Rest of World,0.383
+2026-06-01,USA,Other seaborne,Rest of World,0.422
+2026-07-01,USA,Other seaborne,Rest of World,0.466
+2026-08-01,USA,Other seaborne,Rest of World,0.419
+2026-09-01,USA,Other seaborne,Rest of World,0.438
+2026-10-01,USA,Other seaborne,Rest of World,0.481
+2026-01-01,USA,Other seaborne,Stock builds,0.065
+2026-02-01,USA,Other seaborne,Stock builds,0.17
+2026-03-01,USA,Other seaborne,Stock builds,0.198
+2026-04-01,USA,Other seaborne,Stock builds,0.047
+2026-05-01,USA,Other seaborne,Stock builds,0.027
+2026-06-01,USA,Other seaborne,Stock builds,0.005
+2026-07-01,USA,Other seaborne,Stock builds,0.057
+2026-08-01,USA,Other seaborne,Stock builds,0.055
+2026-09-01,USA,Other seaborne,Stock builds,0.076
+2026-10-01,USA,Other seaborne,Stock builds,0.185
+2026-01-01,USA,Other seaborne,USA,0.001
+2026-02-01,USA,Other seaborne,USA,0.001
+2026-03-01,USA,Other seaborne,USA,0.001
+2026-04-01,USA,Other seaborne,USA,0.001
+2026-05-01,USA,Other seaborne,USA,0
+2026-06-01,USA,Other seaborne,USA,0
+2026-07-01,USA,Other seaborne,USA,0.001
+2026-08-01,USA,Other seaborne,USA,0.001
+2026-09-01,USA,Other seaborne,USA,0.001
+2026-10-01,USA,Other seaborne,USA,0.001

@@ -11,3 +11,8 @@ web/dist/
 data/raw/*_bulk_*
 data/raw/jodi_primary_*
 .env
+_site/
+.quarto/
+
+/.quarto/
+**/*.quarto_ipynb

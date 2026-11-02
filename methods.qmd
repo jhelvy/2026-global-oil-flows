@@ -1,0 +1,235 @@
+---
+title: "Method and limitations"
+toc: true
+toc-title: "On this page"
+toc-depth: 2
+execute:
+  echo: false
+---
+
+```{r}
+flows <- jsonlite::read_json("data/final/flows.json")
+
+# Timeline and source links come from the same file the graphic reads.
+link_list <- function(items, text) {
+  cat(sprintf("- %s\n", vapply(items, text, character(1))), sep = "")
+}
+
+balance <- readr::read_csv("data/interim/world_balance_monthly.csv", show_col_types = FALSE)
+cells <- readr::read_csv("data/interim/stock_cells_monthly.csv", show_col_types = FALSE)
+
+# The data runs on past the graphic. These tables cover the period it shows.
+shown_end <- as.Date(flows$meta$end)
+balance <- balance[balance$month <= shown_end, ]
+cells <- cells[cells$month <= shown_end, ]
+calibration <- readr::read_csv("qa/calibration_comparison.csv", show_col_types = FALSE)
+calibration <- calibration[!grepl("^(Sep|Oct) 2026$", calibration$period), ]
+```
+
+The main diagram on the [Flows](index.qmd) page is a model, not a measurement. There are no free, publicly available publications on daily oil flows by country / route, so this moel combines monthly official statistics, tanker tracking, and a few explicit assumptions. This page explains where each number comes from.
+
+## Key terms
+
+- **mb/d:** million barrels per day. Every flow in the diagram uses this unit.
+- **Crude and condensate:** the unrefined oil that goes into refineries. Finished fuels such as diesel and LPG are not included. Some published figures cover "all oil", which includes those fuels, so this page says which is which.
+- **Refinery runs:** the crude a refinery processes. Consumers in the diagram are refineries, plus a little crude burned directly for power, not drivers or factories.
+- **Stock draw and stock build:** oil taken out of storage and oil put into it.
+- **Oil on water:** the industry's term for oil on ships. It includes cargoes sailing to a buyer ("in transit") and tankers sitting idle ("floating storage"). The diagram calls cargoes on their way **cargoes at sea**.
+- **AIS:** the radio signal ships broadcast with their position. A ship can switch it off, which is called running dark.
+
+## Data sources
+
+Most of the numbers come from a handful of organizations. They measure different things, and they often disagree.
+
+| Source | Who they are | What they track | How it is used here |
+|---|---|---|---|
+| [EIA](https://www.eia.gov/) | The US government's energy statistics agency | Production for every country, [US crude stocks](https://www.eia.gov/dnav/pet/pet_stoc_wstk_dcu_nus_m.htm), and a monthly forecast, the [Short-Term Energy Outlook](https://www.eia.gov/outlooks/steo/) (STEO) | [Crude production](https://www.eia.gov/international/data/world) through June, extended with the STEO, and a check on US stock changes |
+| [IEA](https://www.iea.org/) | An intergovernmental agency in Paris, whose member countries hold emergency oil reserves | The monthly [Oil Market Report](https://www.iea.org/topics/oil-market-report) (OMR): world refinery runs, Gulf exports, Hormuz flows and global stocks, partly from tanker tracking and satellite data it buys | World and Middle East refinery runs, Hormuz volumes, and the stock figures that test the model |
+| [JODI](https://www.jodidata.org/oil/) | The Joint Organisations Data Initiative. Governments report monthly figures to a shared database, coordinated by the International Energy Forum | Each country's own report of its refinery intake, imports, exports and stock-related balance. It lags about two months, and some countries report late or not at all | Refinery use by country, and stock changes for Japan, South Korea and Europe |
+| [Energy Institute](https://www.energyinst.org/statistical-review) | An industry body that publishes the annual Statistical Review, formerly BP's | Oil trade between world regions in 2025 | The starting pattern of who sells to whom |
+| [UN Comtrade](https://comtradeplus.un.org/) | The UN's database of customs records | What each country says it imported, by partner and product. HS code 2709 is crude oil. Annual data here | Splits the Energy Institute's regions into this diagram's countries |
+| [IMF PortWatch](https://portwatch.imf.org) | An IMF and University of Oxford project | Daily ship counts through chokepoints, estimated from AIS signals | The tanker line on the chart, and the day-to-day shape of Hormuz flows |
+| [FRED](https://fred.stlouisfed.org/series/DCOILBRENTEU) | The St. Louis Fed's data service, republishing EIA | Daily Brent and WTI spot prices | The price line on the chart |
+| China's [statistics bureau and customs](https://boereport.com/2026/10/20/china-uses-crude-stockpiles-but-rising-oil-imports-may-curtail-draws-russell/) | Official Chinese data, as reported each month in a Reuters column | Refinery runs, crude imports and domestic output | China's refinery use and stock change |
+| [Kpler](https://www.kpler.com/) | A commercial tanker-tracking company. Its data is paid, but its figures appear in the press and in IEA reports | Cargo-by-cargo flows, including ships that transfer cargo offshore | Some bypass volumes, and checks on Hormuz flows |
+
+Two other companies appear on this page. [Vortexa](https://www.vortexa.com/) also tracks tankers, and [Kayrros](https://www.kayrros.com/) estimates tank levels from satellite images. Both reach this project through reports that cite them.
+
+The IEA reports for March to July are in this project's files. Those for August and September are paid, so the figures from them come from the IEA's free summaries and from press coverage.
+
+## How the flows are built
+
+**Production** is [EIA's crude production](https://www.eia.gov/international/data/world) through June. From July it follows the October edition of the [STEO](https://www.eia.gov/outlooks/steo/), so those months are EIA's estimates and may be revised.
+
+**Consumption** is refinery runs plus crude burned directly, from [JODI](https://www.jodidata.org/oil/). The world total closes on the [IEA's global refinery runs](https://www.iea.org/topics/oil-market-report). There are two exceptions:
+
+- **China:** JODI's China figure equals imports plus output minus exports in every month, so it hides any stock change. China uses [official runs](https://boereport.com/2026/10/20/china-uses-crude-stockpiles-but-rising-oil-imports-may-curtail-draws-russell/) instead.
+- **Middle East:** from March it follows the [IEA's regional runs](https://www.iea.org/reports/oil-market-report-july-2026), because Gulf refineries were hit far harder than country data shows. Figures from July are forecasts.
+
+**Who sells to whom** starts from the [Energy Institute's 2025 trade table](https://www.energyinst.org/statistical-review), split further with [UN Comtrade](https://comtradeplus.un.org/). A standard method called iterative proportional fitting rescales that table until it matches each month's production and consumption. It keeps the pre-war pattern as far as the totals allow.
+
+**Routes** for Gulf oil use published volumes. Each month's [Hormuz figure](https://www.iea.org/reports/oil-market-report-july-2026) comes from the IEA. Bypass volumes come from the [IEA](https://www.iea.org/reports/oil-market-report-may-2026) and [Kpler](https://www.kpler.com/blog/explainer-how-mideast-gulf-crude-exports-returned-to-pre-war-levels), with the rest of each country's exports crossing the strait.
+
+**Daily values** are shaped from those monthly figures, and each flow keeps its monthly average exactly. Hormuz flows follow the 7-day [PortWatch](https://portwatch.imf.org) tanker count, with pre-war swings at half weight. Other flows move in a straight line between mid-month points, with a break at the start of the war.
+
+## Where stored oil comes from
+
+Each month the world refines more or less crude than it produces, and the difference must come from or go to storage. That world total is IEA runs minus EIA production. The diagram splits it into three sources, each drawn on the route the oil physically takes.
+
+- **Stock draws** are tanks in the consuming country, such as a government reserve feeding a nearby refinery. No transit is involved, so they run through **Domestic**.
+- **Cargoes at sea** are tankers loaded earlier that reach a refinery now. When the strait closed, ships already past it kept sailing and delivered through March, with no new oil behind them. They arrive by sea, so they run through **Other seaborne**. [IEA figures](https://www.iea.org/reports/oil-market-report-april-2026) based on Kpler data measure this. The same node on the right side shows the reverse: oil loaded but not yet delivered, as in the [June rush of tankers](https://www.iea.org/reports/oil-market-report-july-2026).
+- **Gulf storage** is oil in tanks and idle tankers inside the Gulf. It runs through **Hormuz**, for the reason below.
+
+### Why a stock band crosses the strait
+
+Most stored oil does not cross the strait. Gulf storage does, because the tanks are on the wrong side of it. Once the strait closed, producers could not ship their oil, so they filled tanks and parked loaded tankers inside the Gulf. That is the **Gulf producer to Domestic to Stock builds** band in March. To reach a buyer, that oil still has to sail out, so when it left it crossed Hormuz. The [IEA says](https://www.iea.org/reports/oil-market-report-july-2026) June's surge was driven partly by releasing those barrels.
+
+The model does not assume this. It takes Gulf output, subtracts Gulf refinery use and bypass loadings, and compares what is left with the published Hormuz volume. A surplus stayed in storage, and a shortfall left storage. The IEA separately measures Gulf storage from satellites and tanker tracking, and the two agree closely through June (see the checks below).
+
+### Stock changes by month
+
+Positive numbers are oil leaving storage, and negative numbers are oil going into it.
+
+```{r}
+months <- sort(unique(cells$month))
+sources <- list(
+  "Gulf storage" = balance$release - balance$stored,
+  "Cargoes at sea" = balance$sea_draw - balance$sea_build
+)
+labels <- c(usa = "USA", china = "China", japan = "Japan", korea = "South Korea", europe = "Europe (EU + UK)")
+reported <- lapply(names(labels), function(k) {
+  x <- cells[cells$consumer == k, ]
+  x <- x[order(x$month), ]
+  x$net_local
+})
+names(reported) <- unname(labels)
+rows <- c(sources, reported, list("Residual" = balance$residual, "World total" = balance$stock_change))
+stock_table <- do.call(rbind, lapply(names(rows), function(n) {
+  data.frame(t(setNames(round(rows[[n]], 2), format(months, "%b"))), row.names = n, check.names = FALSE)
+}))
+knitr::kable(cbind(`mb/d` = rownames(stock_table), stock_table), row.names = FALSE, digits = 2)
+```
+
+- **USA:** [JODI](https://www.jodidata.org/oil/) supply minus refinery intake, corrected by JODI's statistical difference, matches [EIA's stocks](https://www.eia.gov/dnav/pet/pet_stoc_wstk_dcu_nus_m.htm), including the strategic reserve, within 0.01 mb/d in every month.
+- **China:** official runs minus customs imports and domestic output. This implied figure often differs from [satellite counts](https://www.iea.org/reports/oil-market-report-july-2026). Official data shows a 0.44 mb/d build in April and a 0.46 mb/d draw in May, while the IEA shows draws of 0.2 and 0.3 mb/d. Reporting by [Vortexa](https://www.vortexa.com/insights/import-loss-stock-build-how-china) and [Kpler](https://www.bairdmaritime.com/offshore/refining-processing/china-is-dipping-into-its-record-oil-stockpiles-as-fuel-demand-weakens) dates the turn to about May.
+- **Japan, South Korea, Europe:** the same JODI calculation as the US.
+- **Residual:** whatever the items above leave unexplained. It goes to India, Other Asia and Rest of World, in proportion to their imports, as stock draws or builds. **These are not measured stock changes for those places.**
+
+The residual combines tanks nobody reports with errors in the world total. It is largest in March, at about 5.6 mb/d. The world total alone accounts for about 2.5 mb/d of that: it shows a 4.4 mb/d draw, while the [IEA observed](https://www.iea.org/reports/oil-market-report-july-2026) a 1.9 mb/d crude draw. The IEA calls this kind of gap the "unaccounted-for balance". Its own gap for all oil has topped 2 mb/d this year, and it expects such gaps to shrink as data improves.
+
+## Why the graphic stops on August 31
+
+The data after August is not good enough to report daily flows with confidence:
+
+- **Country data ends:** [JODI](https://www.jodidata.org/oil/) runs through August, so later months have no reported refinery use or stock changes for most countries.
+- **Hormuz estimates conflict:** for September, [Kpler and Windward](https://dailycaller.com/2026/10/12/chris-wright-strait-of-hormuz-oil-flows-kpler-tanker-data-kevin-book-matthew-mcmanus/) put crude through the strait at about 10 mb/d and the US Energy Secretary at 13 to 14 mb/d. An [Iranian commander claims](https://www.aljazeera.com/news/2026/10/5/middle-east-oil-exports-surpass-pre-war-levels-despite-tensions-data-shows) 3 to 4 mb/d on the US-supervised route, and [PortWatch](https://portwatch.imf.org) counts about 1 tanker a day.
+- **The volumes do not balance:** using Kpler's figures, about 4 mb/d crossing the strait could not be explained by EIA's production estimates, and Gulf tanks could not have supplied that much for long.
+
+## How much to trust each number
+
+These ratings are my judgment, based on the checks in the next section. High means independent sources agree closely, medium means the source is sound but single or the checks show moderate gaps, and low means the number is mostly a residual, an assumption or a shape.
+
+| What | Confidence | Why |
+|---|---|---|
+| Brent price | High | Official series |
+| Tanker count as a count | High | Direct satellite data, but it covers only ships broadcasting their position |
+| US stock changes | High | Matches EIA within 0.01 mb/d |
+| Refinery use: USA, Japan, South Korea, Europe, China | High through August | Government figures. China's official June figure sits 0.63 mb/d below the IEA's, and other months are within 0.1 |
+| Monthly Hormuz crude, March to August | Medium to high | From the IEA, and matches EIA's second-quarter figure. Several months convert all-oil figures to crude with an estimated share |
+| Gulf production through June | Medium to high | Saudi, Iraqi and Kuwaiti figures are within 0.25 mb/d of the IEA. Iran is less certain, up to 0.85 mb/d higher than the IEA |
+| Bypass pipelines | Medium | Published for most months, but sources conflict in August, when [EIA](https://www.eia.gov/outlooks/steo/report/global_oil.php) reports more from Yanbu alone than the [IEA](https://www.iea.org/commentaries/oil-markets-strain-to-plug-the-gap-left-by-middle-east-supply-shortfall) reports for Yanbu and Fujairah together |
+| Production in July and August | Medium | EIA's estimates from the STEO, not final figures |
+| Refinery use: Middle East | Medium | Follows the IEA through June, but later months are forecasts made before the strait closed again in July |
+| China stock changes | Medium | Sign and timing are broadly right, but official and satellite figures differ by up to 0.64 mb/d |
+| Japan, South Korea and Europe stock changes | Medium | Same method as the US, with no independent check |
+| Gulf storage | Medium through June, low after | Within 0.6 mb/d of the IEA through June. July and August have no direct measurement |
+| Cargoes at sea | Medium through June, low after | Comes from IEA and Kpler figures, with some estimated crude shares. July and August assume a 0.75 crude share |
+| Who buys from whom | Low to medium | A rescaled pre-war pattern, so real rerouting, such as Asian buyers moving to Atlantic crude, is only approximated |
+| Tanker count as a measure of flow | Low after March | In August it shows about 2 tankers a day, which could carry about 4 mb/d at most, while the IEA's figures imply 6.2 mb/d of crude. [EIA](https://www.eia.gov/outlooks/steo/report/global_oil.php) also calls this data unreliable |
+| Refinery use: Rest of World | Low | What is left of the world total, so it absorbs everyone's errors. The July and August world runs come from summaries of paid reports |
+| Residual stock draws and builds | Low | A balancing item, not a measurement |
+| Daily values | Low | Monthly totals given a shape. Read them as the rough timing of a change, not as the flow on that date |
+
+In short, the monthly regional picture is fairly solid through June: how much left the Gulf, by which route, and how much came from storage. Confidence drops from July. Individual buyer-seller bands and single days are illustrations, not measurements.
+
+## Checks against published figures
+
+The table compares the model with figures it does not take directly as inputs. Stock changes here use each source's own sign: for Gulf storage and world stocks, a build is positive, and for US and China "draw" rows, a draw is positive.
+
+::: {.callout-none}
+<details>
+<summary>Show all checks</summary>
+
+```{r}
+check_table <- calibration |>
+  dplyr::filter(!measure %in% c("Hormuz crude, IEA", "China runs, NBS-based")) |>
+  dplyr::filter(!(measure == "Yanbu + Fujairah (model crude; IEA all oil)" & period == "Aug 2026")) |>
+  dplyr::transmute(
+    Measure = measure, Period = period, Model = round(model, 2),
+    Published = round(published, 2), `Gap, mb/d` = round(gap_mbd, 2)
+  )
+knitr::kable(check_table)
+```
+
+</details>
+:::
+
+What stands out:
+
+- **Gulf storage** is the strongest test, because nothing forces it to match. The model is within 0.15 mb/d in March and 0.6 mb/d at worst.
+- **World stock change** matches in February and April but misses by 2.5 mb/d in March and 1.3 mb/d in January.
+- **Yanbu and Fujairah** should come in under the IEA in February and June, because the model counts crude and the IEA counts all oil.
+
+The same comparison caught this project's errors. An audit of the earlier version found that it:
+
+- overstated Gulf refinery use by about 1 mb/d, which forced a release from storage in July and August that the data does not support.
+- filled too little Gulf storage in March, at 0.5 mb/d against the IEA's 3.0.
+
+## Data confidence by month
+
+```{r}
+targets <- readr::read_csv("data/raw/hormuz_crude_targets.csv", show_col_types = FALSE)
+runs <- readr::read_csv("data/raw/iea_refinery_runs.csv", show_col_types = FALSE)
+china <- readr::read_csv("data/raw/china_crude_balance.csv", show_col_types = FALSE)
+all_months <- runs$month[runs$month <= shown_end]
+status_of <- function(tbl) {
+  out <- tbl$status[match(all_months, tbl$month)]
+  out[is.na(out)] <- "from tanker counts and IEA's pre-war figure"
+  out
+}
+knitr::kable(data.frame(
+  Month = format(all_months, "%b"),
+  Production = ifelse(all_months <= as.Date("2026-06-01"), "EIA", "STEO estimate"),
+  `World refinery runs` = runs$status[match(all_months, runs$month)],
+  `China runs` = china$status[match(all_months, china$month)],
+  `Hormuz crude` = status_of(targets),
+  check.names = FALSE
+))
+```
+
+Here "reported" means a figure taken directly from a source, "derived" means calculated from reported figures with a stated conversion, and "interpolated", "forecast" and "assumption" mean what they say. Every value, with its source and note, is in `data/raw/`.
+
+## Known limitations
+
+- No public daily country-level production or consumption data exists. True daily trade flows need paid tanker tracking, such as Kpler or Vortexa.
+- [PortWatch](https://portwatch.imf.org) counts vessels, not barrels, and does not separate inbound from outbound.
+- Crude figures rest on a share of about 0.82 of all oil in several months, which is itself an estimate.
+- Iranian exports are opaque, so treat Iran as an estimate with wide uncertainty.
+- Apart from the cargoes-at-sea bands, flows reach a consumer the day they leave. Dips and spikes at consumers therefore arrive sooner than refineries felt them.
+- World refinery runs exclude crude burned directly, while country figures include it. The effect is small, about 0.5 mb/d, mostly Saudi power plants, and it falls on Rest of World.
+
+## Timeline sources
+
+```{r}
+#| output: asis
+link_list(flows$events, function(e) {
+  sprintf("%s: [%s](%s)", format(as.Date(e$date), "%b %e"), e$label, e$url)
+})
+```
+
+## Data sources
+
+```{r}
+#| output: asis
+link_list(flows$meta$sources, function(s) sprintf("[%s](%s)", s$name, s$url))
+```
