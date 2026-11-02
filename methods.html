@@ -1,0 +1,1439 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.38">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Method and limitations – Oil Flows 2026</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-4a877588884df49529e4218ff7775f2a.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:wght@500;600&amp;family=Roboto+Condensed:wght@400;600;700&amp;display=swap">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 16 16%27%3E%3Cpath fill=%27%23c2480f%27 d=%27M8 1s5 6 5 9a5 5 0 0 1-10 0c0-3 5-9 5-9z%27/%3E%3C/svg%3E">
+
+
+</head>
+
+<body class="nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">Oil Flows 2026</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./index.html"> 
+<span class="menu-text">Flows</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="./methods.html" aria-current="page"> 
+<span class="menu-text">Method</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul class="collapse">
+  <li><a href="#key-terms" id="toc-key-terms" class="nav-link active" data-scroll-target="#key-terms">Key terms</a></li>
+  <li><a href="#data-sources" id="toc-data-sources" class="nav-link" data-scroll-target="#data-sources">Data sources</a></li>
+  <li><a href="#how-the-flows-are-built" id="toc-how-the-flows-are-built" class="nav-link" data-scroll-target="#how-the-flows-are-built">How the flows are built</a></li>
+  <li><a href="#where-stored-oil-comes-from" id="toc-where-stored-oil-comes-from" class="nav-link" data-scroll-target="#where-stored-oil-comes-from">Where stored oil comes from</a></li>
+  <li><a href="#why-the-graphic-stops-on-august-31" id="toc-why-the-graphic-stops-on-august-31" class="nav-link" data-scroll-target="#why-the-graphic-stops-on-august-31">Why the graphic stops on August 31</a></li>
+  <li><a href="#how-much-to-trust-each-number" id="toc-how-much-to-trust-each-number" class="nav-link" data-scroll-target="#how-much-to-trust-each-number">How much to trust each number</a></li>
+  <li><a href="#checks-against-published-figures" id="toc-checks-against-published-figures" class="nav-link" data-scroll-target="#checks-against-published-figures">Checks against published figures</a></li>
+  <li><a href="#data-confidence-by-month" id="toc-data-confidence-by-month" class="nav-link" data-scroll-target="#data-confidence-by-month">Data confidence by month</a></li>
+  <li><a href="#known-limitations" id="toc-known-limitations" class="nav-link" data-scroll-target="#known-limitations">Known limitations</a></li>
+  <li><a href="#timeline-sources" id="toc-timeline-sources" class="nav-link" data-scroll-target="#timeline-sources">Timeline sources</a></li>
+  <li><a href="#data-sources-1" id="toc-data-sources-1" class="nav-link" data-scroll-target="#data-sources-1">Data sources</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Method and limitations</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>The main diagram on the <a href="./index.html">Flows</a> page is a model, not a measurement. There are no free, publicly available publications on daily oil flows by country / route, so this moel combines monthly official statistics, tanker tracking, and a few explicit assumptions. This page explains where each number comes from.</p>
+<section id="key-terms" class="level2">
+<h2 data-anchor-id="key-terms">Key terms</h2>
+<ul>
+<li><strong>mb/d:</strong> million barrels per day. Every flow in the diagram uses this unit.</li>
+<li><strong>Crude and condensate:</strong> the unrefined oil that goes into refineries. Finished fuels such as diesel and LPG are not included. Some published figures cover “all oil”, which includes those fuels, so this page says which is which.</li>
+<li><strong>Refinery runs:</strong> the crude a refinery processes. Consumers in the diagram are refineries, plus a little crude burned directly for power, not drivers or factories.</li>
+<li><strong>Stock draw and stock build:</strong> oil taken out of storage and oil put into it.</li>
+<li><strong>Oil on water:</strong> the industry’s term for oil on ships. It includes cargoes sailing to a buyer (“in transit”) and tankers sitting idle (“floating storage”). The diagram calls cargoes on their way <strong>cargoes at sea</strong>.</li>
+<li><strong>AIS:</strong> the radio signal ships broadcast with their position. A ship can switch it off, which is called running dark.</li>
+</ul>
+</section>
+<section id="data-sources" class="level2">
+<h2 data-anchor-id="data-sources">Data sources</h2>
+<p>Most of the numbers come from a handful of organizations. They measure different things, and they often disagree.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Source</th>
+<th>Who they are</th>
+<th>What they track</th>
+<th>How it is used here</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><a href="https://www.eia.gov/">EIA</a></td>
+<td>The US government’s energy statistics agency</td>
+<td>Production for every country, <a href="https://www.eia.gov/dnav/pet/pet_stoc_wstk_dcu_nus_m.htm">US crude stocks</a>, and a monthly forecast, the <a href="https://www.eia.gov/outlooks/steo/">Short-Term Energy Outlook</a> (STEO)</td>
+<td><a href="https://www.eia.gov/international/data/world">Crude production</a> through June, extended with the STEO, and a check on US stock changes</td>
+</tr>
+<tr class="even">
+<td><a href="https://www.iea.org/">IEA</a></td>
+<td>An intergovernmental agency in Paris, whose member countries hold emergency oil reserves</td>
+<td>The monthly <a href="https://www.iea.org/topics/oil-market-report">Oil Market Report</a> (OMR): world refinery runs, Gulf exports, Hormuz flows and global stocks, partly from tanker tracking and satellite data it buys</td>
+<td>World and Middle East refinery runs, Hormuz volumes, and the stock figures that test the model</td>
+</tr>
+<tr class="odd">
+<td><a href="https://www.jodidata.org/oil/">JODI</a></td>
+<td>The Joint Organisations Data Initiative. Governments report monthly figures to a shared database, coordinated by the International Energy Forum</td>
+<td>Each country’s own report of its refinery intake, imports, exports and stock-related balance. It lags about two months, and some countries report late or not at all</td>
+<td>Refinery use by country, and stock changes for Japan, South Korea and Europe</td>
+</tr>
+<tr class="even">
+<td><a href="https://www.energyinst.org/statistical-review">Energy Institute</a></td>
+<td>An industry body that publishes the annual Statistical Review, formerly BP’s</td>
+<td>Oil trade between world regions in 2025</td>
+<td>The starting pattern of who sells to whom</td>
+</tr>
+<tr class="odd">
+<td><a href="https://comtradeplus.un.org/">UN Comtrade</a></td>
+<td>The UN’s database of customs records</td>
+<td>What each country says it imported, by partner and product. HS code 2709 is crude oil. Annual data here</td>
+<td>Splits the Energy Institute’s regions into this diagram’s countries</td>
+</tr>
+<tr class="even">
+<td><a href="https://portwatch.imf.org">IMF PortWatch</a></td>
+<td>An IMF and University of Oxford project</td>
+<td>Daily ship counts through chokepoints, estimated from AIS signals</td>
+<td>The tanker line on the chart, and the day-to-day shape of Hormuz flows</td>
+</tr>
+<tr class="odd">
+<td><a href="https://fred.stlouisfed.org/series/DCOILBRENTEU">FRED</a></td>
+<td>The St.&nbsp;Louis Fed’s data service, republishing EIA</td>
+<td>Daily Brent and WTI spot prices</td>
+<td>The price line on the chart</td>
+</tr>
+<tr class="even">
+<td>China’s <a href="https://boereport.com/2026/10/20/china-uses-crude-stockpiles-but-rising-oil-imports-may-curtail-draws-russell/">statistics bureau and customs</a></td>
+<td>Official Chinese data, as reported each month in a Reuters column</td>
+<td>Refinery runs, crude imports and domestic output</td>
+<td>China’s refinery use and stock change</td>
+</tr>
+<tr class="odd">
+<td><a href="https://www.kpler.com/">Kpler</a></td>
+<td>A commercial tanker-tracking company. Its data is paid, but its figures appear in the press and in IEA reports</td>
+<td>Cargo-by-cargo flows, including ships that transfer cargo offshore</td>
+<td>Some bypass volumes, and checks on Hormuz flows</td>
+</tr>
+</tbody>
+</table>
+<p>Two other companies appear on this page. <a href="https://www.vortexa.com/">Vortexa</a> also tracks tankers, and <a href="https://www.kayrros.com/">Kayrros</a> estimates tank levels from satellite images. Both reach this project through reports that cite them.</p>
+<p>The IEA reports for March to July are in this project’s files. Those for August and September are paid, so the figures from them come from the IEA’s free summaries and from press coverage.</p>
+</section>
+<section id="how-the-flows-are-built" class="level2">
+<h2 data-anchor-id="how-the-flows-are-built">How the flows are built</h2>
+<p><strong>Production</strong> is <a href="https://www.eia.gov/international/data/world">EIA’s crude production</a> through June. From July it follows the October edition of the <a href="https://www.eia.gov/outlooks/steo/">STEO</a>, so those months are EIA’s estimates and may be revised.</p>
+<p><strong>Consumption</strong> is refinery runs plus crude burned directly, from <a href="https://www.jodidata.org/oil/">JODI</a>. The world total closes on the <a href="https://www.iea.org/topics/oil-market-report">IEA’s global refinery runs</a>. There are two exceptions:</p>
+<ul>
+<li><strong>China:</strong> JODI’s China figure equals imports plus output minus exports in every month, so it hides any stock change. China uses <a href="https://boereport.com/2026/10/20/china-uses-crude-stockpiles-but-rising-oil-imports-may-curtail-draws-russell/">official runs</a> instead.</li>
+<li><strong>Middle East:</strong> from March it follows the <a href="https://www.iea.org/reports/oil-market-report-july-2026">IEA’s regional runs</a>, because Gulf refineries were hit far harder than country data shows. Figures from July are forecasts.</li>
+</ul>
+<p><strong>Who sells to whom</strong> starts from the <a href="https://www.energyinst.org/statistical-review">Energy Institute’s 2025 trade table</a>, split further with <a href="https://comtradeplus.un.org/">UN Comtrade</a>. A standard method called iterative proportional fitting rescales that table until it matches each month’s production and consumption. It keeps the pre-war pattern as far as the totals allow.</p>
+<p><strong>Routes</strong> for Gulf oil use published volumes. Each month’s <a href="https://www.iea.org/reports/oil-market-report-july-2026">Hormuz figure</a> comes from the IEA. Bypass volumes come from the <a href="https://www.iea.org/reports/oil-market-report-may-2026">IEA</a> and <a href="https://www.kpler.com/blog/explainer-how-mideast-gulf-crude-exports-returned-to-pre-war-levels">Kpler</a>, with the rest of each country’s exports crossing the strait.</p>
+<p><strong>Daily values</strong> are shaped from those monthly figures, and each flow keeps its monthly average exactly. Hormuz flows follow the 7-day <a href="https://portwatch.imf.org">PortWatch</a> tanker count, with pre-war swings at half weight. Other flows move in a straight line between mid-month points, with a break at the start of the war.</p>
+</section>
+<section id="where-stored-oil-comes-from" class="level2">
+<h2 data-anchor-id="where-stored-oil-comes-from">Where stored oil comes from</h2>
+<p>Each month the world refines more or less crude than it produces, and the difference must come from or go to storage. That world total is IEA runs minus EIA production. The diagram splits it into three sources, each drawn on the route the oil physically takes.</p>
+<ul>
+<li><strong>Stock draws</strong> are tanks in the consuming country, such as a government reserve feeding a nearby refinery. No transit is involved, so they run through <strong>Domestic</strong>.</li>
+<li><strong>Cargoes at sea</strong> are tankers loaded earlier that reach a refinery now. When the strait closed, ships already past it kept sailing and delivered through March, with no new oil behind them. They arrive by sea, so they run through <strong>Other seaborne</strong>. <a href="https://www.iea.org/reports/oil-market-report-april-2026">IEA figures</a> based on Kpler data measure this. The same node on the right side shows the reverse: oil loaded but not yet delivered, as in the <a href="https://www.iea.org/reports/oil-market-report-july-2026">June rush of tankers</a>.</li>
+<li><strong>Gulf storage</strong> is oil in tanks and idle tankers inside the Gulf. It runs through <strong>Hormuz</strong>, for the reason below.</li>
+</ul>
+<section id="why-a-stock-band-crosses-the-strait" class="level3">
+<h3 data-anchor-id="why-a-stock-band-crosses-the-strait">Why a stock band crosses the strait</h3>
+<p>Most stored oil does not cross the strait. Gulf storage does, because the tanks are on the wrong side of it. Once the strait closed, producers could not ship their oil, so they filled tanks and parked loaded tankers inside the Gulf. That is the <strong>Gulf producer to Domestic to Stock builds</strong> band in March. To reach a buyer, that oil still has to sail out, so when it left it crossed Hormuz. The <a href="https://www.iea.org/reports/oil-market-report-july-2026">IEA says</a> June’s surge was driven partly by releasing those barrels.</p>
+<p>The model does not assume this. It takes Gulf output, subtracts Gulf refinery use and bypass loadings, and compares what is left with the published Hormuz volume. A surplus stayed in storage, and a shortfall left storage. The IEA separately measures Gulf storage from satellites and tanker tracking, and the two agree closely through June (see the checks below).</p>
+</section>
+<section id="stock-changes-by-month" class="level3">
+<h3 data-anchor-id="stock-changes-by-month">Stock changes by month</h3>
+<p>Positive numbers are oil leaving storage, and negative numbers are oil going into it.</p>
+<div class="cell">
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<colgroup>
+<col style="width: 26%">
+<col style="width: 9%">
+<col style="width: 9%">
+<col style="width: 9%">
+<col style="width: 9%">
+<col style="width: 9%">
+<col style="width: 9%">
+<col style="width: 9%">
+<col style="width: 9%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">mb/d</th>
+<th style="text-align: right;">Jan</th>
+<th style="text-align: right;">Feb</th>
+<th style="text-align: right;">Mar</th>
+<th style="text-align: right;">Apr</th>
+<th style="text-align: right;">May</th>
+<th style="text-align: right;">Jun</th>
+<th style="text-align: right;">Jul</th>
+<th style="text-align: right;">Aug</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Gulf storage</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">-3.15</td>
+<td style="text-align: right;">0.10</td>
+<td style="text-align: right;">0.56</td>
+<td style="text-align: right;">1.96</td>
+<td style="text-align: right;">-0.76</td>
+<td style="text-align: right;">0.27</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Cargoes at sea</td>
+<td style="text-align: right;">0.48</td>
+<td style="text-align: right;">0.46</td>
+<td style="text-align: right;">4.35</td>
+<td style="text-align: right;">-0.97</td>
+<td style="text-align: right;">0.19</td>
+<td style="text-align: right;">-4.17</td>
+<td style="text-align: right;">1.52</td>
+<td style="text-align: right;">1.58</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">USA</td>
+<td style="text-align: right;">0.11</td>
+<td style="text-align: right;">-1.04</td>
+<td style="text-align: right;">-0.58</td>
+<td style="text-align: right;">0.78</td>
+<td style="text-align: right;">2.07</td>
+<td style="text-align: right;">1.81</td>
+<td style="text-align: right;">0.42</td>
+<td style="text-align: right;">0.10</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">China</td>
+<td style="text-align: right;">-1.26</td>
+<td style="text-align: right;">-1.30</td>
+<td style="text-align: right;">-1.74</td>
+<td style="text-align: right;">-0.44</td>
+<td style="text-align: right;">0.46</td>
+<td style="text-align: right;">0.94</td>
+<td style="text-align: right;">-0.20</td>
+<td style="text-align: right;">0.64</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Japan</td>
+<td style="text-align: right;">0.22</td>
+<td style="text-align: right;">0.12</td>
+<td style="text-align: right;">0.01</td>
+<td style="text-align: right;">1.59</td>
+<td style="text-align: right;">0.77</td>
+<td style="text-align: right;">-0.05</td>
+<td style="text-align: right;">-0.04</td>
+<td style="text-align: right;">-0.12</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">South Korea</td>
+<td style="text-align: right;">-0.01</td>
+<td style="text-align: right;">-0.07</td>
+<td style="text-align: right;">0.01</td>
+<td style="text-align: right;">0.45</td>
+<td style="text-align: right;">-0.02</td>
+<td style="text-align: right;">-0.08</td>
+<td style="text-align: right;">-0.64</td>
+<td style="text-align: right;">-0.06</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Europe (EU + UK)</td>
+<td style="text-align: right;">0.17</td>
+<td style="text-align: right;">-0.29</td>
+<td style="text-align: right;">-0.07</td>
+<td style="text-align: right;">-0.21</td>
+<td style="text-align: right;">0.21</td>
+<td style="text-align: right;">0.13</td>
+<td style="text-align: right;">-0.26</td>
+<td style="text-align: right;">0.27</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Residual</td>
+<td style="text-align: right;">1.36</td>
+<td style="text-align: right;">0.13</td>
+<td style="text-align: right;">5.57</td>
+<td style="text-align: right;">0.61</td>
+<td style="text-align: right;">-0.52</td>
+<td style="text-align: right;">0.29</td>
+<td style="text-align: right;">-0.06</td>
+<td style="text-align: right;">-0.75</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">World total</td>
+<td style="text-align: right;">1.07</td>
+<td style="text-align: right;">-1.98</td>
+<td style="text-align: right;">4.39</td>
+<td style="text-align: right;">1.91</td>
+<td style="text-align: right;">3.71</td>
+<td style="text-align: right;">0.83</td>
+<td style="text-align: right;">-0.03</td>
+<td style="text-align: right;">1.94</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<ul>
+<li><strong>USA:</strong> <a href="https://www.jodidata.org/oil/">JODI</a> supply minus refinery intake, corrected by JODI’s statistical difference, matches <a href="https://www.eia.gov/dnav/pet/pet_stoc_wstk_dcu_nus_m.htm">EIA’s stocks</a>, including the strategic reserve, within 0.01 mb/d in every month.</li>
+<li><strong>China:</strong> official runs minus customs imports and domestic output. This implied figure often differs from <a href="https://www.iea.org/reports/oil-market-report-july-2026">satellite counts</a>. Official data shows a 0.44 mb/d build in April and a 0.46 mb/d draw in May, while the IEA shows draws of 0.2 and 0.3 mb/d.&nbsp;Reporting by <a href="https://www.vortexa.com/insights/import-loss-stock-build-how-china">Vortexa</a> and <a href="https://www.bairdmaritime.com/offshore/refining-processing/china-is-dipping-into-its-record-oil-stockpiles-as-fuel-demand-weakens">Kpler</a> dates the turn to about May.</li>
+<li><strong>Japan, South Korea, Europe:</strong> the same JODI calculation as the US.</li>
+<li><strong>Residual:</strong> whatever the items above leave unexplained. It goes to India, Other Asia and Rest of World, in proportion to their imports, as stock draws or builds. <strong>These are not measured stock changes for those places.</strong></li>
+</ul>
+<p>The residual combines tanks nobody reports with errors in the world total. It is largest in March, at about 5.6 mb/d.&nbsp;The world total alone accounts for about 2.5 mb/d of that: it shows a 4.4 mb/d draw, while the <a href="https://www.iea.org/reports/oil-market-report-july-2026">IEA observed</a> a 1.9 mb/d crude draw. The IEA calls this kind of gap the “unaccounted-for balance”. Its own gap for all oil has topped 2 mb/d this year, and it expects such gaps to shrink as data improves.</p>
+</section>
+</section>
+<section id="why-the-graphic-stops-on-august-31" class="level2">
+<h2 data-anchor-id="why-the-graphic-stops-on-august-31">Why the graphic stops on August 31</h2>
+<p>The data after August is not good enough to report daily flows with confidence:</p>
+<ul>
+<li><strong>Country data ends:</strong> <a href="https://www.jodidata.org/oil/">JODI</a> runs through August, so later months have no reported refinery use or stock changes for most countries.</li>
+<li><strong>Hormuz estimates conflict:</strong> for September, <a href="https://dailycaller.com/2026/10/12/chris-wright-strait-of-hormuz-oil-flows-kpler-tanker-data-kevin-book-matthew-mcmanus/">Kpler and Windward</a> put crude through the strait at about 10 mb/d and the US Energy Secretary at 13 to 14 mb/d.&nbsp;An <a href="https://www.aljazeera.com/news/2026/10/5/middle-east-oil-exports-surpass-pre-war-levels-despite-tensions-data-shows">Iranian commander claims</a> 3 to 4 mb/d on the US-supervised route, and <a href="https://portwatch.imf.org">PortWatch</a> counts about 1 tanker a day.</li>
+<li><strong>The volumes do not balance:</strong> using Kpler’s figures, about 4 mb/d crossing the strait could not be explained by EIA’s production estimates, and Gulf tanks could not have supplied that much for long.</li>
+</ul>
+</section>
+<section id="how-much-to-trust-each-number" class="level2">
+<h2 data-anchor-id="how-much-to-trust-each-number">How much to trust each number</h2>
+<p>These ratings are my judgment, based on the checks in the next section. High means independent sources agree closely, medium means the source is sound but single or the checks show moderate gaps, and low means the number is mostly a residual, an assumption or a shape.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>What</th>
+<th>Confidence</th>
+<th>Why</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Brent price</td>
+<td>High</td>
+<td>Official series</td>
+</tr>
+<tr class="even">
+<td>Tanker count as a count</td>
+<td>High</td>
+<td>Direct satellite data, but it covers only ships broadcasting their position</td>
+</tr>
+<tr class="odd">
+<td>US stock changes</td>
+<td>High</td>
+<td>Matches EIA within 0.01 mb/d</td>
+</tr>
+<tr class="even">
+<td>Refinery use: USA, Japan, South Korea, Europe, China</td>
+<td>High through August</td>
+<td>Government figures. China’s official June figure sits 0.63 mb/d below the IEA’s, and other months are within 0.1</td>
+</tr>
+<tr class="odd">
+<td>Monthly Hormuz crude, March to August</td>
+<td>Medium to high</td>
+<td>From the IEA, and matches EIA’s second-quarter figure. Several months convert all-oil figures to crude with an estimated share</td>
+</tr>
+<tr class="even">
+<td>Gulf production through June</td>
+<td>Medium to high</td>
+<td>Saudi, Iraqi and Kuwaiti figures are within 0.25 mb/d of the IEA. Iran is less certain, up to 0.85 mb/d higher than the IEA</td>
+</tr>
+<tr class="odd">
+<td>Bypass pipelines</td>
+<td>Medium</td>
+<td>Published for most months, but sources conflict in August, when <a href="https://www.eia.gov/outlooks/steo/report/global_oil.php">EIA</a> reports more from Yanbu alone than the <a href="https://www.iea.org/commentaries/oil-markets-strain-to-plug-the-gap-left-by-middle-east-supply-shortfall">IEA</a> reports for Yanbu and Fujairah together</td>
+</tr>
+<tr class="even">
+<td>Production in July and August</td>
+<td>Medium</td>
+<td>EIA’s estimates from the STEO, not final figures</td>
+</tr>
+<tr class="odd">
+<td>Refinery use: Middle East</td>
+<td>Medium</td>
+<td>Follows the IEA through June, but later months are forecasts made before the strait closed again in July</td>
+</tr>
+<tr class="even">
+<td>China stock changes</td>
+<td>Medium</td>
+<td>Sign and timing are broadly right, but official and satellite figures differ by up to 0.64 mb/d</td>
+</tr>
+<tr class="odd">
+<td>Japan, South Korea and Europe stock changes</td>
+<td>Medium</td>
+<td>Same method as the US, with no independent check</td>
+</tr>
+<tr class="even">
+<td>Gulf storage</td>
+<td>Medium through June, low after</td>
+<td>Within 0.6 mb/d of the IEA through June. July and August have no direct measurement</td>
+</tr>
+<tr class="odd">
+<td>Cargoes at sea</td>
+<td>Medium through June, low after</td>
+<td>Comes from IEA and Kpler figures, with some estimated crude shares. July and August assume a 0.75 crude share</td>
+</tr>
+<tr class="even">
+<td>Who buys from whom</td>
+<td>Low to medium</td>
+<td>A rescaled pre-war pattern, so real rerouting, such as Asian buyers moving to Atlantic crude, is only approximated</td>
+</tr>
+<tr class="odd">
+<td>Tanker count as a measure of flow</td>
+<td>Low after March</td>
+<td>In August it shows about 2 tankers a day, which could carry about 4 mb/d at most, while the IEA’s figures imply 6.2 mb/d of crude. <a href="https://www.eia.gov/outlooks/steo/report/global_oil.php">EIA</a> also calls this data unreliable</td>
+</tr>
+<tr class="even">
+<td>Refinery use: Rest of World</td>
+<td>Low</td>
+<td>What is left of the world total, so it absorbs everyone’s errors. The July and August world runs come from summaries of paid reports</td>
+</tr>
+<tr class="odd">
+<td>Residual stock draws and builds</td>
+<td>Low</td>
+<td>A balancing item, not a measurement</td>
+</tr>
+<tr class="even">
+<td>Daily values</td>
+<td>Low</td>
+<td>Monthly totals given a shape. Read them as the rough timing of a change, not as the flow on that date</td>
+</tr>
+</tbody>
+</table>
+<p>In short, the monthly regional picture is fairly solid through June: how much left the Gulf, by which route, and how much came from storage. Confidence drops from July. Individual buyer-seller bands and single days are illustrations, not measurements.</p>
+</section>
+<section id="checks-against-published-figures" class="level2">
+<h2 data-anchor-id="checks-against-published-figures">Checks against published figures</h2>
+<p>The table compares the model with figures it does not take directly as inputs. Stock changes here use each source’s own sign: for Gulf storage and world stocks, a build is positive, and for US and China “draw” rows, a draw is positive.</p>
+<div class="callout-none">
+<details>
+<summary>
+Show all checks
+</summary>
+<div class="cell">
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<colgroup>
+<col style="width: 60%">
+<col style="width: 10%">
+<col style="width: 6%">
+<col style="width: 11%">
+<col style="width: 11%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Measure</th>
+<th style="text-align: left;">Period</th>
+<th style="text-align: right;">Model</th>
+<th style="text-align: right;">Published</th>
+<th style="text-align: right;">Gap, mb/d</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Gulf crude storage change, IEA</td>
+<td style="text-align: left;">Mar 2026</td>
+<td style="text-align: right;">3.15</td>
+<td style="text-align: right;">3.00</td>
+<td style="text-align: right;">0.15</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Gulf crude storage change, IEA</td>
+<td style="text-align: left;">Apr 2026</td>
+<td style="text-align: right;">-0.10</td>
+<td style="text-align: right;">0.30</td>
+<td style="text-align: right;">-0.40</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Gulf crude storage change, IEA</td>
+<td style="text-align: left;">May 2026</td>
+<td style="text-align: right;">-0.56</td>
+<td style="text-align: right;">-1.16</td>
+<td style="text-align: right;">0.60</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Gulf crude storage change, IEA</td>
+<td style="text-align: left;">Jun 2026</td>
+<td style="text-align: right;">-1.96</td>
+<td style="text-align: right;">-1.63</td>
+<td style="text-align: right;">-0.33</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">World crude stock change, IEA observed</td>
+<td style="text-align: left;">Jan 2026</td>
+<td style="text-align: right;">-1.07</td>
+<td style="text-align: right;">0.19</td>
+<td style="text-align: right;">-1.26</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">World crude stock change, IEA observed</td>
+<td style="text-align: left;">Feb 2026</td>
+<td style="text-align: right;">1.98</td>
+<td style="text-align: right;">2.00</td>
+<td style="text-align: right;">-0.02</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">World crude stock change, IEA observed</td>
+<td style="text-align: left;">Mar 2026</td>
+<td style="text-align: right;">-4.39</td>
+<td style="text-align: right;">-1.90</td>
+<td style="text-align: right;">-2.49</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">World crude stock change, IEA observed</td>
+<td style="text-align: left;">Apr 2026</td>
+<td style="text-align: right;">-1.91</td>
+<td style="text-align: right;">-1.70</td>
+<td style="text-align: right;">-0.21</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">World crude stock change, IEA observed</td>
+<td style="text-align: left;">May 2026</td>
+<td style="text-align: right;">-3.71</td>
+<td style="text-align: right;">-4.52</td>
+<td style="text-align: right;">0.81</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">World crude stock change, IEA observed</td>
+<td style="text-align: left;">Jun 2026</td>
+<td style="text-align: right;">-0.83</td>
+<td style="text-align: right;">-0.10</td>
+<td style="text-align: right;">-0.73</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Hormuz crude, Kpler</td>
+<td style="text-align: left;">Mar 2026</td>
+<td style="text-align: right;">1.90</td>
+<td style="text-align: right;">1.80</td>
+<td style="text-align: right;">0.10</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Saudi crude crossing Hormuz, Kpler</td>
+<td style="text-align: left;">Aug 2026</td>
+<td style="text-align: right;">0.71</td>
+<td style="text-align: right;">0.70</td>
+<td style="text-align: right;">0.01</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Saudi crude output, IEA</td>
+<td style="text-align: left;">Apr 2026</td>
+<td style="text-align: right;">6.60</td>
+<td style="text-align: right;">6.36</td>
+<td style="text-align: right;">0.24</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Saudi crude output, IEA</td>
+<td style="text-align: left;">Jun 2026</td>
+<td style="text-align: right;">7.29</td>
+<td style="text-align: right;">7.34</td>
+<td style="text-align: right;">-0.05</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Iraq crude output, IEA</td>
+<td style="text-align: left;">Apr 2026</td>
+<td style="text-align: right;">1.42</td>
+<td style="text-align: right;">1.45</td>
+<td style="text-align: right;">-0.03</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Iraq crude output, IEA</td>
+<td style="text-align: left;">Jun 2026</td>
+<td style="text-align: right;">1.95</td>
+<td style="text-align: right;">1.96</td>
+<td style="text-align: right;">-0.01</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Kuwait crude output, IEA</td>
+<td style="text-align: left;">Apr 2026</td>
+<td style="text-align: right;">0.57</td>
+<td style="text-align: right;">0.57</td>
+<td style="text-align: right;">0.00</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Kuwait crude output, IEA</td>
+<td style="text-align: left;">Jun 2026</td>
+<td style="text-align: right;">1.39</td>
+<td style="text-align: right;">1.37</td>
+<td style="text-align: right;">0.02</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Iran crude output, IEA</td>
+<td style="text-align: left;">Apr 2026</td>
+<td style="text-align: right;">3.68</td>
+<td style="text-align: right;">3.36</td>
+<td style="text-align: right;">0.32</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Iran crude output, IEA</td>
+<td style="text-align: left;">Jun 2026</td>
+<td style="text-align: right;">3.15</td>
+<td style="text-align: right;">2.30</td>
+<td style="text-align: right;">0.85</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">China runs, IEA</td>
+<td style="text-align: left;">Mar 2026</td>
+<td style="text-align: right;">14.52</td>
+<td style="text-align: right;">14.60</td>
+<td style="text-align: right;">-0.08</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">China runs, IEA</td>
+<td style="text-align: left;">Apr 2026</td>
+<td style="text-align: right;">13.30</td>
+<td style="text-align: right;">13.40</td>
+<td style="text-align: right;">-0.10</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">China runs, IEA</td>
+<td style="text-align: left;">May 2026</td>
+<td style="text-align: right;">12.65</td>
+<td style="text-align: right;">12.70</td>
+<td style="text-align: right;">-0.05</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">China runs, IEA</td>
+<td style="text-align: left;">Jun 2026</td>
+<td style="text-align: right;">12.47</td>
+<td style="text-align: right;">13.10</td>
+<td style="text-align: right;">-0.63</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Asia outside China, IEA Asia Oceania plus Other Asia</td>
+<td style="text-align: left;">Mar 2026</td>
+<td style="text-align: right;">14.98</td>
+<td style="text-align: right;">15.90</td>
+<td style="text-align: right;">-0.92</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Asia outside China, IEA Asia Oceania plus Other Asia</td>
+<td style="text-align: left;">Apr 2026</td>
+<td style="text-align: right;">14.00</td>
+<td style="text-align: right;">14.20</td>
+<td style="text-align: right;">-0.20</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Asia outside China, IEA Asia Oceania plus Other Asia</td>
+<td style="text-align: left;">May 2026</td>
+<td style="text-align: right;">14.61</td>
+<td style="text-align: right;">14.60</td>
+<td style="text-align: right;">0.01</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Asia outside China, IEA Asia Oceania plus Other Asia</td>
+<td style="text-align: left;">Jun 2026</td>
+<td style="text-align: right;">14.96</td>
+<td style="text-align: right;">15.10</td>
+<td style="text-align: right;">-0.14</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Hormuz crude, EIA</td>
+<td style="text-align: left;">1Q26</td>
+<td style="text-align: right;">10.34</td>
+<td style="text-align: right;">10.90</td>
+<td style="text-align: right;">-0.56</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Hormuz crude, EIA</td>
+<td style="text-align: left;">2Q26</td>
+<td style="text-align: right;">3.68</td>
+<td style="text-align: right;">3.70</td>
+<td style="text-align: right;">-0.02</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Gulf crude exports, IEA</td>
+<td style="text-align: left;">Feb 2026</td>
+<td style="text-align: right;">18.02</td>
+<td style="text-align: right;">18.40</td>
+<td style="text-align: right;">-0.38</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Gulf crude exports, IEA</td>
+<td style="text-align: left;">Apr 2026</td>
+<td style="text-align: right;">8.45</td>
+<td style="text-align: right;">8.40</td>
+<td style="text-align: right;">0.05</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Gulf crude exports, IEA</td>
+<td style="text-align: left;">May 2026</td>
+<td style="text-align: right;">8.05</td>
+<td style="text-align: right;">7.90</td>
+<td style="text-align: right;">0.15</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Gulf crude exports, IEA</td>
+<td style="text-align: left;">Jun 2026</td>
+<td style="text-align: right;">13.05</td>
+<td style="text-align: right;">13.20</td>
+<td style="text-align: right;">-0.15</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Yanbu + Fujairah (model crude; IEA all oil)</td>
+<td style="text-align: left;">Feb 2026</td>
+<td style="text-align: right;">3.18</td>
+<td style="text-align: right;">4.10</td>
+<td style="text-align: right;">-0.92</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Yanbu + Fujairah (model crude; IEA all oil)</td>
+<td style="text-align: left;">Jun 2026</td>
+<td style="text-align: right;">6.35</td>
+<td style="text-align: right;">7.80</td>
+<td style="text-align: right;">-1.45</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Middle East runs, IEA</td>
+<td style="text-align: left;">Feb 2026</td>
+<td style="text-align: right;">9.90</td>
+<td style="text-align: right;">10.30</td>
+<td style="text-align: right;">-0.40</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Europe runs, IEA</td>
+<td style="text-align: left;">Apr 2026</td>
+<td style="text-align: right;">10.58</td>
+<td style="text-align: right;">10.60</td>
+<td style="text-align: right;">-0.02</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">China crude stock draw, IEA satellite</td>
+<td style="text-align: left;">Mar 2026</td>
+<td style="text-align: right;">-1.74</td>
+<td style="text-align: right;">-1.20</td>
+<td style="text-align: right;">-0.54</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">China crude stock draw, IEA satellite</td>
+<td style="text-align: left;">Apr 2026</td>
+<td style="text-align: right;">-0.44</td>
+<td style="text-align: right;">0.20</td>
+<td style="text-align: right;">-0.64</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">China crude stock draw, IEA satellite</td>
+<td style="text-align: left;">May 2026</td>
+<td style="text-align: right;">0.46</td>
+<td style="text-align: right;">0.30</td>
+<td style="text-align: right;">0.16</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">China crude stock draw, IEA satellite</td>
+<td style="text-align: left;">Jun 2026</td>
+<td style="text-align: right;">0.94</td>
+<td style="text-align: right;">1.40</td>
+<td style="text-align: right;">-0.46</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">US crude stock draw incl.&nbsp;SPR, EIA</td>
+<td style="text-align: left;">Jan 2026</td>
+<td style="text-align: right;">0.11</td>
+<td style="text-align: right;">0.11</td>
+<td style="text-align: right;">0.00</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">US crude stock draw incl.&nbsp;SPR, EIA</td>
+<td style="text-align: left;">Feb 2026</td>
+<td style="text-align: right;">-1.04</td>
+<td style="text-align: right;">-1.04</td>
+<td style="text-align: right;">0.00</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">US crude stock draw incl.&nbsp;SPR, EIA</td>
+<td style="text-align: left;">Mar 2026</td>
+<td style="text-align: right;">-0.58</td>
+<td style="text-align: right;">-0.58</td>
+<td style="text-align: right;">0.00</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">US crude stock draw incl.&nbsp;SPR, EIA</td>
+<td style="text-align: left;">Apr 2026</td>
+<td style="text-align: right;">0.78</td>
+<td style="text-align: right;">0.79</td>
+<td style="text-align: right;">0.00</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">US crude stock draw incl.&nbsp;SPR, EIA</td>
+<td style="text-align: left;">May 2026</td>
+<td style="text-align: right;">2.07</td>
+<td style="text-align: right;">2.07</td>
+<td style="text-align: right;">0.00</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">US crude stock draw incl.&nbsp;SPR, EIA</td>
+<td style="text-align: left;">Jun 2026</td>
+<td style="text-align: right;">1.81</td>
+<td style="text-align: right;">1.81</td>
+<td style="text-align: right;">0.00</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">US crude stock draw incl.&nbsp;SPR, EIA</td>
+<td style="text-align: left;">Jul 2026</td>
+<td style="text-align: right;">0.42</td>
+<td style="text-align: right;">0.42</td>
+<td style="text-align: right;">0.00</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">US crude stock draw incl.&nbsp;SPR, EIA</td>
+<td style="text-align: left;">Aug 2026</td>
+<td style="text-align: right;">0.10</td>
+<td style="text-align: right;">0.10</td>
+<td style="text-align: right;">0.00</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</details>
+</div>
+<p>What stands out:</p>
+<ul>
+<li><strong>Gulf storage</strong> is the strongest test, because nothing forces it to match. The model is within 0.15 mb/d in March and 0.6 mb/d at worst.</li>
+<li><strong>World stock change</strong> matches in February and April but misses by 2.5 mb/d in March and 1.3 mb/d in January.</li>
+<li><strong>Yanbu and Fujairah</strong> should come in under the IEA in February and June, because the model counts crude and the IEA counts all oil.</li>
+</ul>
+<p>The same comparison caught this project’s errors. An audit of the earlier version found that it:</p>
+<ul>
+<li>overstated Gulf refinery use by about 1 mb/d, which forced a release from storage in July and August that the data does not support.</li>
+<li>filled too little Gulf storage in March, at 0.5 mb/d against the IEA’s 3.0.</li>
+</ul>
+</section>
+<section id="data-confidence-by-month" class="level2">
+<h2 data-anchor-id="data-confidence-by-month">Data confidence by month</h2>
+<div class="cell">
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<colgroup>
+<col style="width: 6%">
+<col style="width: 14%">
+<col style="width: 21%">
+<col style="width: 11%">
+<col style="width: 46%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Month</th>
+<th style="text-align: left;">Production</th>
+<th style="text-align: left;">World refinery runs</th>
+<th style="text-align: left;">China runs</th>
+<th style="text-align: left;">Hormuz crude</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Jan</td>
+<td style="text-align: left;">EIA</td>
+<td style="text-align: left;">reported</td>
+<td style="text-align: left;">derived</td>
+<td style="text-align: left;">from tanker counts and IEA’s pre-war figure</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Feb</td>
+<td style="text-align: left;">EIA</td>
+<td style="text-align: left;">reported</td>
+<td style="text-align: left;">derived</td>
+<td style="text-align: left;">from tanker counts and IEA’s pre-war figure</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Mar</td>
+<td style="text-align: left;">EIA</td>
+<td style="text-align: left;">reported</td>
+<td style="text-align: left;">reported</td>
+<td style="text-align: left;">reported</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Apr</td>
+<td style="text-align: left;">EIA</td>
+<td style="text-align: left;">reported</td>
+<td style="text-align: left;">reported</td>
+<td style="text-align: left;">derived</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">May</td>
+<td style="text-align: left;">EIA</td>
+<td style="text-align: left;">reported</td>
+<td style="text-align: left;">reported</td>
+<td style="text-align: left;">derived</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Jun</td>
+<td style="text-align: left;">EIA</td>
+<td style="text-align: left;">reported</td>
+<td style="text-align: left;">reported</td>
+<td style="text-align: left;">derived</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Jul</td>
+<td style="text-align: left;">STEO estimate</td>
+<td style="text-align: left;">derived</td>
+<td style="text-align: left;">reported</td>
+<td style="text-align: left;">derived</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Aug</td>
+<td style="text-align: left;">STEO estimate</td>
+<td style="text-align: left;">reported</td>
+<td style="text-align: left;">reported</td>
+<td style="text-align: left;">derived</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>Here “reported” means a figure taken directly from a source, “derived” means calculated from reported figures with a stated conversion, and “interpolated”, “forecast” and “assumption” mean what they say. Every value, with its source and note, is in <code>data/raw/</code>.</p>
+</section>
+<section id="known-limitations" class="level2">
+<h2 data-anchor-id="known-limitations">Known limitations</h2>
+<ul>
+<li>No public daily country-level production or consumption data exists. True daily trade flows need paid tanker tracking, such as Kpler or Vortexa.</li>
+<li><a href="https://portwatch.imf.org">PortWatch</a> counts vessels, not barrels, and does not separate inbound from outbound.</li>
+<li>Crude figures rest on a share of about 0.82 of all oil in several months, which is itself an estimate.</li>
+<li>Iranian exports are opaque, so treat Iran as an estimate with wide uncertainty.</li>
+<li>Apart from the cargoes-at-sea bands, flows reach a consumer the day they leave. Dips and spikes at consumers therefore arrive sooner than refineries felt them.</li>
+<li>World refinery runs exclude crude burned directly, while country figures include it. The effect is small, about 0.5 mb/d, mostly Saudi power plants, and it falls on Rest of World.</li>
+</ul>
+</section>
+<section id="timeline-sources" class="level2">
+<h2 data-anchor-id="timeline-sources">Timeline sources</h2>
+<ul>
+<li>Feb 17: <a href="https://www.thenationalnews.com/news/mena/2026/02/17/iran-strait-of-hormuz-closure/">IRGC closes parts of Hormuz for hours during live-fire drills</a></li>
+<li>Feb 28: <a href="https://en.wikipedia.org/wiki/2026_Strait_of_Hormuz_campaign">US-Israeli strikes on Iran; Iran closes the Strait of Hormuz</a></li>
+<li>Mar 1: <a href="https://www.thejakartapost.com/business/2026/03/02/shipping-companies-divert-vessels-around-cape-of-good-hope-after-strikes-on-iran">Major shipping lines suspend Hormuz transits</a></li>
+<li>Mar 5: <a href="https://gasoutlook.com/analysis/cancelled-shipping-insurance-leaves-strait-of-hormuz-blocked/">Marine insurers cancel Gulf war-risk cover</a></li>
+<li>Mar 11: <a href="https://fueloilnews.com/2026/03/16/iea-countries-to-release-oil-amid-middle-east-conflict/">IEA members agree record 400 mb emergency stock release</a></li>
+<li>Mar 18: <a href="https://www.thenationalnews.com/business/energy/2026/03/18/iraq-to-resume-oil-exports-via-turkeys-ceyhan-port-amid-regional-tensions/">Iraq restarts Kirkuk-Ceyhan exports</a></li>
+<li>Apr 8: <a href="https://aljazeera.com/news/2026/4/7/trump-suspends-iran-bombing-for-two-weeks-following-dire-threats">Two-week US-Iran ceasefire begins; attacks on ships continue</a></li>
+<li>Apr 13: <a href="https://en.wikipedia.org/wiki/2026_Strait_of_Hormuz_campaign">US naval blockade of Iran begins</a></li>
+<li>Apr 15: <a href="https://www.iea.org/reports/oil-market-report-july-2026">April: OECD stocks fall about 4 mb/d</a></li>
+<li>May 12: <a href="https://www.bairdmaritime.com/offshore/refining-processing/china-is-dipping-into-its-record-oil-stockpiles-as-fuel-demand-weakens">China starts drawing its crude stocks</a></li>
+<li>May 25: <a href="https://www.iea.org/reports/oil-market-report-june-2026">May: global stocks fall 143 mb</a></li>
+<li>Jun 17: <a href="https://en.wikipedia.org/wiki/2026_Strait_of_Hormuz_campaign">US-Iran memorandum signed; strait reopens and tankers rush out</a></li>
+<li>Jun 24: <a href="https://www.iea.org/reports/oil-market-report-july-2026">Gulf exports surge as the strait reopens</a></li>
+<li>Jul 8: <a href="https://en.wikipedia.org/wiki/2026_Strait_of_Hormuz_campaign">Interim deal collapses; Hormuz shipments near standstill</a></li>
+<li>Jul 14: <a href="https://en.wikipedia.org/wiki/2026_Strait_of_Hormuz_campaign">US reinstates naval blockade</a></li>
+<li>Aug 5: <a href="https://thenationalnews.com/business/energy/2026/08/05/brent-oil-back-above-80-after-houthi-attack-on-saudi-tanker">Houthi attack on Saudi tanker threatens Red Sea bypass route</a></li>
+<li>Aug 15: <a href="https://boereport.com/2026/09/15/china-draws-on-crude-inventories-in-august-as-refinery-runs-rise-russell/">August: China draws again as refineries restart</a></li>
+</ul>
+</section>
+<section id="data-sources-1" class="level2">
+<h2 data-anchor-id="data-sources-1">Data sources</h2>
+<ul>
+<li><a href="https://portwatch.imf.org">IMF PortWatch (daily tanker transits)</a></li>
+<li><a href="https://fred.stlouisfed.org/series/DCOILBRENTEU">FRED / EIA (Brent and WTI spot)</a></li>
+<li><a href="https://www.eia.gov/opendata/">EIA International (crude production)</a></li>
+<li><a href="https://www.eia.gov/outlooks/steo/">EIA Short-Term Energy Outlook, October 2026</a></li>
+<li><a href="https://www.jodidata.org/oil/">JODI Oil World Database (refinery intake, trade)</a></li>
+<li><a href="https://www.iea.org/topics/oil-market-report">IEA Oil Market Report (refinery runs, Hormuz flows)</a></li>
+<li><a href="https://www.iea.org/topics/the-middle-east-and-global-energy-markets">IEA Strait of Hormuz Factsheet</a></li>
+<li><a href="https://www.energyinst.org/statistical-review">Energy Institute Statistical Review 2026 (trade baseline)</a></li>
+<li><a href="https://comtradeplus.un.org/">UN Comtrade HS 2709 (splits EI regions)</a></li>
+<li><a href="https://boereport.com/2026/10/20/china-uses-crude-stockpiles-but-rising-oil-imports-may-curtail-draws-russell/">NBS and customs data for China, via Reuters (refinery runs, imports, output)</a></li>
+<li><a href="https://www.eia.gov/dnav/pet/pet_stoc_wstk_dcu_nus_m.htm">EIA monthly crude stocks (checks the US stock figures)</a></li>
+<li><a href="https://www.kpler.com/blog/explainer-how-mideast-gulf-crude-exports-returned-to-pre-war-levels">Kpler explainer (Gulf export routes)</a></li>
+</ul>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
