@@ -26,17 +26,7 @@ calibration <- readr::read_csv("qa/calibration_comparison.csv", show_col_types =
 calibration <- calibration[!grepl("^(Sep|Oct) 2026$", calibration$period), ]
 ```
 
-The diagram is a model, not a measurement. Nobody publishes daily oil flows by country, so it combines monthly official statistics, tanker tracking and a few explicit assumptions. This page explains where each number comes from and how far to trust it.
-
-## Why the graphic stops on August 31
-
-The data after August is not good enough to report daily flows with confidence:
-
-- **Country data ends:** [JODI](https://www.jodidata.org/oil/) runs through August, so later months have no reported refinery use or stock changes for most countries.
-- **Hormuz estimates conflict:** for September, [Kpler and Windward](https://dailycaller.com/2026/10/12/chris-wright-strait-of-hormuz-oil-flows-kpler-tanker-data-kevin-book-matthew-mcmanus/) put crude through the strait at about 10 mb/d and the US Energy Secretary at 13 to 14 mb/d. An [Iranian commander claims](https://www.aljazeera.com/news/2026/10/5/middle-east-oil-exports-surpass-pre-war-levels-despite-tensions-data-shows) 3 to 4 mb/d on the US-supervised route, and [PortWatch](https://portwatch.imf.org) counts about 1 tanker a day.
-- **The volumes do not balance:** using Kpler's figures, about 4 mb/d crossing the strait could not be explained by EIA's production estimates, and Gulf tanks could not have supplied that much for long.
-
-The graphic stops here, but the September and October data and model results stay in this project's files, so the graphic can be extended if better data arrives.
+The main diagram on the [Flows](index.qmd) page is a model, not a measurement. There are no free, publicly available publications on daily oil flows by country / route, so this moel combines monthly official statistics, tanker tracking, and a few explicit assumptions. This page explains where each number comes from.
 
 ## Key terms
 
@@ -47,7 +37,7 @@ The graphic stops here, but the September and October data and model results sta
 - **Oil on water:** the industry's term for oil on ships. It includes cargoes sailing to a buyer ("in transit") and tankers sitting idle ("floating storage"). The diagram calls cargoes on their way **cargoes at sea**.
 - **AIS:** the radio signal ships broadcast with their position. A ship can switch it off, which is called running dark.
 
-## The data sources
+## Data sources
 
 Most of the numbers come from a handful of organizations. They measure different things, and they often disagree.
 
@@ -127,6 +117,14 @@ knitr::kable(cbind(`mb/d` = rownames(stock_table), stock_table), row.names = FAL
 
 The residual combines tanks nobody reports with errors in the world total. It is largest in March, at about 5.6 mb/d. The world total alone accounts for about 2.5 mb/d of that: it shows a 4.4 mb/d draw, while the [IEA observed](https://www.iea.org/reports/oil-market-report-july-2026) a 1.9 mb/d crude draw. The IEA calls this kind of gap the "unaccounted-for balance". Its own gap for all oil has topped 2 mb/d this year, and it expects such gaps to shrink as data improves.
 
+## Why the graphic stops on August 31
+
+The data after August is not good enough to report daily flows with confidence:
+
+- **Country data ends:** [JODI](https://www.jodidata.org/oil/) runs through August, so later months have no reported refinery use or stock changes for most countries.
+- **Hormuz estimates conflict:** for September, [Kpler and Windward](https://dailycaller.com/2026/10/12/chris-wright-strait-of-hormuz-oil-flows-kpler-tanker-data-kevin-book-matthew-mcmanus/) put crude through the strait at about 10 mb/d and the US Energy Secretary at 13 to 14 mb/d. An [Iranian commander claims](https://www.aljazeera.com/news/2026/10/5/middle-east-oil-exports-surpass-pre-war-levels-despite-tensions-data-shows) 3 to 4 mb/d on the US-supervised route, and [PortWatch](https://portwatch.imf.org) counts about 1 tanker a day.
+- **The volumes do not balance:** using Kpler's figures, about 4 mb/d crossing the strait could not be explained by EIA's production estimates, and Gulf tanks could not have supplied that much for long.
+
 ## How much to trust each number
 
 These ratings are my judgment, based on the checks in the next section. High means independent sources agree closely, medium means the source is sound but single or the checks show moderate gaps, and low means the number is mostly a residual, an assumption or a shape.
@@ -135,21 +133,21 @@ These ratings are my judgment, based on the checks in the next section. High mea
 |---|---|---|
 | Brent price | High | Official series |
 | Tanker count as a count | High | Direct satellite data, but it covers only ships broadcasting their position |
-| Tanker count as a measure of flow | Low after March | In August it shows about 2 tankers a day, which could carry about 4 mb/d at most, while the IEA's figures imply 6.2 mb/d of crude. [EIA](https://www.eia.gov/outlooks/steo/report/global_oil.php) also calls this data unreliable |
-| Monthly Hormuz crude, March to August | Medium to high | From the IEA, and matches EIA's second-quarter figure. Several months convert all-oil figures to crude with an estimated share |
-| Bypass pipelines | Medium | Published for most months, but sources conflict in August, when [EIA](https://www.eia.gov/outlooks/steo/report/global_oil.php) reports more from Yanbu alone than the [IEA](https://www.iea.org/commentaries/oil-markets-strain-to-plug-the-gap-left-by-middle-east-supply-shortfall) reports for Yanbu and Fujairah together |
-| Gulf production through June | Medium to high | Saudi, Iraqi and Kuwaiti figures are within 0.25 mb/d of the IEA. Iran is less certain, up to 0.85 mb/d higher than the IEA |
-| Production in July and August | Medium | EIA's estimates from the STEO, not final figures |
-| Refinery use: USA, Japan, South Korea, Europe, China | High through August | Government figures. China's official June figure sits 0.63 mb/d below the IEA's, and other months are within 0.1 |
-| Refinery use: Middle East | Medium | Follows the IEA through June, but later months are forecasts made before the strait closed again in July |
-| Refinery use: Rest of World | Low | What is left of the world total, so it absorbs everyone's errors. The July and August world runs come from summaries of paid reports |
 | US stock changes | High | Matches EIA within 0.01 mb/d |
+| Refinery use: USA, Japan, South Korea, Europe, China | High through August | Government figures. China's official June figure sits 0.63 mb/d below the IEA's, and other months are within 0.1 |
+| Monthly Hormuz crude, March to August | Medium to high | From the IEA, and matches EIA's second-quarter figure. Several months convert all-oil figures to crude with an estimated share |
+| Gulf production through June | Medium to high | Saudi, Iraqi and Kuwaiti figures are within 0.25 mb/d of the IEA. Iran is less certain, up to 0.85 mb/d higher than the IEA |
+| Bypass pipelines | Medium | Published for most months, but sources conflict in August, when [EIA](https://www.eia.gov/outlooks/steo/report/global_oil.php) reports more from Yanbu alone than the [IEA](https://www.iea.org/commentaries/oil-markets-strain-to-plug-the-gap-left-by-middle-east-supply-shortfall) reports for Yanbu and Fujairah together |
+| Production in July and August | Medium | EIA's estimates from the STEO, not final figures |
+| Refinery use: Middle East | Medium | Follows the IEA through June, but later months are forecasts made before the strait closed again in July |
 | China stock changes | Medium | Sign and timing are broadly right, but official and satellite figures differ by up to 0.64 mb/d |
 | Japan, South Korea and Europe stock changes | Medium | Same method as the US, with no independent check |
 | Gulf storage | Medium through June, low after | Within 0.6 mb/d of the IEA through June. July and August have no direct measurement |
 | Cargoes at sea | Medium through June, low after | Comes from IEA and Kpler figures, with some estimated crude shares. July and August assume a 0.75 crude share |
-| Residual stock draws and builds | Low | A balancing item, not a measurement |
 | Who buys from whom | Low to medium | A rescaled pre-war pattern, so real rerouting, such as Asian buyers moving to Atlantic crude, is only approximated |
+| Tanker count as a measure of flow | Low after March | In August it shows about 2 tankers a day, which could carry about 4 mb/d at most, while the IEA's figures imply 6.2 mb/d of crude. [EIA](https://www.eia.gov/outlooks/steo/report/global_oil.php) also calls this data unreliable |
+| Refinery use: Rest of World | Low | What is left of the world total, so it absorbs everyone's errors. The July and August world runs come from summaries of paid reports |
+| Residual stock draws and builds | Low | A balancing item, not a measurement |
 | Daily values | Low | Monthly totals given a shape. Read them as the rough timing of a change, not as the flow on that date |
 
 In short, the monthly regional picture is fairly solid through June: how much left the Gulf, by which route, and how much came from storage. Confidence drops from July. Individual buyer-seller bands and single days are illustrations, not measurements.
