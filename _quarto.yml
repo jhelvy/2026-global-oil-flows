@@ -10,6 +10,12 @@ project:
 
 website:
   title: "Oil Flows 2026"
+  site-url: https://jhelvy.github.io/2026-global-oil-flows/
+  image: figs/preview.png
+  image-alt: "Sankey diagram of crude oil flows on April 7, 2026, with almost nothing passing through the Strait of Hormuz"
+  open-graph: true
+  twitter-card:
+    card-style: summary_large_image
   search: false
   navbar:
     background: light

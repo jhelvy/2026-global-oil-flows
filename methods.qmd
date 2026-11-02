@@ -3,6 +3,10 @@ title: "Method and limitations"
 toc: true
 toc-title: "On this page"
 toc-depth: 2
+open-graph:
+  description: "How the 2026 oil flow graphic is modeled, where its data come from, and how far to trust each number."
+twitter-card:
+  description: "How the 2026 oil flow graphic is modeled, where its data come from, and how far to trust each number."
 execute:
   echo: false
 ---
