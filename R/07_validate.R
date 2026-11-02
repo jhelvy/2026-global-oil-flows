@@ -141,8 +141,63 @@ stock_net <- function(group, month) {
   stock_cells$net_local[stock_cells$consumer == group & stock_cells$month == as.Date(month)]
 }
 
+observations <- read_csv(file.path(path_raw, "iea_stock_observations.csv"))
+us_stock <- read_csv(file.path(path_interim, "us_stock_change_monthly.csv"))
+observed <- function(what, mon) {
+  observations$change_mbd[observations$item == what & observations$month == as.Date(mon)]
+}
+storage_change <- function(mon) {
+  g <- gulf |> filter(month == as.Date(mon))
+  sum(g$stored) - g$release[1]
+}
+world_change <- function(mon) -balance$stock_change[balance$month == as.Date(mon)]
+gulf_crude <- function(mon) {
+  g <- gulf |> filter(month == as.Date(mon))
+  sum(g$exports - g$other) + g$release[1]
+}
+saudi_hormuz <- function(mon) gulf$hormuz[gulf$producer == "saudi" & gulf$month == as.Date(mon)]
+gulf_output <- function(group, mon) production$mbd[production$group == group & production$month == as.Date(mon)]
+consumer_runs <- function(groups, mon) sum(consumption$mbd[consumption$group %in% groups & consumption$month == as.Date(mon)])
+asia <- c("japan", "korea", "india", "otherasia")
+
 comparison <- tribble(
   ~measure, ~period, ~model, ~published,
+  # Gulf storage comes from output, refinery use and exports. IEA measures it separately from
+  # satellites and tanker tracking, so this is a real test. Builds are positive.
+  "Gulf crude storage change, IEA", "Mar 2026", storage_change("2026-03-01"), observed("gulf_storage_crude", "2026-03-01"),
+  "Gulf crude storage change, IEA", "Apr 2026", storage_change("2026-04-01"), observed("gulf_storage_crude", "2026-04-01"),
+  "Gulf crude storage change, IEA", "May 2026", storage_change("2026-05-01"), observed("gulf_storage_crude", "2026-05-01"),
+  "Gulf crude storage change, IEA", "Jun 2026", storage_change("2026-06-01"), observed("gulf_storage_crude", "2026-06-01"),
+  # World crude stock change: IEA runs less EIA output, against what IEA observed.
+  "World crude stock change, IEA observed", "Jan 2026", world_change("2026-01-01"), observed("world_crude_observed", "2026-01-01"),
+  "World crude stock change, IEA observed", "Feb 2026", world_change("2026-02-01"), observed("world_crude_observed", "2026-02-01"),
+  "World crude stock change, IEA observed", "Mar 2026", world_change("2026-03-01"), observed("world_crude_observed", "2026-03-01"),
+  "World crude stock change, IEA observed", "Apr 2026", world_change("2026-04-01"), observed("world_crude_observed", "2026-04-01"),
+  "World crude stock change, IEA observed", "May 2026", world_change("2026-05-01"), observed("world_crude_observed", "2026-05-01"),
+  "World crude stock change, IEA observed", "Jun 2026", world_change("2026-06-01"), observed("world_crude_observed", "2026-06-01"),
+  # Later route figures that are not model inputs.
+  "Hormuz crude, Kpler", "Mar 2026", hormuz_monthly$mbd[hormuz_monthly$month == as.Date("2026-03-01")], 1.8,
+  "Saudi crude crossing Hormuz, Kpler", "Aug 2026", saudi_hormuz("2026-08-01"), 0.7,
+  "Saudi crude crossing Hormuz, Kpler", "Sep 2026", saudi_hormuz("2026-09-01"), 2.8,
+  "Gulf crude leaving outside the strait, Kpler", "Sep 2026", sum(gulf_total$bypass[gulf_total$month == as.Date("2026-09-01")]) + sum(gulf$other[gulf$month == as.Date("2026-09-01")]), 0.4 * 16.5,
+  # Output: IEA excludes condensate and EIA includes it, so EIA should run somewhat higher.
+  "Saudi crude output, IEA", "Apr 2026", gulf_output("saudi", "2026-04-01"), 6.36,
+  "Saudi crude output, IEA", "Jun 2026", gulf_output("saudi", "2026-06-01"), 7.34,
+  "Iraq crude output, IEA", "Apr 2026", gulf_output("iraq", "2026-04-01"), 1.45,
+  "Iraq crude output, IEA", "Jun 2026", gulf_output("iraq", "2026-06-01"), 1.96,
+  "Kuwait crude output, IEA", "Apr 2026", gulf_output("kuwait", "2026-04-01"), 0.57,
+  "Kuwait crude output, IEA", "Jun 2026", gulf_output("kuwait", "2026-06-01"), 1.37,
+  "Iran crude output, IEA", "Apr 2026", gulf_output("iran", "2026-04-01"), 3.36,
+  "Iran crude output, IEA", "Jun 2026", gulf_output("iran", "2026-06-01"), 2.30,
+  # Consumers. China's official runs are an input, so IEA's estimate is the independent view.
+  "China runs, IEA", "Mar 2026", consumer_runs("china", "2026-03-01"), 14.6,
+  "China runs, IEA", "Apr 2026", consumer_runs("china", "2026-04-01"), 13.4,
+  "China runs, IEA", "May 2026", consumer_runs("china", "2026-05-01"), 12.7,
+  "China runs, IEA", "Jun 2026", consumer_runs("china", "2026-06-01"), 13.1,
+  "Asia outside China, IEA Asia Oceania plus Other Asia", "Mar 2026", consumer_runs(asia, "2026-03-01"), 15.9,
+  "Asia outside China, IEA Asia Oceania plus Other Asia", "Apr 2026", consumer_runs(asia, "2026-04-01"), 14.2,
+  "Asia outside China, IEA Asia Oceania plus Other Asia", "May 2026", consumer_runs(asia, "2026-05-01"), 14.6,
+  "Asia outside China, IEA Asia Oceania plus Other Asia", "Jun 2026", consumer_runs(asia, "2026-06-01"), 15.1,
   "Hormuz crude, EIA", "1Q26", quarter_mean(date_start, as.Date("2026-03-31")), 10.9,
   "Hormuz crude, EIA", "2Q26", quarter_mean(as.Date("2026-04-01"), as.Date("2026-06-30")), 3.7,
   "Hormuz crude, IEA", "2025 vs pre-war 2026", prewar_hormuz, 14.95,
@@ -155,7 +210,6 @@ comparison <- tribble(
   "Yanbu + Fujairah (model crude; IEA all oil)", "Jun 2026", gulf_total$bypass[gulf_total$month == as.Date("2026-06-01")], 7.8,
   "Yanbu + Fujairah (model crude; IEA all oil)", "Aug 2026", gulf_total$bypass[gulf_total$month == as.Date("2026-08-01")], 5.5,
   "Middle East runs, IEA", "Feb 2026", consumption$mbd[consumption$group == "mideast" & consumption$month == as.Date("2026-02-01")], 10.3,
-  "Middle East runs, IEA", "Apr 2026", consumption$mbd[consumption$group == "mideast" & consumption$month == as.Date("2026-04-01")], 7.2,
   "Europe runs, IEA", "Apr 2026", consumption$mbd[consumption$group == "europe" & consumption$month == as.Date("2026-04-01")], 10.6,
   "China runs, NBS-based", "Apr 2026", consumption$mbd[consumption$group == "china" & consumption$month == as.Date("2026-04-01")], 13.3,
   "China runs, NBS-based", "Jun 2026", consumption$mbd[consumption$group == "china" & consumption$month == as.Date("2026-06-01")], 12.38,
@@ -164,15 +218,18 @@ comparison <- tribble(
   "China crude stock draw, IEA satellite", "Mar 2026", stock_net("china", "2026-03-01"), -1.2,
   "China crude stock draw, IEA satellite", "Apr 2026", stock_net("china", "2026-04-01"), 0.2,
   "China crude stock draw, IEA satellite", "May 2026", stock_net("china", "2026-05-01"), 0.3,
-  "China crude stock draw, IEA satellite", "Jun 2026", stock_net("china", "2026-06-01"), 1.4,
-  "US crude stock draw incl. SPR, EIA", "Feb 2026", stock_net("usa", "2026-02-01"), -1.04,
-  "US crude stock draw incl. SPR, EIA", "Apr 2026", stock_net("usa", "2026-04-01"), 0.79,
-  "US crude stock draw incl. SPR, EIA", "May 2026", stock_net("usa", "2026-05-01"), 2.07,
-  "US crude stock draw incl. SPR, EIA", "Jun 2026", stock_net("usa", "2026-06-01"), 1.81,
-  "US crude stock draw incl. SPR, EIA", "Jul 2026", stock_net("usa", "2026-07-01"), 0.42,
-  "US crude stock draw incl. SPR, EIA", "Aug 2026", stock_net("usa", "2026-08-01"), 0.37
+  "China crude stock draw, IEA satellite", "Jun 2026", stock_net("china", "2026-06-01"), 1.4
 ) |>
-  mutate(gap_pct = 100 * (model / published - 1))
+  bind_rows(
+    # JODI's US figures against EIA's own stock levels, commercial plus SPR.
+    us_stock |>
+      filter(month <= as.Date("2026-08-01")) |>
+      transmute(
+        measure = "US crude stock draw incl. SPR, EIA", period = format(month, "%b %Y"),
+        model = map_dbl(month, \(m) stock_net("usa", m)), published = net
+      )
+  ) |>
+  mutate(gap_pct = 100 * (model / published - 1), gap_mbd = model - published)
 
 write_csv(comparison, file.path(path_qa, "calibration_comparison.csv"))
 print(comparison |> mutate(across(where(is.numeric), \(x) round(x, 2))) |> as.data.frame())

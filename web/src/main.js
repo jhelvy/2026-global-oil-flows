@@ -63,7 +63,7 @@ function renderLegend() {
     ['Rest of World', '--p_row'],
     ['Americas', '--p_usa'],
     ['Russia', '--p_russia'],
-    ['Stocks, oil on water', '--p_stock'],
+    ['Stored oil', '--p_stock'],
   ];
   legend.innerHTML =
     groups.map(([label, v]) => `<span><i style="background:var(${v})"></i>${label}</span>`).join('') +
@@ -261,6 +261,7 @@ function main() {
       const now = n.series[day];
       showTooltip(
         `<div class="tt-title">${esc(n.label)}</div>` +
+          (n.note ? `<div class="tt-sub">${esc(n.note)}</div>` : '') +
           `<div class="tt-row"><span>${fmtLong(frames[day].dateObj)}</span><span>${now.toFixed(2)} mb/d</span></div>` +
           `<div class="tt-row"><span>Jan 1 to Feb 27</span><span>${n.baseline.toFixed(2)} mb/d</span></div>` +
           `<div class="tt-row"><span>Change</span><span>${fmtPct(now, n.baseline) || 'n/a'}</span></div>` +

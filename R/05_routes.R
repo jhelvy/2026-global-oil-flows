@@ -27,7 +27,7 @@ gulf_flows <- trade |>
   transmute(producer, route, consumer, month, mbd = mbd * share)
 
 other_flows <- trade |>
-  filter(!producer %in% gulf_producers, producer != "stock") |>
+  filter(!producer %in% c(gulf_producers, "stock", "gulfstore", "atsea")) |>
   left_join(seed |> select(producer, consumer, pipe_share), by = c("producer", "consumer")) |>
   mutate(pipe_share = replace_na(pipe_share, 0)) |>
   # ROW-to-ROW lacks bilateral detail; it is reported as within-region flow.
@@ -42,11 +42,14 @@ other_flows <- trade |>
   select(producer, route, consumer, month, mbd) |>
   filter(mbd > 0)
 
-# Stock draws reach refiners from local tanks, so they carry no transit route. The
-# exception is the release from Gulf storage, which leaves through Hormuz.
-stock_flows <- stock_cells |>
-  transmute(producer = "stock", consumer, month, hormuz, domestic) |>
-  pivot_longer(c(hormuz, domestic), names_to = "route", values_to = "mbd") |>
+# Each source of stored oil travels the way it physically does. Refiners' own tanks need no
+# transit. Oil leaving Gulf storage still has to cross the strait. Cargoes already loaded
+# arrive by sea.
+stock_flows <- bind_rows(
+  stock_cells |> transmute(producer = "stock", route = "domestic", consumer, month, mbd = domestic),
+  stock_cells |> transmute(producer = "gulfstore", route = "hormuz", consumer, month, mbd = gulf_storage),
+  stock_cells |> transmute(producer = "atsea", route = "seaborne", consumer, month, mbd = at_sea)
+) |>
   filter(mbd > 0)
 
 domestic_flows <- domestic |>

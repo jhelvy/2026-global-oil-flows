@@ -41,7 +41,7 @@ include-after-body:
     </div>
   </section>
 
-  <p class="note">These are modeled estimates, not measurements. Flows reach consumers the same day they leave, with no voyage lag. See the <a href="methods.html">method and limitations</a>.</p>
+  <p class="note">These are modeled estimates, not measurements. Apart from cargoes at sea, flows reach consumers the same day they leave. Hover over a stored-oil node for what it means, or see the <a href="methods.html">method and limitations</a>.</p>
 
   <details id="table-details">
     <summary>Table of values for this date</summary>

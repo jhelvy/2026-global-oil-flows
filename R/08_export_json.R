@@ -20,12 +20,14 @@ nodes <- tribble(
   "kuwait", "p_kuwait", "Kuwait", 0, "gulf",
   "iran", "p_iran", "Iran", 0, "gulf",
   "othergulf", "p_othergulf", "Other Gulf", 0, "gulf",
+  "gulfstore", "p_gulfstore", "Gulf storage", 0, "stock",
   "row", "p_row", "Rest of World", 0, "other",
   "brazil", "p_brazil", "Brazil", 0, "americas",
   "russia", "p_russia", "Russia", 0, "russia",
   "usa", "p_usa", "USA", 0, "americas",
   "canada", "p_canada", "Canada", 0, "americas",
-  "stock", "p_stock", "Stocks, oil on water", 0, "stock",
+  "atsea", "p_atsea", "Cargoes at sea", 0, "stock",
+  "stock", "p_stock", "Stock draws", 0, "stock",
   "hormuz", "r_hormuz", "Strait of Hormuz", 1, "hormuz",
   "bypass", "r_bypass", "Gulf bypass pipelines", 1, "route",
   "seaborne", "r_seaborne", "Other seaborne", 1, "route",
@@ -40,8 +42,19 @@ nodes <- tribble(
   "mideast", "c_mideast", "Middle East", 2, "consumer",
   "row", "c_row", "Rest of World", 2, "consumer",
   "usa", "c_usa", "USA", 2, "consumer",
-  "stock", "c_stock", "Stock builds, oil on water", 2, "stock"
+  "atsea", "c_atsea", "Cargoes at sea", 2, "stock",
+  "stock", "c_stock", "Stock builds", 2, "stock"
 )
+
+# Shown when a reader hovers over the node, because these are not places.
+node_notes <- c(
+  p_gulfstore = "Oil from tanks and idle tankers inside the Gulf. It still has to cross the strait, which is why it flows through Hormuz. From September this band likely includes output that EIA's estimates miss.",
+  p_atsea = "Tankers loaded earlier that reach refiners now. They arrive by sea, with no new production behind them.",
+  p_stock = "Refiners and governments drawing on tanks in their own country, so there is no transit. Part of this band is a balancing residual, largest in March. The Method page has the split.",
+  c_atsea = "Oil loaded onto tankers that has not reached a refinery yet.",
+  c_stock = "Oil added to tanks, including Gulf producers storing what they could not ship."
+)
+nodes <- nodes |> mutate(note = unname(node_notes[id]))
 
 id_for <- function(key, col) {
   n <- nodes |> filter(column == col)
@@ -127,13 +140,15 @@ export <- list(
       list(name = "Energy Institute Statistical Review 2026 (trade baseline)", url = "https://www.energyinst.org/statistical-review"),
       list(name = "UN Comtrade HS 2709 (splits EI regions)", url = "https://comtradeplus.un.org/"),
       list(name = "NBS and customs data for China, via Reuters (refinery runs, imports, output)", url = "https://boereport.com/2026/10/20/china-uses-crude-stockpiles-but-rising-oil-imports-may-curtail-draws-russell/"),
-      list(name = "EIA monthly crude stocks (checks the US stock figures)", url = "https://www.eia.gov/dnav/pet/pet_stoc_wstk_dcu_nus_m.htm")
+      list(name = "EIA monthly crude stocks (checks the US stock figures)", url = "https://www.eia.gov/dnav/pet/pet_stoc_wstk_dcu_nus_m.htm"),
+      list(name = "Kpler via CNBC (Hormuz crude, September and October)", url = "https://www.cnbc.com/2026/10/30/tanker-attack-strait-hormuz-iran-war-oil.html"),
+      list(name = "Kpler explainer (Gulf export routes, June and September)", url = "https://www.kpler.com/blog/explainer-how-mideast-gulf-crude-exports-returned-to-pre-war-levels")
     ),
     notes = "Daily flows are modeled estimates. Monthly official data are shaped by daily shipping signals; no public daily country-level data exist.",
     hormuz_target_status = hormuz_targets |> transmute(month = format(month), status, value = hormuz_crude_mbd),
     runs_status = iea_runs |> transmute(month = format(month), status, value = runs_mbd)
   ),
-  nodes = nodes |> select(id, label, column, group),
+  nodes = nodes |> select(id, label, column, group, note),
   links = links |> select(id, source, target, origin, p, r, c),
   frames = frames,
   baseline = list(values = baseline_values),

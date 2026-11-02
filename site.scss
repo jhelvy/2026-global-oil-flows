@@ -4,3 +4,28 @@ $headings-font-family: "Fira Sans Condensed", "Roboto Condensed", system-ui, san
 
 /*-- scss:rules --*/
 .navbar-brand { font-family: $headings-font-family; font-weight: 500; }
+
+// Quarto's script opens the table of contents, but browsers block that script on a page
+// opened from disk, so the contents stay open without it.
+#TOC ul.collapse { display: block; }
+#TOC #toc-title { font-family: $headings-font-family; font-size: 0.9rem; font-weight: 600; }
+
+// Below this width Quarto drops the side column, so the contents move above the article.
+@media (max-width: 991.98px) {
+  #quarto-margin-sidebar {
+    display: block !important;
+    position: static !important;
+    grid-column: body-content-start / body-content-end;
+    grid-row: 1;
+    height: auto !important;
+    max-height: none !important;
+    overflow: visible !important;
+    padding: 1rem 0 0;
+  }
+  #TOC { display: block; }
+  #quarto-document-content { grid-row: 2; }
+}
+
+// Wide tables scroll on their own instead of widening the page.
+main.content table { display: block; max-width: 100%; overflow-x: auto; }
+main.content details summary { cursor: pointer; font-weight: 600; margin-bottom: 0.5rem; }

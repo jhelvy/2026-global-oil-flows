@@ -1,0 +1,20 @@
+month,item,change_mb,change_mbd,status,source_url,note
+2026-01-01,at_sea_crude,-15,-0.48,derived,https://www.iea.org/reports/oil-market-report-march-2026,"Oil on water +14 mb, with listed products +29 mb, leaves crude about -15 mb."
+2026-02-01,at_sea_crude,-13,-0.46,reported,https://www.iea.org/reports/oil-market-report-april-2026,April OMR: crude on water down 13 mb.
+2026-03-01,at_sea_crude,-135,-4.35,derived,https://www.iea.org/reports/oil-market-report-april-2026,"Crude in transit -117 mb, plus floating crude +55 mb less the 73 mb of it inside the Gulf."
+2026-04-01,at_sea_crude,29,0.97,derived,https://www.iea.org/reports/oil-market-report-may-2026,"In transit +33 mb times March's 0.65 crude share, plus floating crude +21 mb less +13 mb inside the Gulf."
+2026-05-01,at_sea_crude,-6,-0.19,derived,https://www.iea.org/reports/oil-market-report-june-2026,"In transit -13 mb times 0.65, plus floating crude -31 mb less about -34 mb inside the Gulf (-46 mb times 0.73)."
+2026-06-01,at_sea_crude,125,4.17,derived,https://www.iea.org/reports/oil-market-report-july-2026,"Crude in transit +139 mb, plus floating crude -14 mb outside the Gulf."
+2026-07-01,at_sea_crude,-47,-1.52,derived,https://www.hellenicshippingnews.com/?p=1144387,"Observed stocks -69 mb, on land -6 mb, so oil on water about -63 mb, times an assumed 0.75 crude share. Includes any change inside the Gulf."
+2026-08-01,at_sea_crude,-49,-1.58,derived,https://www.iea.org/reports/oil-market-report-september-2026,Oil on water -65 mb times an assumed 0.75 crude share. Includes any change inside the Gulf.
+2026-09-01,at_sea_crude,77,2.57,derived,https://www.iea.org/reports/oil-market-report-october-2026,Oil on water +103 mb times an assumed 0.75 crude share. Includes any change inside the Gulf.
+2026-03-01,gulf_storage_crude,93,3,derived,https://www.iea.org/reports/oil-market-report-april-2026,"Check only. Floating crude in the Gulf +73 mb, onshore crude +20 mb."
+2026-04-01,gulf_storage_crude,9,0.3,derived,https://www.iea.org/reports/oil-market-report-may-2026,Check only. Floating oil in the Gulf +12 mb times a 0.73 crude share.
+2026-05-01,gulf_storage_crude,-36,-1.16,derived,https://www.iea.org/reports/oil-market-report-june-2026,"Check only. All Gulf storage -48 mb, of it floating -46 mb times 0.73 and onshore -2 mb."
+2026-06-01,gulf_storage_crude,-49,-1.63,derived,https://www.iea.org/reports/oil-market-report-july-2026,"Check only. Floating crude -26 mb, and on-land crude builds erased, about -23 mb."
+2026-01-01,world_crude_observed,6,0.19,reported,https://www.iea.org/reports/oil-market-report-july-2026,Check only. July OMR: 0.2 mb/d.
+2026-02-01,world_crude_observed,56,2,reported,https://www.iea.org/reports/oil-market-report-july-2026,Check only. July OMR: 2.0 mb/d.
+2026-03-01,world_crude_observed,-59,-1.9,reported,https://www.iea.org/reports/oil-market-report-july-2026,Check only. July OMR: -1.9 mb/d.
+2026-04-01,world_crude_observed,-51,-1.7,reported,https://www.iea.org/reports/oil-market-report-july-2026,Check only. July OMR: -1.7 mb/d.
+2026-05-01,world_crude_observed,-140,-4.52,reported,https://www.iea.org/reports/oil-market-report-july-2026,Check only. July OMR: -4.5 mb/d.
+2026-06-01,world_crude_observed,-3,-0.1,reported,https://www.iea.org/reports/oil-market-report-july-2026,Check only. July OMR: -0.1 mb/d.

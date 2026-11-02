@@ -91,7 +91,9 @@ keep_series <- c(
   "T3_STCHANGE_WORLD", "PATC_WORLD", "PAPR_WORLD",
   # Consumption proxies for gaps in JODI refinery intake.
   "PATC_IN", "PATC_R05", "PATC_OTHER_ASIA", "PATC_CH", "PATC_JA",
-  "PATC_OECD_EUROPE", "CORIPUS"
+  "PATC_OECD_EUROPE", "CORIPUS",
+  # US crude stocks, commercial and strategic.
+  "COSXPUS", "COSQPUS"
 )
 
 parse_series <- function(line) {
