@@ -1,0 +1,13 @@
+Type: Website
+Package: globaloilflows
+Title: Global Crude Oil Flows Through the 2026 Hormuz Closure
+Version: 0.0.1
+Description: Packages needed to render the website. The full data pipeline in
+    run_all.R uses more, and renv.lock records those.
+Encoding: UTF-8
+Imports:
+    dplyr,
+    jsonlite,
+    knitr,
+    readr,
+    rmarkdown

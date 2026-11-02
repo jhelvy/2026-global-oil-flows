@@ -1,0 +1,85 @@
+name: Render and Publish Quarto Site
+
+# Renders the site from the data committed to the repo. It does not rerun the
+# data pipeline, so it needs no API keys. To update the numbers, run
+# `Rscript run_all.R` locally and commit the results.
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+
+    env:
+      GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
+      R_VERSION: '4.4.1'
+
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Setup R
+        uses: r-lib/actions/setup-r@v2
+        with:
+          r-version: ${{ env.R_VERSION }}
+          use-public-rspm: true
+
+      - name: Install system dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libicu-dev libcurl4-openssl-dev
+
+      - name: Record Ubuntu codename for the cache key
+        run: echo "UBUNTU_CODENAME=$(. /etc/os-release && echo "$VERSION_CODENAME")" >> "$GITHUB_ENV"
+
+      - name: Query R package dependencies
+        run: |
+          install.packages('remotes')
+          saveRDS(remotes::dev_package_deps(dependencies = TRUE), ".github/depends.Rds", version = 2)
+        shell: Rscript {0}
+
+      - name: Cache R packages
+        uses: actions/cache@v5
+        with:
+          path: ${{ env.R_LIBS_USER }}
+          # The codename is part of the key because the cached packages are
+          # binaries built for one Ubuntu release.
+          key: ${{ runner.os }}-${{ env.UBUNTU_CODENAME }}-${{ env.R_VERSION }}-1-${{ hashFiles('.github/depends.Rds') }}
+          restore-keys: ${{ runner.os }}-${{ env.UBUNTU_CODENAME }}-${{ env.R_VERSION }}-1-
+
+      - name: Install R dependencies
+        run: remotes::install_deps(dependencies = TRUE)
+        shell: Rscript {0}
+
+      # web/build.sh runs as Quarto's pre-render step and bundles the graphic.
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+          cache-dependency-path: web/package-lock.json
+
+      - name: Set up Quarto
+        uses: quarto-dev/quarto-actions/setup@v2
+        with:
+          version: 1.9.38
+
+      - name: Render Quarto Project
+        uses: quarto-dev/quarto-actions/render@v2
+
+      - name: Publish to GitHub Pages
+        uses: quarto-dev/quarto-actions/publish@v2
+        with:
+          target: gh-pages
+          render: false
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

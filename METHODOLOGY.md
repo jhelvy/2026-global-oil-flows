@@ -2,6 +2,8 @@
 
 Rerun everything with `Rscript run_all.R` from the repo root. API keys go in a git-ignored `.env`, as `COMTRADE_API_KEY`, `EIA_API_KEY` and `FRED_API_KEY`. Files that need a person with a browser go in `data/raw/manual/`. That command ends by rendering the website to `_site/`, so `_site/index.html` opens with a double-click. To rebuild only the site, run `quarto render`, or `quarto preview` while editing. The graphic's code lives in `web/`, and Quarto bundles it before each render.
 
+Each push to `main` renders the site and publishes it to the `gh-pages` branch through `.github/workflows/publish.yml`. That workflow renders the data already committed and does not rerun the pipeline, so to update the numbers, run `Rscript run_all.R` locally and commit the results.
+
 ## Scope decisions
 
 - **The graphic stops on August 31** (`date_stop` in `R/00_setup.R`). JODI ends in August, and September and October Hormuz estimates range from 3 to 14 mb/d. The data and model still run through October: `data/raw/`, `data/interim/` and the CSVs in `data/final/` keep those months, and only `flows.json` stops. To extend the graphic, move `date_stop` and rerun.
