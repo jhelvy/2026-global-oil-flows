@@ -6,6 +6,20 @@ import * as d3 from 'd3';
 import { sankeyLinkHorizontal } from 'd3-sankey';
 
 const NODE_W = 14;
+// From this width the group labels and the band width key sit beside the diagram.
+// Below it there is no room, so main.js shows them in the legend row instead.
+export const SIDE_LABELS_MIN_WIDTH = 900;
+export const KEY_VALUES = [10, 5, 1];
+// Text colors, darker than the band colors where needed so the labels stay readable.
+export const GROUPS = [
+  { key: 'gulf', label: 'Gulf producers', color: 'var(--p_saudi)' },
+  { key: 'other', label: 'Rest of World', color: 'var(--muted)' },
+  { key: 'americas', label: 'Americas', color: 'var(--p_canada)' },
+  { key: 'russia', label: 'Russia', color: 'var(--p_russia)' },
+  { key: 'stock', label: 'Stored oil', color: 'var(--p_stock)' },
+];
+const GROUP_LINE_X = 92;
+const KEY_W = 30;
 const SHORT = {
   'Saudi Arabia': 'Saudi', 'Rest of World': 'ROW', 'Stock draws': 'Draws', 'South Korea': 'Korea',
   'Europe (EU + UK)': 'Europe', 'Middle East': 'Mideast', 'Strait of Hormuz': 'Hormuz',
@@ -72,13 +86,32 @@ export function createSankey(svgEl, data) {
     .attr('class', 'col-head')
     .attr('y', 11);
 
+  // Direct labels for the producer groups, each with a line spanning its nodes.
+  const groupSel = svg
+    .append('g')
+    .attr('class', 'group-labels')
+    .selectAll('g')
+    .data(GROUPS.map((g) => ({ ...g, members: nodes.filter((n) => n.column === 0 && n.group === g.key) })))
+    .join('g')
+    .style('--group-color', (g) => g.color);
+  groupSel.append('line');
+  groupSel.append('text').attr('dy', '0.35em').text((g) => g.label);
+
+  // Key for band width. Each swatch is drawn on the same scale as the bands.
+  const keySel = svg.append('g').attr('class', 'size-key');
+  keySel.append('text').attr('class', 'col-head').attr('y', 11).text('Band width');
+  const keyRows = keySel.selectAll('g').data(KEY_VALUES).join('g');
+  keyRows.append('rect').attr('width', KEY_W);
+  keyRows.append('text').attr('dy', '0.35em').attr('x', KEY_W + 6).text((v) => `${v} mb/d`);
+
   let k = 1;
   let narrow = false;
   const colX = [0, 0, 0];
 
   function layout(width, height) {
     narrow = width < 620;
-    const gutter = narrow ? 92 : 178;
+    const side = width >= SIDE_LABELS_MIN_WIDTH;
+    const gutter = narrow ? 92 : side ? 228 : 178;
     colX[0] = gutter;
     colX[2] = width - gutter - NODE_W;
     colX[1] = (colX[0] + colX[2]) / 2 - NODE_W / 2 - (narrow ? 0 : 20);
@@ -137,6 +170,27 @@ export function createSankey(svgEl, data) {
       .attr('x', (d) => (d.column === 0 ? colX[0] + NODE_W : d.column === 1 ? colX[1] : colX[2]))
       .attr('text-anchor', (d) => (d.column === 0 ? 'end' : 'start'))
       .text((d) => d.label);
+
+    groupSel.style('display', side ? null : 'none');
+    groupSel.each(function (g) {
+      const y0 = g.members[0].slotY;
+      const last = g.members[g.members.length - 1];
+      const y1 = last.slotY + last.slotH;
+      const el = d3.select(this);
+      el.select('line').attr('x1', GROUP_LINE_X).attr('x2', GROUP_LINE_X).attr('y1', y0).attr('y2', y1);
+      el.select('text').attr('x', 0).attr('y', (y0 + y1) / 2);
+    });
+
+    keySel.style('display', side ? null : 'none').attr('transform', `translate(${width - 80},0)`);
+    let keyY = top + 6;
+    keyRows.each(function (v) {
+      const h = v * k;
+      const row = d3.select(this);
+      const rowH = Math.max(h, 14);
+      row.attr('transform', `translate(0,${keyY + rowH / 2})`);
+      row.select('rect').attr('y', -h / 2).attr('height', h);
+      keyY += rowH + 8;
+    });
 
     for (const l of links) {
       const i = l.i;

@@ -19,11 +19,17 @@ website:
   search: false
   navbar:
     background: light
+    # Keeps the GitHub icon in the top right corner on small screens.
+    collapse: false
     left:
       - text: Flows
         href: index.qmd
       - text: Method
         href: methods.qmd
+    right:
+      - icon: github
+        href: https://github.com/jhelvy/2026-global-oil-flows
+        aria-label: GitHub repository for this project
 
 format:
   html:

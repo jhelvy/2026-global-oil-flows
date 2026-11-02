@@ -1,6 +1,6 @@
 import * as d3 from 'd3';
 import raw from '../../data/final/flows.json';
-import { createSankey, fmtPct } from './sankey.js';
+import { createSankey, fmtPct, GROUPS, KEY_VALUES, SIDE_LABELS_MIN_WIDTH } from './sankey.js';
 import { createParticles } from './particles.js';
 import { createPriceChart } from './priceChart.js';
 import { createControls } from './controls.js';
@@ -58,17 +58,19 @@ function prepare(raw) {
 
 function renderLegend() {
   const legend = document.getElementById('legend');
-  const groups = [
-    ['Gulf producers', '--p_saudi'],
-    ['Rest of World', '--p_row'],
-    ['Americas', '--p_usa'],
-    ['Russia', '--p_russia'],
-    ['Stored oil', '--p_stock'],
-  ];
+  // The group and size entries show only when the diagram has no room for its side labels.
   legend.innerHTML =
-    groups.map(([label, v]) => `<span><i style="background:var(${v})"></i>${label}</span>`).join('') +
+    GROUPS.map((g) => `<span class="beside"><i style="background:${g.color}"></i>${g.label}</span>`).join('') +
+    `<span class="beside" id="size-key">Band width:${KEY_VALUES.map((v) => `<i class="band" data-mbd="${v}"></i>${v}`).join('')} mb/d</span>` +
     `<span><i class="outline"></i>Jan 1 to Feb 27 average</span>` +
     `<span class="hint">Click a producer to follow its oil.</span>`;
+}
+
+function updateLegend(width, scale) {
+  document.getElementById('legend').classList.toggle('side-labels', width >= SIDE_LABELS_MIN_WIDTH);
+  document.querySelectorAll('#size-key .band').forEach((el) => {
+    el.style.height = `${+el.dataset.mbd * scale}px`;
+  });
 }
 
 function main() {
@@ -326,11 +328,14 @@ function main() {
   function resize() {
     const w = wrap.clientWidth;
     const narrow = w < 620;
+    // The legend row changes height with the width, so set it before measuring the room.
+    updateLegend(w, sankey.getScale());
     // Fill what is left of the first screen, within limits that keep labels readable.
     const room = window.innerHeight - (wrap.getBoundingClientRect().top + window.scrollY) - 16;
     const h = narrow ? 560 : Math.max(470, Math.min(760, room));
     wrap.style.height = `${h}px`;
     sankey.layout(w, h);
+    updateLegend(w, sankey.getScale());
     particles.resize(w, h);
     chart.resize(priceEl.clientWidth);
     placeCard();

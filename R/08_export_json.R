@@ -11,9 +11,10 @@ events <- read_csv(file.path(path_raw, "events.csv"))
 hormuz_targets <- read_csv(file.path(path_raw, "hormuz_crude_targets.csv"))
 iea_runs <- read_csv(file.path(path_raw, "iea_refinery_runs.csv"))
 
-# Row order sets the top-to-bottom order of each column. This order came from a search over
-# the non-Gulf producers, routes and consumer regions for the fewest band crossings and the
-# least vertical travel, so same-country paths such as USA to USA run nearly straight.
+# Row order sets the top-to-bottom order of each column. Producers stay together by group,
+# because the groups are labeled directly beside the column. Within that, the order came from
+# a search for the fewest band crossings and the least vertical travel, so same-country paths
+# such as USA to USA run nearly straight.
 nodes <- tribble(
   ~key, ~id, ~label, ~column, ~group,
   "saudi", "p_saudi", "Saudi Arabia", 0, "gulf",
@@ -22,12 +23,12 @@ nodes <- tribble(
   "kuwait", "p_kuwait", "Kuwait", 0, "gulf",
   "iran", "p_iran", "Iran", 0, "gulf",
   "othergulf", "p_othergulf", "Other Gulf", 0, "gulf",
-  "gulfstore", "p_gulfstore", "Gulf storage", 0, "stock",
   "row", "p_row", "Rest of World", 0, "other",
   "brazil", "p_brazil", "Brazil", 0, "americas",
-  "russia", "p_russia", "Russia", 0, "russia",
   "usa", "p_usa", "USA", 0, "americas",
   "canada", "p_canada", "Canada", 0, "americas",
+  "russia", "p_russia", "Russia", 0, "russia",
+  "gulfstore", "p_gulfstore", "Gulf storage", 0, "stock",
   "atsea", "p_atsea", "Cargoes at sea", 0, "stock",
   "stock", "p_stock", "Stock draws", 0, "stock",
   "hormuz", "r_hormuz", "Strait of Hormuz", 1, "hormuz",

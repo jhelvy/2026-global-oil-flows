@@ -10,7 +10,7 @@ Each push to `main` renders the site and publishes it to the `gh-pages` branch t
 - **Crude plus lease condensate**, per the plan's recommendation. EIA International (product 57) is the production source because it has one definition and sums to a world total. JODI's crude definition varies by country, so JODI supplies only refinery intake, direct use, imports and exports.
 - **Brent on the chart.** WTI is in `flows.json` but not drawn.
 - **Other seaborne stays one route.** It is not split by Bab el-Mandeb, Suez and Cape.
-- **Column order is chosen for legibility.** The order of nodes in `R/08_export_json.R` came from a search over the non-Gulf producers, routes and consumer regions for the fewest band crossings and the least vertical travel. Each route stacks its outgoing bands by origin in the same order as its incoming bands, so a producer's band enters and leaves at the same height.
+- **Column order is chosen for legibility.** Producers stay together by group, because the groups are labeled beside the column. Within that, the order of nodes in `R/08_export_json.R` came from a search over the producers, routes and consumer regions for the fewest band crossings and the least vertical travel. Keeping stored oil together sends Gulf storage across the column to Hormuz. Each route stacks its outgoing bands by origin in the same order as its incoming bands, so a producer's band enters and leaves at the same height.
 
 ## Method
 
