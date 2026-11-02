@@ -11,7 +11,7 @@ include-after-body:
 ```{=html}
 <div class="flows">
   <h1>Global crude oil flows through the 2026 Hormuz closure</h1>
-  <p class="sub">Modeled daily flows from producers, through routes, to consumers, in million barrels per day (mb/d) of crude and condensate.</p>
+  <p class="sub">Modeled daily flows from producers, through routes, to consumers, in million barrels per day (mb/d) of crude and condensate, January to August 2026.</p>
 
   <div class="date-row">
     <div class="date" id="date-value"></div>

@@ -7,7 +7,7 @@ barrels_per_tonne <- 7.33
 producers <- c("usa", "saudi", "iraq", "uae", "kuwait", "iran", "othergulf", "russia", "canada", "brazil", "row")
 consumers <- c("usa", "china", "india", "japan", "korea", "europe", "mideast", "otherasia", "row")
 
-months <- seq(as.Date("2026-01-01"), as.Date("2026-10-01"), by = "month")
+months <- model_months
 assume <- read_csv(file.path(path_raw, "route_assumptions.csv"))
 production <- read_csv(file.path(path_interim, "production_monthly.csv"))
 consumption_country <- read_csv(file.path(path_interim, "consumption_monthly_country.csv"))

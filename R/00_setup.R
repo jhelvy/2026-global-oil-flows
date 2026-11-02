@@ -21,6 +21,11 @@ for (p in c(path_raw, path_interim, path_final, path_qa)) {
 date_start <- as.Date("2026-01-01")
 date_war <- as.Date("2026-02-28")
 date_baseline_end <- as.Date("2026-02-27")
+# Last date the graphic shows. JODI country data ends in August, and later Hormuz figures
+# conflict too widely to report (see methods.qmd). The data and model run on through
+# October, so moving this date is all it takes to extend the graphic.
+date_stop <- as.Date("2026-08-31")
+model_months <- seq(date_start, as.Date("2026-10-01"), by = "month")
 
 # Cache a download under data/raw with the download date in its name. Reuses the
 # newest cached copy unless `refresh` is TRUE, so reruns never need live endpoints.

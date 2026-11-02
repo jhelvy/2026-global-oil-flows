@@ -131,7 +131,7 @@ message("JODI through ", max(jodi$month))
 # Production uses EIA International crude including lease condensate, the one
 # source with a consistent definition that sums to a world total. JODI's crude
 # definition differs by country, so JODI supplies refinery intake and trade only.
-months <- seq(as.Date("2026-01-01"), as.Date("2026-10-01"), by = "month")
+months <- model_months
 
 steo_wide <- steo |>
   select(series, month, value) |>
@@ -142,7 +142,7 @@ steo_value <- function(series, m) {
 }
 
 # Extend one EIA International series past its last month with a STEO driver. Months
-# the driver lacks (October for most countries) follow STEO world crude production.
+# the driver lacks follow STEO world crude production.
 extend_production <- function(id, driver) {
   base <- intl |> filter(id == !!id, month %in% months)
   last_month <- max(base$month)

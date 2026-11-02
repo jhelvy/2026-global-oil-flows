@@ -1,7 +1,9 @@
 # Write flows.json for the front end, plus long-format CSVs for inspection.
 source(file.path("R", "00_setup.R"))
 
-daily <- read_csv(file.path(path_interim, "flows_daily_model.csv"))
+# The graphic stops at date_stop. The long CSVs at the end keep every date.
+daily_all <- read_csv(file.path(path_interim, "flows_daily_model.csv"))
+daily <- daily_all |> filter(date <= date_stop)
 monthly <- read_csv(file.path(path_interim, "flows_monthly_model.csv"))
 prices <- read_csv(file.path(path_interim, "prices_daily.csv"))
 hormuz <- read_csv(file.path(path_interim, "hormuz_daily.csv"))
@@ -48,7 +50,7 @@ nodes <- tribble(
 
 # Shown when a reader hovers over the node, because these are not places.
 node_notes <- c(
-  p_gulfstore = "Oil from tanks and idle tankers inside the Gulf. It still has to cross the strait, which is why it flows through Hormuz. From September this band likely includes output that EIA's estimates miss.",
+  p_gulfstore = "Oil from tanks and idle tankers inside the Gulf. It still has to cross the strait, which is why it flows through Hormuz.",
   p_atsea = "Tankers loaded earlier that reach refiners now. They arrive by sea, with no new production behind them.",
   p_stock = "Refiners and governments drawing on tanks in their own country, so there is no transit. Part of this band is a balancing residual, largest in March. The Method page has the split.",
   c_atsea = "Oil loaded onto tankers that has not reached a refinery yet.",
@@ -141,18 +143,17 @@ export <- list(
       list(name = "UN Comtrade HS 2709 (splits EI regions)", url = "https://comtradeplus.un.org/"),
       list(name = "NBS and customs data for China, via Reuters (refinery runs, imports, output)", url = "https://boereport.com/2026/10/20/china-uses-crude-stockpiles-but-rising-oil-imports-may-curtail-draws-russell/"),
       list(name = "EIA monthly crude stocks (checks the US stock figures)", url = "https://www.eia.gov/dnav/pet/pet_stoc_wstk_dcu_nus_m.htm"),
-      list(name = "Kpler via CNBC (Hormuz crude, September and October)", url = "https://www.cnbc.com/2026/10/30/tanker-attack-strait-hormuz-iran-war-oil.html"),
-      list(name = "Kpler explainer (Gulf export routes, June and September)", url = "https://www.kpler.com/blog/explainer-how-mideast-gulf-crude-exports-returned-to-pre-war-levels")
+      list(name = "Kpler explainer (Gulf export routes)", url = "https://www.kpler.com/blog/explainer-how-mideast-gulf-crude-exports-returned-to-pre-war-levels")
     ),
     notes = "Daily flows are modeled estimates. Monthly official data are shaped by daily shipping signals; no public daily country-level data exist.",
-    hormuz_target_status = hormuz_targets |> transmute(month = format(month), status, value = hormuz_crude_mbd),
-    runs_status = iea_runs |> transmute(month = format(month), status, value = runs_mbd)
+    hormuz_target_status = hormuz_targets |> filter(month <= date_stop) |> transmute(month = format(month), status, value = hormuz_crude_mbd),
+    runs_status = iea_runs |> filter(month <= date_stop) |> transmute(month = format(month), status, value = runs_mbd)
   ),
   nodes = nodes |> select(id, label, column, group, note),
   links = links |> select(id, source, target, origin, p, r, c),
   frames = frames,
   baseline = list(values = baseline_values),
-  events = events |> transmute(date = format(date), label, url = source_url, detail, kind)
+  events = events |> filter(date <= date_stop) |> transmute(date = format(date), label, url = source_url, detail, kind)
 )
 
 json <- toJSON(export, auto_unbox = TRUE, digits = NA, na = "null", dataframe = "rows")
@@ -175,5 +176,5 @@ long <- function(df, time_col) {
     ) |>
     select(all_of(time_col), source, route, target, value)
 }
-write_csv(long(daily, "date"), file.path(path_final, "flows_daily.csv"))
+write_csv(long(daily_all, "date"), file.path(path_final, "flows_daily.csv"))
 write_csv(long(monthly, "month"), file.path(path_final, "flows_monthly.csv"))

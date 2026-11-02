@@ -7,88 +7,98 @@ flows <- read_csv(file.path(path_interim, "flows_monthly_model.csv"))
 hormuz <- read_csv(file.path(path_interim, "hormuz_daily.csv"))
 prices <- read_csv(file.path(path_interim, "prices_daily.csv"))
 
-date_end <- min(max(hormuz$date[!hormuz$missing]), max(prices$date))
-dates <- seq(date_start, date_end, by = "day")
-day_month <- floor_date(dates, "month")
-months <- sort(unique(day_month))
-prewar <- dates < date_war
+build_daily <- function(flows, date_end) {
+  dates <- seq(date_start, date_end, by = "day")
+  day_month <- floor_date(dates, "month")
+  months <- sort(unique(day_month))
+  prewar <- dates < date_war
 
-# Mid-month knots. The partial final month uses the middle of its available days.
-mid_of <- function(m) {
-  d <- dates[day_month == m]
-  d[ceiling(length(d) / 2)]
-}
-month_mid <- as.Date(map_dbl(months, mid_of))
+  # Mid-month knots. The partial final month uses the middle of its available days.
+  mid_of <- function(m) {
+    d <- dates[day_month == m]
+    d[ceiling(length(d) / 2)]
+  }
+  month_mid <- as.Date(map_dbl(months, mid_of))
 
-# 7-day tanker mean plus a small constant. After the closure AIS counts fall to one or
-# two vessels a day and most transits run dark, so one vessel must not double a flow.
-# The constant barely changes the pre-war shape, where counts average near 37 a day.
-signal_damping <- 3
-signal <- hormuz |>
-  filter(date %in% dates) |>
-  arrange(date) |>
-  mutate(w = tanker_7d + signal_damping) |>
-  pull(w)
-signal <- signal / mean(signal[prewar])
-# Pre-war counts swing more than barrels do: a 60% rise over the last days of February
-# would overstate the starting point of the collapse. Half weight keeps the shape.
-prewar_weight <- 0.5
-signal[prewar] <- 1 + prewar_weight * (signal[prewar] - 1)
+  # 7-day tanker mean plus a small constant. After the closure AIS counts fall to one or
+  # two vessels a day and most transits run dark, so one vessel must not double a flow.
+  # The constant barely changes the pre-war shape, where counts average near 37 a day.
+  signal_damping <- 3
+  signal <- hormuz |>
+    filter(date %in% dates) |>
+    arrange(date) |>
+    mutate(w = tanker_7d + signal_damping) |>
+    pull(w)
+  signal <- signal / mean(signal[prewar])
+  # Pre-war counts swing more than barrels do: a 60% rise over the last days of February
+  # would overstate the starting point of the collapse. Half weight keeps the shape.
+  prewar_weight <- 0.5
+  signal[prewar] <- 1 + prewar_weight * (signal[prewar] - 1)
 
-scale_path <- function(s) {
-  out <- numeric(length(dates))
-  pre <- which(prewar)
-  out[pre] <- approx(
-    as.numeric(month_mid[1:2]), s[1:2],
-    xout = as.numeric(dates[pre]), rule = 2
-  )$y
-  out
-}
+  scale_path <- function(s) {
+    out <- numeric(length(dates))
+    pre <- which(prewar)
+    out[pre] <- approx(
+      as.numeric(month_mid[1:2]), s[1:2],
+      xout = as.numeric(dates[pre]), rule = 2
+    )$y
+    out
+  }
 
-fit_daily <- function(targets, w, max_iter = 200, tol = 1e-5) {
-  n <- length(months)
-  s <- ifelse(targets > 0, targets, 0)
-  v <- numeric(length(dates))
-  war_i <- which(dates == date_war)
-  ramp_end <- date_war + 7
-  for (iter in seq_len(max_iter)) {
-    v[prewar] <- (scale_path(s) * w)[prewar]
-    left <- v[war_i - 1] / w[war_i]
-    # Post-war knots: war start, one week later, then each month's middle.
-    x <- as.numeric(c(date_war, ramp_end, month_mid[3:n]))
-    y <- c(left, s[3], s[3:n])
-    keep <- !duplicated(x)
-    post <- which(!prewar)
-    v[post] <- approx(x[keep], y[keep], xout = as.numeric(dates[post]), rule = 2)$y * w[post]
-    means <- map_dbl(months, \(m) mean(v[day_month == m]))
-    ok <- targets > 0 & means > 0
-    if (all(abs(means[ok] / targets[ok] - 1) < tol)) {
-      break
+  fit_daily <- function(targets, w, max_iter = 200, tol = 1e-5) {
+    n <- length(months)
+    s <- ifelse(targets > 0, targets, 0)
+    v <- numeric(length(dates))
+    war_i <- which(dates == date_war)
+    ramp_end <- date_war + 7
+    for (iter in seq_len(max_iter)) {
+      v[prewar] <- (scale_path(s) * w)[prewar]
+      left <- v[war_i - 1] / w[war_i]
+      # Post-war knots: war start, one week later, then each month's middle.
+      x <- as.numeric(c(date_war, ramp_end, month_mid[3:n]))
+      y <- c(left, s[3], s[3:n])
+      keep <- !duplicated(x)
+      post <- which(!prewar)
+      v[post] <- approx(x[keep], y[keep], xout = as.numeric(dates[post]), rule = 2)$y * w[post]
+      means <- map_dbl(months, \(m) mean(v[day_month == m]))
+      ok <- targets > 0 & means > 0
+      if (all(abs(means[ok] / targets[ok] - 1) < tol)) {
+        break
+      }
+      s[ok] <- s[ok] * (targets[ok] / means[ok])
+      s[targets <= 0] <- 0
     }
-    s[ok] <- s[ok] * (targets[ok] / means[ok])
-    s[targets <= 0] <- 0
+    # Exact monthly means. Months with a zero target stay at zero.
+    for (i in seq_len(n)) {
+      idx <- day_month == months[i]
+      m <- mean(v[idx])
+      v[idx] <- if (targets[i] <= 0 || m <= 0) 0 else v[idx] * targets[i] / m
+    }
+    pmax(v, 0)
   }
-  # Exact monthly means. Months with a zero target stay at zero.
-  for (i in seq_len(n)) {
-    idx <- day_month == months[i]
-    m <- mean(v[idx])
-    v[idx] <- if (targets[i] <= 0 || m <= 0) 0 else v[idx] * targets[i] / m
-  }
-  pmax(v, 0)
+
+  triples <- flows |>
+    complete(nesting(producer, route, consumer), month = months, fill = list(mbd = 0)) |>
+    arrange(producer, route, consumer, month)
+
+  triples |>
+    group_by(producer, route, consumer) |>
+    group_modify(\(d, key) {
+      targets <- d$mbd[match(months, d$month)]
+      w <- if (key$route == "hormuz") signal else rep(1, length(dates))
+      tibble(date = dates, mbd = fit_daily(targets, w))
+    }) |>
+    ungroup()
 }
 
-triples <- flows |>
-  complete(nesting(producer, route, consumer), month = months, fill = list(mbd = 0)) |>
-  arrange(producer, route, consumer, month)
+data_end <- min(max(hormuz$date[!hormuz$missing]), max(prices$date))
 
-daily <- triples |>
-  group_by(producer, route, consumer) |>
-  group_modify(\(d, key) {
-    targets <- d$mbd[match(months, d$month)]
-    w <- if (key$route == "hormuz") signal else rep(1, length(dates))
-    tibble(date = dates, mbd = fit_daily(targets, w))
-  }) |>
-  ungroup()
+# The shown period is fit on its own, so late August does not bend toward months the
+# graphic leaves out. Later days come from a fit of the whole series and are kept for
+# inspection. Each month keeps its exact mean either way.
+shown <- build_daily(flows |> filter(month <= date_stop), min(date_stop, data_end))
+whole <- build_daily(flows, data_end)
+daily <- bind_rows(shown, whole |> filter(date > date_stop))
 
 write_csv(daily, file.path(path_interim, "flows_daily_model.csv"))
-message("Daily flows: ", n_distinct(paste(daily$producer, daily$route, daily$consumer)), " triples, ", length(dates), " days to ", date_end)
+message("Daily flows: ", n_distinct(paste(daily$producer, daily$route, daily$consumer)), " triples, ", n_distinct(daily$date), " days to ", max(daily$date), ", shown to ", date_stop)
