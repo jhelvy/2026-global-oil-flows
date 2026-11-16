@@ -100,7 +100,7 @@ order_target <- c(
 
 # Total height used by the tallest column on either date, plus gaps. Fixing it keeps the
 # two Sankeys on the same scale, so a band's thickness means the same thing in both.
-gap <- 1.5
+gap <- 2.4
 y_max <- flows |>
   filter(date %in% c(date_before, date_after)) |>
   summarise(total = sum(value), .by = c(date, source)) |>
@@ -220,18 +220,18 @@ make_sankey <- function(day, title) {
       data = labels |> filter(x != 1),
       aes(x = x_label, y = y, label = label, hjust = hjust),
       family = font,
-      size = 3.2
+      size = 5
     ) +
     geom_label(
       data = labels |> filter(x == 1),
       aes(x = x_label, y = y, label = label),
       family = font,
-      size = 3.2,
+      size = 5,
       linewidth = 0,
       fill = alpha("white", 0.85)
     ) +
     scale_fill_identity() +
-    scale_x_continuous(expand = expansion(mult = c(0.28, 0.28))) +
+    scale_x_continuous(expand = expansion(mult = c(0.36, 0.36))) +
     scale_y_reverse() +
     labs(
       title = title,
@@ -243,7 +243,8 @@ make_sankey <- function(day, title) {
     ) +
     theme_void(base_family = font) +
     theme(
-      plot.title = element_text(face = "bold", size = 16),
+      plot.title = element_text(face = "bold", size = 20),
+      plot.subtitle = element_text(size = 14),
       plot.title.position = "plot",
       plot.caption.position = "plot",
       plot.caption = element_text(hjust = 0, face = "italic"),
